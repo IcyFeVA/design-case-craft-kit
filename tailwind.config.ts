@@ -20,6 +20,8 @@ export default {
 		extend: {
 			fontFamily: {
 				'sans': ['Poppins', 'sans-serif'],
+				'serif': ['Poppins', 'sans-serif'],
+				'mono': ['Poppins', 'monospace'],
 				'poppins': ['Poppins', 'sans-serif'],
 			},
 			colors: {
