@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -45,7 +44,8 @@ const Home = () => {
             <div className="font-semibold text-lg">Portfolio</div>
             <div className="hidden md:flex items-center space-x-8">
               <Link to="/" className="text-gray-900 hover:text-gray-600 transition-colors">Home</Link>
-              <Link to="/work" className="text-gray-600 hover:text-gray-900 transition-colors">Work</Link>
+              <Link to="/ui-gallery" className="text-gray-600 hover:text-gray-900 transition-colors">UI Gallery</Link>
+              <Link to="/case-study" className="text-gray-600 hover:text-gray-900 transition-colors">Case Study</Link>
               <Link to="/about" className="text-gray-600 hover:text-gray-900 transition-colors">About</Link>
               <Link to="/contact" className="text-gray-600 hover:text-gray-900 transition-colors">Contact</Link>
             </div>
