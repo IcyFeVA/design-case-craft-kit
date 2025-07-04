@@ -1,16 +1,23 @@
 
-import { ArrowLeft, ExternalLink } from 'lucide-react';
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-white font-inter">
+    <div className="min-h-screen bg-white">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-sm z-50 border-b border-gray-100">
-        <div className="max-w-4xl mx-auto px-6 py-4">
-          <button className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors">
-            <ArrowLeft size={20} />
-            <span className="text-sm font-medium">Back to Portfolio</span>
-          </button>
+      <nav className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16">
+            <Link to="/" className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 transition-colors">
+              <ArrowLeft className="w-4 h-4" />
+              <span>Back to Portfolio</span>
+            </Link>
+            <div className="font-semibold text-lg">Case Study</div>
+          </div>
         </div>
       </nav>
 
