@@ -25,14 +25,14 @@ const Home = () => {
       category: "Web Application", 
       description: "Complete redesign of a B2B marketplace, increasing conversion rates by 40% through improved user flows.",
       tags: ["Web Design", "User Research", "Conversion Optimization"],
-      link: "#"
+      link: "/case-study"
     },
     {
       title: "Mobile Banking App",
       category: "Mobile Application",
       description: "Designed an intuitive mobile banking experience focusing on accessibility and security for elderly users.",
       tags: ["Mobile Design", "Accessibility", "FinTech"],
-      link: "#"
+      link: "/case-study"
     }
   ];
 

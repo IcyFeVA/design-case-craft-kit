@@ -1,8 +1,6 @@
-
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { ArrowLeft, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Index = () => {
