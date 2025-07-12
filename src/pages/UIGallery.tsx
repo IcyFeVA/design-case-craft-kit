@@ -1,9 +1,8 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { ArrowLeft, X } from "lucide-react";
+import { ArrowLeft, Download, X } from "lucide-react";
 import { Link } from "react-router-dom";
 
 interface GalleryItem {
@@ -133,35 +132,51 @@ const UIGallery = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md z-40 border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <nav className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <Link to="/" className="flex items-center space-x-3 hover:opacity-70 transition-opacity">
-              <ArrowLeft className="w-5 h-5" />
-              <span className="font-medium">Back to Home</span>
-            </Link>
-            <div className="font-semibold text-lg">UI Gallery</div>
-            <div className="w-20"></div>
+            <div className="font-semibold text-lg">Portfolio</div>
+            <div className="hidden md:flex items-center space-x-8">
+                <Link to="/" className="text-gray-600 hover:text-gray-900 transition-colors">
+                Work
+                </Link>
+                <Link to="/ui-gallery" className="text-gray-600 font-semibold hover:text-gray-900 transition-colors">
+                Gallery
+                </Link>
+                <Link to="#about" className="text-gray-600 hover:text-gray-900 transition-colors">
+                About
+                </Link>
+                <Link to="#contact" className="text-gray-600 hover:text-gray-900 transition-colors">
+                Contact
+                </Link>
+            </div>
+
+            <Button variant="outline" className="gap-2 bg-transparent">
+              <Download className="w-4 h-4" />
+              Resume
+            </Button>
           </div>
         </div>
       </nav>
 
       {/* Header */}
-      <section className="pt-32 pb-16 px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-            UI Gallery
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            A curated collection of my design work spanning web applications, mobile interfaces, 
-            and FUI for Film and TV. Each piece represents a unique challenge and creative solution.
-          </p>
+      <section className="max-w-4xl mx-auto px-6 py-20">
+        <div className="space-y-8">
+          <div className="space-y-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
+              UI Gallery
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+              A curated collection of my design work spanning web applications, mobile interfaces, 
+              and FUI for Film and TV. Each piece represents a unique challenge and creative solution.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Gallery Grid */}
       <section className="pb-20 px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 auto-rows-auto">
             {galleryItems.map((item, index) => {
               // Create interesting grid patterns
