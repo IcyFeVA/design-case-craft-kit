@@ -91,6 +91,42 @@ const UIGallery = () => {
       imageUrl: "https://images.unsplash.com/photo-1483058712412-4245e9b90334?w=800&h=600&fit=crop",
       tags: ["Portfolio", "Creative", "Gallery"],
       year: "2024"
+    },
+    {
+      id: 9,
+      title: "Healthcare Portal",
+      category: "Web Application",
+      description: "Patient management system with appointment scheduling and medical records access.",
+      imageUrl: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&h=600&fit=crop",
+      tags: ["Healthcare", "Portal", "Patient Management"],
+      year: "2023"
+    },
+    {
+      id: 10,
+      title: "Travel Booking App",
+      category: "Mobile Design",
+      description: "User-friendly travel booking app with personalized recommendations and itinerary management.",
+      imageUrl: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?w=600&h=800&fit=crop",
+      tags: ["Travel", "Booking", "Mobile"],
+      year: "2024"
+    },
+    {
+      id: 11,
+      title: "Educational Platform",
+      category: "Web Application",
+      description: "E-learning platform with interactive courses and progress tracking features.",
+      imageUrl: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&h=600&fit=crop",
+      tags: ["Education", "E-learning", "Web App"],
+      year: "2023"
+    },
+    {
+      id: 12,
+      title: "Event Management System",
+      category: "Web Application",
+      description: "Comprehensive event management tool with ticketing, scheduling, and attendee engagement features.",
+      imageUrl: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?w=600&h=800&fit=crop",
+      tags: ["Event Management", "Web App", "Ticketing"],
+      year: "2024"
     }
   ];
 
@@ -118,7 +154,7 @@ const UIGallery = () => {
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             A curated collection of my design work spanning web applications, mobile interfaces, 
-            and design systems. Each piece represents a unique challenge and creative solution.
+            and FUI for Film and TV. Each piece represents a unique challenge and creative solution.
           </p>
         </div>
       </section>
@@ -213,11 +249,11 @@ const UIGallery = () => {
               </DialogHeader>
               
               <div className="flex-1 p-6 overflow-hidden">
-                <div className="relative w-full h-full rounded-xl overflow-hidden bg-gray-100">
+                <div className="relative w-full h-full rounded-xl overflow-hidden bg-gray-100 flex items-center justify-center">
                   <img
                     src={selectedImage.imageUrl}
                     alt={selectedImage.title}
-                    className="w-full h-full object-contain"
+                    className="max-h-[100%] w-auto object-contain"
                   />
                 </div>
               </div>
