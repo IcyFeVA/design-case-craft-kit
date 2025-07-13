@@ -354,6 +354,33 @@ const TeslaWatchApp = () => {
         </div>
       </section>
 
+        {/* Animation Demo */}
+    <section className="py-16">
+        <div className="max-w-4xl mx-auto px-6">
+            <div className="space-y-8">
+                <h2 className="text-3xl font-bold text-gray-900 text-center">
+                    Prototype Animation
+                </h2>
+                <div className="flex justify-center">
+                    <div className="aspect-video w-full max-w-4xl rounded-2xl overflow-hidden shadow-lg bg-black">
+                        <iframe
+                            src="https://player.vimeo.com/video/867596433"
+                            width="100%"
+                            height="100%"
+                            frameBorder="0"
+                            allow="autoplay; fullscreen; picture-in-picture"
+                            allowFullScreen
+                            title="Tesla Watch App Demo"
+                            className="w-full h-full"
+                        ></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
       {/* Reflection & Conclusion */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-6">
@@ -427,6 +454,7 @@ const TeslaWatchApp = () => {
           </div>
         </div>
       </section>
+
 
       {/* CTA Section */}
       <section className="bg-gray-50 py-16">
