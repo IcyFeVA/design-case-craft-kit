@@ -307,7 +307,7 @@ const TeslaWatchApp = () => {
 
       {/* Design Process */}
       <section className="bg-gray-50 py-16">
-        <div className="max-w-4xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-6 pb-8">
           <div className="space-y-12">
             <div className="text-center space-y-4">
               <h2 className="text-3xl font-bold text-gray-900">
@@ -411,10 +411,8 @@ const TeslaWatchApp = () => {
     </section>
 
 
-
-
       {/* UI Screens Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16">
         <div className="max-w-4xl mx-auto px-6">
             <div className="space-y-8">
                 <h2 className="text-3xl font-bold text-gray-900 text-center">
