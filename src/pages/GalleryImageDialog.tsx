@@ -18,11 +18,11 @@ export interface GalleryImageDialogProps {
 
 export function GalleryImageDialog({ open, onOpenChange, item }: GalleryImageDialogProps) {
   return (
-    <Dialog open={open} onOpenChange={open => onOpenChange(open)}>
-      <DialogContent className="max-w-5xl w-[95vw] h-[90vh] p-0 overflow-hidden">
+    <Dialog open={open} onOpenChange={onOpenChange}>
+      <DialogContent className="max-w-5xl w-[95vw] h-[90vh] p-0 flex flex-col">
         {item && (
-          <div className="flex flex-col h-full">
-            <DialogHeader className="p-6 pb-4 border-b">
+          <>
+            <DialogHeader className="p-6 pb-4 border-b z-10 bg-white">
               <div className="flex items-start justify-between">
                 <div className="flex-1">
                   <div className="flex items-center space-x-3 mb-2">
@@ -46,16 +46,14 @@ export function GalleryImageDialog({ open, onOpenChange, item }: GalleryImageDia
                 </Button>
               </div>
             </DialogHeader>
-            <div className="flex-1 p-6 overflow-hidden">
-              <div className="relative w-full h-full rounded-xl overflow-hidden bg-gray-100 flex items-center justify-center">
-                <img
-                  src={item.imageUrl}
-                  alt={item.title}
-                  className="max-h-[100%] w-auto object-contain"
-                />
-              </div>
+            <div className="flex-1 flex items-center justify-center overflow-hidden p-6 bg-gray-100">
+              <img
+                src={item.imageUrl}
+                alt={item.title}
+                className="max-w-full max-h-full object-contain rounded-lg"
+              />
             </div>
-            <div className="p-6 pt-4 border-t bg-gray-50">
+            <div className="p-6 pt-4 border-t z-10 bg-gray-50">
               <div className="flex flex-wrap gap-2">
                 {item.tags.map((tag, index) => (
                   <Badge key={index} variant="secondary" className="text-sm">
@@ -64,7 +62,7 @@ export function GalleryImageDialog({ open, onOpenChange, item }: GalleryImageDia
                 ))}
               </div>
             </div>
-          </div>
+          </>
         )}
       </DialogContent>
     </Dialog>

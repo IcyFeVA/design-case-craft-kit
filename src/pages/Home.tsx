@@ -55,8 +55,7 @@ const Home = () => {
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-3xl">
-              I help companies transform complex problems into intuitive digital solutions. Currently designing at
-              TechCorp, previously at StartupXYZ and DesignStudio.
+              I’m Pascal, a product designer with 9+ years in tech. I build clear, useful interfaces that solve real problems — fast.
             </p>
           </div>
 
@@ -79,7 +78,7 @@ const Home = () => {
           {/* Social Links */}
             <div className="flex items-center space-x-6 pt-4">
             <Link to="https://linkedin.com/in/alexchen" target="_blank" className="text-gray-400 hover:text-gray-600 transition-colors">
-              <Linkedin className="w-5 h-5" />
+              <Instagram className="w-5 h-5" />
             </Link>
             <Link to="https://twitter.com/alexchen" target="_blank" className="text-gray-400 hover:text-gray-600 transition-colors">
               <Twitter className="w-5 h-5" />
@@ -96,10 +95,6 @@ const Home = () => {
         <div className="max-w-4xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center space-y-2">
-              <div className="text-3xl font-bold text-gray-900">9+</div>
-              <div className="text-sm text-gray-600">Years Experience</div>
-            </div>
-            <div className="text-center space-y-2">
               <div className="text-3xl font-bold text-gray-900">150+</div>
               <div className="text-sm text-gray-600">Projects Completed</div>
             </div>
@@ -108,12 +103,21 @@ const Home = () => {
               <div className="text-sm text-gray-600">Happy Clients</div>
             </div>
             <div className="text-center space-y-2">
+              <div className="text-3xl font-bold text-gray-900">9+</div>
+              <div className="text-sm text-gray-600">Years Experience</div>
+            </div>
+            <div className="text-center space-y-2">
               <div className="text-3xl font-bold text-gray-900">1</div>
               <div className="text-sm text-gray-600">Design Award</div>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Skills Section */}
+      {/* <section className="py-20">
+        <img src="/img/core-skills.png" alt="Core Skills" className="max-w-6xl mx-auto px-6 py-20" />
+      </section> */}
 
       {/* Featured Work */}
       <section id="work" className="max-w-6xl mx-auto px-6 py-20">
@@ -384,16 +388,15 @@ const Home = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900">About Me</h2>
               <div className="space-y-4 text-lg text-gray-700 leading-relaxed">
                 <p>
-                  I'm a product designer with 5+ years of experience creating digital experiences that users love. My
-                  background in psychology helps me understand user behavior and design solutions that truly resonate.
+                  I'm a product designer with 9+ years of experience creating digital experiences that users love. My
+                  interest in psychology helps me understand user behavior and design solutions that truly resonate.
                 </p>
                 <p>
-                  I specialize in complex B2B applications, design systems, and user research. I believe great design
+                  I specialize in complex applications, design systems, and UI design. I believe great design
                   happens when we deeply understand the problem we're solving and the people we're solving it for.
                 </p>
                 <p>
-                  When I'm not designing, you'll find me hiking, experimenting with new coffee brewing methods, or
-                  contributing to open-source design tools.
+                  When I'm not designing, you'll find me hiking, playing video games, or learning new things.
                 </p>
               </div>
             </div>
@@ -401,20 +404,19 @@ const Home = () => {
             <div className="space-y-6">
               <div className="aspect-square bg-gradient-to-br from-gray-200 to-gray-300 rounded-2xl flex items-center justify-center">
                 <div className="text-center space-y-2">
-                  <div className="w-16 h-16 bg-gray-400 rounded-full mx-auto"></div>
-                  <p className="text-gray-600 font-medium">Profile Photo</p>
+                  <img src="/img/itsame.jpg" alt="Alex Chen" className="rounded-3xl" />
                 </div>
               </div>
 
               <div className="space-y-4">
                 <h3 className="text-xl font-semibold text-gray-900">Skills & Expertise</h3>
                 <div className="flex flex-wrap gap-2">
-                  <Badge variant="secondary">User Research</Badge>
+                  <Badge variant="secondary">3D</Badge>
                   <Badge variant="secondary">Interaction Design</Badge>
                   <Badge variant="secondary">Prototyping</Badge>
                   <Badge variant="secondary">Design Systems</Badge>
                   <Badge variant="secondary">Figma</Badge>
-                  <Badge variant="secondary">Sketch</Badge>
+                  <Badge variant="secondary">After Effects</Badge>
                   <Badge variant="secondary">Adobe Creative Suite</Badge>
                   <Badge variant="secondary">HTML/CSS</Badge>
                 </div>

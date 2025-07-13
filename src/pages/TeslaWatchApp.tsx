@@ -16,12 +16,6 @@ import CaseStudyNav from "@/components/CaseStudyNav";
 import { GalleryImageDialog } from "./GalleryImageDialog";
 import React, { useState } from "react";
 
-const fakeImages = [
-  "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?w=400&h=225&fit=crop",
-  "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?w=400&h=225&fit=crop",
-  "https://images.unsplash.com/photo-1483058712412-4245e9b90334?w=400&h=225&fit=crop",
-  "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&h=225&fit=crop",
-];
 
 type Screenshot = {
   imageUrl: string;
@@ -33,38 +27,32 @@ type Screenshot = {
 };
 
 const screenshots: Screenshot[] = [
-    {
-        imageUrl: fakeImages[0],
-        title: "Tesla Home",
-        description: "Main dashboard for Tesla Watch App.",
+      {
+        imageUrl: '/img/tesla/process3.png',
+        title: "Process",
+        description: "First draft looks nice, but not usable (text and buttons too small).",
         category: "UI",
         year: 2023,
-        tags: ["Dashboard", "Tesla", "Watch"],
+        tags: ["Dashboard", "Tesla", "Apple Watch"],
     },
     {
-        imageUrl: fakeImages[1],
-        title: "Car Controls",
-        description: "Control your Tesla from your wrist.",
-        category: "Controls",
+        imageUrl: '/img/tesla/process1.png',
+        title: "Process",
+        description: "Iterations: Home Screen / Summoning Car",
+        category: "UI",
         year: 2023,
-        tags: ["Controls", "Remote", "Watch"],
+        tags: ["Dashboard", "Tesla", "Apple Watch"],
     },
     {
-        imageUrl: fakeImages[2],
-        title: "Summon Gesture",
-        description: "Gesture-based car summoning.",
-        category: "Gesture",
+        imageUrl: '/img/tesla/process2.png',
+        title: "Process",
+        description: "Iterations: Touch Surface",
+        category: "UI",
         year: 2023,
-        tags: ["Gesture", "Summon", "UX"],
+        tags: ["Dashboard", "Tesla", "Apple Watch"],
     },
-    {
-        imageUrl: fakeImages[3],
-        title: "Animation Demo",
-        description: "Animated transitions for concept validation.",
-        category: "Animation",
-        year: 2023,
-        tags: ["Animation", "Demo", "Concept"],
-    },
+
+
 ];
 
 type ScreenshotsRowProps = {
@@ -84,9 +72,9 @@ function ScreenshotsRow({ screenshots }: ScreenshotsRowProps) {
                     className="mr-4 text-sm font-medium text-gray-600"
                     style={{ minWidth: 80 }}
                 >
-                    Screenshots
+                    Process Shots
                 </span>
-                {screenshots.map((s, i) => (
+                {screenshots.map((s, i) => ( 
                     <div
                         key={i}
                         style={{
@@ -109,6 +97,7 @@ function ScreenshotsRow({ screenshots }: ScreenshotsRowProps) {
                             textShadow: "0 1px 4px rgba(0,0,0,0.4)",
                             border: "3px solid #fff",
                             boxSizing: "border-box",
+                            transform: Math.random() > 0.5 ? "rotate(3deg)" : "rotate(-3deg)",
                         }}
                         title={s.title}
                         onClick={() => setOpenIndex(i)}
@@ -132,10 +121,10 @@ const TeslaWatchApp = () => {
 
   const uiScreens: Screenshot[] = [
       {
-          imageUrl: '/placeholder.svg',
-          title: "Climate Controls",
+          imageUrl: '/img/tesla/final1.png',
+          title: "Mockup: What if Tesla had a Watch App?",
           description: "Adjust in-car climate settings from the watch.",
-          category: "UI",
+          category: "UX/UI",
           year: 2023,
           tags: ["Climate", "Controls", "Watch"],
       },
@@ -143,7 +132,7 @@ const TeslaWatchApp = () => {
           imageUrl: '/placeholder.svg',
           title: "Music Player",
           description: "Control your music playback on the go.",
-          category: "UI",
+          category: "UX/UI",
           year: 2023,
           tags: ["Music", "Media", "Watch"],
       },
@@ -151,7 +140,7 @@ const TeslaWatchApp = () => {
           imageUrl: '/placeholder.svg',
           title: "Navigation",
           description: "Get directions and see your route on your wrist.",
-          category: "UI",
+          category: "UX/UI",
           year: 2023,
           tags: ["Navigation", "Maps", "Watch"],
       },
@@ -226,8 +215,8 @@ const TeslaWatchApp = () => {
                   <p className="text-gray-600">Apple Watch App</p>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900">Client</h3>
-                  <p className="text-gray-600">Personal Project</p>
+                  <h3 className="font-semibold text-gray-900">Figma / After Effects</h3>
+                  <p className="text-gray-600">Software</p>
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900">Role</h3>
@@ -236,10 +225,10 @@ const TeslaWatchApp = () => {
               </div>
             </div>
             <div className="aspect-video bg-gradient-to-br from-gray-50 to-blue-100 rounded-2xl flex items-center justify-center">
-              <div className="text-center space-y-2">
-                <Watch className="w-16 h-16 text-blue-600 mx-auto" />
-                <p className="text-blue-600 font-medium">Tesla Watch App</p>
-              </div>
+              <img
+                src="/img/tesla/thumb.png"
+                alt="Tesla Watch App Hero Image"
+                className="w-full h-full object-cover rounded-2xl"/>
             </div>
           </div>
         </div>
@@ -398,7 +387,6 @@ const TeslaWatchApp = () => {
                             src="https://player.vimeo.com/video/867596433"
                             width="100%"
                             height="100%"
-                            frameBorder="0"
                             allow="autoplay; fullscreen; picture-in-picture"
                             allowFullScreen
                             title="Tesla Watch App Demo"
@@ -416,7 +404,7 @@ const TeslaWatchApp = () => {
         <div className="max-w-4xl mx-auto px-6">
             <div className="space-y-8">
                 <h2 className="text-3xl font-bold text-gray-900 text-center">
-                    More UI Screens
+                    More UI
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {uiScreens.map((screen, index) => (
@@ -424,6 +412,7 @@ const TeslaWatchApp = () => {
                             key={index}
                             className="w-full rounded-2xl shadow-lg overflow-hidden transform transition-transform hover:scale-105 cursor-pointer aspect-video"
                             onClick={() => setOpenUiScreenIndex(index)}
+                            style={{transform: `rotate(${(-10 + Math.random()*20)}deg)`, border: '5px solid #fff'}}
                         >
                             <CardContent className="p-0">
                                 <img src={screen.imageUrl} alt={screen.title} className="w-full h-full object-cover" />
