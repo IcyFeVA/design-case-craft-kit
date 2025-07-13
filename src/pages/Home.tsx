@@ -296,6 +296,64 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Case Studies Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Featured Case Studies</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Deep dives into design challenges, processes, and solutions
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* vSTAGE Case Study */}
+            <Link to="/case-study" className="group">
+              <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 h-full">
+                <div className="h-48 bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl mb-6 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-gray-300 rounded-lg mx-auto mb-3"></div>
+                    <p className="text-gray-600 font-medium">vSTAGE Interface</p>
+                  </div>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  vSTAGE: 3D Editor Redesign
+                </h3>
+                <p className="text-gray-600 mb-4 leading-relaxed">
+                  Transforming a complex CAD tool into an intuitive 3D presentation engine for both experts and newcomers.
+                </p>
+                <div className="flex items-center text-blue-600 font-medium">
+                  Read Case Study
+                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </div>
+            </Link>
+
+            {/* MindSpace Case Study */}
+            <Link to="/mindspace-case-study" className="group">
+              <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 h-full">
+                <div className="h-48 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-xl mb-6 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-blue-200 rounded-lg mx-auto mb-3"></div>
+                    <p className="text-blue-600 font-medium">MindSpace App</p>
+                  </div>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  MindSpace: Mental Health Companion
+                </h3>
+                <p className="text-gray-600 mb-4 leading-relaxed">
+                  Designing accessible mental health support for college students through crisis intervention and peer connection.
+                </p>
+                <div className="flex items-center text-blue-600 font-medium">
+                  Read Case Study
+                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* About Section */}
       <section id="about" className="bg-gray-50 py-20">
         <div className="max-w-4xl mx-auto px-6">

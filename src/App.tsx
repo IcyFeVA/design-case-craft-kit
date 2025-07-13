@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Index from "./pages/Index";
 import UIGallery from "./pages/UIGallery";
+import MindSpaceCaseStudy from "./pages/MindSpaceCaseStudy";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -20,6 +21,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/case-study" element={<Index />} />
+          <Route path="/mindspace-case-study" element={<MindSpaceCaseStudy />} />
           <Route path="/ui-gallery" element={<UIGallery />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
