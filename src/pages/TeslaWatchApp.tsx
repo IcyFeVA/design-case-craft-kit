@@ -154,20 +154,20 @@ const TeslaWatchApp = () => {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 py-4">
               <div className="text-center">
-                <div className="text-2xl font-bold text-gray-900">Personal</div>
-                <div className="text-sm text-gray-600">Client</div>
+                <div className="text-2xl font-bold text-gray-900">Apple Watch</div>
+                <div className="text-sm text-gray-600">Platform</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-gray-900">Concept</div>
-                <div className="text-sm text-gray-600">Type</div>
+                <div className="text-2xl font-bold text-gray-900">Gesture UX</div>
+                <div className="text-sm text-gray-600">Interaction</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-gray-900">Demo</div>
-                <div className="text-sm text-gray-600">Video</div>
+                <div className="text-2xl font-bold text-gray-900">Animation</div>
+                <div className="text-sm text-gray-600">Validation</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-gray-900">007</div>
-                <div className="text-sm text-gray-600">Inspired</div>
+                <div className="text-2xl font-bold text-gray-900">007 Bond</div>
+                <div className="text-sm text-gray-600">Inspiration</div>
               </div>
             </div>
           </div>
