@@ -8,7 +8,7 @@ const Index = () => {
     <div className="min-h-screen bg-white">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <Link to="/" className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 transition-colors">
               <ArrowLeft className="w-4 h-4" />
@@ -20,7 +20,7 @@ const Index = () => {
       </nav>
 
       {/* Main Content */}
-      <main className="pt-20 pb-16">
+      <main className="pt-20 pb-16 ">
         <div className="max-w-4xl mx-auto px-6">
           
           {/* Hero Section */}

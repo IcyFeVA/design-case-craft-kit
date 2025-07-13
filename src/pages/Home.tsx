@@ -96,20 +96,20 @@ const Home = () => {
         <div className="max-w-4xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center space-y-2">
-              <div className="text-3xl font-bold text-gray-900">5+</div>
+              <div className="text-3xl font-bold text-gray-900">9+</div>
               <div className="text-sm text-gray-600">Years Experience</div>
             </div>
             <div className="text-center space-y-2">
-              <div className="text-3xl font-bold text-gray-900">50+</div>
+              <div className="text-3xl font-bold text-gray-900">150+</div>
               <div className="text-sm text-gray-600">Projects Completed</div>
             </div>
             <div className="text-center space-y-2">
-              <div className="text-3xl font-bold text-gray-900">15+</div>
+              <div className="text-3xl font-bold text-gray-900">30+</div>
               <div className="text-sm text-gray-600">Happy Clients</div>
             </div>
             <div className="text-center space-y-2">
-              <div className="text-3xl font-bold text-gray-900">3</div>
-              <div className="text-sm text-gray-600">Design Awards</div>
+              <div className="text-3xl font-bold text-gray-900">1</div>
+              <div className="text-sm text-gray-600">Design Award</div>
             </div>
           </div>
         </div>

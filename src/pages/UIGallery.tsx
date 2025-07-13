@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { ArrowLeft, Download, X } from "lucide-react";
 import { Link } from "react-router-dom";
+import Navbar from "@/components/ui/navbar";
 
 interface GalleryItem {
   id: number;
@@ -132,32 +133,7 @@ const UIGallery = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
-        <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <div className="font-semibold text-lg">Portfolio</div>
-            <div className="hidden md:flex items-center space-x-8">
-                <Link to="/" className="text-gray-600 hover:text-gray-900 transition-colors">
-                Work
-                </Link>
-                <Link to="/ui-gallery" className="text-gray-600 font-semibold hover:text-gray-900 transition-colors">
-                Gallery
-                </Link>
-                <Link to="#about" className="text-gray-600 hover:text-gray-900 transition-colors">
-                About
-                </Link>
-                <Link to="#contact" className="text-gray-600 hover:text-gray-900 transition-colors">
-                Contact
-                </Link>
-            </div>
-
-            <Button variant="outline" className="gap-2 bg-transparent">
-              <Download className="w-4 h-4" />
-              Resume
-            </Button>
-          </div>
-        </div>
-      </nav>
+      <Navbar highlight="gallery" />
 
       {/* Header */}
       <section className="max-w-4xl mx-auto px-6 py-20">
