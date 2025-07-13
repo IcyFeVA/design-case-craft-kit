@@ -319,27 +319,29 @@ const TeslaWatchApp = () => {
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">
                   Key Features
                 </h3>
-                <div className="space-y-4">
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-700">
-                      Gesture-based car summoning
-                    </span>
-                    <span className="font-bold text-green-600">
-                      ✓ Concepted
-                    </span>
+                <div className="grid grid-cols-2 gap-x-6 gap-y-4">
+                  <div className="flex items-center">
+                    <span className="text-gray-700">Gesture-based car summoning</span>
                   </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-700">
-                      Minimalist UI for small screens
-                    </span>
+                  <div className="flex items-center justify-end">
+                    <span className="font-bold text-green-600">✓ Concepted</span>
+                  </div>
+                  <div className="flex items-center">
+                    <span className="text-gray-700">Minimalist UI for small screens</span>
+                  </div>
+                  <div className="flex items-center justify-end">
                     <span className="font-bold text-green-600">✓ Designed</span>
                   </div>
-                  <div className="flex justify-between items-center">
+                  <div className="flex items-center">
                     <span className="text-gray-700">Animated transitions</span>
+                  </div>
+                  <div className="flex items-center justify-end">
                     <span className="font-bold text-green-600">✓ Demoed</span>
                   </div>
-                  <div className="flex justify-between items-center">
+                  <div className="flex items-center">
                     <span className="text-gray-700">007-inspired UX</span>
+                  </div>
+                  <div className="flex items-center justify-end">
                     <span className="font-bold text-green-600">✓ Ideated</span>
                   </div>
                 </div>
