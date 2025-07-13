@@ -21,11 +21,11 @@ const Home = () => {
       link: "/case-study"
     },
     {
-      title: "E-commerce Platform",
-      category: "Web Application", 
+      title: "E-commerce Platform", 
+      category: "Web Application",
       description: "Complete redesign of a B2B marketplace, increasing conversion rates by 40% through improved user flows.",
       tags: ["Web Design", "User Research", "Conversion Optimization"],
-      link: "/case-study"
+      link: "/ecommerce-case-study"
     },
     {
       title: "Mobile Banking App",
@@ -169,7 +169,7 @@ const Home = () => {
 
           {/* Other Projects Grid */}
           <div className="grid md:grid-cols-2 gap-8">
-            <Link to="/case-study">
+            <Link to="/ecommerce-case-study">
               <Card className="border-0 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
                 <CardContent className="p-0">
                   <div className="aspect-[4/3] bg-gradient-to-br from-blue-50 to-indigo-50 rounded-t-lg flex items-center justify-center border-b border-blue-100">
@@ -181,15 +181,15 @@ const Home = () => {
                   <div className="p-6 space-y-4">
                     <div className="flex flex-wrap gap-2">
                       <Badge variant="outline" className="text-xs">
-                        Mobile App
+                        Web App
                       </Badge>
                       <Badge variant="outline" className="text-xs">
                         E-commerce
                       </Badge>
                     </div>
-                    <h4 className="text-xl font-semibold text-gray-900">ShopFlow Mobile</h4>
+                    <h4 className="text-xl font-semibold text-gray-900">Checkout Optimization</h4>
                     <p className="text-gray-600 text-sm leading-relaxed">
-                      Redesigned mobile shopping experience resulting in 40% increase in conversion rates
+                      Reduced cart abandonment by 24% through simplified checkout design and improved user experience
                     </p>
                     <Button variant="ghost" className="gap-2 p-0 h-auto text-sm">
                       View Project
@@ -291,6 +291,86 @@ const Home = () => {
                   </div>
                 </CardContent>
               </Card>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Case Studies Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Featured Case Studies</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Deep dives into design challenges, processes, and solutions
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* vSTAGE Case Study */}
+            <Link to="/case-study" className="group">
+              <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 h-full">
+                <div className="h-48 bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl mb-6 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-gray-300 rounded-lg mx-auto mb-3"></div>
+                    <p className="text-gray-600 font-medium">vSTAGE Interface</p>
+                  </div>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  vSTAGE: 3D Editor Redesign
+                </h3>
+                <p className="text-gray-600 mb-4 leading-relaxed">
+                  Transforming a complex CAD tool into an intuitive 3D presentation engine for both experts and newcomers.
+                </p>
+                <div className="flex items-center text-blue-600 font-medium">
+                  Read Case Study
+                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </div>
+            </Link>
+
+            {/* E-commerce Case Study */}
+            <Link to="/ecommerce-case-study" className="group">
+              <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 h-full">
+                <div className="h-48 bg-gradient-to-br from-green-50 to-emerald-100 rounded-xl mb-6 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-green-200 rounded-lg mx-auto mb-3"></div>
+                    <p className="text-green-600 font-medium">E-commerce Platform</p>
+                  </div>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  Checkout Optimization
+                </h3>
+                <p className="text-gray-600 mb-4 leading-relaxed">
+                  Reducing cart abandonment by 24% through simplified checkout design and transparent pricing strategies.
+                </p>
+                <div className="flex items-center text-blue-600 font-medium">
+                  Read Case Study
+                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </div>
+            </Link>
+
+            {/* MindSpace Case Study */}
+            <Link to="/mindspace-case-study" className="group">
+              <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 h-full">
+                <div className="h-48 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-xl mb-6 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-blue-200 rounded-lg mx-auto mb-3"></div>
+                    <p className="text-blue-600 font-medium">MindSpace App</p>
+                  </div>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  MindSpace: Mental Health Companion
+                </h3>
+                <p className="text-gray-600 mb-4 leading-relaxed">
+                  Designing accessible mental health support for college students through crisis intervention and peer connection.
+                </p>
+                <div className="flex items-center text-blue-600 font-medium">
+                  Read Case Study
+                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </div>
             </Link>
           </div>
         </div>
