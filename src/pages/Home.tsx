@@ -5,6 +5,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { ArrowRight, Github, Linkedin, Instagram, Download, Twitter, ExternalLink, Grid3X3, Star, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/ui/navbar";
+import ScrollToAnchor from "@/components/ScrollToAnchor";
 
 const Home = () => {
   const skills = [
@@ -37,6 +38,8 @@ const Home = () => {
   ];
 
   return (
+    <>
+    <ScrollToAnchor />
     <div className="min-h-screen bg-white">
       {/* Navigation */}
       <Navbar highlight="work" />
@@ -55,7 +58,7 @@ const Home = () => {
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-3xl">
-              I’m Pascal, a product designer with 9+ years in tech. I build clear, useful interfaces that solve real problems — fast.
+              I’m Pascal, a product designer with 9+ years in tech. I build clear, useful experiences that solve real problems — fast.
             </p>
           </div>
 
@@ -301,7 +304,7 @@ const Home = () => {
       </section>
 
       {/* Case Studies Section */}
-      <section className="py-20 bg-gray-50">
+      {/* <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Featured Case Studies</h2>
@@ -311,7 +314,6 @@ const Home = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {/* vSTAGE Case Study */}
             <Link to="/case-study" className="group">
               <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 h-full">
                 <div className="h-48 bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl mb-6 flex items-center justify-center">
@@ -333,7 +335,6 @@ const Home = () => {
               </div>
             </Link>
 
-            {/* E-commerce Case Study */}
             <Link to="/ecommerce-case-study" className="group">
               <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 h-full">
                 <div className="h-48 bg-gradient-to-br from-green-50 to-emerald-100 rounded-xl mb-6 flex items-center justify-center">
@@ -355,7 +356,6 @@ const Home = () => {
               </div>
             </Link>
 
-            {/* MindSpace Case Study */}
             <Link to="/mindspace-case-study" className="group">
               <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 h-full">
                 <div className="h-48 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-xl mb-6 flex items-center justify-center">
@@ -378,7 +378,7 @@ const Home = () => {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* About Section */}
       <section id="about" className="bg-gray-50 py-20">
@@ -443,14 +443,13 @@ const Home = () => {
                   ))}
                 </div>
                 <p className="text-gray-700 leading-relaxed">
-                  "Alex has an incredible ability to translate complex business requirements into elegant, user-friendly
-                  designs. Their attention to detail and user empathy is unmatched."
+                  "Pascal is both a skilled and knowledgeable UI/UX Designer, as well as a great team leader. I highly recommend Pascal to any organization who needs a great UI/UX team leader or instructor."
                 </p>
                 <div className="flex items-center space-x-3">
                   <div className="w-10 h-10 bg-gray-200 rounded-full"></div>
                   <div>
-                    <p className="font-semibold text-gray-900">Sarah Johnson</p>
-                    <p className="text-sm text-gray-600">Product Manager, TechCorp</p>
+                    <p className="font-semibold text-gray-900">Dougal Mac Gregor</p>
+                    <p className="text-sm text-gray-600">Executive Coach & Software Engineer, Ryv Consulting</p>
                   </div>
                 </div>
               </CardContent>
@@ -464,18 +463,18 @@ const Home = () => {
                   ))}
                 </div>
                 <p className="text-gray-700 leading-relaxed">
-                  "Working with Alex was a game-changer for our product. They brought fresh perspectives and helped us
-                  achieve a 40% increase in user engagement through thoughtful design."
+                  "I wholeheartedly recommend Pascal for any position requiring expertise in education and UX/UI Design."
                 </p>
                 <div className="flex items-center space-x-3">
                   <div className="w-10 h-10 bg-gray-200 rounded-full"></div>
                   <div>
-                    <p className="font-semibold text-gray-900">Michael Rodriguez</p>
-                    <p className="text-sm text-gray-600">CEO, StartupXYZ</p>
+                    <p className="font-semibold text-gray-900">Gabriela Kurtz, Phd.</p>
+                    <p className="text-sm text-gray-600">Ex-Program Manager, Tamwood Careers</p>
                   </div>
                 </div>
               </CardContent>
             </Card>
+
           </div>
         </div>
       </section>
@@ -534,6 +533,7 @@ const Home = () => {
         </div>
       </footer>
     </div>
+    </>
   );
 };
 

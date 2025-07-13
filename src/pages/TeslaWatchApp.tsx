@@ -122,27 +122,19 @@ const TeslaWatchApp = () => {
   const uiScreens: Screenshot[] = [
       {
           imageUrl: '/img/tesla/final1.png',
-          title: "Mockup: What if Tesla had a Watch App?",
-          description: "Adjust in-car climate settings from the watch.",
+          title: "What if Tesla had a Apple Watch App?",
+          description: "Mockup",
           category: "UX/UI",
           year: 2023,
           tags: ["Climate", "Controls", "Watch"],
       },
       {
-          imageUrl: '/placeholder.svg',
-          title: "Music Player",
-          description: "Control your music playback on the go.",
+          imageUrl: '/img/tesla/final2.jpg',
+          title: "On the Apple Watch Ultra",
+          description: "Mockup",
           category: "UX/UI",
           year: 2023,
-          tags: ["Music", "Media", "Watch"],
-      },
-      {
-          imageUrl: '/placeholder.svg',
-          title: "Navigation",
-          description: "Get directions and see your route on your wrist.",
-          category: "UX/UI",
-          year: 2023,
-          tags: ["Navigation", "Maps", "Watch"],
+          tags: ["Climate", "Controls", "Watch"],
       },
   ];
 
@@ -410,11 +402,11 @@ const TeslaWatchApp = () => {
                     {uiScreens.map((screen, index) => (
                         <Card
                             key={index}
-                            className="w-full rounded-2xl shadow-lg overflow-hidden transform transition-transform hover:scale-105 cursor-pointer aspect-video"
+                            className="w-full rounded-2xl shadow-xl overflow-hidden transform transition-transform hover:scale-105 cursor-pointer aspect-video"
                             onClick={() => setOpenUiScreenIndex(index)}
-                            style={{transform: `rotate(${(-10 + Math.random()*20)}deg)`, border: '5px solid #fff'}}
+                            style={{transform: `rotate(${(-5 + Math.random()*10)}deg)`, border: '5px solid #fff'}}
                         >
-                            <CardContent className="p-0">
+                            <CardContent className="p-0 w-full h-full">
                                 <img src={screen.imageUrl} alt={screen.title} className="w-full h-full object-cover" />
                             </CardContent>
                         </Card>
@@ -506,7 +498,7 @@ const TeslaWatchApp = () => {
 
 
       {/* CTA Section */}
-      <section className="bg-gray-50 py-16">
+      {/* <section className="bg-gray-50 py-16">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <div className="space-y-8">
             <h2 className="text-3xl font-bold text-gray-900">
@@ -534,7 +526,8 @@ const TeslaWatchApp = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+
     </main>
   );
 };
