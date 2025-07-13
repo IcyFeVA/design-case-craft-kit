@@ -128,6 +128,37 @@ function ScreenshotsRow({ screenshots }: ScreenshotsRowProps) {
 
 
 const TeslaWatchApp = () => {
+  const [openUiScreenIndex, setOpenUiScreenIndex] = useState<number | null>(null);
+
+  const uiScreens: Screenshot[] = [
+      {
+          imageUrl: '/placeholder.svg',
+          title: "Climate Controls",
+          description: "Adjust in-car climate settings from the watch.",
+          category: "UI",
+          year: 2023,
+          tags: ["Climate", "Controls", "Watch"],
+      },
+      {
+          imageUrl: '/placeholder.svg',
+          title: "Music Player",
+          description: "Control your music playback on the go.",
+          category: "UI",
+          year: 2023,
+          tags: ["Music", "Media", "Watch"],
+      },
+      {
+          imageUrl: '/placeholder.svg',
+          title: "Navigation",
+          description: "Get directions and see your route on your wrist.",
+          category: "UI",
+          year: 2023,
+          tags: ["Navigation", "Maps", "Watch"],
+      },
+  ];
+
+  const selectedUiScreen = openUiScreenIndex !== null ? uiScreens[openUiScreenIndex] : null;
+
   return (
     <main className="pt-8 pb-16">
       <CaseStudyNav />
@@ -380,6 +411,37 @@ const TeslaWatchApp = () => {
     </section>
 
 
+
+
+      {/* UI Screens Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-6">
+            <div className="space-y-8">
+                <h2 className="text-3xl font-bold text-gray-900 text-center">
+                    UI Screens
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {uiScreens.map((screen, index) => (
+                        <Card
+                            key={index}
+                            className="w-full rounded-2xl shadow-lg overflow-hidden transform transition-transform hover:scale-105 cursor-pointer aspect-video"
+                            onClick={() => setOpenUiScreenIndex(index)}
+                        >
+                            <CardContent className="p-0">
+                                <img src={screen.imageUrl} alt={screen.title} className="w-full h-full object-cover" />
+                            </CardContent>
+                        </Card>
+                    ))}
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <GalleryImageDialog
+          open={!!selectedUiScreen}
+          onOpenChange={(open) => setOpenUiScreenIndex(open ? openUiScreenIndex : null)}
+          item={selectedUiScreen}
+      />
 
       {/* Reflection & Conclusion */}
       <section className="py-16">
