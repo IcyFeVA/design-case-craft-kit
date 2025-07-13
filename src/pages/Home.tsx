@@ -2,10 +2,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { ArrowRight, Github, Linkedin, Instagram, Download, Twitter, ExternalLink, Grid3X3, Star, Mail } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Instagram, Download, Twitter, ExternalLink, Grid3X3, Star, Mail, ArrowDown, Dribbble } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/ui/navbar";
-import ScrollToAnchor from "@/components/ScrollToAnchor";
 
 const Home = () => {
   const skills = [
@@ -38,19 +37,19 @@ const Home = () => {
   ];
 
   return (
-    <>
-    <ScrollToAnchor />
     <div className="min-h-screen bg-white">
       {/* Navigation */}
       <Navbar highlight="work" />
+
+      <div className="max-w-6xl mx-auto py-8"></div>
 
       {/* Hero Section */}
       <section className="max-w-4xl mx-auto px-6 py-20">
         <div className="space-y-8">
           <div className="space-y-6">
-            <Badge variant="outline" className="text-sm font-medium">
+            {/* <Badge variant="outline" className="text-sm font-medium">
               Available for new opportunities
-            </Badge>
+            </Badge> */}
 
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
               Product Designer crafting
@@ -63,10 +62,10 @@ const Home = () => {
           </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-            <Link to="/case-study">
+            <Link to="/#work">
               <Button size="lg" className="gap-2">
               View My Work
-              <ArrowRight className="w-4 h-4" />
+              <ArrowDown className="w-4 h-4" />
               </Button>
             </Link>
             <Link to="/ui-gallery">
@@ -80,15 +79,16 @@ const Home = () => {
 
           {/* Social Links */}
             <div className="flex items-center space-x-6 pt-4">
-            <Link to="https://linkedin.com/in/alexchen" target="_blank" className="text-gray-400 hover:text-gray-600 transition-colors">
+            <Link to="https://instagram.com/icyfeva" target="_blank" className="text-gray-400 hover:text-gray-600 transition-colors">
               <Instagram className="w-5 h-5" />
             </Link>
-            <Link to="https://twitter.com/alexchen" target="_blank" className="text-gray-400 hover:text-gray-600 transition-colors">
-              <Twitter className="w-5 h-5" />
+            <Link to="https://dribbble.com/icyfeva" target="_blank" className="text-gray-400 hover:text-gray-600 transition-colors">
+              <Dribbble className="w-5 h-5" />
             </Link>
-            <Link to="https://alexchen.design" target="_blank" className="text-gray-400 hover:text-gray-600 transition-colors">
+            {/* <Link to="https://bsky.app/profile/icyfeva.bsky.social" target="_blank" className="text-gray-400 hover:text-gray-600 transition-colors">
               <ExternalLink className="w-5 h-5" />
-            </Link>
+              Bluesky
+            </Link> */}
             </div>
         </div>
       </section>
@@ -533,7 +533,6 @@ const Home = () => {
         </div>
       </footer>
     </div>
-    </>
   );
 };
 

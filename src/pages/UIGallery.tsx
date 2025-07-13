@@ -135,10 +135,12 @@ const UIGallery = () => {
       {/* Navigation */}
       <Navbar highlight="gallery" />
 
+      <div className="max-w-6xl mx-auto py-8"></div>
+
       {/* Header */}
       <section className="max-w-4xl mx-auto px-6 py-20">
         <div className="space-y-8">
-          <div className="space-y-6">
+          <div className="space-y-6 align-center text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
               UI Gallery
             </h1>

@@ -14,7 +14,7 @@ const Navbar: FC<NavbarProps> = ({ highlight }) => (
     <div className="max-w-6xl mx-auto px-6 lg:px-8">
       <div className="flex items-center justify-between h-16">
         <Link to="/#">
-          <div className="font-semibold text-lg">Portfolio</div>
+          <div className="font-semibold text-lg">Pascal Zirn <span className="font-light text-sm">- Vancouver, Canada</span></div>
         </Link>
         <div className="hidden md:flex items-center space-x-8">
           <Link
@@ -58,10 +58,10 @@ const Navbar: FC<NavbarProps> = ({ highlight }) => (
             Contact
           </Link> */}
         </div>
-        <Button variant="outline" className="gap-2 bg-transparent">
+        {/* <Button variant="outline" className="gap-2 bg-transparent">
           <Download className="w-4 h-4" />
           Resume
-        </Button>
+        </Button> */}
       </div>
     </div>
   </nav>
