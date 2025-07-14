@@ -34,7 +34,7 @@ const Navbar: FC<NavbarProps> = ({ highlight }) => (
             Gallery
           </Link>
           <Link
-            to="/3d-motion"
+            to="/motion"
             className={`text-gray-600 hover:text-gray-900 transition-colors ${
               highlight === "motion" ? "font-semibold" : ""
             }`}

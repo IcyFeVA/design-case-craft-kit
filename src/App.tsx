@@ -14,6 +14,7 @@ import TxcmsCaseStudy from "./pages/TxcmsCaseStudy";
 import TeslaWatchApp from "./pages/TeslaWatchApp";
 import NotFound from "./pages/NotFound";
 import VStage from "./pages/VStage";
+import Motion from "./pages/3DMotion";
 
 const queryClient = new QueryClient();
 
@@ -60,9 +61,7 @@ const App = () => (
           <Route path="/tesla-watch-app" element={<TeslaWatchApp />} />
           <Route path="/vstage" element={<VStage />} />
           <Route path="/ui-gallery" element={<UIGallery />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THIS LINE */}
-          {/* Catch-all route for 404 Not Found */}
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/motion" element={<Motion />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
