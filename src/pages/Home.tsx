@@ -173,14 +173,11 @@ const Home = () => {
 
           {/* Other Projects Grid */}
           <div className="grid md:grid-cols-2 gap-8">
-            <Link to="/ecommerce-case-study">
+            <Link to="/txcms-case-study">
               <Card className="border-0 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
                 <CardContent className="p-0">
-                  <div className="aspect-[4/3] bg-gradient-to-br from-blue-50 to-indigo-50 rounded-t-lg flex items-center justify-center border-b border-blue-100">
-                    <div className="text-center space-y-2">
-                      <div className="w-12 h-12 bg-blue-200 rounded-lg mx-auto"></div>
-                      <p className="text-blue-600 font-medium text-sm">E-commerce Platform</p>
-                    </div>
+                    <div className="aspect-video bg-gradient-to-br from-green-50 to-emerald-50 rounded-t-lg flex items-center justify-center border-b border-green-100">
+                    <img src="/img/tx/thumb.png" alt="vSTAGE Hero" className="aspect-video w-full object-cover rounded-lg" />
                   </div>
                   <div className="p-6 space-y-4">
                     <div className="flex flex-wrap gap-2">
@@ -188,12 +185,15 @@ const Home = () => {
                         Web App
                       </Badge>
                       <Badge variant="outline" className="text-xs">
-                        E-commerce
+                        CMS
+                      </Badge>
+                      <Badge variant="outline" className="text-xs">
+                        React
                       </Badge>
                     </div>
-                    <h4 className="text-xl font-semibold text-gray-900">Checkout Optimization</h4>
+                    <h4 className="text-xl font-semibold text-gray-900">A Unique and Powerful CMS</h4>
                     <p className="text-gray-600 text-sm leading-relaxed">
-                      Reduced cart abandonment by 24% through simplified checkout design and improved user experience
+                      Reduced user frustration (by a lot), designed new interactions, and invented a new way to automatically crop images
                     </p>
                     <Button variant="ghost" className="gap-2 p-0 h-auto text-sm">
                       View Project
@@ -203,30 +203,6 @@ const Home = () => {
                 </CardContent>
               </Card>
             </Link>
-                        {/* <div className="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl flex items-center justify-center border border-gray-200">
-              <div className="text-center space-y-2">
-                <div className="w-16 h-16 bg-gray-300 rounded-lg mx-auto"></div>
-                <p className="text-gray-500 font-medium">vSTAGE Interface</p>
-                <p className="text-sm text-gray-400">3D Editor & Presentation Engine</p>
-              </div>
-            </div>
-
-            <div className="max-w-4xl mx-auto space-y-6">
-              <div className="flex flex-wrap gap-2">
-                <Badge variant="secondary">UX/UI Design</Badge>
-                <Badge variant="secondary">Desktop Application</Badge>
-                <Badge variant="secondary">3D Visualization</Badge>
-              </div>
-
-              <div className="space-y-4">
-                <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
-                  vSTAGE — 3D Editor & Presentation Engine
-                </h3>
-                <p className="text-lg text-gray-600 leading-relaxed">
-                  Transformed a complex 3D tool designed for CAD professionals into an intuitive platform accessible to
-                  newcomers while retaining deep functionality for power users.
-                </p>
-              </div> */}
 
             <Link to="/vstage">
               <Card className="border-0 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
@@ -260,7 +236,7 @@ const Home = () => {
               </Card>
             </Link>
 
-            <Link to="/case-study">
+            {/* <Link to="/case-study">
               <Card className="border-0 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
                 <CardContent className="p-0">
                   <div className="aspect-[4/3] bg-gradient-to-br from-purple-50 to-pink-50 rounded-t-lg flex items-center justify-center border-b border-purple-100">
@@ -289,9 +265,9 @@ const Home = () => {
                   </div>
                 </CardContent>
               </Card>
-            </Link>
+            </Link> */}
 
-            <Link to="/case-study">
+            {/* <Link to="/case-study">
               <Card className="border-0 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
                 <CardContent className="p-0">
                   <div className="aspect-[4/3] bg-gradient-to-br from-orange-50 to-red-50 rounded-t-lg flex items-center justify-center border-b border-orange-100">
@@ -320,7 +296,7 @@ const Home = () => {
                   </div>
                 </CardContent>
               </Card>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </section>
@@ -329,7 +305,7 @@ const Home = () => {
       {/* <section className="py-20 bg-slate-50">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Featured Case Studies</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">More Case Studies</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Deep dives into design challenges, processes, and solutions
             </p>

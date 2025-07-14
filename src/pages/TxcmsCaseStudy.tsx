@@ -5,27 +5,28 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, ArrowRight, ExternalLink, Newspaper, Users, Monitor, Lightbulb } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/ui/navbar";
+import CaseStudyNav from "@/components/CaseStudyNav";
 
 const TxcmsCaseStudy = () => {
   return (
-    <div className="min-h-screen bg-white">
-      <Navbar />
+   <div className="pt-8 pb-16">
+      <CaseStudyNav />
       
       {/* Hero Section */}
       <section className="max-w-4xl mx-auto px-6 py-16">
         <div className="space-y-8">
-          <Link to="/" className="inline-flex items-center text-gray-600 hover:text-gray-900 transition-colors">
+          {/* <Link to="/" className="inline-flex items-center text-gray-600 hover:text-gray-900 transition-colors">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Portfolio
-          </Link>
+          </Link> */}
 
           <div className="space-y-6">
-            <div className="flex flex-wrap gap-2">
+            {/* <div className="flex flex-wrap gap-2">
               <Badge variant="secondary">CMS Design</Badge>
               <Badge variant="secondary">UX/UI Design</Badge>
               <Badge variant="secondary">Publishing Workflows</Badge>
               <Badge variant="secondary">Mobile-First</Badge>
-            </div>
+            </div> */}
 
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
               Designing a Unified CMS for Switzerland's Leading News Publishers
@@ -51,7 +52,7 @@ const TxcmsCaseStudy = () => {
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-gray-900">50+</div>
-                <div className="text-sm text-gray-600">Journalists trained</div>
+                <div className="text-sm text-gray-600">Journalists interviewed</div>
               </div>
             </div>
           </div>
@@ -85,7 +86,7 @@ const TxcmsCaseStudy = () => {
                 </div>
               </div>
             </div>
-            <div className="aspect-video bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl flex items-center justify-center">
+            <div className="aspect-video bg-gradient-to-br from-slate-50 to-indigo-100 rounded-2xl flex items-center justify-center">
               <div className="text-center space-y-2">
                 <Newspaper className="w-16 h-16 text-blue-600 mx-auto" />
                 <p className="text-blue-600 font-medium">TX Group CMS</p>
@@ -203,44 +204,36 @@ const TxcmsCaseStudy = () => {
             <div className="text-center space-y-4">
               <h2 className="text-3xl font-bold text-gray-900">Innovative Solutions</h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                I designed several groundbreaking features that set this CMS apart from any other system available at the time.
+                I designed several features that set this CMS apart from any other system available at the time.
               </p>
             </div>
 
             <div className="space-y-8">
-              <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8">
+              <div className="bg-gradient-to-r from-slate-50 to-indigo-50 rounded-2xl p-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">The "Importance Triangle" Innovation</h3>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  While having a shower one day, I conceived the "importance triangle" - a unique solution for adaptive image cropping. 
+                  While having a shower one day, it came to me: The "importance triangle" - a unique solution for adaptive image cropping. 
                   Three hexagonal markers allow journalists to indicate which parts of an image are most important, 
                   ensuring smart cropping across different portal layouts (16:9, 3:2, square formats).
                 </p>
                 <div className="bg-white rounded-lg p-6 mt-4">
                   <div className="flex items-center justify-center space-x-4">
-                    <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
-                      <span className="text-white text-sm font-bold">1</span>
-                    </div>
-                    <div className="w-6 h-6 bg-yellow-500 rounded-full flex items-center justify-center">
-                      <span className="text-white text-xs font-bold">2</span>
-                    </div>
-                    <div className="w-4 h-4 bg-red-500 rounded-full flex items-center justify-center">
-                      <span className="text-white text-xs font-bold">3</span>
-                    </div>
+                    <img src="/img/tx/importance-triangle.png" alt="Importance Triangle" className="w-full object-contain" />
                   </div>
                   <p className="text-center text-sm text-gray-600 mt-2">Priority markers ensure intelligent cropping</p>
                 </div>
               </div>
 
               <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Command-Based Rich Text Editor</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Command-Based Rich Text Editor (before Notion was a thing)</h3>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  Inspired by gaming consoles, I designed a command system where journalists could type commands like 
+                  Inspired by what I have seen at a React Conference in Paris, I designed a command system where journalists could type commands like 
                   "/new poll" or "/add poll" to insert content without leaving their keyboard - revolutionary for 2016.
                 </p>
                 <div className="bg-white rounded-lg p-4 font-mono text-sm">
-                  <div className="text-gray-600">Type: <span className="text-blue-600">/new poll</span> → Creates new poll</div>
-                  <div className="text-gray-600">Type: <span className="text-green-600">/add image</span> → Insert existing image</div>
-                  <div className="text-gray-600">Type: <span className="text-purple-600">/embed video</span> → Embed video content</div>
+                  <div className="text-gray-600">Type: <span className="text-blue-600">/new</span> → Creates new poll, map, etc.</div>
+                  <div className="text-gray-600">Type: <span className="text-green-600">/add </span> → Insert existing image, poll, etc.</div>
+                  <div className="text-gray-600">Type: <span className="text-purple-600">/embed </span> → Embed video content, iframe, etc.</div>
                 </div>
               </div>
             </div>
@@ -363,11 +356,11 @@ const TxcmsCaseStudy = () => {
       </section>
 
       {/* Key Learnings */}
-      <section className="bg-slate-50 py-16">
+      <section className="py-16">
         <div className="max-w-4xl mx-auto px-6">
           <div className="space-y-8">
             <h2 className="text-3xl font-bold text-gray-900">Key Learnings & Reflection</h2>
-            <div className="bg-blue-50 rounded-2xl p-8">
+            <div className="bg-slate-50 rounded-2xl p-8">
               <p className="text-lg text-gray-700 leading-relaxed">
                 This project taught me that the best innovations often come from unexpected moments of insight. 
                 The importance triangle concept, born during a shower, became one of the system's most praised features. 
@@ -390,7 +383,7 @@ const TxcmsCaseStudy = () => {
                   </li>
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-green-600 rounded-full mt-2"></div>
-                    <span className="text-gray-700">Close collaboration with developers enabled rapid prototyping</span>
+                    <span className="text-gray-700">Close collaboration with developers and SCRUM enabled rapid prototyping</span>
                   </li>
                 </ul>
               </div>
@@ -461,7 +454,7 @@ const TxcmsCaseStudy = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-slate-50 py-16">
+      {/* <section className="bg-slate-50 py-16">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <div className="space-y-8">
             <h2 className="text-3xl font-bold text-gray-900">Interested in the Design Process?</h2>
@@ -482,7 +475,7 @@ const TxcmsCaseStudy = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };
