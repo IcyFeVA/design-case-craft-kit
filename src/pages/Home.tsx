@@ -486,16 +486,16 @@ const Home = () => {
             <div className="space-y-4">
               <h2 className="text-3xl md:text-4xl font-bold">Let's Work Together</h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                I'm always interested in new opportunities and exciting projects. Let's discuss how we can create
-                something amazing together.
+                I'm always interested in new opportunities and exciting projects. Let's discuss how we can create something amazing together.
               </p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="secondary" className="gap-2">
                 <Mail className="w-4 h-4" />
-                hello@alexchen.design
+                pascal.zirn@pm.me
               </Button>
+              <Link to="https://www.linkedin.com/in/pascalz/" target="_blank">
               <Button
                 size="lg"
                 variant="outline"
@@ -504,10 +504,11 @@ const Home = () => {
                 <Linkedin className="w-4 h-4" />
                 LinkedIn
               </Button>
+              </Link>
             </div>
 
             <p className="text-sm text-gray-400">
-              Currently based in San Francisco, open to remote opportunities worldwide
+              Based in Vancouver Metro Area, open to remote opportunities worldwide
             </p>
           </div>
         </div>
@@ -517,16 +518,13 @@ const Home = () => {
       <footer className="border-t border-gray-100 py-8">
         <div className="max-w-4xl mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-gray-600">© 2024 Alex Chen. All rights reserved.</p>
+            <p className="text-gray-600">© 2025 Pascal Zirn. All rights reserved.</p>
             <div className="flex items-center space-x-6">
-              <Link to="#" className="text-gray-400 hover:text-gray-600 transition-colors">
-                <Linkedin className="w-5 h-5" />
+              <Link to="https://instagram.com/icyfeva" target="_blank" className="text-gray-400 hover:text-gray-600 transition-colors">
+                <Instagram className="w-5 h-5" />
               </Link>
-              <Link to="#" className="text-gray-400 hover:text-gray-600 transition-colors">
-                <Twitter className="w-5 h-5" />
-              </Link>
-              <Link to="#" className="text-gray-400 hover:text-gray-600 transition-colors">
-                <ExternalLink className="w-5 h-5" />
+              <Link to="https://dribbble.com/icyfeva" target="_blank" className="text-gray-400 hover:text-gray-600 transition-colors">
+                <Dribbble className="w-5 h-5" />
               </Link>
             </div>
           </div>
