@@ -125,7 +125,6 @@ function ScreenshotsRow({ screenshots }: ScreenshotsRowProps) {
 
 const TeslaWatchApp = () => {
   const [openUiScreenIndex, setOpenUiScreenIndex] = useState<number | null>(null);
-  const selectedUiScreen = openUiScreenIndex !== null ? uiScreens[openUiScreenIndex] : null;
 
   const uiScreens: Screenshot[] = [
       {
@@ -153,6 +152,9 @@ const TeslaWatchApp = () => {
           tags: ["Climate", "Controls", "Watch"],
       },
   ];
+
+  const selectedUiScreen = openUiScreenIndex !== null ? uiScreens[openUiScreenIndex] : null;
+
 
 
   return (

@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import CaseStudyNav from "@/components/CaseStudyNav";
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
+import ScreenshotsRow from "@/components/ScreenshotsRow";
 import { GalleryImageDialog } from "./GalleryImageDialog";
 
 type Screenshot = {
@@ -34,98 +35,64 @@ const processShots: Screenshot[] = [
         year: 2023,
         tags: ["Dashboard", "Tesla", "Apple Watch"],
     },
+          {
+        imageUrl: '/img/vstage/process5.png',
+        title: "Process",
+        description: "The concept of using a touch surface to execute a action was inspired by the James Bond movie 'Tomorrow Never Dies.' In this film, the renowned spy is seen using a touchpad on an Ericsson phone to control his BMW car.",
+        category: "UI",
+        year: 2023,
+        tags: ["Dashboard", "Tesla", "Apple Watch"],
+    },
 
 ];
-
-type ScreenshotsRowProps = {
-    screenshots: Screenshot[];
-};
-
-function ScreenshotsRow({ screenshots }: ScreenshotsRowProps) {
-    const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-    const selectedImage = openIndex !== null ? screenshots[openIndex] : null;
-    const setSelectedImage = (idx: number | null) => setOpenIndex(idx);
-
-    return (
-        <>
-            <div className="flex items-center mt-8" style={{ height: 48 }}>
-                <span
-                    className="mr-4 text-sm font-medium text-gray-600"
-                    style={{ minWidth: 80 }}
-                >
-                    Process Shots
-                </span>
-                {screenshots.map((s, i) => ( 
-                    <div
-                        key={i}
-                        style={{
-                            width: 120,
-                            aspectRatio: "16/9",
-                            borderRadius: 8,
-                            overflow: "hidden",
-                            marginLeft: i === 0 ? 0 : 16,
-                            zIndex: 10 + i,
-                            background: `url(${s.imageUrl}) center/cover`,
-                            cursor: "pointer",
-                            // transition: "box-shadow 0.2s",
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            color: "#fff",
-                            fontSize: 12,
-                            fontWeight: 500,
-                            textShadow: "0 1px 4px rgba(0,0,0,0.4)",
-                            border: "3px solid #fff",
-                            boxSizing: "border-box",
-                            // transform: Math.random() > 0.5 ? "rotate(3deg)" : "rotate(-3deg)",
-                        }}
-                        title={s.title}
-                        onClick={() => setOpenIndex(i)}
-                        className="shadow-2xl transform transition-transform duration-300 hover:scale-110"
-                    >
-                    </div>
-                ))}
-            </div>
-            {/* Image Overlay Dialog */}
-            <GalleryImageDialog
-                open={!!selectedImage}
-                onOpenChange={(open) => setSelectedImage(open ? openIndex : null)}
-                item={selectedImage}
-            />
-        </>
-    );
-}
-
-const VStage = () => {
-  const [openUiScreenIndex, setOpenUiScreenIndex] = useState<number | null>(null);
 
   const uiScreens: Screenshot[] = [
       {
           imageUrl: '/img/vstage/final1.png',
-          title: "What if vstage had a Apple Watch App?",
-          description: "Mockup",
+          title: "Final UI",
+          description: "Dark mode of the vSTAGE 3D interface, showcasing the main editor with advanced controls and data visualization.",
           category: "UX/UI",
           year: 2023,
           tags: ["Climate", "Controls", "Watch"],
       },
       {
-          imageUrl: '/img/vstage/final2.png',
-          title: "On the Apple Watch Ultra",
-          description: "Mockup",
+          imageUrl: '/img/vstage/final5.png',
+          title: "Final UI",
+          description: "Slide-bar navigation (bottom) with large visual trackers for presentation sequences, designed like familiar media players.",
           category: "UX/UI",
           year: 2023,
           tags: ["Climate", "Controls", "Watch"],
       },
       {
           imageUrl: '/img/vstage/final3.png',
-          title: "Teaser",
-          description: "Mockup",
+          title: "Final UI",
+          description: "Overlay Editor to manage visual overlays for video export and presentation",
+          category: "UX/UI",
+          year: 2023,
+          tags: ["Climate", "Controls", "Watch"],
+      },
+      {
+          imageUrl: '/img/vstage/final2.png',
+          title: "Final UI",
+          description: "Login screen for vSTAGE, designed to be simple and intuitive for new users.",
+          category: "UX/UI",
+          year: 2023,
+          tags: ["Climate", "Controls", "Watch"],
+      },
+      {
+          imageUrl: '/img/vstage/final4.png',
+          title: "Figma Components",
+          description: "There are dozens of dynamic components and reusable patterns for rapid development.",
           category: "UX/UI",
           year: 2023,
           tags: ["Climate", "Controls", "Watch"],
       },
   ];
+
+
+
+const VStage = () => {
+  const [openUiScreenIndex, setOpenUiScreenIndex] = useState<number | null>(null);
 
   const selectedUiScreen = openUiScreenIndex !== null ? uiScreens[openUiScreenIndex] : null;
 
@@ -156,12 +123,8 @@ const VStage = () => {
             </div>
 
             {/* Hero Image Placeholder */}
-            <div className="w-full h-96 bg-gradient-to-br from-slate-50 to-gray-100 rounded-2xl mb-8 flex items-center justify-center">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-slate-300 rounded-lg mx-auto mb-4"></div>
-                <p className="text-slate-600 font-medium">Hero Image</p>
-                <p className="text-sm text-slate-400">vSTAGE Interface Overview</p>
-              </div>
+            <div className="w-full bg-gradient-to-br from-slate-50 to-gray-100 rounded-2xl mb-8 flex items-center justify-center">
+              <img src="/img/vstage/hero.png" alt="vSTAGE Hero" className="max-w-full max-h-full object-cover rounded-lg shadow-lg" />
             </div>
 
             {/* Project Details */}
@@ -316,7 +279,7 @@ const VStage = () => {
                       <p className="text-gray-700 mb-4">Built high-fidelity Figma components and prototypes to test interaction patterns and validate design decisions with real users.</p>
                       <div className="grid md:grid-cols-2 gap-4">
                         <div className="aspect-video border border-slate-300 bg-gradient-to-br from-teal-50 to-cyan-50 rounded-lg overflow-hidden flex items-center justify-center">
-                          <img src="/img/vstage/process5.png" alt="design system" className="w-full h-full object-cover" />
+                          <img src="/img/vstage/process1.png" alt="design system" className="w-full h-full object-cover" />
                         </div>
                         <div className="aspect-video bg-gradient-to-br from-teal-50 to-cyan-50 rounded-lg overflow-hidden flex items-center justify-center">
                           <img src="/img/vstage/process2.png" alt="design system" className="w-full h-full object-cover" />
@@ -366,8 +329,8 @@ const VStage = () => {
                   </div>
 
                   {/* Visual Design Highlights */}
-                  <div className="mt-8">
-                    <h4 className="font-semibold text-gray-900 mb-4">Key Interface Elements</h4>
+                  {/* <div className="mt-8">
+                    <h4 className="font-semibold text-gray-900 mb-4">Key Interface Elements that need revamping</h4>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                       <div className="h-48 bg-gradient-to-br from-gray-50 to-slate-100 rounded-xl flex items-center justify-center">
                         <div className="text-center">
@@ -384,7 +347,7 @@ const VStage = () => {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -428,7 +391,7 @@ const VStage = () => {
                       </div>
                       <div className="flex items-start gap-2">
                         <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
-                        <p className="text-sm">"Finally, a slide navigation that actually makes sense for 3D presentations"</p>
+                        <p className="text-sm">"Finally, a slide navigation that is fast and from left to right (like a video editor)"</p>
                       </div>
                       <div className="flex items-start gap-2">
                         <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
@@ -466,12 +429,32 @@ const VStage = () => {
             </div>
           </section>
 
+          {/* Video */}
+          <section className="py-16">
+              <div className="max-w-4xl mx-auto px-6">
+                  <div className="space-y-8">
+                      <h2 className="text-3xl font-bold text-gray-900 text-center">
+                          Prototype in Action
+                      </h2>
+                      <div className="flex justify-center">
+                          <div className="aspect-video w-full max-w-4xl rounded-2xl overflow-hidden shadow-lg bg-black">
+                                        <iframe
+                                            className="w-full h-full"
+                                            src="https://www.youtube.com/embed/x9Sv6HWOf9E?si=vtetT8m7eiUsq2PR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                                        </iframe>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </section>          
+
+
           {/* UI Screens Section */}
           <section className="py-16">
-            <div className="max-w-4xl mx-auto px-6">
+            <div className="max-w-4xl mx-auto">
                 <div className="space-y-8">
-                    <h2 className="text-3xl font-bold text-gray-900 text-center">
-                        Mockups
+                    <h2 className="text-3xl font-bold text-gray-900">
+                        Final UI
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {uiScreens.map((screen, index) => (
@@ -488,6 +471,12 @@ const VStage = () => {
                         ))}
                     </div>
                 </div>
+                      <GalleryImageDialog
+                          open={!!selectedUiScreen}
+                          onOpenChange={(open) => setOpenUiScreenIndex(open ? openUiScreenIndex : null)}
+                          item={selectedUiScreen}
+                      />
+                
             </div>
           </section>
 
@@ -501,7 +490,6 @@ const VStage = () => {
                     Based on user feedback and usage analytics, several opportunities emerged for future development:
                   </p>
                   <ul className="space-y-3 text-gray-700">
-                    <li><strong>AI-Assisted Component Organization</strong> - Machine learning to automatically tag and categorize components</li>
                     <li><strong>Collaborative Features</strong> - Real-time multi-user editing and annotation for team presentations</li>
                     <li><strong>Advanced Analytics</strong> - User interaction tracking to optimize workflows and identify bottlenecks</li>
                     <li><strong>Mobile Companion App</strong> - Remote control interface for presentations and quick edits</li>
@@ -518,7 +506,7 @@ const VStage = () => {
                 <div>
                   <h2 className="text-2xl font-bold text-slate-900 mb-4">Personal Reflection</h2>
                   <p className="text-slate-800 leading-relaxed">
-                    This project taught me that successful enterprise software design isn't about choosing between simplicity and power—it's about creating intelligent systems that adapt to user needs. The challenge of serving both CAD experts and newcomers pushed me to develop more sophisticated approaches to progressive disclosure and contextual interfaces. Most importantly, I learned that when users feel in control of their interface complexity, they're more willing to explore advanced features.
+                    This project taught me that successful Saas software design isn't about choosing between simplicity and power—it's about creating intelligent systems that adapt to user needs. The challenge of serving both CAD experts and newcomers pushed me to develop more sophisticated approaches to progressive disclosure and contextual interfaces. Most importantly, I learned that when users feel in control of their interface complexity, they're more willing to explore advanced features.
                   </p>
                 </div>
               </div>
@@ -526,7 +514,7 @@ const VStage = () => {
           </section>
 
           {/* Next Project CTA */}
-          <section className="text-center">
+          {/* <section className="text-center">
             <div className="border-t border-gray-200 pt-16">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Explore More Work</h3>
               <p className="text-gray-600 mb-8">Check out other case studies and design projects</p>
@@ -545,7 +533,7 @@ const VStage = () => {
                 </Link>
               </div>
             </div>
-          </section>
+          </section> */}
 
         </div>
       </main>
