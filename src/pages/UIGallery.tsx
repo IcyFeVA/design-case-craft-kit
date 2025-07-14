@@ -25,7 +25,7 @@ const UIGallery = () => {
       title: "vSTAGE 3D Interface",
       category: "Desktop Application",
       description: "Complete redesign of a complex 3D editing interface, focusing on intuitive navigation and powerful tools accessibility.",
-      imageUrl: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=800&h=600&fit=crop",
+      imageUrl: "/img/gallery/bolt1.jpg",
       tags: ["UI Design", "3D Interface", "Desktop App"],
       year: "2024"
     },
@@ -34,7 +34,7 @@ const UIGallery = () => {
       title: "E-commerce Dashboard",
       category: "Web Application",
       description: "Modern dashboard design for B2B marketplace with focus on data visualization and user workflow optimization.",
-      imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+      imageUrl: "/img/gallery/netflix1.jpg",
       tags: ["Dashboard", "Data Viz", "B2B"],
       year: "2024"
     },
@@ -43,7 +43,7 @@ const UIGallery = () => {
       title: "Mobile Banking Interface",
       category: "Mobile Design",
       description: "Accessible mobile banking app design prioritizing security and ease of use for elderly users.",
-      imageUrl: "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=600&h=800&fit=crop",
+      imageUrl: "/img/gallery/holo1.jpg",
       tags: ["Mobile", "FinTech", "Accessibility"],
       year: "2023"
     },
@@ -52,7 +52,7 @@ const UIGallery = () => {
       title: "Design System Components",
       category: "Design System",
       description: "Comprehensive component library with dark/light themes and extensive documentation.",
-      imageUrl: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop",
+      imageUrl: "/img/gallery/hacker1.jpg",
       tags: ["Design System", "Components", "Documentation"],
       year: "2024"
     },
@@ -61,7 +61,7 @@ const UIGallery = () => {
       title: "Analytics Platform",
       category: "Web Application",
       description: "Real-time analytics dashboard with advanced filtering and customizable reporting features.",
-      imageUrl: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=600&fit=crop",
+      imageUrl: "/img/gallery/ff1.jpg",
       tags: ["Analytics", "Dashboard", "Real-time"],
       year: "2023"
     },
@@ -70,7 +70,7 @@ const UIGallery = () => {
       title: "Collaboration Tool",
       category: "Web Application",
       description: "Team collaboration interface with video conferencing integration and project management tools.",
-      imageUrl: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&h=600&fit=crop",
+      imageUrl: "/img/gallery/lb1.png",
       tags: ["Collaboration", "Video", "Teams"],
       year: "2024"
     },
@@ -79,7 +79,7 @@ const UIGallery = () => {
       title: "Smart Home App",
       category: "Mobile Design",
       description: "IoT device management app with intuitive controls and energy monitoring features.",
-      imageUrl: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=600&h=800&fit=crop",
+      imageUrl: "/img/gallery/manhunt1.jpg",
       tags: ["IoT", "Smart Home", "Mobile"],
       year: "2023"
     },
@@ -88,7 +88,7 @@ const UIGallery = () => {
       title: "Creative Portfolio",
       category: "Web Design",
       description: "Artist portfolio website with dynamic galleries and immersive presentation modes.",
-      imageUrl: "https://images.unsplash.com/photo-1483058712412-4245e9b90334?w=800&h=600&fit=crop",
+      imageUrl: "/img/gallery/dash1.jpg",
       tags: ["Portfolio", "Creative", "Gallery"],
       year: "2024"
     },
@@ -97,7 +97,7 @@ const UIGallery = () => {
       title: "Healthcare Portal",
       category: "Web Application",
       description: "Patient management system with appointment scheduling and medical records access.",
-      imageUrl: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&h=600&fit=crop",
+      imageUrl: "/img/gallery/bolt2.jpg",
       tags: ["Healthcare", "Portal", "Patient Management"],
       year: "2023"
     },
@@ -106,7 +106,7 @@ const UIGallery = () => {
       title: "Travel Booking App",
       category: "Mobile Design",
       description: "User-friendly travel booking app with personalized recommendations and itinerary management.",
-      imageUrl: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?w=600&h=800&fit=crop",
+      imageUrl: "/img/gallery/pilot1.jpg",
       tags: ["Travel", "Booking", "Mobile"],
       year: "2024"
     },
@@ -115,7 +115,7 @@ const UIGallery = () => {
       title: "Educational Platform",
       category: "Web Application",
       description: "E-learning platform with interactive courses and progress tracking features.",
-      imageUrl: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&h=600&fit=crop",
+      imageUrl: "/img/gallery/ff2.jpg",
       tags: ["Education", "E-learning", "Web App"],
       year: "2023"
     },
@@ -124,10 +124,120 @@ const UIGallery = () => {
       title: "Event Management System",
       category: "Web Application",
       description: "Comprehensive event management tool with ticketing, scheduling, and attendee engagement features.",
-      imageUrl: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?w=600&h=800&fit=crop",
+      imageUrl: "/img/gallery/neo1.png",
       tags: ["Event Management", "Web App", "Ticketing"],
       year: "2024"
-    }
+    },
+
+
+    {
+      id: 13,
+      title: "vSTAGE 3D Interface",
+      category: "Desktop Application",
+      description: "Complete redesign of a complex 3D editing interface, focusing on intuitive navigation and powerful tools accessibility.",
+      imageUrl: "/img/gallery/bolt1.jpg",
+      tags: ["UI Design", "3D Interface", "Desktop App"],
+      year: "2024"
+    },
+    {
+      id: 14,
+      title: "E-commerce Dashboard",
+      category: "Web Application",
+      description: "Modern dashboard design for B2B marketplace with focus on data visualization and user workflow optimization.",
+      imageUrl: "/img/gallery/netflix1.jpg",
+      tags: ["Dashboard", "Data Viz", "B2B"],
+      year: "2024"
+    },
+    {
+      id: 15,
+      title: "Mobile Banking Interface",
+      category: "Mobile Design",
+      description: "Accessible mobile banking app design prioritizing security and ease of use for elderly users.",
+      imageUrl: "/img/gallery/holo1.jpg",
+      tags: ["Mobile", "FinTech", "Accessibility"],
+      year: "2023"
+    },
+    {
+      id: 16,
+      title: "Design System Components",
+      category: "Design System",
+      description: "Comprehensive component library with dark/light themes and extensive documentation.",
+      imageUrl: "/img/gallery/hacker1.jpg",
+      tags: ["Design System", "Components", "Documentation"],
+      year: "2024"
+    },
+    {
+      id: 17,
+      title: "Analytics Platform",
+      category: "Web Application",
+      description: "Real-time analytics dashboard with advanced filtering and customizable reporting features.",
+      imageUrl: "/img/gallery/ff1.jpg",
+      tags: ["Analytics", "Dashboard", "Real-time"],
+      year: "2023"
+    },
+    {
+      id: 18,
+      title: "Collaboration Tool",
+      category: "Web Application",
+      description: "Team collaboration interface with video conferencing integration and project management tools.",
+      imageUrl: "/img/gallery/lb1.png",
+      tags: ["Collaboration", "Video", "Teams"],
+      year: "2024"
+    },
+    {
+      id: 19,
+      title: "Smart Home App",
+      category: "Mobile Design",
+      description: "IoT device management app with intuitive controls and energy monitoring features.",
+      imageUrl: "/img/gallery/manhunt1.jpg",
+      tags: ["IoT", "Smart Home", "Mobile"],
+      year: "2023"
+    },
+    {
+      id: 20,
+      title: "Creative Portfolio",
+      category: "Web Design",
+      description: "Artist portfolio website with dynamic galleries and immersive presentation modes.",
+      imageUrl: "/img/gallery/dash1.jpg",
+      tags: ["Portfolio", "Creative", "Gallery"],
+      year: "2024"
+    },
+    {
+      id: 21,
+      title: "Healthcare Portal",
+      category: "Web Application",
+      description: "Patient management system with appointment scheduling and medical records access.",
+      imageUrl: "/img/gallery/bolt2.jpg",
+      tags: ["Healthcare", "Portal", "Patient Management"],
+      year: "2023"
+    },
+    {
+      id: 22,
+      title: "Travel Booking App",
+      category: "Mobile Design",
+      description: "User-friendly travel booking app with personalized recommendations and itinerary management.",
+      imageUrl: "/img/gallery/pilot1.jpg",
+      tags: ["Travel", "Booking", "Mobile"],
+      year: "2024"
+    },
+    {
+      id: 23,
+      title: "Educational Platform",
+      category: "Web Application",
+      description: "E-learning platform with interactive courses and progress tracking features.",
+      imageUrl: "/img/gallery/ff2.jpg",
+      tags: ["Education", "E-learning", "Web App"],
+      year: "2023"
+    },
+    {
+      id: 24,
+      title: "Event Management System",
+      category: "Web Application",
+      description: "Comprehensive event management tool with ticketing, scheduling, and attendee engagement features.",
+      imageUrl: "/img/gallery/neo1.png",
+      tags: ["Event Management", "Web App", "Ticketing"],
+      year: "2024"
+    }    
   ];
 
   return (
@@ -142,7 +252,7 @@ const UIGallery = () => {
         <div className="space-y-8">
           <div className="space-y-6 align-center text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
-              UI Gallery
+              Gallery
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
               A curated collection of my design work spanning web applications, mobile interfaces, 

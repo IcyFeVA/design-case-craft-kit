@@ -31,7 +31,7 @@ const Navbar: FC<NavbarProps> = ({ highlight }) => (
               highlight === "gallery" ? "font-semibold" : ""
             }`}
           >
-            UI Gallery
+            Gallery
           </Link>
           <Link
             to="/3d-motion"
