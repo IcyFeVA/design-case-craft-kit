@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { ArrowRight, Github, Linkedin, Instagram, Download, Twitter, ExternalLink, Grid3X3, Star, Mail, ArrowDown, Dribbble } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Instagram, Download, Twitter, ExternalLink, Grid3X3, Star, Mail, ArrowDown, Dribbble, Lock } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/ui/navbar";
 
@@ -302,81 +302,81 @@ const Home = () => {
       </section>
 
       {/* Case Studies Section */}
-      {/* <section className="py-20 bg-slate-50">
+      <section className="py-20">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">More Case Studies</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Locked Case Studies (for interviews)</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Deep dives into design challenges, processes, and solutions
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <Link to="/case-study" className="group">
+            {/* <Link to="/case-study" className="group"> */}
               <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 h-full">
-                <div className="h-48 bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl mb-6 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-slate-300 rounded-lg mx-auto mb-3"></div>
-                    <p className="text-gray-600 font-medium">vSTAGE Interface</p>
+                <div className="h-48 bg-gradient-to-br from-red-100 to-gray-200 rounded-xl mb-6 flex items-center justify-center">
+                  <div className="text-center flex flex-col items-center justify-center">
+                    <Lock className="w-16 h-16 text-red-300 mb-3" />
+                    <p className="text-red-600 font-medium">Crushy</p>
                   </div>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  vSTAGE: 3D Editor Redesign
+                  Brand New Social Networking App
                 </h3>
                 <p className="text-gray-600 mb-4 leading-relaxed">
-                  Transforming a complex CAD tool into an intuitive 3D presentation engine for both experts and newcomers.
+                  A fresh approach to social networking, focusing on people first.
                 </p>
-                <div className="flex items-center text-blue-600 font-medium">
+                {/* <div className="flex items-center text-blue-600 font-medium">
                   Read Case Study
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </div>
+                </div> */}
               </div>
-            </Link>
+            {/* </Link> */}
 
-            <Link to="/ecommerce-case-study" className="group">
+            {/* <Link to="/ecommerce-case-study" className="group"> */}
               <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 h-full">
                 <div className="h-48 bg-gradient-to-br from-green-50 to-emerald-100 rounded-xl mb-6 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-green-200 rounded-lg mx-auto mb-3"></div>
-                    <p className="text-green-600 font-medium">E-commerce Platform</p>
+                  <div className="text-center flex flex-col items-center justify-center">
+                    <Lock className="w-16 h-16 text-green-300 mb-3" />
+                    <p className="text-green-600 font-medium">Bolt from the Blue</p>
                   </div>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  Checkout Optimization
+                  Fictional UI's for a Feature Film
                 </h3>
                 <p className="text-gray-600 mb-4 leading-relaxed">
-                  Reducing cart abandonment by 24% through simplified checkout design and transparent pricing strategies.
+                  After working on a Netflix Show, I had the pleasure to design and animate UI's for a feature film.
                 </p>
-                <div className="flex items-center text-blue-600 font-medium">
+                {/* <div className="flex items-center text-blue-600 font-medium">
                   Read Case Study
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </div>
+                </div> */}
               </div>
-            </Link>
+            {/* </Link> */}
 
-            <Link to="/mindspace-case-study" className="group">
+            {/* <Link to="/mindspace-case-study" className="group"> */}
               <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 h-full">
                 <div className="h-48 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-xl mb-6 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-blue-200 rounded-lg mx-auto mb-3"></div>
-                    <p className="text-blue-600 font-medium">MindSpace App</p>
+                  <div className="text-center flex flex-col items-center justify-center">
+                    <Lock className="w-16 h-16 text-blue-300 mb-3" />
+                    <p className="text-blue-600 font-medium">Zdash</p>
                   </div>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  MindSpace: Mental Health Companion
+                  Banking App for young adults
                 </h3>
                 <p className="text-gray-600 mb-4 leading-relaxed">
-                  Designing accessible mental health support for college students through crisis intervention and peer connection.
+                 Effortless banking for the young generation, designed to be intuitive and secure.
                 </p>
-                <div className="flex items-center text-blue-600 font-medium">
+                {/* <div className="flex items-center text-blue-600 font-medium">
                   Read Case Study
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </div>
+                </div> */}
               </div>
-            </Link>
+            {/* </Link> */}
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* About Section */}
       <section id="about" className="bg-slate-50 py-20">
@@ -414,9 +414,9 @@ const Home = () => {
                   <Badge variant="secondary">Prototyping</Badge>
                   <Badge variant="secondary">Design Systems</Badge>
                   <Badge variant="secondary">Figma</Badge>
-                  <Badge variant="secondary">After Effects</Badge>
+                  <Badge variant="secondary">Motion Design</Badge>
                   <Badge variant="secondary">Adobe Creative Suite</Badge>
-                  <Badge variant="secondary">HTML/CSS</Badge>
+                  <Badge variant="secondary">HTML/CSS/JS</Badge>
                 </div>
               </div>
             </div>

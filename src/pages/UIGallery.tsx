@@ -52,7 +52,7 @@ const UIGallery = () => {
       title: "Design System Components",
       category: "",
       description: "Comprehensive component library with dark/light themes and extensive documentation.",
-      imageUrl: "/img/gallery/hacker1.jpg",
+      imageUrl: "/img/gallery/sfx1.jpg",
       tags: ["Design System", "Components", "Documentation"],
       year: "2024"
     },
@@ -106,7 +106,7 @@ const UIGallery = () => {
       title: "Travel Booking App",
       category: "",
       description: "User-friendly travel booking app with personalized recommendations and itinerary management.",
-      imageUrl: "/img/gallery/pilot1.jpg",
+      imageUrl: "/img/gallery/hacker1.jpg",
       tags: ["Travel", "Booking", "Mobile"],
       year: "2024"
     },
@@ -130,12 +130,15 @@ const UIGallery = () => {
     },
 
 
+
+
+
     {
       id: 13,
       title: "vSTAGE 3D Interface",
       category: "",
       description: "Complete redesign of a complex 3D editing interface, focusing on intuitive navigation and powerful tools accessibility.",
-      imageUrl: "/img/gallery/bolt1.jpg",
+      imageUrl: "/img/gallery/vhub1.jpg",
       tags: ["UI Design", "3D Interface", "Desktop App"],
       year: "2024"
     },
@@ -144,7 +147,7 @@ const UIGallery = () => {
       title: "E-commerce Dashboard",
       category: "",
       description: "Modern dashboard design for B2B marketplace with focus on data visualization and user workflow optimization.",
-      imageUrl: "/img/gallery/netflix1.jpg",
+      imageUrl: "/img/gallery/ff3.jpg",
       tags: ["Dashboard", "Data Viz", "B2B"],
       year: "2024"
     },
@@ -153,7 +156,7 @@ const UIGallery = () => {
       title: "Mobile Banking Interface",
       category: "",
       description: "Accessible mobile banking app design prioritizing security and ease of use for elderly users.",
-      imageUrl: "/img/gallery/holo1.jpg",
+      imageUrl: "/img/gallery/personal1.jpg",
       tags: ["Mobile", "FinTech", "Accessibility"],
       year: "2023"
     },
@@ -162,7 +165,7 @@ const UIGallery = () => {
       title: "Design System Components",
       category: "",
       description: "Comprehensive component library with dark/light themes and extensive documentation.",
-      imageUrl: "/img/gallery/hacker1.jpg",
+      imageUrl: "/img/gallery/ff4.jpg",
       tags: ["Design System", "Components", "Documentation"],
       year: "2024"
     },
@@ -171,7 +174,7 @@ const UIGallery = () => {
       title: "Analytics Platform",
       category: "",
       description: "Real-time analytics dashboard with advanced filtering and customizable reporting features.",
-      imageUrl: "/img/gallery/ff1.jpg",
+      imageUrl: "/img/gallery/bolt3.jpg",
       tags: ["Analytics", "Dashboard", "Real-time"],
       year: "2023"
     },
@@ -180,7 +183,7 @@ const UIGallery = () => {
       title: "Collaboration Tool",
       category: "",
       description: "Team collaboration interface with video conferencing integration and project management tools.",
-      imageUrl: "/img/gallery/lb1.png",
+      imageUrl: "/img/gallery/inba1.jpg",
       tags: ["Collaboration", "Video", "Teams"],
       year: "2024"
     },
@@ -189,7 +192,7 @@ const UIGallery = () => {
       title: "Smart Home App",
       category: "",
       description: "IoT device management app with intuitive controls and energy monitoring features.",
-      imageUrl: "/img/gallery/manhunt1.jpg",
+      imageUrl: "/img/gallery/inba2.jpg",
       tags: ["IoT", "Smart Home", "Mobile"],
       year: "2023"
     },
@@ -198,7 +201,7 @@ const UIGallery = () => {
       title: "Creative Portfolio",
       category: "",
       description: "Artist portfolio website with dynamic galleries and immersive presentation modes.",
-      imageUrl: "/img/gallery/dash1.jpg",
+      imageUrl: "/img/gallery/vstage2.jpg",
       tags: ["Portfolio", "Creative", "Gallery"],
       year: "2024"
     },
@@ -207,7 +210,7 @@ const UIGallery = () => {
       title: "Healthcare Portal",
       category: "",
       description: "Patient management system with appointment scheduling and medical records access.",
-      imageUrl: "/img/gallery/bolt2.jpg",
+      imageUrl: "/img/gallery/manhunt2.jpg",
       tags: ["Healthcare", "Portal", "Patient Management"],
       year: "2023"
     },
@@ -225,7 +228,7 @@ const UIGallery = () => {
       title: "Educational Platform",
       category: "",
       description: "E-learning platform with interactive courses and progress tracking features.",
-      imageUrl: "/img/gallery/ff2.jpg",
+      imageUrl: "/img/gallery/old1.jpg",
       tags: ["Education", "E-learning", "Web App"],
       year: "2023"
     },
@@ -234,7 +237,7 @@ const UIGallery = () => {
       title: "Event Management System",
       category: "",
       description: "Comprehensive event management tool with ticketing, scheduling, and attendee engagement features.",
-      imageUrl: "/img/gallery/neo1.png",
+      imageUrl: "/img/gallery/vstage1.jpg",
       tags: ["Event Management", "Web App", "Ticketing"],
       year: "2024"
     }    

@@ -6,8 +6,80 @@ import { ArrowLeft, ArrowRight, ExternalLink, Newspaper, Users, Monitor, Lightbu
 import { Link } from "react-router-dom";
 import Navbar from "@/components/ui/navbar";
 import CaseStudyNav from "@/components/CaseStudyNav";
+import ScreenshotsRow from "@/components/ScreenshotsRow";
+import { GalleryImageDialog } from "./GalleryImageDialog";
+import { useState } from "react";
+
+type Screenshot = {
+  imageUrl: string;
+  title: string;
+  description: string;
+  category: string;
+  year: string | number;
+  tags: string[];
+};
+
+const processShots: Screenshot[] = [
+      {
+        imageUrl: '/img/tx/process3.png',
+        title: "Process",
+        description: "User Journey Mapping and Personas. Interviewwed dozens of journalists to understand their workflows and needs.",
+        category: "UI",
+        year: 2023,
+        tags: ["UX", "Interviews", "User Journey Mapping"],
+    },
+      {
+        imageUrl: '/img/tx/process1.png',
+        title: "Process",
+        description: "A few of the many hifi wireframes I created to explore different approaches to the CMS design.",
+        category: "UI",
+        year: 2023,
+        tags: ["Sketch", "Wireframes"],
+    },
+          {
+        imageUrl: '/img/tx/process2.png',
+        title: "Process",
+        description: "Each step of a user journey was carefully mapped out, from content creation to publishing and sharing.",
+        category: "UI",
+        year: 2023,
+        tags: ["Sketch", "Wireframes"],
+    },
+
+];
+
+  const uiScreens: Screenshot[] = [
+      {
+          imageUrl: '/img/tx/final1.png',
+          title: "The final Story Editor UI",
+          description: "Designed for mobile-first content creation with a focus on simplicity and efficiency. It supports a command-based rich text editor, drag & drop, and a real-time mobile-preview. Remeber, this was 2016!",
+          category: "UX/UI",
+          year: 2016,
+          tags: [""],
+      },
+      {
+          imageUrl: '/img/tx/final3.png',
+          title: "Story Placement System",
+          description: "Drag & drop story placement system allows journalists to easily select where their articles will appear across different news portals and categories, ensuring content is optimized for each audience.",
+          category: "UX/UI",
+          year: 2016,
+          tags: [""],
+      },
+      {
+          imageUrl: '/img/tx/final2.png',
+          title: "Video Management",
+          description: "Each video can be tagged with multiple synonyms, allowing for flexible search and categorization across different news portals. This system ensures that content is easily discoverable and adaptable to each portal's unique needs.",
+          category: "UX/UI",
+          year: 2016,
+          tags: [""],
+      },
+  ];
 
 const TxcmsCaseStudy = () => {
+
+    const [openUiScreenIndex, setOpenUiScreenIndex] = useState<number | null>(null);
+  
+    const selectedUiScreen = openUiScreenIndex !== null ? uiScreens[openUiScreenIndex] : null;
+
   return (
    <div className="pt-8 pb-16">
       <CaseStudyNav />
@@ -294,6 +366,8 @@ const TxcmsCaseStudy = () => {
                 </div>
               </div>
             </div>
+                                {/* Overlapping 16:9 thumbnails row */}
+                    <ScreenshotsRow screenshots={processShots} />
           </div>
         </div>
       </section>
@@ -355,6 +429,37 @@ const TxcmsCaseStudy = () => {
         </div>
       </section>
 
+                {/* UI Screens Section */}
+          <section className="py-16">
+            <div className="max-w-4xl mx-auto px-6">
+                <div className="space-y-8">
+                    <h2 className="text-3xl font-bold text-gray-900">
+                        Final UI
+                    </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        {uiScreens.map((screen, index) => (
+                            <Card
+                                key={index}
+                                className="w-full rounded-2xl shadow-xl overflow-hidden transform transition-transform hover:scale-105 cursor-pointer aspect-video"
+                                onClick={() => setOpenUiScreenIndex(index)}
+                                style={{transform: `rotate(${(-5 + Math.random()*10)}deg)`, border: '5px solid #fff'}}
+                            >
+                                <CardContent className="p-0 w-full h-full">
+                                    <img src={screen.imageUrl} alt={screen.title} className="w-full h-full object-cover" />
+                                </CardContent>
+                            </Card>
+                        ))}
+                    </div>
+                </div>
+                      <GalleryImageDialog
+                          open={!!selectedUiScreen}
+                          onOpenChange={(open) => setOpenUiScreenIndex(open ? openUiScreenIndex : null)}
+                          item={selectedUiScreen}
+                      />
+                
+            </div>
+          </section>      
+
       {/* Key Learnings */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-6">
@@ -409,6 +514,8 @@ const TxcmsCaseStudy = () => {
           </div>
         </div>
       </section>
+
+
 
       {/* Legacy & Impact */}
       <section className="py-16">
