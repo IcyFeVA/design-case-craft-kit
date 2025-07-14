@@ -169,7 +169,7 @@ const UIGallery = () => {
                   } ${isTall ? 'md:row-span-2' : ''}`}
                   onClick={() => setSelectedImage(item)}
                 >
-                  <div className="relative overflow-hidden rounded-2xl bg-gray-100 hover:shadow-2xl transition-all duration-500 hover:scale-[1.02]">
+                  <div className="relative overflow-hidden rounded-2xl bg-slate-100 hover:shadow-2xl transition-all duration-500 hover:scale-[1.02]">
                     <div
                       className={`relative ${
                         isTall ? 'aspect-[4/6]' : isLarge ? 'aspect-[2/1]' : 'aspect-square'

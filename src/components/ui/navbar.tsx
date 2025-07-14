@@ -13,7 +13,7 @@ const Navbar: FC<NavbarProps> = ({ highlight }) => (
   <nav className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
     <div className="max-w-6xl mx-auto px-6 lg:px-8">
       <div className="flex items-center justify-between h-16">
-        <Link to="/#">
+        <Link to="/">
           <div className="font-semibold text-lg">Pascal Zirn <span className="font-light text-sm">- Vancouver, Canada</span></div>
         </Link>
         <div className="hidden md:flex items-center space-x-8">

@@ -51,7 +51,14 @@ const screenshots: Screenshot[] = [
         year: 2023,
         tags: ["Dashboard", "Tesla", "Apple Watch"],
     },
-
+      {
+        imageUrl: '/img/tesla/process4.png',
+        title: "Process",
+        description: "The concept of using a touch surface to execute a action was inspired by the James Bond movie 'Tomorrow Never Dies.' In this film, the renowned spy is seen using a touchpad on an Ericsson phone to control his BMW car.",
+        category: "UI",
+        year: 2023,
+        tags: ["Dashboard", "Tesla", "Apple Watch"],
+    },
 
 ];
 
@@ -82,12 +89,11 @@ function ScreenshotsRow({ screenshots }: ScreenshotsRowProps) {
                             aspectRatio: "16/9",
                             borderRadius: 8,
                             overflow: "hidden",
-                            boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
-                            marginLeft: i === 0 ? 0 : -20,
+                            marginLeft: i === 0 ? 0 : 16,
                             zIndex: 10 + i,
                             background: `url(${s.imageUrl}) center/cover`,
                             cursor: "pointer",
-                            transition: "box-shadow 0.2s",
+                            // transition: "box-shadow 0.2s",
                             display: "flex",
                             alignItems: "center",
                             justifyContent: "center",
@@ -97,10 +103,11 @@ function ScreenshotsRow({ screenshots }: ScreenshotsRowProps) {
                             textShadow: "0 1px 4px rgba(0,0,0,0.4)",
                             border: "3px solid #fff",
                             boxSizing: "border-box",
-                            transform: Math.random() > 0.5 ? "rotate(3deg)" : "rotate(-3deg)",
+                            // transform: Math.random() > 0.5 ? "rotate(3deg)" : "rotate(-3deg)",
                         }}
                         title={s.title}
                         onClick={() => setOpenIndex(i)}
+                        className="shadow-2xl transform transition-transform duration-300 hover:scale-110"
                     >
                     </div>
                 ))}
@@ -131,6 +138,14 @@ const TeslaWatchApp = () => {
       {
           imageUrl: '/img/tesla/final2.jpg',
           title: "On the Apple Watch Ultra",
+          description: "Mockup",
+          category: "UX/UI",
+          year: 2023,
+          tags: ["Climate", "Controls", "Watch"],
+      },
+      {
+          imageUrl: '/img/tesla/final3.png',
+          title: "Teaser",
           description: "Mockup",
           category: "UX/UI",
           year: 2023,
@@ -187,7 +202,7 @@ const TeslaWatchApp = () => {
       </section>
 
       {/* Project Overview */}
-      <section className="bg-gray-50 py-16">
+      <section className="bg-slate-50 py-16">
         <div className="max-w-4xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-6">
@@ -287,7 +302,7 @@ const TeslaWatchApp = () => {
       </section>
 
       {/* Design Process */}
-      <section className="bg-gray-50 py-16">
+      <section className="bg-slate-50 py-16">
         <div className="max-w-4xl mx-auto px-6 pb-8">
           <div className="space-y-12">
             <div className="text-center space-y-4">
@@ -396,7 +411,7 @@ const TeslaWatchApp = () => {
         <div className="max-w-4xl mx-auto px-6">
             <div className="space-y-8">
                 <h2 className="text-3xl font-bold text-gray-900 text-center">
-                    More UI
+                    Mockups
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {uiScreens.map((screen, index) => (
@@ -431,7 +446,7 @@ const TeslaWatchApp = () => {
                 Reflection & Conclusion
               </h2>
             </div>
-            <div className="bg-blue-50 rounded-2xl p-8">
+            <div className="bg-slate-100 rounded-2xl p-8">
               <p className="text-lg text-gray-700 leading-relaxed">
                 Porting the Tesla mobile app to the Apple Watch involves
                 overcoming several design and compatibility challenges. With
@@ -498,7 +513,7 @@ const TeslaWatchApp = () => {
 
 
       {/* CTA Section */}
-      {/* <section className="bg-gray-50 py-16">
+      {/* <section className="bg-slate-50 py-16">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <div className="space-y-8">
             <h2 className="text-3xl font-bold text-gray-900">

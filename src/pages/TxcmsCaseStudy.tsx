@@ -59,7 +59,7 @@ const TxcmsCaseStudy = () => {
       </section>
 
       {/* Project Overview */}
-      <section className="bg-gray-50 py-16">
+      <section className="bg-slate-50 py-16">
         <div className="max-w-4xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-6">
@@ -147,7 +147,7 @@ const TxcmsCaseStudy = () => {
       </section>
 
       {/* Research Process */}
-      <section className="bg-gray-50 py-16">
+      <section className="bg-slate-50 py-16">
         <div className="max-w-4xl mx-auto px-6">
           <div className="space-y-12">
             <div className="text-center space-y-4">
@@ -249,7 +249,7 @@ const TxcmsCaseStudy = () => {
       </section>
 
       {/* Design Process */}
-      <section className="bg-gray-50 py-16">
+      <section className="bg-slate-50 py-16">
         <div className="max-w-4xl mx-auto px-6">
           <div className="space-y-12">
             <div className="text-center space-y-4">
@@ -363,7 +363,7 @@ const TxcmsCaseStudy = () => {
       </section>
 
       {/* Key Learnings */}
-      <section className="bg-gray-50 py-16">
+      <section className="bg-slate-50 py-16">
         <div className="max-w-4xl mx-auto px-6">
           <div className="space-y-8">
             <h2 className="text-3xl font-bold text-gray-900">Key Learnings & Reflection</h2>
@@ -461,7 +461,7 @@ const TxcmsCaseStudy = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gray-50 py-16">
+      <section className="bg-slate-50 py-16">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <div className="space-y-8">
             <h2 className="text-3xl font-bold text-gray-900">Interested in the Design Process?</h2>

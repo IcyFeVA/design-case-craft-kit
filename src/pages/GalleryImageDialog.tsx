@@ -46,14 +46,14 @@ export function GalleryImageDialog({ open, onOpenChange, item }: GalleryImageDia
                 </Button>
               </div>
             </DialogHeader>
-            <div className="flex-1 flex items-center justify-center overflow-hidden p-6 bg-gray-100">
+            <div className="flex-1 flex items-center justify-center overflow-hidden p-6 bg-slate-100">
               <img
                 src={item.imageUrl}
                 alt={item.title}
                 className="max-w-full max-h-full object-contain rounded-lg"
               />
             </div>
-            <div className="p-6 pt-4 border-t z-10 bg-gray-50">
+            <div className="p-6 pt-4 border-t z-10 bg-slate-50">
               <div className="flex flex-wrap gap-2">
                 {item.tags.map((tag, index) => (
                   <Badge key={index} variant="secondary" className="text-sm">

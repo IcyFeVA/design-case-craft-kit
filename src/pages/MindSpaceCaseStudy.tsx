@@ -142,7 +142,7 @@ const MindSpaceCaseStudy = () => {
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-3 text-xl">1. User Personas & Journey Mapping</h3>
                       <p className="text-gray-700 mb-4">Created three distinct personas representing different student mental health archetypes and mapped their journey from stress triggers to resolution.</p>
-                      <div className="bg-gray-50 p-6 rounded-xl">
+                      <div className="bg-slate-50 p-6 rounded-xl">
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                           <div className="text-center">
                             <div className="w-12 h-12 bg-blue-200 rounded-full mx-auto mb-2"></div>
@@ -304,7 +304,7 @@ const MindSpaceCaseStudy = () => {
                     </div>
                   </div>
 
-                  <div className="bg-gray-50 p-6 rounded-xl">
+                  <div className="bg-slate-50 p-6 rounded-xl">
                     <h4 className="font-semibold text-gray-900 mb-3">Key User Feedback</h4>
                     <div className="space-y-3 text-gray-700">
                       <div className="flex items-start gap-2">

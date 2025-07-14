@@ -141,7 +141,7 @@ const Index = () => {
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-3 text-xl">1. Workflow Mapping & User Journeys</h3>
                       <p className="text-gray-700 mb-4">Mapped distinct export and overlay workflows for each persona, identifying critical decision points and potential friction areas.</p>
-                      <div className="bg-gray-50 p-6 rounded-xl">
+                      <div className="bg-slate-50 p-6 rounded-xl">
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                           <div className="text-center">
                             <div className="w-12 h-12 bg-green-200 rounded-full mx-auto mb-2"></div>
@@ -254,7 +254,7 @@ const Index = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                       <div className="h-48 bg-gradient-to-br from-gray-50 to-slate-100 rounded-xl flex items-center justify-center">
                         <div className="text-center">
-                          <div className="w-12 h-12 bg-gray-300 rounded-xl mx-auto mb-3"></div>
+                          <div className="w-12 h-12 bg-slate-300 rounded-xl mx-auto mb-3"></div>
                           <p className="text-gray-600 font-medium">Dashboard Layout</p>
                           <p className="text-gray-500 text-sm">Customizable workspace</p>
                         </div>
@@ -303,7 +303,7 @@ const Index = () => {
                     </div>
                   </div>
 
-                  <div className="bg-gray-50 p-6 rounded-xl">
+                  <div className="bg-slate-50 p-6 rounded-xl">
                     <h4 className="font-semibold text-gray-900 mb-3">Key Testing Insights</h4>
                     <div className="space-y-3 text-gray-700">
                       <div className="flex items-start gap-2">

@@ -12,7 +12,7 @@ const CaseStudyNav: React.FC = () => {
                         className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 transition-colors"
                     >
                         <ArrowLeft className="w-4 h-4" />
-                        <span>Back Home</span>
+                        <span>Back</span>
                     </Link>
                     <div className="font-semibold text-lg">Case Study</div>
                 </div>

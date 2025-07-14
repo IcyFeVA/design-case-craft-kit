@@ -94,7 +94,7 @@ const Home = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="bg-gray-50 py-16">
+      <section className="bg-slate-50 py-16">
         <div className="max-w-4xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center space-y-2">
@@ -110,8 +110,8 @@ const Home = () => {
               <div className="text-sm text-gray-600">Years Experience</div>
             </div>
             <div className="text-center space-y-2">
-              <div className="text-3xl font-bold text-gray-900">1</div>
-              <div className="text-sm text-gray-600">Design Award</div>
+              <div className="text-3xl font-bold text-gray-900">3</div>
+              <div className="text-sm text-gray-600">Design Awards</div>
             </div>
           </div>
         </div>
@@ -134,42 +134,37 @@ const Home = () => {
 
           {/* Featured Project - vSTAGE */}
           <div className="space-y-8">
-            <div className="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl flex items-center justify-center border border-gray-200">
-              <div className="text-center space-y-2">
-                <div className="w-16 h-16 bg-gray-300 rounded-lg mx-auto"></div>
-                <p className="text-gray-500 font-medium">vSTAGE Interface</p>
-                <p className="text-sm text-gray-400">3D Editor & Presentation Engine</p>
-              </div>
+            <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl flex items-center justify-center max-h-[480px] overflow-hidden w-full">
+                <img src="/img/tesla/teaser.png" alt="Tesla Apple Watch App Thumbnail" className="rounded-2xl" />
             </div>
 
             <div className="max-w-4xl mx-auto space-y-6">
               <div className="flex flex-wrap gap-2">
                 <Badge variant="secondary">UX/UI Design</Badge>
-                <Badge variant="secondary">Desktop Application</Badge>
-                <Badge variant="secondary">3D Visualization</Badge>
+                <Badge variant="secondary">Apple Watch</Badge>
+                <Badge variant="secondary">Tiny UI</Badge>
               </div>
 
               <div className="space-y-4">
                 <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
-                  vSTAGE — 3D Editor & Presentation Engine
+                  Tesla — Adoption to Apple Watch
                 </h3>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  Transformed a complex 3D tool designed for CAD professionals into an intuitive platform accessible to
-                  newcomers while retaining deep functionality for power users.
+                  If you know the TV Show "Knight Rider", this is the next step. This concept watch app allows you to control your car from your wrist, with a focus on simplicity and ease of use.
                 </p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/case-study">
+                <Link to="/tesla-watch-app">
                   <Button className="gap-2">
                     View Case Study
                     <ArrowRight className="w-4 h-4" />
                   </Button>
                 </Link>
-                <Button variant="outline" className="gap-2 bg-transparent">
+                {/* <Button variant="outline" className="gap-2 bg-transparent">
                   <ExternalLink className="w-4 h-4" />
                   Live Project
-                </Button>
+                </Button> */}
               </div>
             </div>
           </div>
@@ -304,7 +299,7 @@ const Home = () => {
       </section>
 
       {/* Case Studies Section */}
-      {/* <section className="py-20 bg-gray-50">
+      {/* <section className="py-20 bg-slate-50">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Featured Case Studies</h2>
@@ -318,7 +313,7 @@ const Home = () => {
               <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 h-full">
                 <div className="h-48 bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl mb-6 flex items-center justify-center">
                   <div className="text-center">
-                    <div className="w-16 h-16 bg-gray-300 rounded-lg mx-auto mb-3"></div>
+                    <div className="w-16 h-16 bg-slate-300 rounded-lg mx-auto mb-3"></div>
                     <p className="text-gray-600 font-medium">vSTAGE Interface</p>
                   </div>
                 </div>
@@ -381,7 +376,7 @@ const Home = () => {
       </section> */}
 
       {/* About Section */}
-      <section id="about" className="bg-gray-50 py-20">
+      <section id="about" className="bg-slate-50 py-20">
         <div className="max-w-4xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
@@ -446,7 +441,7 @@ const Home = () => {
                   "Pascal is both a skilled and knowledgeable UI/UX Designer, as well as a great team leader. I highly recommend Pascal to any organization who needs a great UI/UX team leader or instructor."
                 </p>
                 <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-gray-200 rounded-full"></div>
+                  <div className="w-10 h-10 bg-slate-200 rounded-full"></div>
                   <div>
                     <p className="font-semibold text-gray-900">Dougal Mac Gregor</p>
                     <p className="text-sm text-gray-600">Executive Coach & Software Engineer, Ryv Consulting</p>
@@ -466,7 +461,7 @@ const Home = () => {
                   "I wholeheartedly recommend Pascal for any position requiring expertise in education and UX/UI Design."
                 </p>
                 <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-gray-200 rounded-full"></div>
+                  <div className="w-10 h-10 bg-slate-200 rounded-full"></div>
                   <div>
                     <p className="font-semibold text-gray-900">Gabriela Kurtz, Phd.</p>
                     <p className="text-sm text-gray-600">Ex-Program Manager, Tamwood Careers</p>
@@ -480,7 +475,7 @@ const Home = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="bg-gray-900 text-white py-20">
+      <section id="contact" className="bg-slate-900 text-white py-20">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <div className="space-y-8">
             <div className="space-y-4">
@@ -491,10 +486,12 @@ const Home = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" className="gap-2">
-                <Mail className="w-4 h-4" />
-                pascal.zirn@pm.me
-              </Button>
+              <Link to="mailto:pascal.zirn@pm.me">
+                <Button size="lg" variant="secondary" className="gap-2">
+                  <Mail className="w-4 h-4" />
+                  pascal.zirn@pm.me
+                </Button>
+              </Link>
               <Link to="https://www.linkedin.com/in/pascalz/" target="_blank">
               <Button
                 size="lg"
