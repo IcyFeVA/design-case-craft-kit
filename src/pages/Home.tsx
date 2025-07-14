@@ -201,28 +201,53 @@ const Home = () => {
                 </CardContent>
               </Card>
             </Link>
+                        {/* <div className="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl flex items-center justify-center border border-gray-200">
+              <div className="text-center space-y-2">
+                <div className="w-16 h-16 bg-gray-300 rounded-lg mx-auto"></div>
+                <p className="text-gray-500 font-medium">vSTAGE Interface</p>
+                <p className="text-sm text-gray-400">3D Editor & Presentation Engine</p>
+              </div>
+            </div>
 
-            <Link to="/case-study">
+            <div className="max-w-4xl mx-auto space-y-6">
+              <div className="flex flex-wrap gap-2">
+                <Badge variant="secondary">UX/UI Design</Badge>
+                <Badge variant="secondary">Desktop Application</Badge>
+                <Badge variant="secondary">3D Visualization</Badge>
+              </div>
+
+              <div className="space-y-4">
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
+                  vSTAGE — 3D Editor & Presentation Engine
+                </h3>
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  Transformed a complex 3D tool designed for CAD professionals into an intuitive platform accessible to
+                  newcomers while retaining deep functionality for power users.
+                </p>
+              </div> */}
+
+            <Link to="/vstage">
               <Card className="border-0 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
                 <CardContent className="p-0">
                   <div className="aspect-[4/3] bg-gradient-to-br from-green-50 to-emerald-50 rounded-t-lg flex items-center justify-center border-b border-green-100">
-                    <div className="text-center space-y-2">
-                      <div className="w-12 h-12 bg-green-200 rounded-lg mx-auto"></div>
-                      <p className="text-green-600 font-medium text-sm">SaaS Dashboard</p>
-                    </div>
+                    
                   </div>
                   <div className="p-6 space-y-4">
                     <div className="flex flex-wrap gap-2">
                       <Badge variant="outline" className="text-xs">
-                        Web App
+                        Desktop Application
                       </Badge>
                       <Badge variant="outline" className="text-xs">
-                        Analytics
+                        3D Visualization
+                      </Badge>
+                      <Badge variant="outline" className="text-xs">
+                        3D Presentation
                       </Badge>
                     </div>
-                    <h4 className="text-xl font-semibold text-gray-900">DataViz Pro</h4>
+                    <h4 className="text-xl font-semibold text-gray-900">vSTAGE — 3D Presentation Platform</h4>
                     <p className="text-gray-600 text-sm leading-relaxed">
-                      Analytics dashboard helping businesses make data-driven decisions with intuitive visualizations
+                      Transformed a complex 3D tool designed for CAD professionals into an intuitive platform accessible to
+                  newcomers while retaining deep functionality for power users.
                     </p>
                     <Button variant="ghost" className="gap-2 p-0 h-auto text-sm">
                       View Project

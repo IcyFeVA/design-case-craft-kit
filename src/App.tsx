@@ -13,6 +13,7 @@ import EcommerceCaseStudy from "./pages/EcommerceCaseStudy";
 import TxcmsCaseStudy from "./pages/TxcmsCaseStudy";
 import TeslaWatchApp from "./pages/TeslaWatchApp";
 import NotFound from "./pages/NotFound";
+import VStage from "./pages/VStage";
 
 const queryClient = new QueryClient();
 
@@ -43,13 +44,10 @@ const App = () => (
           >
             <div style={{ fontWeight: 600, marginBottom: 4, fontSize: 13 }}>Routes</div>
             <ul style={{ listStyle: "none", margin: 0, padding: 0 }}>
-              <li><a href="/" style={{ color: "#2563eb", textDecoration: "none" }}>Home</a></li>
               <li><a href="/case-study" style={{ color: "#2563eb", textDecoration: "none" }}>Default Case Study</a></li>
               <li><a href="/mindspace-case-study" style={{ color: "#2563eb", textDecoration: "none" }}>MindSpace Case Study</a></li>
               <li><a href="/ecommerce-case-study" style={{ color: "#2563eb", textDecoration: "none" }}>Ecommerce Case Study</a></li>
               <li><a href="/txcms-case-study" style={{ color: "#2563eb", textDecoration: "none" }}>Txcms Case Study</a></li>
-              <li><a href="/tesla-watch-app" style={{ color: "#2563eb", textDecoration: "none" }}>Tesla Watch App</a></li>
-              <li><a href="/ui-gallery" style={{ color: "#2563eb", textDecoration: "none" }}>UI Gallery</a></li>
             </ul>
           </div>
         )}
@@ -60,6 +58,7 @@ const App = () => (
           <Route path="/ecommerce-case-study" element={<EcommerceCaseStudy />} />
           <Route path="/txcms-case-study" element={<TxcmsCaseStudy />} />
           <Route path="/tesla-watch-app" element={<TeslaWatchApp />} />
+          <Route path="/vstage" element={<VStage />} />
           <Route path="/ui-gallery" element={<UIGallery />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THIS LINE */}
           {/* Catch-all route for 404 Not Found */}
