@@ -51,9 +51,9 @@ const Home = () => {
               Available for new opportunities
             </Badge> */}
 
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
+            <h1 className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500 leading-tight">
               Product Designer crafting
-              <span className="block text-gray-600">meaningful experiences</span>
+              <span className="block text-gray-700">meaningful experiences</span>
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-3xl">
@@ -314,10 +314,10 @@ const Home = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {/* <Link to="/case-study" className="group"> */}
               <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 h-full">
-                <div className="h-48 bg-gradient-to-br from-red-100 to-gray-200 rounded-xl mb-6 flex items-center justify-center">
+                <div className="h-48 bg-gradient-to-br from-slate-300 to-slate-500 rounded-xl mb-6 flex items-center justify-center">
                   <div className="text-center flex flex-col items-center justify-center">
-                    <Lock className="w-16 h-16 text-red-300 mb-3" />
-                    <p className="text-red-600 font-medium">Crushy</p>
+                    <Lock className="w-16 h-16 text-white mb-3" />
+                    <p className="text-white font-medium">Crushy</p>
                   </div>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
@@ -335,10 +335,10 @@ const Home = () => {
 
             {/* <Link to="/ecommerce-case-study" className="group"> */}
               <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 h-full">
-                <div className="h-48 bg-gradient-to-br from-green-50 to-emerald-100 rounded-xl mb-6 flex items-center justify-center">
+                <div className="h-48 bg-gradient-to-br from-slate-300 to-slate-500 rounded-xl mb-6 flex items-center justify-center">
                   <div className="text-center flex flex-col items-center justify-center">
-                    <Lock className="w-16 h-16 text-green-300 mb-3" />
-                    <p className="text-green-600 font-medium">Bolt from the Blue</p>
+                    <Lock className="w-16 h-16 text-white mb-3" />
+                    <p className="text-white font-medium">Bolt from the Blue</p>
                   </div>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
@@ -356,10 +356,10 @@ const Home = () => {
 
             {/* <Link to="/mindspace-case-study" className="group"> */}
               <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 h-full">
-                <div className="h-48 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-xl mb-6 flex items-center justify-center">
+                <div className="h-48 bg-gradient-to-br from-slate-300 to-slate-500 rounded-xl mb-6 flex items-center justify-center">
                   <div className="text-center flex flex-col items-center justify-center">
-                    <Lock className="w-16 h-16 text-blue-300 mb-3" />
-                    <p className="text-blue-600 font-medium">Zdash</p>
+                    <Lock className="w-16 h-16 text-white mb-3" />
+                    <p className="text-white font-medium">Zdash</p>
                   </div>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
