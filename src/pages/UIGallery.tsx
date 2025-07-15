@@ -22,9 +22,9 @@ const UIGallery = () => {
   const galleryItems: GalleryItem[] = [
     {
       id: 1,
-      title: "80's Style Weather App",
+      title: "80's Style UI's",
       category: "",
-      description: "This UI can be seen in the film 'Bolt from the blue' (2024) and is designed to evoke nostalgia with its retro aesthetic.",
+      description: "UI's I made for the movie 'Bolt from the blue' (2024). The film is about a weird scientist who tries to capture lightning",
       imageUrl: "/img/gallery/bolt1.jpg",
       tags: ["Film"],
       year: "2024"
@@ -40,47 +40,47 @@ const UIGallery = () => {
     },
     {
       id: 3,
-      title: "",
+      title: "Augmented Reality",
       category: "",
       description: "",
       imageUrl: "/img/gallery/holo1.jpg",
-      tags: [""],
-      year: "2023"
+      tags: ["AR"],
+      year: "2022"
     },
     {
       id: 4,
-      title: "",
+      title: "Website for Side Effects",
       category: "",
       description: "",
       imageUrl: "/img/gallery/sfx1.jpg",
       tags: [""],
-      year: "2024"
+      year: "2022"
     },
     {
       id: 5,
-      title: "",
+      title: "Fast & Furious UI",
       category: "",
       description: "",
       imageUrl: "/img/gallery/ff1.jpg",
-      tags: [""],
-      year: "2023"
+      tags: ["Netflix", "DreamWorks"],
+      year: "2019"
     },
     {
       id: 6,
-      title: "",
+      title: "Server Status Dashboard",
       category: "",
       description: "",
       imageUrl: "/img/gallery/lb1.png",
       tags: [""],
-      year: "2024"
+      year: "2016"
     },
     {
       id: 7,
-      title: "",
+      title: "Film UI for Manhunt",
       category: "",
       description: "",
       imageUrl: "/img/gallery/manhunt1.jpg",
-      tags: [""],
+      tags: ["FUI"],
       year: "2023"
     },
     {
@@ -94,38 +94,38 @@ const UIGallery = () => {
     },
     {
       id: 9,
-      title: "",
+      title: "Concept Design",
       category: "",
       description: "",
       imageUrl: "/img/gallery/bolt2.jpg",
-      tags: [""],
-      year: "2023"
+      tags: ["concept"],
+      year: "2021"
     },
     {
       id: 10,
-      title: "",
+      title: "Fictional Hacker UI",
       category: "",
-      description: "",
+      description: "What would a hacker's UI look like?",
       imageUrl: "/img/gallery/hacker1.jpg",
-      tags: [""],
+      tags: ["Exercise", "FUI"],
       year: "2024"
     },
     {
       id: 11,
-      title: "",
+      title: "Fast & Furious UI",
       category: "",
-      description: "",
+      description: "Drones are scanning the area inside the mountain",
       imageUrl: "/img/gallery/ff2.jpg",
-      tags: [""],
-      year: "2023"
+      tags: ["Netlfix", "DreamWorks"],
+      year: "2019"
     },
     {
       id: 12,
-      title: "",
+      title: "Design Exercise",
       category: "",
-      description: "",
+      description: "I did this exercise with my students in class. 'Create a weather display in the style of neo-pop'",
       imageUrl: "/img/gallery/neo1.png",
-      tags: [""],
+      tags: ["exercise", "college"],
       year: "2024"
     },
 
@@ -135,39 +135,39 @@ const UIGallery = () => {
 
     {
       id: 13,
-      title: "",
+      title: "3D Visual for vHUB. A 3D cloud platform for digital twins",
       category: "",
       description: "",
       imageUrl: "/img/gallery/vhub1.jpg",
       tags: [""],
-      year: "2024"
+      year: "2021"
     },
     {
       id: 14,
-      title: "",
+      title: "Fast & Furious Concept UI",
       category: "",
       description: "",
       imageUrl: "/img/gallery/ff3.jpg",
-      tags: [""],
-      year: "2024"
+      tags: ["Netflix", "DreamWorks"],
+      year: "2019"
     },
     {
       id: 15,
-      title: "",
+      title: "Supergirl",
       category: "",
-      description: "",
+      description: "A 3D exercise I did in my free time. Took me two months from start to finish",
       imageUrl: "/img/gallery/personal1.jpg",
       tags: [""],
-      year: "2023"
+      year: "2012"
     },
     {
       id: 16,
-      title: "",
+      title: "Fast & Furious UI",
       category: "",
       description: "",
       imageUrl: "/img/gallery/ff4.jpg",
-      tags: [""],
-      year: "2024"
+      tags: ["Netflix", "DreamWorks"],
+      year: "2019"
     },
     {
       id: 17,
