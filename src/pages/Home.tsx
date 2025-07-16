@@ -57,7 +57,7 @@ const Home = () => {
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-3xl">
-              I’m Pascal, a product designer with 9+ years in tech. I build clear, useful experiences that solve real problems — fast.
+              Hi! I’m Pascal, I build clear, useful experiences that solve real problems — fast.
             </p>
           </div>
 
@@ -440,11 +440,11 @@ const Home = () => {
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed italic">
                   "Pascal is both a skilled and knowledgeable UI/UX Designer, as well as a great team leader. I highly recommend Pascal to any organization who needs a great UI/UX team leader or instructor."
                 </p>
                 <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-slate-200 rounded-full"></div>
+                  <img src="/img/testimonials/dougal.jpg" alt="Dougal Mac Gregor" className="w-16 aspect-square rounded-full" />
                   <div>
                     <p className="font-semibold text-gray-900">Dougal Mac Gregor</p>
                     <p className="text-sm text-gray-600">Executive Coach & Software Engineer, Ryv Consulting</p>
@@ -460,14 +460,14 @@ const Home = () => {
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed italic">
                   "I wholeheartedly recommend Pascal for any position requiring expertise in education and UX/UI Design."
                 </p>
                 <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-slate-200 rounded-full"></div>
+                  <img src="/img/testimonials/gabi.jpg" alt="Gabriela Kurtz" className="w-16 aspect-square rounded-full" />
                   <div>
-                    <p className="font-semibold text-gray-900">Gabriela Kurtz, Phd.</p>
-                    <p className="text-sm text-gray-600">Ex-Program Manager, Tamwood Careers</p>
+                    <p className="font-semibold text-gray-900">Gabriela Kurtz</p>
+                    <p className="text-sm text-gray-600">PhD | Professor & Consultant</p>
                   </div>
                 </div>
               </CardContent>
