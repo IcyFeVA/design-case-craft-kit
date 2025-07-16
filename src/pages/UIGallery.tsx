@@ -18,6 +18,28 @@ interface GalleryItem {
 
 const UIGallery = () => {
   const [selectedImage, setSelectedImage] = useState<GalleryItem | null>(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const openDialog = (item: GalleryItem, index: number) => {
+    setSelectedImage(item);
+    setCurrentIndex(index);
+  };
+
+  const closeDialog = () => {
+    setSelectedImage(null);
+  };
+
+  const handleNext = () => {
+    const nextIndex = (currentIndex + 1) % galleryItems.length;
+    setSelectedImage(galleryItems[nextIndex]);
+    setCurrentIndex(nextIndex);
+  };
+
+  const handlePrevious = () => {
+    const prevIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+    setSelectedImage(galleryItems[prevIndex]);
+    setCurrentIndex(prevIndex);
+  };
 
   const galleryItems: GalleryItem[] = [
     {
@@ -292,7 +314,7 @@ const UIGallery = () => {
                 <div
                   key={item.id}
                   className={`group cursor-pointer ${colSpan} ${rowSpan}`}
-                  onClick={() => setSelectedImage(item)}
+                  onClick={() => openDialog(item, index)}
                 >
                   <div className="relative w-full h-full overflow-hidden rounded-2xl bg-slate-100 hover:shadow-2xl transition-all duration-500 hover:scale-[1.02]">
                     <img
@@ -330,7 +352,14 @@ const UIGallery = () => {
       </section>
 
       {/* Image Overlay Dialog */}
-      <GalleryImageDialog open={!!selectedImage} onOpenChange={open => setSelectedImage(open ? selectedImage : null)} item={selectedImage} />
+      <GalleryImageDialog 
+        open={!!selectedImage} 
+        onOpenChange={open => !open && closeDialog()} 
+        item={selectedImage} 
+        onNext={handleNext}
+        onPrevious={handlePrevious}
+        showNavigation={true}
+      />
     </div>
   );
 };

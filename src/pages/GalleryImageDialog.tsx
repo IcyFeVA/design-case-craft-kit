@@ -1,7 +1,7 @@
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { X } from "lucide-react";
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
 export interface GalleryImageDialogProps {
   open: boolean;
@@ -14,9 +14,12 @@ export interface GalleryImageDialogProps {
     imageUrl: string;
     tags: string[];
   } | null;
+  onNext?: () => void;
+  onPrevious?: () => void;
+  showNavigation?: boolean;
 }
 
-export function GalleryImageDialog({ open, onOpenChange, item }: GalleryImageDialogProps) {
+export function GalleryImageDialog({ open, onOpenChange, item, onNext, onPrevious, showNavigation }: GalleryImageDialogProps) {
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-5xl w-[95vw] h-[90vh] p-0 flex flex-col">
@@ -46,7 +49,27 @@ export function GalleryImageDialog({ open, onOpenChange, item }: GalleryImageDia
                 </Button>
               </div>
             </DialogHeader>
-            <div className="flex-1 flex items-center justify-center overflow-hidden p-6 bg-slate-100">
+            <div className="relative flex-1 flex items-center justify-center overflow-hidden p-6 bg-slate-100">
+              {showNavigation && (
+                <>
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    onClick={onPrevious}
+                    className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/50 hover:bg-white"
+                  >
+                    <ChevronLeft className="w-6 h-6" />
+                  </Button>
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    onClick={onNext}
+                    className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/50 hover:bg-white"
+                  >
+                    <ChevronRight className="w-6 h-6" />
+                  </Button>
+                </>
+              )}
               <img
                 src={item.imageUrl}
                 alt={item.title}
