@@ -2,6 +2,7 @@ import { Download } from "lucide-react";
 import { FC } from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import MobileMenu from "./MobileMenu";
 
 type NavLink = "work" | "gallery" | "motion" | "about" | "contact";
 
@@ -15,7 +16,7 @@ const Navbar: FC<NavbarProps> = ({ highlight }) => (
       <div className="flex items-center justify-between h-16">
         <Link to="/" className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 transition-colors">
           <img src="/img/itsame2.jpg" alt="Pascal Zirn" className="h-12 w-auto rounded-full" />
-          <div className="font-semibold text-lg">Pascal Zirn <span className="font-light">- Vancouver, Canada</span></div>
+          <div className="font-semibold text-lg">Pascal Zirn <span className="font-light hidden md:inline-block">- Vancouver, Canada</span></div>
         </Link>
         <div className="hidden md:flex items-center space-x-8">
           <Link
@@ -59,6 +60,7 @@ const Navbar: FC<NavbarProps> = ({ highlight }) => (
             Contact
           </Link> */}
         </div>
+        <MobileMenu />
         {/* <Button variant="outline" className="gap-2 bg-transparent">
           <Download className="w-4 h-4" />
           Resume
