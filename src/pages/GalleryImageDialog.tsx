@@ -22,20 +22,23 @@ export interface GalleryImageDialogProps {
 export function GalleryImageDialog({ open, onOpenChange, item, onNext, onPrevious, showNavigation }: GalleryImageDialogProps) {
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-5xl w-[95vw] h-[90vh] p-0 flex flex-col">
+      <DialogContent className="max-w-none w-screen h-screen p-0 flex flex-col bg-black/95 border-0 rounded-none">
         {item && (
           <>
-            <DialogHeader className="p-6 pb-4 border-b z-10 bg-white">
+            {/* Header with info overlay */}
+            <div className="absolute top-0 left-0 right-0 z-30 bg-gradient-to-b from-black/80 via-black/40 to-transparent p-6 pb-12">
               <div className="flex items-start justify-between">
                 <div className="flex-1">
                   <div className="flex items-center space-x-3 mb-2">
-                    <Badge variant="outline">{item.category}</Badge>
-                    <span className="text-sm text-gray-500">{item.year}</span>
+                    <Badge variant="outline" className="bg-white/10 border-white/20 text-white">
+                      {item.category}
+                    </Badge>
+                    <span className="text-sm text-white/70">{item.year}</span>
                   </div>
-                  <DialogTitle className="text-2xl font-bold text-gray-900 mb-2">
+                  <DialogTitle className="text-2xl font-bold text-white mb-2">
                     {item.title}
                   </DialogTitle>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-white/80 leading-relaxed max-w-2xl">
                     {item.description}
                   </p>
                 </div>
@@ -43,43 +46,51 @@ export function GalleryImageDialog({ open, onOpenChange, item, onNext, onPreviou
                   variant="ghost"
                   size="icon"
                   onClick={() => onOpenChange(false)}
-                  className="ml-4"
+                  className="ml-4 text-white hover:bg-white/10 hover:text-white"
                 >
-                  <X className="w-5 h-5" />
+                  <X className="w-6 h-6" />
                 </Button>
               </div>
-            </DialogHeader>
-            <div className="relative flex-1 flex items-center justify-center overflow-hidden p-6 bg-slate-100">
+            </div>
+
+            {/* Main image area */}
+            <div className="relative flex-1 flex items-center justify-center overflow-hidden">
               {showNavigation && (
                 <>
                   <Button
                     variant="ghost"
                     size="icon"
                     onClick={onPrevious}
-                    className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/50 hover:bg-white"
+                    className="absolute left-6 top-1/2 -translate-y-1/2 z-20 bg-black/30 hover:bg-black/50 text-white border-white/20 backdrop-blur-sm"
                   >
-                    <ChevronLeft className="w-6 h-6" />
+                    <ChevronLeft className="w-8 h-8" />
                   </Button>
                   <Button
                     variant="ghost"
                     size="icon"
                     onClick={onNext}
-                    className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/50 hover:bg-white"
+                    className="absolute right-6 top-1/2 -translate-y-1/2 z-20 bg-black/30 hover:bg-black/50 text-white border-white/20 backdrop-blur-sm"
                   >
-                    <ChevronRight className="w-6 h-6" />
+                    <ChevronRight className="w-8 h-8" />
                   </Button>
                 </>
               )}
               <img
                 src={item.imageUrl}
                 alt={item.title}
-                className="max-w-full max-h-full object-contain rounded-lg"
+                className="max-w-[95vw] max-h-[95vh] object-contain drop-shadow-2xl"
               />
             </div>
-            <div className="p-6 pt-4 border-t z-10 bg-slate-50">
-              <div className="flex flex-wrap gap-2">
+
+            {/* Footer with tags overlay */}
+            <div className="absolute bottom-0 left-0 right-0 z-30 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-6 pt-12">
+              <div className="flex flex-wrap gap-2 justify-center">
                 {item.tags.map((tag, index) => (
-                  <Badge key={index} variant="secondary" className="text-sm">
+                  <Badge 
+                    key={index} 
+                    variant="secondary" 
+                    className="text-sm bg-white/10 border-white/20 text-white hover:bg-white/20"
+                  >
                     {tag}
                   </Badge>
                 ))}
