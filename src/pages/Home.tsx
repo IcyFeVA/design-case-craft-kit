@@ -134,9 +134,9 @@ const Home = () => {
 
           {/* Featured Project - vSTAGE */}
           <div className="space-y-8">
-            <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl flex items-center justify-center max-h-[480px] overflow-hidden w-full">
+            <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl flex items-center justify-center max-h-[480px] overflow-hidden w-full featured-work-container">
               <Link to="/tesla-watch-app">
-                <img src="/img/tesla/teaser.png" alt="Tesla Apple Watch App Thumbnail" className="rounded-2xl" />
+                <img src="/img/tesla/teaser.png" alt="Tesla Apple Watch App Thumbnail" className="rounded-2xl featured-work-hover" />
               </Link>
             </div>
 
@@ -176,8 +176,8 @@ const Home = () => {
             <Link to="/txcms-case-study">
               <Card className="border-0 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
                 <CardContent className="p-0">
-                    <div className="aspect-video bg-gradient-to-br from-green-50 to-emerald-50 rounded-t-lg flex items-center justify-center border-b border-green-100">
-                    <img src="/img/tx/thumb.png" alt="vSTAGE Hero" className="aspect-video w-full object-cover rounded-lg" />
+                    <div className="aspect-video bg-gradient-to-br from-green-50 to-emerald-50 rounded-t-lg flex items-center justify-center border-b border-green-100 featured-work-container">
+                    <img src="/img/tx/thumb.png" alt="vSTAGE Hero" className="aspect-video w-full object-cover rounded-lg featured-work-hover" />
                   </div>
                   <div className="p-6 space-y-4">
                     <div className="flex flex-wrap gap-2">
@@ -207,8 +207,8 @@ const Home = () => {
             <Link to="/vstage">
               <Card className="border-0 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
                 <CardContent className="p-0">
-                  <div className="aspect-video bg-gradient-to-br from-green-50 to-emerald-50 rounded-t-lg flex items-center justify-center border-b border-green-100">
-                    <img src="/img/vstage/hero.png" alt="vSTAGE Hero" className="aspect-video w-full object-cover rounded-lg" />
+                  <div className="aspect-video bg-gradient-to-br from-green-50 to-emerald-50 rounded-t-lg flex items-center justify-center border-b border-green-100 featured-work-container">
+                    <img src="/img/vstage/hero.png" alt="vSTAGE Hero" className="aspect-video w-full object-cover rounded-lg featured-work-hover" />
                   </div>
                   <div className="p-6 space-y-4">
                     <div className="flex flex-wrap gap-2">
