@@ -28,21 +28,21 @@ const Navbar: FC<NavbarProps> = ({ highlight }) => (
             Home
           </Link>
           <Link
+            to="/motion"
+            className={`text-gray-600 hover:text-gray-900 transition-colors ${
+              highlight === "motion" ? "font-semibold" : ""
+            }`}
+          >
+            Motion & 3D
+          </Link>
+          <Link
             to="/ui-gallery"
             className={`text-gray-600 hover:text-gray-900 transition-colors ${
               highlight === "gallery" ? "font-semibold" : ""
             }`}
           >
             Gallery
-          </Link>
-          <Link
-            to="/motion"
-            className={`text-gray-600 hover:text-gray-900 transition-colors ${
-              highlight === "motion" ? "font-semibold" : ""
-            }`}
-          >
-            3D & Motion
-          </Link>
+          </Link>          
           <Link
             to="/#about"
             className={`text-gray-600 hover:text-gray-900 transition-colors ${

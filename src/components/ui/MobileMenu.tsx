@@ -19,8 +19,8 @@ const MobileMenu = () => {
         <div className="absolute top-16 left-0 right-0 bg-white/80 z-49 border-b border-gray-100"> 
           <div className="px-6 py-4 flex flex-col space-y-4 backdrop-blur-md">
             <Link to="/" className="text-gray-600 hover:text-gray-900 transition-colors" onClick={toggleMenu}>Home</Link>
-            <Link to="/ui-gallery" className="text-gray-600 hover:text-gray-900 transition-colors" onClick={toggleMenu}>Gallery</Link>
             <Link to="/motion" className="text-gray-600 hover:text-gray-900 transition-colors" onClick={toggleMenu}>3D & Motion</Link>
+            <Link to="/ui-gallery" className="text-gray-600 hover:text-gray-900 transition-colors" onClick={toggleMenu}>Gallery</Link>
             <Link to="/#about" className="text-gray-600 hover:text-gray-900 transition-colors" onClick={toggleMenu}>About</Link>
           </div>
         </div>
