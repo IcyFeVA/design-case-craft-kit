@@ -23,7 +23,7 @@ const Motion = () => {
         <div className="space-y-8">
           <div className="space-y-6 align-center text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
-              3D & Motion Design
+              Demo Reel
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
               Some of my recent work in 3D design, motion graphics, and user interface animations.
