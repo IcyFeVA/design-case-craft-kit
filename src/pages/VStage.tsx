@@ -22,26 +22,26 @@ const processShots: Screenshot[] = [
       {
         imageUrl: '/img/vstage/process3.png',
         title: "Process",
-        description: "First draft looks nice, but not usable (text and buttons too small).",
+        description: "",
         category: "UI",
         year: 2023,
-        tags: ["Dashboard", "Tesla", "Apple Watch"],
+        tags: [],
     },
       {
         imageUrl: '/img/vstage/process4.png',
         title: "Process",
-        description: "The concept of using a touch surface to execute a action was inspired by the James Bond movie 'Tomorrow Never Dies.' In this film, the renowned spy is seen using a touchpad on an Ericsson phone to control his BMW car.",
+        description: "",
         category: "UI",
         year: 2023,
-        tags: ["Dashboard", "Tesla", "Apple Watch"],
+        tags: [],
     },
           {
         imageUrl: '/img/vstage/process5.png',
         title: "Process",
-        description: "The concept of using a touch surface to execute a action was inspired by the James Bond movie 'Tomorrow Never Dies.' In this film, the renowned spy is seen using a touchpad on an Ericsson phone to control his BMW car.",
+        description: "",
         category: "UI",
         year: 2023,
-        tags: ["Dashboard", "Tesla", "Apple Watch"],
+        tags: [],
     },
 
 ];
@@ -53,7 +53,7 @@ const processShots: Screenshot[] = [
           description: "Dark mode of the vSTAGE 3D interface, showcasing the main editor with advanced controls and data visualization.",
           category: "UX/UI",
           year: 2023,
-          tags: ["Climate", "Controls", "Watch"],
+          tags: ["3D", "Presentation", "Real-time", "CAD"],
       },
       {
           imageUrl: '/img/vstage/final5.png',
@@ -61,7 +61,7 @@ const processShots: Screenshot[] = [
           description: "Slide-bar navigation (bottom) with large visual trackers for presentation sequences, designed like familiar media players.",
           category: "UX/UI",
           year: 2023,
-          tags: ["Climate", "Controls", "Watch"],
+          tags: ["3D", "Presentation", "Real-time", "CAD"],
       },
       {
           imageUrl: '/img/vstage/final3.png',
@@ -69,7 +69,7 @@ const processShots: Screenshot[] = [
           description: "Overlay Editor to manage visual overlays for video export and presentation",
           category: "UX/UI",
           year: 2023,
-          tags: ["Climate", "Controls", "Watch"],
+          tags: ["3D", "Presentation", "Real-time", "CAD"],
       },
       {
           imageUrl: '/img/vstage/final2.png',
@@ -77,7 +77,7 @@ const processShots: Screenshot[] = [
           description: "Login screen for vSTAGE, designed to be simple and intuitive for new users.",
           category: "UX/UI",
           year: 2023,
-          tags: ["Climate", "Controls", "Watch"],
+          tags: ["3D", "Presentation", "Real-time", "CAD"],
       },
       {
           imageUrl: '/img/vstage/final4.png',
@@ -85,7 +85,7 @@ const processShots: Screenshot[] = [
           description: "There are dozens of dynamic components and reusable patterns for rapid development.",
           category: "UX/UI",
           year: 2023,
-          tags: ["Climate", "Controls", "Watch"],
+          tags: ["3D", "Presentation", "Real-time", "CAD"],
       },
   ];
 

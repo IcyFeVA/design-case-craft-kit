@@ -30,14 +30,14 @@ export function GalleryImageDialog({ open, onOpenChange, item, onNext, onPreviou
               <div className="flex items-start justify-between">
                 <div className="flex-1">
                   <div className="flex items-center space-x-3 mb-2">
-                    <Badge variant="outline" className="bg-white/10 border-white/20 text-white">
+                    {/* <Badge variant="outline" className="bg-white/10 border-white/20 text-white">
                       {item.category}
-                    </Badge>
-                    <span className="text-sm text-white/70">{item.year}</span>
+                    </Badge> */}
+                    {/* <span className="text-sm text-white/70">{item.year}</span> */}
                   </div>
-                  <DialogTitle className="text-2xl font-bold text-white mb-2">
+                  {/* <DialogTitle className="text-2xl font-bold text-white mb-2">
                     {item.title}
-                  </DialogTitle>
+                  </DialogTitle> */}
                   <p className="text-white/80 leading-relaxed max-w-2xl">
                     {item.description}
                   </p>
@@ -78,13 +78,13 @@ export function GalleryImageDialog({ open, onOpenChange, item, onNext, onPreviou
               <img
                 src={item.imageUrl}
                 alt={item.title}
-                className="max-w-[95vw] max-h-[95vh] object-contain drop-shadow-2xl"
+                className="max-w-[95vw] max-h-[80vh] object-contain drop-shadow-2xl"
               />
             </div>
 
             {/* Footer with tags overlay */}
             <div className="absolute bottom-0 left-0 right-0 z-30 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-6 pt-12">
-              <div className="flex flex-wrap gap-2 justify-center">
+              {/* <div className="flex flex-wrap gap-2 justify-center">
                 {item.tags.map((tag, index) => (
                   <Badge 
                     key={index} 
@@ -94,7 +94,7 @@ export function GalleryImageDialog({ open, onOpenChange, item, onNext, onPreviou
                     {tag}
                   </Badge>
                 ))}
-              </div>
+              </div> */}
             </div>
           </>
         )}
