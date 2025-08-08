@@ -38,7 +38,7 @@ const Motion = () => {
 
       <section className="pb-20 px-6 lg:px-8 py-8">
         <div className="max-w-6xl mx-auto">
-            <div style={{padding: '56.25% 0 0 0', position:'relative'}}>
+            <div style={{padding: '56.25% 0 0 0', position:'relative'}} className="aspect-video rounded-2xl overflow-hidden shadow-2xl bg-card bg-gray-900">
                 <iframe src={`https://player.vimeo.com/video/1034439821?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;dnt=1`} frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style={{position:'absolute', top:0, left:0, width:'100%',height:'100%'}} title="Demo Reel 2024 (3D, Motion, FUI)">
                 </iframe>
             </div>
@@ -52,7 +52,7 @@ const Motion = () => {
 
       <section className="pb-20 px-6 lg:px-8 py-8">
         <div className="max-w-6xl mx-auto">
-            <div style={{padding: '56.25% 0 0 0', position:'relative'}}>
+            <div style={{padding: '56.25% 0 0 0', position:'relative'}} className="aspect-video rounded-2xl overflow-hidden shadow-2xl bg-card bg-gray-900">
                 <iframe src={`https://player.vimeo.com/video/55232116?h=1de71794e3&badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;dnt=1`} frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style={{position:'absolute', top:0, left:0, width:'100%',height:'100%'}} title="Demo Reel 2024 (3D, Motion, FUI)">
                 </iframe>
             </div>
