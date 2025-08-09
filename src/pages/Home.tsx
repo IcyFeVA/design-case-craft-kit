@@ -98,68 +98,72 @@ const Home = () => {
       }
     );
 
-    // Animate stats numbers
-    gsap.fromTo(projectsRef.current, 
-      { innerText: 0 },
-      {
-        innerText: 150,
-        duration: 2,
-        snap: { innerText: 1 },
-        scrollTrigger: {
-          trigger: statsRef.current,
-          start: "top 80%"
-        },
-        onUpdate: function() {
-          projectsRef.current.innerText = Math.floor(this.targets()[0].innerText) + "+";
-        }
-      }
-    );
+    // Animate stats numbers only on mobile. Desktop shows final values instantly.
+    const numberTweens: any[] = [];
+    const isMobile = typeof window !== "undefined" && window.matchMedia && window.matchMedia("(max-width: 767px)").matches;
 
-    gsap.fromTo(clientsRef.current, 
-      { innerText: 0 },
-      {
-        innerText: 30,
-        duration: 2,
-        snap: { innerText: 1 },
-        scrollTrigger: {
-          trigger: statsRef.current,
-          start: "top 80%"
-        },
-        onUpdate: function() {
-          clientsRef.current.innerText = Math.floor(this.targets()[0].innerText) + "+";
-        }
-      }
-    );
+    if (isMobile) {
+      // start from zero to final values on mobile
+      if (projectsRef.current) projectsRef.current.innerText = "0";
+      if (clientsRef.current) clientsRef.current.innerText = "0";
+      if (yearsRef.current) yearsRef.current.innerText = "0";
+      if (awardsRef.current) awardsRef.current.innerText = "0";
 
-    gsap.fromTo(yearsRef.current, 
-      { innerText: 0 },
-      {
-        innerText: 9,
-        duration: 2,
-        snap: { innerText: 1 },
-        scrollTrigger: {
-          trigger: statsRef.current,
-          start: "top 80%"
-        },
-        onUpdate: function() {
-          yearsRef.current.innerText = Math.floor(this.targets()[0].innerText) + "+";
-        }
-      }
-    );
+      numberTweens.push(
+        gsap.fromTo(projectsRef.current, { innerText: 0 }, {
+          innerText: 120,
+          duration: 2,
+          snap: { innerText: 1 },
+          scrollTrigger: { trigger: statsRef.current, start: "top 80%" },
+          onUpdate: function() {
+            if (projectsRef.current) projectsRef.current.innerText = Math.floor(this.targets()[0].innerText) + "+";
+          }
+        })
+      );
 
-    gsap.fromTo(awardsRef.current, 
-      { innerText: 0 },
-      {
-        innerText: 3,
-        duration: 2,
-        snap: { innerText: 1 },
-        scrollTrigger: {
-          trigger: statsRef.current,
-          start: "top 80%"
-        }
-      }
-    );
+      numberTweens.push(
+        gsap.fromTo(clientsRef.current, { innerText: 0 }, {
+          innerText: 40,
+          duration: 2,
+          snap: { innerText: 1 },
+          scrollTrigger: { trigger: statsRef.current, start: "top 80%" },
+          onUpdate: function() {
+            if (clientsRef.current) clientsRef.current.innerText = Math.floor(this.targets()[0].innerText) + "+";
+          }
+        })
+      );
 
+      numberTweens.push(
+        gsap.fromTo(yearsRef.current, { innerText: 0 }, {
+          innerText: 9,
+          duration: 2,
+          snap: { innerText: 1 },
+          scrollTrigger: { trigger: statsRef.current, start: "top 80%" },
+          onUpdate: function() {
+            if (yearsRef.current) yearsRef.current.innerText = Math.floor(this.targets()[0].innerText) + "+";
+          }
+        })
+      );
+
+      numberTweens.push(
+        gsap.fromTo(awardsRef.current, { innerText: 0 }, {
+          innerText: 3,
+          duration: 2,
+          snap: { innerText: 1 },
+          scrollTrigger: { trigger: statsRef.current, start: "top 80%" },
+          onUpdate: function() {
+            if (awardsRef.current) awardsRef.current.innerText = Math.floor(this.targets()[0].innerText).toString();
+          }
+        })
+      );
+    } else {
+      // Desktop: set final texts immediately (no animation)
+      if (projectsRef.current) projectsRef.current.innerText = "120+";
+      if (clientsRef.current) clientsRef.current.innerText = "40+";
+      if (yearsRef.current) yearsRef.current.innerText = "9+";
+      if (awardsRef.current) awardsRef.current.innerText = "3";
+    }
+ 
     // Featured work animation
     gsap.fromTo(featuredWorkRef.current, 
       { opacity: 0, y: 30 },
@@ -232,6 +236,8 @@ const Home = () => {
 
     // Cleanup function
     return () => {
+      // kill any number tweens created for mobile
+      numberTweens.forEach(t => { try { t.kill(); } catch (e) {} });
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
     };
   }, []);
