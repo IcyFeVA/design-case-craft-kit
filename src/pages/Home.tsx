@@ -319,11 +319,11 @@ const Home = () => {
         <div className="max-w-4xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center space-y-2">
-              <div ref={projectsRef} className="text-3xl font-bold text-gray-900">150+</div>
+              <div ref={projectsRef} className="text-3xl font-bold text-gray-900">120+</div>
               <div className="text-sm text-gray-600">Projects Completed</div>
             </div>
             <div className="text-center space-y-2">
-              <div ref={clientsRef} className="text-3xl font-bold text-gray-900">30+</div>
+              <div ref={clientsRef} className="text-3xl font-bold text-gray-900">40+</div>
               <div className="text-sm text-gray-600">Happy Clients</div>
             </div>
             <div className="text-center space-y-2">
@@ -332,7 +332,7 @@ const Home = () => {
             </div>
             <div className="text-center space-y-2">
               <div ref={awardsRef} className="text-3xl font-bold text-gray-900">3</div>
-              <div className="text-sm text-gray-600">Design Awards</div>
+              <div className="text-sm text-gray-600">Awards</div>
             </div>
           </div>
         </div>
