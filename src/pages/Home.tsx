@@ -5,6 +5,12 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { ArrowRight, Github, Linkedin, Instagram, Download, Twitter, ExternalLink, Grid3X3, Star, Mail, ArrowDown, Dribbble, Lock } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/ui/navbar";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+// Register ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
   const skills = [
@@ -36,6 +42,186 @@ const Home = () => {
     }
   ];
 
+  // Refs for animation elements
+  const heroRef = useRef(null);
+  const statsRef = useRef(null);
+  const featuredWorkRef = useRef(null);
+  const caseStudiesRef = useRef(null);
+  const aboutRef = useRef(null);
+  const testimonialsRef = useRef(null);
+  const contactRef = useRef(null);
+
+  // Refs for stats numbers
+  const projectsRef = useRef(null);
+  const clientsRef = useRef(null);
+  const yearsRef = useRef(null);
+  const awardsRef = useRef(null);
+
+  useEffect(() => {
+    // Hero section animation with delay
+    gsap.fromTo(heroRef.current, 
+      { opacity: 0, y: 30 },
+      { 
+        opacity: 1, 
+        y: 0, 
+        duration: 1, 
+        ease: "power2.out",
+        delay: 0.5 // Add delay to hero section
+      }
+    );
+
+    // Stats section animation
+    gsap.fromTo(statsRef.current, 
+      { opacity: 0, y: 30 },
+      { 
+        opacity: 1, 
+        y: 0, 
+        duration: 1, 
+        scrollTrigger: {
+          trigger: statsRef.current,
+          start: "top 80%"
+        }
+      }
+    );
+
+    // Animate stats numbers
+    gsap.fromTo(projectsRef.current, 
+      { innerText: 0 },
+      {
+        innerText: 150,
+        duration: 2,
+        snap: { innerText: 1 },
+        scrollTrigger: {
+          trigger: statsRef.current,
+          start: "top 80%"
+        },
+        onUpdate: function() {
+          projectsRef.current.innerText = Math.floor(this.targets()[0].innerText) + "+";
+        }
+      }
+    );
+
+    gsap.fromTo(clientsRef.current, 
+      { innerText: 0 },
+      {
+        innerText: 30,
+        duration: 2,
+        snap: { innerText: 1 },
+        scrollTrigger: {
+          trigger: statsRef.current,
+          start: "top 80%"
+        },
+        onUpdate: function() {
+          clientsRef.current.innerText = Math.floor(this.targets()[0].innerText) + "+";
+        }
+      }
+    );
+
+    gsap.fromTo(yearsRef.current, 
+      { innerText: 0 },
+      {
+        innerText: 9,
+        duration: 2,
+        snap: { innerText: 1 },
+        scrollTrigger: {
+          trigger: statsRef.current,
+          start: "top 80%"
+        },
+        onUpdate: function() {
+          yearsRef.current.innerText = Math.floor(this.targets()[0].innerText) + "+";
+        }
+      }
+    );
+
+    gsap.fromTo(awardsRef.current, 
+      { innerText: 0 },
+      {
+        innerText: 3,
+        duration: 2,
+        snap: { innerText: 1 },
+        scrollTrigger: {
+          trigger: statsRef.current,
+          start: "top 80%"
+        }
+      }
+    );
+
+    // Featured work animation
+    gsap.fromTo(featuredWorkRef.current, 
+      { opacity: 0, y: 30 },
+      { 
+        opacity: 1, 
+        y: 0, 
+        duration: 1, 
+        scrollTrigger: {
+          trigger: featuredWorkRef.current,
+          start: "top 80%"
+        }
+      }
+    );
+
+    // Case studies animation
+    gsap.fromTo(caseStudiesRef.current, 
+      { opacity: 0, y: 30 },
+      { 
+        opacity: 1, 
+        y: 0, 
+        duration: 1, 
+        scrollTrigger: {
+          trigger: caseStudiesRef.current,
+          start: "top 80%"
+        }
+      }
+    );
+
+    // About section animation
+    gsap.fromTo(aboutRef.current, 
+      { opacity: 0, y: 30 },
+      { 
+        opacity: 1, 
+        y: 0, 
+        duration: 1, 
+        scrollTrigger: {
+          trigger: aboutRef.current,
+          start: "top 80%"
+        }
+      }
+    );
+
+    // Testimonials animation
+    gsap.fromTo(testimonialsRef.current, 
+      { opacity: 0, y: 30 },
+      { 
+        opacity: 1, 
+        y: 0, 
+        duration: 1, 
+        scrollTrigger: {
+          trigger: testimonialsRef.current,
+          start: "top 80%"
+        }
+      }
+    );
+
+    // Contact section animation
+    gsap.fromTo(contactRef.current, 
+      { opacity: 0, y: 30 },
+      { 
+        opacity: 1, 
+        y: 0, 
+        duration: 1, 
+        scrollTrigger: {
+          trigger: contactRef.current,
+          start: "top 80%"
+        }
+      }
+    );
+
+    // Cleanup function
+    return () => {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
@@ -44,7 +230,7 @@ const Home = () => {
       <div className="max-w-6xl mx-auto py-8"></div>
 
       {/* Hero Section */}
-      <section className="max-w-4xl mx-auto px-6 py-20">
+      <section ref={heroRef} className="max-w-4xl mx-auto px-6 py-20">
         <div className="space-y-8">
           <div className="space-y-6">
             {/* <Badge variant="outline" className="text-sm font-medium">
@@ -94,23 +280,23 @@ const Home = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="bg-slate-50 py-16">
+      <section ref={statsRef} className="bg-slate-50 py-16">
         <div className="max-w-4xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center space-y-2">
-              <div className="text-3xl font-bold text-gray-900">150+</div>
+              <div ref={projectsRef} className="text-3xl font-bold text-gray-900">150+</div>
               <div className="text-sm text-gray-600">Projects Completed</div>
             </div>
             <div className="text-center space-y-2">
-              <div className="text-3xl font-bold text-gray-900">30+</div>
+              <div ref={clientsRef} className="text-3xl font-bold text-gray-900">30+</div>
               <div className="text-sm text-gray-600">Happy Clients</div>
             </div>
             <div className="text-center space-y-2">
-              <div className="text-3xl font-bold text-gray-900">9+</div>
+              <div ref={yearsRef} className="text-3xl font-bold text-gray-900">9+</div>
               <div className="text-sm text-gray-600">Years Experience</div>
             </div>
             <div className="text-center space-y-2">
-              <div className="text-3xl font-bold text-gray-900">3</div>
+              <div ref={awardsRef} className="text-3xl font-bold text-gray-900">3</div>
               <div className="text-sm text-gray-600">Design Awards</div>
             </div>
           </div>
@@ -123,7 +309,7 @@ const Home = () => {
       </section> */}
 
       {/* Featured Work */}
-      <section id="work" className="max-w-6xl mx-auto px-6 py-20">
+      <section ref={featuredWorkRef} id="work" className="max-w-6xl mx-auto px-6 py-20">
         <div className="space-y-16">
           <div className="text-center space-y-4">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Featured Work</h2>
@@ -302,7 +488,7 @@ const Home = () => {
       </section>
 
       {/* Case Studies Section */}
-      <section className="py-20">
+      <section ref={caseStudiesRef} className="py-20">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Locked Case Studies (for interviews)</h2>
@@ -379,7 +565,7 @@ const Home = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="bg-slate-50 py-20">
+      <section ref={aboutRef} id="about" className="bg-slate-50 py-20">
         <div className="max-w-4xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
@@ -425,7 +611,7 @@ const Home = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="max-w-4xl mx-auto px-6 py-20">
+      <section ref={testimonialsRef} className="max-w-4xl mx-auto px-6 py-20">
         <div className="space-y-12">
           <div className="text-center space-y-4">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">What People Say</h2>
@@ -478,7 +664,7 @@ const Home = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="bg-slate-900 text-white py-20">
+      <section ref={contactRef} id="contact" className="bg-slate-900 text-white py-20">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <div className="space-y-8">
             <div className="space-y-4">
