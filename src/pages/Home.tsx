@@ -44,6 +44,7 @@ const Home = () => {
 
   // Refs for animation elements
   const heroRef = useRef(null);
+  const headlineRef = useRef(null); // new ref for headline
   const statsRef = useRef(null);
   const featuredWorkRef = useRef(null);
   const caseStudiesRef = useRef(null);
@@ -58,17 +59,30 @@ const Home = () => {
   const awardsRef = useRef(null);
 
   useEffect(() => {
-    // Hero section animation with delay
-    gsap.fromTo(heroRef.current, 
+    // Hero + headline timeline: hero fades in, then quick staggered headline entrance
+    const tl = gsap.timeline();
+    tl.fromTo(
+      heroRef.current,
       { opacity: 0, y: 30 },
-      { 
-        opacity: 1, 
-        y: 0, 
-        duration: 1, 
-        ease: "power2.out",
-        delay: 0.5 // Add delay to hero section
-      }
+      { opacity: 1, y: 0, duration: 0.8, ease: "power2.out", delay: 0.2 }
     );
+
+    // animate headline words with a quick, tight stagger for a "cool" effect
+    if (headlineRef.current) {
+      tl.fromTo(
+        headlineRef.current.querySelectorAll(".headline-word"),
+        { y: 36, opacity: 0, skewY: 8, transformOrigin: "0% 50%" },
+        {
+          y: 0,
+          opacity: 1,
+          skewY: 0,
+          duration: 0.45,
+          ease: "power3.out",
+          stagger: 0.06
+        },
+        "-=0.45" // overlap slightly with hero fade for punch
+      );
+    }
 
     // Stats section animation
     gsap.fromTo(statsRef.current, 
@@ -237,9 +251,30 @@ const Home = () => {
               Available for new opportunities
             </Badge> */}
 
-            <h1 className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500 leading-tight">
-              Product Designer crafting
-              <span className="block text-gray-700">meaningful experiences</span>
+            {/* Headline split into word spans for per-word animation.
+                Each word gets the gradient classes so they're visible individually,
+                and starts with opacity-0 to avoid flash (GSAP will reveal them). */}
+            <h1 ref={headlineRef} className="text-5xl md:text-6xl font-bold leading-tight">
+              <div className="leading-tight">
+                {["Product Designer crafting"].map((w, i) => (
+                  <span
+                    key={i}
+                    className="inline-block headline-word mr-3 opacity-0 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500"
+                  >
+                    {w}
+                  </span>
+                ))}
+              </div>
+              <div className="block leading-tight mt-1">
+                {["meaningful", "experiences"].map((w, i) => (
+                  <span
+                    key={i}
+                    className="inline-block headline-word mr-3 opacity-0 text-gray-700"
+                  >
+                    {w}
+                  </span>
+                ))}
+              </div>
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-3xl">
