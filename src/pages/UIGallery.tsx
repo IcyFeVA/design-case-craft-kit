@@ -51,17 +51,9 @@ const UIGallery = () => {
       tags: ["Film"],
       year: "2024"
     },
+
     {
       id: 2,
-      title: "Netflix Profile Selector",
-      category: "",
-      description: "Design exercise I did with my students",
-      imageUrl: "/img/gallery/netflix1.jpg",
-      tags: ["TV UI", "Design Exercise"],
-      year: "2024"
-    },
-    {
-      id: 3,
       title: "Augmented Reality",
       category: "",
       description: "",
@@ -69,6 +61,15 @@ const UIGallery = () => {
       tags: ["AR"],
       year: "2022"
     },
+    {
+      id: 3,
+      title: "Netflix Profile Selector",
+      category: "",
+      description: "Design exercise I did with my students",
+      imageUrl: "/img/gallery/netflix1.jpg",
+      tags: ["TV UI", "Design Exercise"],
+      year: "2024"
+    },    
     {
       id: 4,
       title: "Website for Side Effects",
@@ -255,7 +256,7 @@ const UIGallery = () => {
       year: "2023"
     },
         {
-      id: 19,
+      id: 24,
       title: "",
       category: "",
       description: "",
@@ -264,7 +265,7 @@ const UIGallery = () => {
       year: "2023"
     },
     {
-      id: 24,
+      id: 25,
       title: "",
       category: "",
       description: "",
