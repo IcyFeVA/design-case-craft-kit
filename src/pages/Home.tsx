@@ -313,12 +313,12 @@ const Home = () => {
               <Dribbble className="w-5 h-5" />
             </Link> */}
             <Link to="https://artstation.com/icyfeva" target="_blank" className="text-gray-400 hover:text-gray-600 transition-colors">
-              <ExternalLink className="w-5 h-5" />
-              Art Station
+              <ExternalLink className="w-5 h-5 inline" />
+              &nbsp; Art Station
             </Link>            
             <Link to="https://vimeo.com/masonstyle" target="_blank" className="text-gray-400 hover:text-gray-600 transition-colors">
-              <ExternalLink className="w-5 h-5" />
-              Vimeo
+              <ExternalLink className="w-5 h-5 inline" />
+              &nbsp; Vimeo
             </Link>
             </div>
         </div>
