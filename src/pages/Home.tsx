@@ -306,16 +306,20 @@ const Home = () => {
 
           {/* Social Links */}
             <div className="flex items-center space-x-6 pt-4">
-            <Link to="https://instagram.com/icyfeva" target="_blank" className="text-gray-400 hover:text-gray-600 transition-colors">
+            {/* <Link to="https://instagram.com/icyfeva" target="_blank" className="text-gray-400 hover:text-gray-600 transition-colors">
               <Instagram className="w-5 h-5" />
             </Link>
             <Link to="https://dribbble.com/icyfeva" target="_blank" className="text-gray-400 hover:text-gray-600 transition-colors">
               <Dribbble className="w-5 h-5" />
-            </Link>
-            {/* <Link to="https://bsky.app/profile/icyfeva.bsky.social" target="_blank" className="text-gray-400 hover:text-gray-600 transition-colors">
-              <ExternalLink className="w-5 h-5" />
-              Bluesky
             </Link> */}
+            <Link to="https://artstation.com/icyfeva" target="_blank" className="text-gray-400 hover:text-gray-600 transition-colors">
+              <ExternalLink className="w-5 h-5" />
+              Art Station
+            </Link>            
+            <Link to="https://vimeo.com/masonstyle" target="_blank" className="text-gray-400 hover:text-gray-600 transition-colors">
+              <ExternalLink className="w-5 h-5" />
+              Vimeo
+            </Link>
             </div>
         </div>
       </section>
