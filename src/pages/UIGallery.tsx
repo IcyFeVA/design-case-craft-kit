@@ -143,10 +143,10 @@ const UIGallery = () => {
     },
     {
       id: 12,
-      title: "Design Exercise",
+      title: "Camel 3D model for kiosk advertisement",
       category: "",
-      description: "I did this exercise with my students in class. 'Create a weather display in the style of neo-pop'",
-      imageUrl: "/img/gallery/neo1.png",
+      description: "Camel 3D model for kiosk advertisement",
+      imageUrl: "/img/gallery/camel.jpg",
       tags: ["exercise", "college"],
       year: "2024"
     },
@@ -214,7 +214,7 @@ const UIGallery = () => {
       title: "",
       category: "",
       description: "",
-      imageUrl: "/img/gallery/inba2.jpg",
+      imageUrl: "/img/gallery/rdm1.jpg",
       tags: [""],
       year: "2023"
     },
@@ -251,6 +251,15 @@ const UIGallery = () => {
       category: "",
       description: "",
       imageUrl: "/img/gallery/old1.jpg",
+      tags: [""],
+      year: "2023"
+    },
+        {
+      id: 19,
+      title: "",
+      category: "",
+      description: "",
+      imageUrl: "/img/gallery/rdm2.jpg",
       tags: [""],
       year: "2023"
     },
