@@ -42,16 +42,16 @@ const UIGallery = () => {
   };
 
   const galleryItems: GalleryItem[] = [
-    {
-      id: 1,
-      title: "80's Style UI's",
-      category: "",
-      description: "UI's I made for the movie 'Bolt from the blue' (2024). The film is about a weird scientist who tries to capture lightning",
-      imageUrl: "/img/gallery/bolt1.jpg",
-      tags: ["Film"],
-      year: "2024"
-    },
 
+    {
+      id: 19,
+      title: "",
+      category: "",
+      description: "",
+      imageUrl: "/img/gallery/rdm1.jpg",
+      tags: [""],
+      year: "2023"
+    },
     {
       id: 2,
       title: "Augmented Reality",
@@ -210,15 +210,16 @@ const UIGallery = () => {
       tags: [""],
       year: "2024"
     },
-    {
+      {
       id: 19,
-      title: "",
+      title: "80's Style UI's",
       category: "",
-      description: "",
-      imageUrl: "/img/gallery/rdm1.jpg",
-      tags: [""],
-      year: "2023"
+      description: "UI's I made for the movie 'Bolt from the blue' (2024). The film is about a weird scientist who tries to capture lightning",
+      imageUrl: "/img/gallery/bolt1.jpg",
+      tags: ["Film"],
+      year: "2024"
     },
+
     {
       id: 20,
       title: "",

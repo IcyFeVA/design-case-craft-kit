@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { ArrowRight, Github, Linkedin, Instagram, Download, Twitter, ExternalLink, Grid3X3, Star, Mail, ArrowDown, Dribbble, Lock } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Instagram, Download, Twitter, ExternalLink, Grid3X3, Star, Mail, ArrowDown, Dribbble, Lock, Palette, Video } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/ui/navbar";
 import { useEffect, useRef } from "react";
@@ -299,7 +299,7 @@ const Home = () => {
               <Button variant="outline" size="lg" className="gap-2 bg-transparent">
               {/* If you have Grid3X3 icon, import and use it; otherwise, use a similar Lucide icon */}
               <Grid3X3 className="w-4 h-4" />
-              Design Gallery
+              Curated Gallery
               </Button>
             </Link>
             </div>
@@ -312,14 +312,14 @@ const Home = () => {
             <Link to="https://dribbble.com/icyfeva" target="_blank" className="text-gray-400 hover:text-gray-600 transition-colors">
               <Dribbble className="w-5 h-5" />
             </Link> */}
-            <Link to="https://artstation.com/icyfeva" target="_blank" className="text-gray-400 hover:text-gray-600 transition-colors">
-              <ExternalLink className="w-5 h-5 inline" />
+            {/* <Link to="https://artstation.com/icyfeva" target="_blank" className="text-gray-400 hover:text-gray-600 transition-colors">
+              <Palette className="w-5 h-5 inline" />
               &nbsp; Art Station
-            </Link>            
-            <Link to="https://vimeo.com/masonstyle" target="_blank" className="text-gray-400 hover:text-gray-600 transition-colors">
-              <ExternalLink className="w-5 h-5 inline" />
-              &nbsp; Vimeo
             </Link>
+            <Link to="https://vimeo.com/masonstyle" target="_blank" className="text-gray-400 hover:text-gray-600 transition-colors">
+              <Video className="w-5 h-5 inline" />
+              &nbsp; Vimeo
+            </Link> */}
             </div>
         </div>
       </section>
@@ -751,11 +751,17 @@ const Home = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-gray-600">© 2025 Pascal Zirn. All rights reserved.</p>
             <div className="flex items-center space-x-6">
-              <Link to="https://instagram.com/icyfeva" target="_blank" className="text-gray-400 hover:text-gray-600 transition-colors">
+              {/* <Link to="https://instagram.com/icyfeva" target="_blank" className="text-gray-400 hover:text-gray-600 transition-colors">
                 <Instagram className="w-5 h-5" />
               </Link>
               <Link to="https://dribbble.com/icyfeva" target="_blank" className="text-gray-400 hover:text-gray-600 transition-colors">
                 <Dribbble className="w-5 h-5" />
+              </Link> */}
+              <Link to="https://artstation.com/icyfeva" target="_blank" className="text-gray-400 hover:text-gray-600 transition-colors">
+                <Palette className="w-5 h-5" /><span className="text-gray-600 text-sm">Artstation</span>
+              </Link>
+              <Link to="https://vimeo.com/masonstyle" target="_blank" className="text-gray-400 hover:text-gray-600 transition-colors">
+                <Video className="w-5 h-5" /><span className="text-gray-600 text-sm">Vimeo</span>
               </Link>
             </div>
           </div>
