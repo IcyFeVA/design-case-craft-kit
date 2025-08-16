@@ -5,6 +5,7 @@ import { GalleryImageDialog } from "./GalleryImageDialog";
 import { ArrowLeft, Download, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/ui/navbar";
+import Footer from "@/components/ui/footer";
 
 
 
@@ -100,8 +101,9 @@ const Motion = () => {
             </div>
             <script src="https://player.vimeo.com/api/player.js"></script>
         </div>
-      </section>         
+      </section>
 
+      <Footer />
     </div>
   );
 };

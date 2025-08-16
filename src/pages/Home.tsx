@@ -5,6 +5,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { ArrowRight, Github, Linkedin, Instagram, Download, Twitter, ExternalLink, Grid3X3, Star, Mail, ArrowDown, Dribbble, Lock, Palette, Video } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/ui/navbar";
+import Footer from "@/components/ui/footer";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -745,28 +746,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t border-gray-100 py-8">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-gray-600">© 2025 Pascal Zirn. All rights reserved.</p>
-            <div className="flex items-center space-x-6">
-              {/* <Link to="https://instagram.com/icyfeva" target="_blank" className="text-gray-400 hover:text-gray-600 transition-colors">
-                <Instagram className="w-5 h-5" />
-              </Link>
-              <Link to="https://dribbble.com/icyfeva" target="_blank" className="text-gray-400 hover:text-gray-600 transition-colors">
-                <Dribbble className="w-5 h-5" />
-              </Link> */}
-              <Link to="https://artstation.com/icyfeva" target="_blank" className="text-gray-400 hover:text-gray-600 transition-colors">
-                <Palette className="w-5 h-5" /><span className="text-gray-600 text-sm">Artstation</span>
-              </Link>
-              <Link to="https://vimeo.com/masonstyle" target="_blank" className="text-gray-400 hover:text-gray-600 transition-colors">
-                <Video className="w-5 h-5" /><span className="text-gray-600 text-sm">Vimeo</span>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

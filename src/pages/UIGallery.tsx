@@ -5,6 +5,7 @@ import { GalleryImageDialog } from "./GalleryImageDialog";
 import { ArrowLeft, Download, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/ui/navbar";
+import Footer from "@/components/ui/footer";
 
 interface GalleryItem {
   id: number;
@@ -371,6 +372,8 @@ const UIGallery = () => {
         onPrevious={handlePrevious}
         showNavigation={true}
       />
+
+      <Footer />
     </div>
   );
 };
