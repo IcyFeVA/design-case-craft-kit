@@ -113,3 +113,33 @@
     }
   }
 }
+
+/* Explore Button Arrow Animation */
+.explore-arrow {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.explore-arrow:hover {
+  transform: translateY(2px);
+  animation: bounce-subtle 0.6s ease-in-out;
+}
+
+@keyframes bounce-subtle {
+  0%, 100% { transform: translateY(2px); }
+  50% { transform: translateY(-1px); }
+}
+
+/* Reduced motion support for arrow */
+@media (prefers-reduced-motion: reduce) {
+  .explore-arrow {
+    transition: opacity 0.3s ease;
+    will-change: opacity;
+  }
+  
+  .explore-arrow:hover {
+    transform: none;
+    animation: none;
+    opacity: 0.8;
+  }
+}

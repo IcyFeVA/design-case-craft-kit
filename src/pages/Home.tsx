@@ -291,9 +291,9 @@ const Home = () => {
 
             <div className="flex flex-col sm:flex-row gap-4">
             <Link to="/#work">
-              <Button size="lg" className="gap-2">
+              <Button variant="explore" size="lg" className="gap-2">
               View My Work
-              <ArrowDown className="w-4 h-4" />
+              <ArrowDown className="w-4 h-4 explore-arrow" />
               </Button>
             </Link>
             <Link to="/ui-gallery">
@@ -390,7 +390,7 @@ const Home = () => {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/tesla-watch-app">
-                  <Button className="gap-2">
+                  <Button variant="explore" className="gap-2">
                     View Case Study
                     <ArrowRight className="w-4 h-4" />
                   </Button>
