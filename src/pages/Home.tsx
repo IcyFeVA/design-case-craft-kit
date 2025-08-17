@@ -342,8 +342,8 @@ const Home = () => {
               <div className="text-sm text-gray-600">Years Experience</div>
             </div>
             <div className="text-center space-y-2">
-              <div ref={awardsRef} className="text-3xl font-bold text-gray-900">3</div>
-              <div className="text-sm text-gray-600">Awards</div>
+              <div ref={awardsRef} className="text-3xl font-bold text-gray-900">25000+</div>
+              <div className="text-sm text-gray-600">work hours</div>
             </div>
           </div>
         </div>
