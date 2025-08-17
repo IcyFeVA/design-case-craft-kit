@@ -298,8 +298,7 @@ const Home = () => {
             </Link>
             <Link to="/ui-gallery">
               <Button variant="outline" size="lg" className="gap-2 bg-transparent">
-              {/* If you have Grid3X3 icon, import and use it; otherwise, use a similar Lucide icon */}
-              <Grid3X3 className="w-4 h-4" />
+              {/* <Grid3X3 className="w-4 h-4" /> */}
               Curated Gallery
               </Button>
             </Link>
