@@ -148,7 +148,7 @@ const Home = () => {
 
       numberTweens.push(
         gsap.fromTo(awardsRef.current, { innerText: 0 }, {
-          innerText: 3,
+          innerText: 25000,
           duration: 2,
           snap: { innerText: 1 },
           scrollTrigger: { trigger: statsRef.current, start: "top 80%" },
@@ -162,7 +162,7 @@ const Home = () => {
       if (projectsRef.current) projectsRef.current.innerText = "120+";
       if (clientsRef.current) clientsRef.current.innerText = "40+";
       if (yearsRef.current) yearsRef.current.innerText = "9+";
-      if (awardsRef.current) awardsRef.current.innerText = "3";
+      if (awardsRef.current) awardsRef.current.innerText = "25000+";
     }
  
     // Featured work animation
@@ -342,7 +342,7 @@ const Home = () => {
               <div className="text-sm text-gray-600">Years Experience</div>
             </div>
             <div className="text-center space-y-2">
-              <div ref={awardsRef} className="text-3xl font-bold text-gray-900">25000+</div>
+              <div ref={awardsRef} className="text-3xl font-bold text-gray-900">2 5000+</div>
               <div className="text-sm text-gray-600">work hours</div>
             </div>
           </div>
