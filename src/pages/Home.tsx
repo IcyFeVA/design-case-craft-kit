@@ -136,7 +136,7 @@ const Home = () => {
 
       numberTweens.push(
         gsap.fromTo(yearsRef.current, { innerText: 0 }, {
-          innerText: 9,
+          innerText: 10,
           duration: 2,
           snap: { innerText: 1 },
           scrollTrigger: { trigger: statsRef.current, start: "top 80%" },
@@ -161,7 +161,7 @@ const Home = () => {
       // Desktop: set final texts immediately (no animation)
       if (projectsRef.current) projectsRef.current.innerText = "120+";
       if (clientsRef.current) clientsRef.current.innerText = "40+";
-      if (yearsRef.current) yearsRef.current.innerText = "9+";
+      if (yearsRef.current) yearsRef.current.innerText = "10+";
       if (awardsRef.current) awardsRef.current.innerText = "25000+";
     }
  
@@ -338,7 +338,7 @@ const Home = () => {
               <div className="text-sm text-gray-600">Happy Clients</div>
             </div>
             <div className="text-center space-y-2">
-              <div ref={yearsRef} className="text-3xl font-bold text-gray-900">9+</div>
+              <div ref={yearsRef} className="text-3xl font-bold text-gray-900">10+</div>
               <div className="text-sm text-gray-600">Years Experience</div>
             </div>
             <div className="text-center space-y-2">
