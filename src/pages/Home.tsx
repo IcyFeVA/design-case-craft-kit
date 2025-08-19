@@ -6,6 +6,7 @@ import { ArrowRight, Github, Linkedin, Instagram, Download, Twitter, ExternalLin
 import { Link } from "react-router-dom";
 import Navbar from "@/components/ui/navbar";
 import Footer from "@/components/ui/footer";
+import Marquee from "@/components/Marquee";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -100,7 +101,7 @@ const Home = () => {
     );
 
     // Animate stats numbers only on mobile. Desktop shows final values instantly.
-    const numberTweens: any[] = [];
+    const numberTweens: gsap.core.Tween[] = [];
     const isMobile = typeof window !== "undefined" && window.matchMedia && window.matchMedia("(max-width: 767px)").matches;
 
     if (isMobile) {
@@ -238,7 +239,13 @@ const Home = () => {
     // Cleanup function
     return () => {
       // kill any number tweens created for mobile
-      numberTweens.forEach(t => { try { t.kill(); } catch (e) {} });
+      numberTweens.forEach(t => {
+        try {
+          t.kill();
+        } catch (e) {
+          console.error('Error killing tween:', e);
+        }
+      });
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
     };
   }, []);
@@ -347,6 +354,8 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+
 
       {/* Skills Section */}
       {/* <section className="py-20">
@@ -707,6 +716,24 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Marquee Section */}
+      {/* <section className="py-8 bg-gradient-to-r from-accent/10 via-accent/5 to-accent/10 border-y border-accent/20">
+        <Marquee
+          quotes={[
+            'Currently looking for new opportunities',
+            'Open to remote work worldwide',
+            'Currently looking for new opportunities',
+            'Open to remote work worldwide',
+            'Currently looking for new opportunities',
+            'Open to remote work worldwide',
+            'Currently looking for new opportunities',
+            'Open to remote work worldwide',
+          ]}
+          speed="fast"
+          className="text-lg md:text-xl font-medium text-gray-500"
+        />
+      </section> */}
 
       {/* Contact Section */}
       <section ref={contactRef} id="contact" className="bg-slate-900 text-white py-20">

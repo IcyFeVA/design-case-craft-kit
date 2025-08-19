@@ -143,3 +143,44 @@
     opacity: 0.8;
   }
 }
+
+/* Marquee Animation */
+@keyframes marquee {
+  0% {
+    transform: translate3d(0%, 0, 0);
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+.animate-marquee-slow {
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee-fast {
+  animation: marquee 10s linear infinite;
+}
+
+.reverse {
+  animation-direction: reverse;
+}
+
+/* Mobile responsive marquee speeds */
+@media (max-width: 768px) {
+  .animate-marquee {
+    animation: marquee 12s linear infinite;
+  }
+
+  .animate-marquee-slow {
+    animation: marquee 18s linear infinite;
+  }
+
+  .animate-marquee-fast {
+    animation: marquee 6s linear infinite;
+  }
+}
