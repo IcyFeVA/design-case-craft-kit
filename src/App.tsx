@@ -15,6 +15,7 @@ import TeslaWatchApp from "./pages/TeslaWatchApp";
 import NotFound from "./pages/NotFound";
 import VStage from "./pages/VStage";
 import Motion from "./pages/3DMotion";
+import CrushyCaseStudy from "./pages/CrushyCaseStudy";
 
 const queryClient = new QueryClient();
 
@@ -60,6 +61,7 @@ const App = () => (
           <Route path="/txcms-case-study" element={<TxcmsCaseStudy />} />
           <Route path="/tesla-watch-app" element={<TeslaWatchApp />} />
           <Route path="/vstage" element={<VStage />} />
+          <Route path="/crushy-case-study" element={<CrushyCaseStudy />} />
           <Route path="/ui-gallery" element={<UIGallery />} />
           <Route path="/motion" element={<Motion />} />
           <Route path="*" element={<NotFound />} />
