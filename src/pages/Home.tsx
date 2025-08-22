@@ -416,7 +416,7 @@ const Home = () => {
             <Link to="/txcms-case-study">
               <Card className="border-0 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
                 <CardContent className="p-0">
-                    <div className="aspect-video bg-gradient-to-br from-green-50 to-emerald-50 rounded-t-lg flex items-center justify-center border-b border-green-100 featured-work-container">
+                    <div className="aspect-video rounded-t-lg flex items-center justify-center border-b featured-work-container">
                     <img src="/img/tx/thumb.png" alt="vSTAGE Hero" className="aspect-video w-full object-cover rounded-lg featured-work-hover transition-transform duration-300 hover:scale-105" />
                   </div>
                   <div className="p-6 space-y-4">
@@ -447,7 +447,7 @@ const Home = () => {
             <Link to="/vstage">
               <Card className="border-0 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
                 <CardContent className="p-0">
-                  <div className="aspect-video bg-gradient-to-br from-green-50 to-emerald-50 rounded-t-lg flex items-center justify-center border-b border-green-100 featured-work-container">
+                  <div className="aspect-video rounded-t-lg flex items-center justify-center border-b featured-work-container">
                     <img src="/img/vstage/hero.png" alt="vSTAGE Hero" className="aspect-video w-full object-cover rounded-lg featured-work-hover transition-transform duration-300 hover:scale-105" />
                   </div>
                   <div className="p-6 space-y-4">
@@ -464,8 +464,7 @@ const Home = () => {
                     </div>
                     <h4 className="text-xl font-semibold text-foreground">vSTAGE — 3D Presentation Platform</h4>
                     <p className="text-muted-foreground text-sm leading-relaxed">
-                      Transformed a complex 3D tool designed for CAD professionals into an intuitive platform accessible to
-                  newcomers while retaining deep functionality for power users.
+                      Transformed a complex 3D tool designed for CAD professionals into an intuitive platform accessible to newcomers while retaining deep functionality for power users.
                     </p>
                     <Button variant="ghost" className="gap-2 p-0 h-auto text-sm">
                       View Project
@@ -554,7 +553,7 @@ const Home = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {/* <Link to="/case-study" className="group"> */}
               <div className="bg-card rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 h-full">
-                <div className="h-48 bg-gradient-to-br from-slate-300 to-slate-500 rounded-xl mb-6 flex items-center justify-center">
+                <div className="h-48 bg-gradient-to-br from-slate-300 to-slate-500 dark:from-slate-800 dark:to-slate-600 rounded-xl mb-6 flex items-center justify-center">
                   <div className="text-center flex flex-col items-center justify-center">
                     <Lock className="w-16 h-16 text-white mb-3" />
                     <p className="text-white font-medium">Crushy</p>
@@ -575,7 +574,7 @@ const Home = () => {
 
             {/* <Link to="/ecommerce-case-study" className="group"> */}
               <div className="bg-card rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 h-full">
-                <div className="h-48 bg-gradient-to-br from-slate-300 to-slate-500 rounded-xl mb-6 flex items-center justify-center">
+                <div className="h-48 bg-gradient-to-br from-slate-300 to-slate-500 dark:from-slate-800 dark:to-slate-600 rounded-xl mb-6 flex items-center justify-center">
                   <div className="text-center flex flex-col items-center justify-center">
                     <Lock className="w-16 h-16 text-white mb-3" />
                     <p className="text-white font-medium">Bolt from the Blue</p>
@@ -596,7 +595,7 @@ const Home = () => {
 
             {/* <Link to="/mindspace-case-study" className="group"> */}
               <div className="bg-card rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 h-full">
-                <div className="h-48 bg-gradient-to-br from-slate-300 to-slate-500 rounded-xl mb-6 flex items-center justify-center">
+                <div className="h-48 bg-gradient-to-br from-slate-300 to-slate-500 dark:from-slate-800 dark:to-slate-600 rounded-xl mb-6 flex items-center justify-center">
                   <div className="text-center flex flex-col items-center justify-center">
                     <Lock className="w-16 h-16 text-white mb-3" />
                     <p className="text-white font-medium">Zdash</p>
