@@ -98,7 +98,7 @@ const VStage = () => {
 
   
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       <CaseStudyNav />
 
       {/* Main Content */}
@@ -108,38 +108,38 @@ const VStage = () => {
           {/* Hero Section */}
           <section className="mb-20">
             <div className="mb-8">
-              <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+              <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
                 vSTAGE
               </h1>
-              <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-3xl">
+              <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl">
                 3D Data Visualization & Presentation Platform
               </p>
             </div>
             
             <div className="mb-12">
-              <p className="text-lg text-gray-700 leading-relaxed max-w-2xl">
+              <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
                 Transforming complex 3D CAD data into intuitive, real-time presentations accessible to both experts and newcomers
               </p>
             </div>
 
             {/* Hero Image Placeholder */}
-            <div className="w-full bg-gradient-to-br from-slate-50 to-gray-100 rounded-2xl mb-8 flex items-center justify-center">
+            <div className="w-full bg-gradient-to-br from-muted/30 to-muted/50 dark:from-muted/20 dark:to-muted/40 rounded-2xl mb-8 flex items-center justify-center">
               <img src="/img/vstage/hero.png" alt="vSTAGE Hero" className="max-w-full max-h-full object-cover rounded-lg shadow-lg" />
             </div>
 
             {/* Project Details */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
               <div>
-                <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">Role</h3>
-                <p className="text-gray-900 font-medium">Lead UX/UI Designer</p>
+                <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-2">Role</h3>
+                <p className="text-foreground font-medium">Lead UX/UI Designer</p>
               </div>
               <div>
-                <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">Timeline</h3>
-                <p className="text-gray-900 font-medium">9 Months</p>
+                <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-2">Timeline</h3>
+                <p className="text-foreground font-medium">9 Months</p>
               </div>
               <div>
-                <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">Team</h3>
-                <p className="text-gray-900 font-medium">Designer + 4 Developers</p>
+                <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-2">Team</h3>
+                <p className="text-foreground font-medium">Designer + 4 Developers</p>
               </div>
             </div>
           </section>
@@ -148,13 +148,13 @@ const VStage = () => {
           <section className="mb-20">
             <div className="flex items-start gap-4 mb-8">
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">The Challenge</h2>
+                <h2 className="text-3xl font-bold text-foreground mb-6">The Challenge</h2>
                 <div className="prose prose-lg max-w-none">
-                  <p className="text-gray-700 leading-relaxed mb-6">
+                  <p className="text-muted-foreground leading-relaxed mb-6">
                     Side Effects had developed vSTAGE, an advanced 3D visualization tool for presentations, training, and simulations. However, it was exclusively designed for CAD professionals, creating a significant barrier for broader adoption.
                   </p>
                   
-                  <div className="bg-red-50 p-6 rounded-xl border-l-4 border-red-200 mb-6">
+                  <div className="bg-red-50 dark:bg-red-950/30 p-6 rounded-xl border-l-4 border-red-200 dark:border-red-800 mb-6">
                     <h4 className="font-semibold text-red-800 mb-2">Core Problems</h4>
                     <ul className="space-y-2 text-red-700">
                       <li>• Interface overwhelmed new users with complex 3D data visualization</li>
@@ -177,14 +177,14 @@ const VStage = () => {
           <section className="mb-20">
             <div className="flex items-start gap-4 mb-8">
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">User Research & Personas</h2>
+                <h2 className="text-3xl font-bold text-foreground mb-6">User Research & Personas</h2>
                 <div className="prose prose-lg max-w-none">
-                  <p className="text-gray-700 leading-relaxed mb-6">
+                  <p className="text-muted-foreground leading-relaxed mb-6">
                     I conducted extensive research to understand the needs of both existing CAD professionals and potential new users, identifying key personas and mapping their distinct workflows.
                   </p>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                    <div className="bg-emerald-50 p-6 rounded-xl">
+                    <div className="bg-emerald-50 dark:bg-emerald-950/30 p-6 rounded-xl">
                       <h4 className="font-semibold text-emerald-800 mb-3">CAD Expert Persona</h4>
                       <div className="space-y-2 text-emerald-700 text-sm">
                         <p><strong>Goals:</strong> Maximum control, advanced filtering, precise component management</p>
@@ -192,7 +192,7 @@ const VStage = () => {
                         <p><strong>Needs:</strong> Bulk operations, inverse selection, bookmark systems</p>
                       </div>
                     </div>
-                    <div className="bg-blue-50 p-6 rounded-xl">
+                    <div className="bg-blue-50 dark:bg-blue-950/30 p-6 rounded-xl">
                       <h4 className="font-semibold text-blue-800 mb-3">Newcomer Persona</h4>
                       <div className="space-y-2 text-blue-700 text-sm">
                         <p><strong>Goals:</strong> Simple presentations, intuitive navigation, quick learning</p>
@@ -202,8 +202,8 @@ const VStage = () => {
                     </div>
                   </div>
 
-                  <h4 className="font-semibold text-gray-900 mb-3">Key Research Insights</h4>
-                  <ul className="space-y-3 text-gray-700">
+                  <h4 className="font-semibold text-foreground mb-3">Key Research Insights</h4>
+                  <ul className="space-y-3 text-muted-foreground">
                     <li><strong>Workflow Complexity:</strong> Expert users needed 15+ specialized tools accessible simultaneously</li>
                     <li><strong>Data Overwhelm:</strong> Projects often contained 50,000+ components requiring intelligent filtering</li>
                     <li><strong>Learning Curve:</strong> New users abandoned the tool within 10 minutes due to complexity</li>
@@ -218,53 +218,53 @@ const VStage = () => {
           <section className="mb-20">
             <div className="flex items-start gap-4 mb-8">
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Design Process</h2>
+                <h2 className="text-3xl font-bold text-foreground mb-6">Design Process</h2>
                 <div className="prose prose-lg max-w-none">
                   <div className="space-y-8">
                     
                     <div>
-                      <h3 className="font-semibold text-gray-900 mb-3 text-xl">1. Workflow Mapping & User Journeys</h3>
-                      <p className="text-gray-700 mb-4">Mapped distinct export and overlay workflows for each persona, identifying critical decision points and potential friction areas.</p>
-                      <div className="bg-slate-50 p-6 rounded-xl">
+                      <h3 className="font-semibold text-foreground mb-3 text-xl">1. Workflow Mapping & User Journeys</h3>
+                      <p className="text-muted-foreground mb-4">Mapped distinct export and overlay workflows for each persona, identifying critical decision points and potential friction areas.</p>
+                      <div className="bg-muted/30 p-6 rounded-xl">
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                           <div className="text-center">
                             <div className="w-12 h-12 bg-green-200 rounded-full mx-auto mb-2"></div>
                             <p className="font-medium text-sm">Expert Journey</p>
-                            <p className="text-xs text-gray-600">Complex multi-step workflows</p>
+                            <p className="text-xs text-muted-foreground">Complex multi-step workflows</p>
                           </div>
                           <div className="text-center">
                             <div className="w-12 h-12 bg-blue-200 rounded-full mx-auto mb-2"></div>
                             <p className="font-medium text-sm">Newcomer Journey</p>
-                            <p className="text-xs text-gray-600">Simplified linear flows</p>
+                            <p className="text-xs text-muted-foreground">Simplified linear flows</p>
                           </div>
                           <div className="text-center">
                             <div className="w-12 h-12 bg-purple-200 rounded-full mx-auto mb-2"></div>
                             <p className="font-medium text-sm">Shared Touchpoints</p>
-                            <p className="text-xs text-gray-600">Common interaction areas</p>
+                            <p className="text-xs text-muted-foreground">Common interaction areas</p>
                           </div>
                         </div>
                       </div>
                     </div>
 
                     <div>
-                      <h3 className="font-semibold text-gray-900 mb-3 text-xl">2. Information Architecture & Constraints</h3>
-                      <p className="text-gray-700 mb-4">Designed a flexible system that could handle massive datasets while maintaining usability across different experience levels.</p>
+                      <h3 className="font-semibold text-foreground mb-3 text-xl">2. Information Architecture & Constraints</h3>
+                      <p className="text-muted-foreground mb-4">Designed a flexible system that could handle massive datasets while maintaining usability across different experience levels.</p>
                       <div className="space-y-3">
-                        <div className="flex items-center gap-3 p-3 bg-yellow-50 rounded-lg">
+                        <div className="flex items-center gap-3 p-3 bg-yellow-50 dark:bg-yellow-950/30 rounded-lg">
                           <div className="w-8 h-8 bg-yellow-200 rounded-full flex items-center justify-center text-yellow-800 font-bold text-sm">⚠</div>
                           <div>
                             <p className="font-medium text-yellow-800">No Horizontal Scrolling</p>
                             <p className="text-yellow-600 text-sm">Except for intentional slide-style navigation patterns</p>
                           </div>
                         </div>
-                        <div className="flex items-center gap-3 p-3 bg-blue-50 rounded-lg">
+                        <div className="flex items-center gap-3 p-3 bg-blue-50 dark:bg-blue-950/30 rounded-lg">
                           <div className="w-8 h-8 bg-blue-200 rounded-full flex items-center justify-center text-blue-800 font-bold text-sm">🏗</div>
                           <div>
                             <p className="font-medium text-blue-800">Modular Components</p>
                             <p className="text-blue-600 text-sm">Reusable patterns for rapid development</p>
                           </div>
                         </div>
-                        <div className="flex items-center gap-3 p-3 bg-green-50 rounded-lg">
+                        <div className="flex items-center gap-3 p-3 bg-green-50 dark:bg-green-950/30 rounded-lg">
                           <div className="w-8 h-8 bg-green-200 rounded-full flex items-center justify-center text-green-800 font-bold text-sm">🎛</div>
                           <div>
                             <p className="font-medium text-green-800">Advanced Controls</p>
@@ -275,13 +275,13 @@ const VStage = () => {
                     </div>
 
                     <div>
-                      <h3 className="font-semibold text-gray-900 mb-3 text-xl">3. Prototyping & UI Kit</h3>
-                      <p className="text-gray-700 mb-4">Built high-fidelity Figma components and prototypes to test interaction patterns and validate design decisions with real users.</p>
+                      <h3 className="font-semibold text-foreground mb-3 text-xl">3. Prototyping & UI Kit</h3>
+                      <p className="text-muted-foreground mb-4">Built high-fidelity Figma components and prototypes to test interaction patterns and validate design decisions with real users.</p>
                       <div className="grid md:grid-cols-2 gap-4">
-                        <div className="aspect-video border border-slate-300 bg-gradient-to-br from-teal-50 to-cyan-50 rounded-lg overflow-hidden flex items-center justify-center">
+                        <div className="aspect-video border border-border bg-gradient-to-br from-teal-50 to-cyan-50 dark:from-teal-950/30 dark:to-cyan-950/30 rounded-lg overflow-hidden flex items-center justify-center">
                           <img src="/img/vstage/process1.png" alt="design system" className="w-full h-full object-cover" />
                         </div>
-                        <div className="aspect-video bg-gradient-to-br from-teal-50 to-cyan-50 rounded-lg overflow-hidden flex items-center justify-center">
+                        <div className="aspect-video bg-gradient-to-br from-teal-50 to-cyan-50 dark:from-teal-950/30 dark:to-cyan-950/30 rounded-lg overflow-hidden flex items-center justify-center">
                           <img src="/img/vstage/process2.png" alt="design system" className="w-full h-full object-cover" />
                         </div>
                       </div>
@@ -300,29 +300,29 @@ const VStage = () => {
           <section className="mb-20">
             <div className="flex items-start gap-4 mb-8">
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">The Solution</h2>
+                <h2 className="text-3xl font-bold text-foreground mb-6">The Solution</h2>
                 <div className="prose prose-lg max-w-none">
-                  <p className="text-gray-700 leading-relaxed mb-6">
+                  <p className="text-muted-foreground leading-relaxed mb-6">
                     I designed an adaptive interface system that dynamically adjusts complexity based on user needs, featuring progressive disclosure and contextual controls.
                   </p>
 
                   <div className="space-y-6">
-                    <div className="bg-slate-50 p-6 rounded-xl border-l-4 border-slate-200">
-                      <h4 className="font-semibold text-slate-800 mb-2">🎨 Adaptive UI System</h4>
-                      <p className="text-slate-700">Toggle-based interface that hides complexity for newcomers while keeping advanced tools accessible to experts. Pop-over toggles, collapsible panels, and contextual menus.</p>
+                    <div className="bg-muted/30 p-6 rounded-xl border-l-4 border-muted">
+                      <h4 className="font-semibold text-foreground mb-2">🎨 Adaptive UI System</h4>
+                      <p className="text-muted-foreground">Toggle-based interface that hides complexity for newcomers while keeping advanced tools accessible to experts. Pop-over toggles, collapsible panels, and contextual menus.</p>
                     </div>
                     
-                    <div className="bg-amber-50 p-6 rounded-xl border-l-4 border-amber-200">
+                    <div className="bg-amber-50 dark:bg-amber-950/30 p-6 rounded-xl border-l-4 border-amber-200 dark:border-amber-800">
                       <h4 className="font-semibold text-amber-800 mb-2">🎬 Slide-Bar Navigation</h4>
                       <p className="text-amber-700">Horizontal slide navigation with large visual trackers for presentation sequences - the one exception to the "no horizontal scroll" rule, designed like familiar media players.</p>
                     </div>
                     
-                    <div className="bg-emerald-50 p-6 rounded-xl border-l-4 border-emerald-200">
+                    <div className="bg-emerald-50 dark:bg-emerald-950/30 p-6 rounded-xl border-l-4 border-emerald-200 dark:border-emerald-800">
                       <h4 className="font-semibold text-emerald-800 mb-2">🌳 Smart Tree View Filters</h4>
                       <p className="text-emerald-700">Hierarchical component browser with bulk selection, inverse selection, bookmarking, and tagging. Handles 50k+ components with search and filtering.</p>
                     </div>
                     
-                    <div className="bg-violet-50 p-6 rounded-xl border-l-4 border-violet-200">
+                    <div className="bg-violet-50 dark:bg-violet-950/30 p-6 rounded-xl border-l-4 border-violet-200 dark:border-violet-800">
                       <h4 className="font-semibold text-violet-800 mb-2">🌓 Dual Theme System</h4>
                       <p className="text-violet-700">Complete dark/light theme implementation optimized for long CAD sessions and presentation environments. Seamless switching preserves user context.</p>
                     </div>
@@ -357,34 +357,34 @@ const VStage = () => {
           <section className="mb-20">
             <div className="flex items-start gap-4 mb-8">
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Testing & Impact</h2>
+                <h2 className="text-3xl font-bold text-foreground mb-6">Testing & Impact</h2>
                 <div className="prose prose-lg max-w-none">
-                  <p className="text-gray-700 leading-relaxed mb-6">
+                  <p className="text-muted-foreground leading-relaxed mb-6">
                     Conducted extensive usability testing with both expert and novice users, iterating based on feedback to refine the adaptive interface approach.
                   </p>
 
                   {/* Results Metrics */}
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                    <div className="bg-green-50 p-6 rounded-xl text-center">
+                    <div className="bg-green-50 dark:bg-green-950/30 p-6 rounded-xl text-center">
                       <div className="text-3xl font-bold text-green-600 mb-2">75%</div>
                       <p className="text-green-800 font-medium">Faster Onboarding</p>
                       <p className="text-green-600 text-sm">For new users</p>
                     </div>
-                    <div className="bg-blue-50 p-6 rounded-xl text-center">
+                    <div className="bg-blue-50 dark:bg-blue-950/30 p-6 rounded-xl text-center">
                       <div className="text-3xl font-bold text-blue-600 mb-2">40%</div>
                       <p className="text-blue-800 font-medium">Improved Workflow Speed</p>
                       <p className="text-blue-600 text-sm">For expert users</p>
                     </div>
-                    <div className="bg-purple-50 p-6 rounded-xl text-center">
+                    <div className="bg-purple-50 dark:bg-purple-950/30 p-6 rounded-xl text-center">
                       <div className="text-3xl font-bold text-purple-600 mb-2">3x</div>
                       <p className="text-purple-800 font-medium">Development Efficiency</p>
                       <p className="text-purple-600 text-sm">With modular system</p>
                     </div>
                   </div>
 
-                  <div className="bg-slate-50 p-6 rounded-xl">
-                    <h4 className="font-semibold text-gray-900 mb-3">Key Testing Insights</h4>
-                    <div className="space-y-3 text-gray-700">
+                  <div className="bg-muted/30 p-6 rounded-xl">
+                    <h4 className="font-semibold text-foreground mb-3">Key Testing Insights</h4>
+                    <div className="space-y-3 text-muted-foreground">
                       <div className="flex items-start gap-2">
                         <div className="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>
                         <p className="text-sm">"The toggle system lets me hide what I don't need without losing access to advanced features"</p>
@@ -408,19 +408,19 @@ const VStage = () => {
           <section className="mb-20">
             <div className="flex items-start gap-4 mb-8">
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Key Learnings</h2>
+                <h2 className="text-3xl font-bold text-foreground mb-6">Key Learnings</h2>
                 <div className="prose prose-lg max-w-none">
-                  <div className="space-y-6 text-gray-700">
+                  <div className="space-y-6 text-muted-foreground">
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Designing for Expertise Levels</h4>
+                      <h4 className="font-semibold text-foreground mb-2">Designing for Expertise Levels</h4>
                       <p>Creating adaptive interfaces requires deep understanding of both novice and expert mental models. Progressive disclosure must feel natural, not restrictive.</p>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Horizontal Scroll Psychology</h4>
+                      <h4 className="font-semibold text-foreground mb-2">Horizontal Scroll Psychology</h4>
                       <p>Users accept horizontal scrolling when it matches familiar interaction patterns (like media players) but reject it for navigation or content browsing.</p>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Modular Design Systems</h4>
+                      <h4 className="font-semibold text-foreground mb-2">Modular Design Systems</h4>
                       <p>Building reusable components from the start dramatically speeds development and ensures consistency across complex applications.</p>
                     </div>
                   </div>
@@ -433,14 +433,19 @@ const VStage = () => {
           <section className="py-16">
               <div className="max-w-4xl mx-auto px-6">
                   <div className="space-y-8">
-                      <h2 className="text-3xl font-bold text-gray-900 text-center">
+                      <h2 className="text-3xl font-bold text-foreground text-center">
                           Prototype in Action
                       </h2>
                       <div className="flex justify-center">
                           <div className="aspect-video w-full max-w-4xl rounded-2xl overflow-hidden shadow-lg bg-black">
                                         <iframe
                                             className="w-full h-full"
-                                            src="https://www.youtube.com/embed/x9Sv6HWOf9E?si=vtetT8m7eiUsq2PR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                                            src="https://www.youtube.com/embed/x9Sv6HWOf9E?si=vtetT8m7eiUsq2PR" 
+                                            title="YouTube video player" 
+                                            frameBorder="0" 
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                            referrerPolicy="strict-origin-when-cross-origin" 
+                                            allowFullScreen>
                                         </iframe>
                           </div>
                       </div>
@@ -453,7 +458,7 @@ const VStage = () => {
           <section className="py-16">
             <div className="max-w-4xl mx-auto">
                 <div className="space-y-8">
-                    <h2 className="text-3xl font-bold text-gray-900">
+                    <h2 className="text-3xl font-bold text-foreground">
                         Final UI
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -484,12 +489,12 @@ const VStage = () => {
           <section className="mb-20">
             <div className="flex items-start gap-4 mb-8">
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Future Enhancements</h2>
+                <h2 className="text-3xl font-bold text-foreground mb-6">Future Enhancements</h2>
                 <div className="prose prose-lg max-w-none">
-                  <p className="text-gray-700 leading-relaxed mb-4">
+                  <p className="text-muted-foreground leading-relaxed mb-4">
                     Based on user feedback and usage analytics, several opportunities emerged for future development:
                   </p>
-                  <ul className="space-y-3 text-gray-700">
+                  <ul className="space-y-3 text-muted-foreground">
                     <li><strong>Collaborative Features</strong> - Real-time multi-user editing and annotation for team presentations</li>
                     <li><strong>Advanced Analytics</strong> - User interaction tracking to optimize workflows and identify bottlenecks</li>
                     <li><strong>Mobile Companion App</strong> - Remote control interface for presentations and quick edits</li>
@@ -501,11 +506,11 @@ const VStage = () => {
 
           {/* Reflection Section */}
           <section className="mb-20">
-            <div className="bg-slate-50 p-8 rounded-2xl">
+            <div className="bg-muted/30 p-8 rounded-2xl">
               <div className="flex items-start gap-4">
                 <div>
-                  <h2 className="text-2xl font-bold text-slate-900 mb-4">Personal Reflection</h2>
-                  <p className="text-slate-800 leading-relaxed">
+                  <h2 className="text-2xl font-bold text-foreground mb-4">Personal Reflection</h2>
+                  <p className="text-muted-foreground leading-relaxed">
                     This project taught me that successful Saas software design isn't about choosing between simplicity and power—it's about creating intelligent systems that adapt to user needs. The challenge of serving both CAD experts and newcomers pushed me to develop more sophisticated approaches to progressive disclosure and contextual interfaces. Most importantly, I learned that when users feel in control of their interface complexity, they're more willing to explore advanced features.
                   </p>
                 </div>

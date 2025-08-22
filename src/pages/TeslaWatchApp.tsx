@@ -76,7 +76,7 @@ function ScreenshotsRow({ screenshots }: ScreenshotsRowProps) {
         <>
             <div className="flex items-center mt-8" style={{ height: 48 }}>
                 <span
-                    className="mr-4 text-sm font-medium text-gray-600"
+                    className="mr-4 text-sm font-medium text-muted-foreground"
                     style={{ minWidth: 80 }}
                 >
                     Process Shots
@@ -158,7 +158,7 @@ const TeslaWatchApp = () => {
 
 
   return (
-    <main className="pt-8 pb-16">
+    <main className="pt-8 pb-16 bg-background">
       <CaseStudyNav />
       {/* Hero Section */}
       <section className="max-w-4xl mx-auto px-6 py-16">
@@ -171,11 +171,11 @@ const TeslaWatchApp = () => {
               <Badge variant="secondary">UX/UI</Badge>
             </div> */}
 
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground leading-tight">
               Tesla Watch App: Concept Design & Animation
             </h1>
 
-            <p className="text-xl text-gray-600 leading-relaxed">
+            <p className="text-xl text-muted-foreground leading-relaxed">
               Porting the Tesla mobile app to the Apple Watch presents unique
               challenges in UI, compatibility, and interaction. This concept
               explores how a seamless Tesla experience could work on your wrist.
@@ -183,20 +183,20 @@ const TeslaWatchApp = () => {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 py-4">
               <div className="text-center">
-                <div className="text-2xl font-bold text-gray-900">Apple Watch</div>
-                <div className="text-sm text-gray-600">Platform</div>
+                <div className="text-2xl font-bold text-foreground">Apple Watch</div>
+                <div className="text-sm text-muted-foreground">Platform</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-gray-900">Gesture UX</div>
-                <div className="text-sm text-gray-600">Interaction</div>
+                <div className="text-2xl font-bold text-foreground">Gesture UX</div>
+                <div className="text-sm text-muted-foreground">Interaction</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-gray-900">Animation</div>
-                <div className="text-sm text-gray-600">Validation</div>
+                <div className="text-2xl font-bold text-foreground">Animation</div>
+                <div className="text-sm text-muted-foreground">Validation</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-gray-900">007 Bond</div>
-                <div className="text-sm text-gray-600">Inspiration</div>
+                <div className="text-2xl font-bold text-foreground">007 Bond</div>
+                <div className="text-sm text-muted-foreground">Inspiration</div>
               </div>
             </div>
           </div>
@@ -204,14 +204,14 @@ const TeslaWatchApp = () => {
       </section>
 
       {/* Project Overview */}
-      <section className="bg-slate-50 py-16">
+      <section className="bg-muted/30 py-16">
         <div className="max-w-4xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-6">
-              <h2 className="text-3xl font-bold text-gray-900">
+              <h2 className="text-3xl font-bold text-foreground">
                 Project Overview
               </h2>
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed">
                 The Tesla Watch App is a personal concept project exploring how
                 Tesla's mobile features could be adapted for the Apple Watch.
                 The main challenge was designing for a tiny screen, rethinking
@@ -220,20 +220,20 @@ const TeslaWatchApp = () => {
               </p>
               <div className="space-y-4">
                 <div>
-                  <h3 className="font-semibold text-gray-900">Type</h3>
-                  <p className="text-gray-600">Apple Watch App</p>
+                  <h3 className="font-semibold text-foreground">Type</h3>
+                  <p className="text-muted-foreground">Apple Watch App</p>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900">Figma / After Effects</h3>
-                  <p className="text-gray-600">Software</p>
+                  <h3 className="font-semibold text-foreground">Figma / After Effects</h3>
+                  <p className="text-muted-foreground">Software</p>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900">Role</h3>
-                  <p className="text-gray-600">Concept Designer & Animator</p>
+                  <h3 className="font-semibold text-foreground">Role</h3>
+                  <p className="text-muted-foreground">Concept Designer & Animator</p>
                 </div>
               </div>
             </div>
-            <div className="aspect-video bg-gradient-to-br from-gray-50 to-blue-100 rounded-2xl flex items-center justify-center">
+            <div className="aspect-video bg-gradient-to-br from-muted/30 to-blue-100 dark:from-muted/20 dark:to-blue-950/30 rounded-2xl flex items-center justify-center">
               <img
                 src="/img/tesla/thumb.png"
                 alt="Tesla Watch App Hero Image"
@@ -247,8 +247,8 @@ const TeslaWatchApp = () => {
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-6">
           <div className="space-y-8">
-            <h2 className="text-3xl font-bold text-gray-900">The Challenge</h2>
-            <p className="text-xl text-gray-600 leading-relaxed">
+            <h2 className="text-3xl font-bold text-foreground">The Challenge</h2>
+            <p className="text-xl text-muted-foreground leading-relaxed">
               Designing for the Apple Watch meant rethinking every aspect of the
               Tesla app. Screen size, resolution, and interaction methods
               required creative solutions to make features usable and intuitive.
@@ -259,10 +259,10 @@ const TeslaWatchApp = () => {
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
                     <Zap className="w-6 h-6 text-blue-600" />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900">
+                  <h3 className="text-xl font-semibold text-foreground">
                     Screen Constraints
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-muted-foreground">
                     The tiny display made traditional buttons unusable. Every
                     pixel had to be carefully considered for clarity and
                     usability.
@@ -274,10 +274,10 @@ const TeslaWatchApp = () => {
                   <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
                     <Touchpad className="w-6 h-6 text-green-600" />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900">
+                  <h3 className="text-xl font-semibold text-foreground">
                     Gesture Interaction
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-muted-foreground">
                     Buttons were too small, so a double-tap and hold gesture was
                     designed for summoning the car, inspired by spy movies.
                   </p>
@@ -288,10 +288,10 @@ const TeslaWatchApp = () => {
                   <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
                     <Film className="w-6 h-6 text-purple-600" />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900">
+                  <h3 className="text-xl font-semibold text-foreground">
                     007 Inspiration
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-muted-foreground">
                     The touch gesture concept was inspired by James Bond's use
                     of a phone to control his car in "Tomorrow Never Dies." Cool
                     UX starts with imagination.
@@ -304,71 +304,71 @@ const TeslaWatchApp = () => {
       </section>
 
       {/* Design Process */}
-      <section className="bg-slate-50 py-16">
+      <section className="bg-muted/30 py-16">
         <div className="max-w-4xl mx-auto px-6 pb-8">
           <div className="space-y-12">
             <div className="text-center space-y-4">
-              <h2 className="text-3xl font-bold text-gray-900">
+              <h2 className="text-3xl font-bold text-foreground">
                 Design Process
               </h2>
             </div>
             <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-white rounded-2xl p-8 shadow-sm">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">
+              <div className="bg-card rounded-2xl p-8 shadow-sm">
+                <h3 className="text-2xl font-bold text-foreground mb-6">
                   Concept & Iteration
                 </h3>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                    <span className="text-gray-700">
+                    <span className="text-muted-foreground">
                       Initial sketches and wireframes for watch UI
                     </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                    <span className="text-gray-700">
+                    <span className="text-muted-foreground">
                       Tested button layouts, removed for usability
                     </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                    <span className="text-gray-700">
+                    <span className="text-muted-foreground">
                       Developed gesture-based interaction
                     </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                    <span className="text-gray-700">
+                    <span className="text-muted-foreground">
                       Animated demo video for concept validation
                     </span>
                   </div>
                 </div>
               </div>
-              <div className="bg-white rounded-2xl p-8 shadow-sm">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">
+              <div className="bg-card rounded-2xl p-8 shadow-sm">
+                <h3 className="text-2xl font-bold text-foreground mb-6">
                   Key Features
                 </h3>
                 <div className="grid grid-cols-2 gap-x-6 gap-y-4">
                   <div className="flex items-center">
-                    <span className="text-gray-700">Gesture-based car summoning</span>
+                    <span className="text-muted-foreground">Gesture-based car summoning</span>
                   </div>
                   <div className="flex items-center justify-end">
                     <span className="font-bold text-green-600">✓ Concepted</span>
                   </div>
                   <div className="flex items-center">
-                    <span className="text-gray-700">Minimalist UI for small screens</span>
+                    <span className="text-muted-foreground">Minimalist UI for small screens</span>
                   </div>
                   <div className="flex items-center justify-end">
                     <span className="font-bold text-green-600">✓ Designed</span>
                   </div>
                   <div className="flex items-center">
-                    <span className="text-gray-700">Animated transitions</span>
+                    <span className="text-muted-foreground">Animated transitions</span>
                   </div>
                   <div className="flex items-center justify-end">
                     <span className="font-bold text-green-600">✓ Demoed</span>
                   </div>
                   <div className="flex items-center">
-                    <span className="text-gray-700">007-inspired UX</span>
+                    <span className="text-muted-foreground">007-inspired UX</span>
                   </div>
                   <div className="flex items-center justify-end">
                     <span className="font-bold text-green-600">✓ Ideated</span>
@@ -387,7 +387,7 @@ const TeslaWatchApp = () => {
     <section className="py-16">
         <div className="max-w-4xl mx-auto px-6">
             <div className="space-y-8">
-                <h2 className="text-3xl font-bold text-gray-900 text-center">
+                <h2 className="text-3xl font-bold text-foreground text-center">
                     Prototype Animation
                 </h2>
                 <div className="flex justify-center">
@@ -412,7 +412,7 @@ const TeslaWatchApp = () => {
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-6">
             <div className="space-y-8">
-                <h2 className="text-3xl font-bold text-gray-900 text-center">
+                <h2 className="text-3xl font-bold text-foreground text-center">
                     Mockups
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -444,12 +444,12 @@ const TeslaWatchApp = () => {
         <div className="max-w-4xl mx-auto px-6">
           <div className="space-y-12">
             <div className="text-center space-y-4">
-              <h2 className="text-3xl font-bold text-gray-900">
+              <h2 className="text-3xl font-bold text-foreground">
                 Reflection & Conclusion
               </h2>
             </div>
-            <div className="bg-slate-100 rounded-2xl p-8">
-              <p className="text-lg text-gray-700 leading-relaxed">
+            <div className="bg-muted/30 rounded-2xl p-8">
+              <p className="text-lg text-muted-foreground leading-relaxed">
                 Porting the Tesla mobile app to the Apple Watch involves
                 overcoming several design and compatibility challenges. With
                 careful planning and creative thinking, a seamless and intuitive
@@ -459,50 +459,50 @@ const TeslaWatchApp = () => {
             </div>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-4">
-                <h3 className="text-xl font-semibold text-gray-900">
+                <h3 className="text-xl font-semibold text-foreground">
                   What Worked Well
                 </h3>
                 <ul className="space-y-2">
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-green-600 rounded-full mt-2"></div>
-                    <span className="text-gray-700">
+                    <span className="text-muted-foreground">
                       Gesture-based UX solved small screen issues
                     </span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-green-600 rounded-full mt-2"></div>
-                    <span className="text-gray-700">
+                    <span className="text-muted-foreground">
                       007 inspiration led to creative solutions
                     </span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-green-600 rounded-full mt-2"></div>
-                    <span className="text-gray-700">
+                    <span className="text-muted-foreground">
                       Animation helped validate the concept
                     </span>
                   </li>
                 </ul>
               </div>
               <div className="space-y-4">
-                <h3 className="text-xl font-semibold text-gray-900">
+                <h3 className="text-xl font-semibold text-foreground">
                   Personal Growth
                 </h3>
                 <ul className="space-y-2">
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-orange-600 rounded-full mt-2"></div>
-                    <span className="text-gray-700">
+                    <span className="text-muted-foreground">
                       Learned to design for extreme constraints
                     </span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-orange-600 rounded-full mt-2"></div>
-                    <span className="text-gray-700">
+                    <span className="text-muted-foreground">
                       Developed new animation skills
                     </span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-orange-600 rounded-full mt-2"></div>
-                    <span className="text-gray-700">
+                    <span className="text-muted-foreground">
                       Gained confidence in concept ideation
                     </span>
                   </li>

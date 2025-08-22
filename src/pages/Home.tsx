@@ -251,7 +251,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       {/* Navigation */}
       <Navbar highlight="work" />
 
@@ -283,7 +283,7 @@ const Home = () => {
                 {["meaningful", "experiences"].map((w, i) => (
                   <span
                     key={i}
-                    className="inline-block headline-word mr-3 opacity-0 text-gray-700"
+                    className="inline-block headline-word mr-3 opacity-0 text-foreground"
                   >
                     {w}
                   </span>
@@ -332,24 +332,24 @@ const Home = () => {
       </section>
 
       {/* Stats Section */}
-      <section ref={statsRef} className="bg-slate-50 py-16">
+      <section ref={statsRef} className="bg-muted/30 py-16">
         <div className="max-w-4xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center space-y-2">
-              <div ref={projectsRef} className="text-3xl font-bold text-gray-900">120+</div>
-              <div className="text-sm text-gray-600">Projects Completed</div>
+              <div ref={projectsRef} className="text-3xl font-bold text-foreground">120+</div>
+              <div className="text-sm text-muted-foreground">Projects Completed</div>
             </div>
             <div className="text-center space-y-2">
-              <div ref={clientsRef} className="text-3xl font-bold text-gray-900">40+</div>
-              <div className="text-sm text-gray-600">Happy Clients</div>
+              <div ref={clientsRef} className="text-3xl font-bold text-foreground">40+</div>
+              <div className="text-sm text-muted-foreground">Happy Clients</div>
             </div>
             <div className="text-center space-y-2">
-              <div ref={yearsRef} className="text-3xl font-bold text-gray-900">10+</div>
-              <div className="text-sm text-gray-600">Years Experience</div>
+              <div ref={yearsRef} className="text-3xl font-bold text-foreground">10+</div>
+              <div className="text-sm text-muted-foreground">Years Experience</div>
             </div>
             <div className="text-center space-y-2">
-              <div ref={awardsRef} className="text-3xl font-bold text-gray-900">2 5000+</div>
-              <div className="text-sm text-gray-600">work hours</div>
+              <div ref={awardsRef} className="text-3xl font-bold text-foreground">2 5000+</div>
+              <div className="text-sm text-muted-foreground">work hours</div>
             </div>
           </div>
         </div>
@@ -366,8 +366,8 @@ const Home = () => {
       <section ref={featuredWorkRef} id="work" className="max-w-6xl mx-auto px-6 py-20">
         <div className="space-y-16">
           <div className="text-center space-y-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Featured Work</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground">Featured Work</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               A selection of projects that showcase my approach to solving complex design challenges
             </p>
           </div>
@@ -388,10 +388,10 @@ const Home = () => {
               </div>
 
               <div className="space-y-4">
-                <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
+                <h3 className="text-2xl md:text-3xl font-bold text-foreground">
                   Tesla — Adoption to Apple Watch
                 </h3>
-                <p className="text-lg text-gray-600 leading-relaxed">
+                <p className="text-lg text-muted-foreground leading-relaxed">
                   If you know the TV Show "Knight Rider", this is the next step. This concept watch app allows you to control your car from your wrist, with a focus on simplicity and ease of use.
                 </p>
               </div>
@@ -431,8 +431,8 @@ const Home = () => {
                         React
                       </Badge>
                     </div>
-                    <h4 className="text-xl font-semibold text-gray-900">A Unique and Powerful CMS</h4>
-                    <p className="text-gray-600 text-sm leading-relaxed">
+                    <h4 className="text-xl font-semibold text-foreground">A Unique and Powerful CMS</h4>
+                    <p className="text-muted-foreground text-sm leading-relaxed">
                       Reduced user frustration (by a lot), designed new interactions, and invented a new way to automatically crop images
                     </p>
                     <Button variant="ghost" className="gap-2 p-0 h-auto text-sm">
@@ -462,8 +462,8 @@ const Home = () => {
                         3D Presentation
                       </Badge>
                     </div>
-                    <h4 className="text-xl font-semibold text-gray-900">vSTAGE — 3D Presentation Platform</h4>
-                    <p className="text-gray-600 text-sm leading-relaxed">
+                    <h4 className="text-xl font-semibold text-foreground">vSTAGE — 3D Presentation Platform</h4>
+                    <p className="text-muted-foreground text-sm leading-relaxed">
                       Transformed a complex 3D tool designed for CAD professionals into an intuitive platform accessible to
                   newcomers while retaining deep functionality for power users.
                     </p>
@@ -545,25 +545,25 @@ const Home = () => {
       <section ref={caseStudiesRef} className="py-20">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Locked Case Studies (for interviews)</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <h2 className="text-4xl font-bold text-foreground mb-4">Locked Case Studies (for interviews)</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Deep dives into design challenges, processes, and solutions
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {/* <Link to="/case-study" className="group"> */}
-              <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 h-full">
+              <div className="bg-card rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 h-full">
                 <div className="h-48 bg-gradient-to-br from-slate-300 to-slate-500 rounded-xl mb-6 flex items-center justify-center">
                   <div className="text-center flex flex-col items-center justify-center">
                     <Lock className="w-16 h-16 text-white mb-3" />
                     <p className="text-white font-medium">Crushy</p>
                   </div>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                <h3 className="text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
                   Brand New Social Networking App
                 </h3>
-                <p className="text-gray-600 mb-4 leading-relaxed">
+                <p className="text-muted-foreground mb-4 leading-relaxed">
                   A fresh approach to social networking, focusing on people first.
                 </p>
                 {/* <div className="flex items-center text-blue-600 font-medium">
@@ -574,17 +574,17 @@ const Home = () => {
             {/* </Link> */}
 
             {/* <Link to="/ecommerce-case-study" className="group"> */}
-              <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 h-full">
+              <div className="bg-card rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 h-full">
                 <div className="h-48 bg-gradient-to-br from-slate-300 to-slate-500 rounded-xl mb-6 flex items-center justify-center">
                   <div className="text-center flex flex-col items-center justify-center">
                     <Lock className="w-16 h-16 text-white mb-3" />
                     <p className="text-white font-medium">Bolt from the Blue</p>
                   </div>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                <h3 className="text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
                   Fictional UI's for a Feature Film
                 </h3>
-                <p className="text-gray-600 mb-4 leading-relaxed">
+                <p className="text-muted-foreground mb-4 leading-relaxed">
                   After working on a Netflix Show, I had the pleasure to design and animate UI's for a feature film.
                 </p>
                 {/* <div className="flex items-center text-blue-600 font-medium">
@@ -595,17 +595,17 @@ const Home = () => {
             {/* </Link> */}
 
             {/* <Link to="/mindspace-case-study" className="group"> */}
-              <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 h-full">
+              <div className="bg-card rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 h-full">
                 <div className="h-48 bg-gradient-to-br from-slate-300 to-slate-500 rounded-xl mb-6 flex items-center justify-center">
                   <div className="text-center flex flex-col items-center justify-center">
                     <Lock className="w-16 h-16 text-white mb-3" />
                     <p className="text-white font-medium">Zdash</p>
                   </div>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                <h3 className="text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
                   Banking App for young adults
                 </h3>
-                <p className="text-gray-600 mb-4 leading-relaxed">
+                <p className="text-muted-foreground mb-4 leading-relaxed">
                  Effortless banking for the young generation, designed to be intuitive and secure.
                 </p>
                 {/* <div className="flex items-center text-blue-600 font-medium">
@@ -619,12 +619,12 @@ const Home = () => {
       </section>
 
       {/* About Section */}
-      <section ref={aboutRef} id="about" className="bg-slate-50 py-20">
+      <section ref={aboutRef} id="about" className="bg-muted/30 py-20">
         <div className="max-w-4xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">About Me</h2>
-              <div className="space-y-4 text-lg text-gray-700 leading-relaxed">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground">About Me</h2>
+              <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
                 <p>
                   I'm a product designer with 9+ years of experience creating digital experiences that users love. My
                   interest in psychology helps me understand user behavior and design solutions that truly resonate.
@@ -647,7 +647,7 @@ const Home = () => {
               </div>
 
               <div className="space-y-4">
-                <h3 className="text-xl font-semibold text-gray-900">Skills & Expertise</h3>
+                <h3 className="text-xl font-semibold text-foreground">Skills & Expertise</h3>
                 <div className="flex flex-wrap gap-2">
                   <Badge variant="secondary">3D</Badge>
                   <Badge variant="secondary">Interaction Design</Badge>
@@ -668,8 +668,8 @@ const Home = () => {
       <section ref={testimonialsRef} className="max-w-4xl mx-auto px-6 py-20">
         <div className="space-y-12">
           <div className="text-center space-y-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">What People Say</h2>
-            <p className="text-xl text-gray-600">Feedback from colleagues and clients I've worked with</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground">What People Say</h2>
+            <p className="text-xl text-muted-foreground">Feedback from colleagues and clients I've worked with</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -680,14 +680,14 @@ const Home = () => {
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <p className="text-gray-700 leading-relaxed italic">
+                <p className="text-muted-foreground leading-relaxed italic">
                   "Pascal is both a skilled and knowledgeable UI/UX Designer, as well as a great team leader. I highly recommend Pascal to any organization who needs a great UI/UX team leader or instructor."
                 </p>
                 <div className="flex items-center space-x-3">
                   <img src="/img/testimonials/dougal.jpg" alt="Dougal Mac Gregor" className="w-16 aspect-square rounded-full" />
                   <div>
-                    <p className="font-semibold text-gray-900">Dougal Mac Gregor</p>
-                    <p className="text-sm text-gray-600">Executive Coach & Software Engineer, Ryv Consulting</p>
+                    <p className="font-semibold text-foreground">Dougal Mac Gregor</p>
+                    <p className="text-sm text-muted-foreground">Executive Coach & Software Engineer, Ryv Consulting</p>
                   </div>
                 </div>
               </CardContent>
@@ -700,14 +700,14 @@ const Home = () => {
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <p className="text-gray-700 leading-relaxed italic">
+                <p className="text-muted-foreground leading-relaxed italic">
                   "I wholeheartedly recommend Pascal for any position requiring expertise in education and UX/UI Design."
                 </p>
                 <div className="flex items-center space-x-3">
                   <img src="/img/testimonials/gabi.jpg" alt="Gabriela Kurtz" className="w-16 aspect-square rounded-full" />
                   <div>
-                    <p className="font-semibold text-gray-900">Gabriela Kurtz</p>
-                    <p className="text-sm text-gray-600">PhD | Professor & Consultant</p>
+                    <p className="font-semibold text-foreground">Gabriela Kurtz</p>
+                    <p className="text-sm text-muted-foreground">PhD | Professor & Consultant</p>
                   </div>
                 </div>
               </CardContent>

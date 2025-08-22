@@ -278,7 +278,7 @@ const UIGallery = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       {/* Navigation */}
       <Navbar highlight="gallery" />
 
@@ -288,10 +288,10 @@ const UIGallery = () => {
       <section className="max-w-4xl mx-auto px-6 py-20">
         <div className="space-y-8">
           <div className="space-y-6 align-center text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
+            <h1 className="text-5xl md:text-6xl font-bold text-foreground leading-tight">
               Shots worth sharing
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
               A curated collection of my design work spanning web applications, mobile interfaces, 
               and FUI for Film and TV. Each piece represents a unique challenge and creative solution.
             </p>

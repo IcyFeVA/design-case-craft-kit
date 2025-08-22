@@ -6,16 +6,16 @@ import { Link } from "react-router-dom";
 
 const MindSpaceCaseStudy = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
+      <nav className="fixed top-0 left-0 right-0 bg-background/80 backdrop-blur-md z-50 border-b border-border">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <Link to="/" className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 transition-colors">
+            <Link to="/" className="flex items-center space-x-2 text-muted-foreground hover:text-foreground transition-colors">
               <ArrowLeft className="w-4 h-4" />
               <span>Back to Portfolio</span>
             </Link>
-            <div className="font-semibold text-lg">Case Study</div>
+            <div className="font-semibold text-lg text-foreground">Case Study</div>
           </div>
         </div>
       </nav>
@@ -27,16 +27,16 @@ const MindSpaceCaseStudy = () => {
           {/* Hero Section */}
           <section className="mb-20">
             <div className="mb-8">
-              <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+              <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
                 MindSpace
               </h1>
-              <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-3xl">
+              <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl">
                 Mental Health Companion for College Students
               </p>
             </div>
             
             <div className="mb-12">
-              <p className="text-lg text-gray-700 leading-relaxed max-w-2xl">
+              <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
                 Bridging the gap between crisis and care through accessible, peer-supported mental health tools
               </p>
             </div>
@@ -53,16 +53,16 @@ const MindSpaceCaseStudy = () => {
             {/* Project Details */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
               <div>
-                <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">Role</h3>
-                <p className="text-gray-900 font-medium">Solo UX/UI Designer</p>
+                <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-2">Role</h3>
+                <p className="text-foreground font-medium">Solo UX/UI Designer</p>
               </div>
               <div>
-                <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">Timeline</h3>
-                <p className="text-gray-900 font-medium">6 Weeks</p>
+                <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-2">Timeline</h3>
+                <p className="text-foreground font-medium">6 Weeks</p>
               </div>
               <div>
-                <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">Type</h3>
-                <p className="text-gray-900 font-medium">Personal Project</p>
+                <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-2">Type</h3>
+                <p className="text-foreground font-medium">Personal Project</p>
               </div>
             </div>
           </section>
@@ -72,12 +72,12 @@ const MindSpaceCaseStudy = () => {
             <div className="flex items-start gap-4 mb-8">
               <div className="text-2xl">🎯</div>
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">The Challenge</h2>
+                <h2 className="text-3xl font-bold text-foreground mb-6">The Challenge</h2>
                 <div className="prose prose-lg max-w-none">
-                  <p className="text-gray-700 leading-relaxed mb-6">
+                  <p className="text-muted-foreground leading-relaxed mb-6">
                     College students face unprecedented mental health challenges, with 85% reporting feeling overwhelmed and 45% experiencing higher-than-average stress levels. The problem:
                   </p>
-                  <ul className="space-y-3 text-gray-700">
+                  <ul className="space-y-3 text-muted-foreground">
                     <li>Existing mental health apps feel clinical and disconnected from student life</li>
                     <li>Crisis support often requires multiple steps, creating barriers during vulnerable moments</li>
                     <li>Students value peer support but lack accessible platforms for connection</li>
@@ -97,9 +97,9 @@ const MindSpaceCaseStudy = () => {
             <div className="flex items-start gap-4 mb-8">
               <div className="text-2xl">🔍</div>
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">User Research</h2>
+                <h2 className="text-3xl font-bold text-foreground mb-6">User Research</h2>
                 <div className="prose prose-lg max-w-none">
-                  <p className="text-gray-700 leading-relaxed mb-6">
+                  <p className="text-muted-foreground leading-relaxed mb-6">
                     I conducted comprehensive research with 15 college students aged 18-24 to understand their mental health journey and current coping mechanisms.
                   </p>
                   
@@ -118,8 +118,8 @@ const MindSpaceCaseStudy = () => {
                     </div>
                   </div>
 
-                  <h4 className="font-semibold text-gray-900 mb-3">Key Research Insights</h4>
-                  <ul className="space-y-3 text-gray-700 mb-6">
+                  <h4 className="font-semibold text-foreground mb-3">Key Research Insights</h4>
+                  <ul className="space-y-3 text-muted-foreground mb-6">
                     <li><strong>Crisis moments need immediate access</strong> - Students couldn't navigate complex interfaces during panic attacks</li>
                     <li><strong>Peer support trumps professional therapy</strong> for daily stress management</li>
                     <li><strong>Time constraints matter</strong> - 20-minute meditation sessions weren't realistic</li>
@@ -135,37 +135,37 @@ const MindSpaceCaseStudy = () => {
             <div className="flex items-start gap-4 mb-8">
               <div className="text-2xl">⚡</div>
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Design Process</h2>
+                <h2 className="text-3xl font-bold text-foreground mb-6">Design Process</h2>
                 <div className="prose prose-lg max-w-none">
                   <div className="space-y-8">
                     
                     <div>
-                      <h3 className="font-semibold text-gray-900 mb-3 text-xl">1. User Personas & Journey Mapping</h3>
-                      <p className="text-gray-700 mb-4">Created three distinct personas representing different student mental health archetypes and mapped their journey from stress triggers to resolution.</p>
+                      <h3 className="font-semibold text-foreground mb-3 text-xl">1. User Personas & Journey Mapping</h3>
+                      <p className="text-muted-foreground mb-4">Created three distinct personas representing different student mental health archetypes and mapped their journey from stress triggers to resolution.</p>
                       <div className="bg-slate-50 p-6 rounded-xl">
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                           <div className="text-center">
                             <div className="w-12 h-12 bg-blue-200 rounded-full mx-auto mb-2"></div>
                             <p className="font-medium text-sm">Alex - The Overwhelmed</p>
-                            <p className="text-xs text-gray-600">High-achiever with anxiety</p>
+                            <p className="text-xs text-muted-foreground">High-achiever with anxiety</p>
                           </div>
                           <div className="text-center">
                             <div className="w-12 h-12 bg-green-200 rounded-full mx-auto mb-2"></div>
                             <p className="font-medium text-sm">Sam - The Isolated</p>
-                            <p className="text-xs text-gray-600">Struggles with depression</p>
+                            <p className="text-xs text-muted-foreground">Struggles with depression</p>
                           </div>
                           <div className="text-center">
                             <div className="w-12 h-12 bg-purple-200 rounded-full mx-auto mb-2"></div>
                             <p className="font-medium text-sm">Jordan - The Skeptic</p>
-                            <p className="text-xs text-gray-600">Resistant to traditional help</p>
+                            <p className="text-xs text-muted-foreground">Resistant to traditional help</p>
                           </div>
                         </div>
                       </div>
                     </div>
 
                     <div>
-                      <h3 className="font-semibold text-gray-900 mb-3 text-xl">2. Information Architecture</h3>
-                      <p className="text-gray-700 mb-4">Designed a three-tier support system addressing different levels of mental health needs:</p>
+                      <h3 className="font-semibold text-foreground mb-3 text-xl">2. Information Architecture</h3>
+                      <p className="text-muted-foreground mb-4">Designed a three-tier support system addressing different levels of mental health needs:</p>
                       <div className="space-y-3">
                         <div className="flex items-center gap-3 p-3 bg-red-50 rounded-lg">
                           <div className="w-8 h-8 bg-red-200 rounded-full flex items-center justify-center text-red-800 font-bold text-sm">1</div>
@@ -192,8 +192,8 @@ const MindSpaceCaseStudy = () => {
                     </div>
 
                     <div>
-                      <h3 className="font-semibold text-gray-900 mb-3 text-xl">3. Prototyping & Testing</h3>
-                      <p className="text-gray-700 mb-4">Built and tested low-fidelity wireframes with focus on crisis intervention flow and peer support features.</p>
+                      <h3 className="font-semibold text-foreground mb-3 text-xl">3. Prototyping & Testing</h3>
+                      <p className="text-muted-foreground mb-4">Built and tested low-fidelity wireframes with focus on crisis intervention flow and peer support features.</p>
                       <div className="grid md:grid-cols-2 gap-4">
                         <div className="h-32 bg-gradient-to-br from-cyan-50 to-blue-50 rounded-lg flex items-center justify-center">
                           <div className="text-center">
