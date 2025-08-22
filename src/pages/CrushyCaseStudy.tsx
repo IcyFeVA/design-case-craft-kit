@@ -139,10 +139,10 @@ const CrushyCaseStudy = () => {
               </div>
             </div>
             
-            <div className="aspect-video bg-gradient-to-br from-pink-50 to-purple-100 rounded-2xl flex items-center justify-center">
+            <div className="aspect-video bg-gradient-to-br from-pink-50 to-purple-100 dark:from-pink-950/30 dark:to-purple-950/30 rounded-2xl flex items-center justify-center">
               <div className="text-center space-y-3 max-w-md">
-                <Heart className="w-16 h-16 text-pink-600 mx-auto" />
-                <p className="text-pink-600 font-medium">Crushy App</p>
+                <Heart className="w-16 h-16 text-pink-600 dark:text-pink-400 mx-auto" />
+                <p className="text-pink-600 dark:text-pink-400 font-medium">Crushy App</p>
                 <p className="text-sm text-muted-foreground">Founded by Pascal in Vancouver — a mission-driven, people-first approach to help newcomers and locals find friends, dates, and community without the usual paywalls.</p>
               </div>
             </div>
@@ -164,8 +164,8 @@ const CrushyCaseStudy = () => {
             <div className="grid md:grid-cols-3 gap-6">
               <Card className="border-0 shadow-sm">
                 <CardContent className="p-6 space-y-4">
-                  <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center">
-                    <Smartphone className="w-6 h-6 text-red-600" />
+                  <div className="w-12 h-12 bg-red-100 dark:bg-red-950/30 rounded-lg flex items-center justify-center">
+                    <Smartphone className="w-6 h-6 text-red-600 dark:text-red-400" />
                   </div>
                   <h3 className="text-xl font-semibold text-foreground">Different Intentions</h3>
                   <p className="text-muted-foreground">
@@ -176,8 +176,8 @@ const CrushyCaseStudy = () => {
 
               <Card className="border-0 shadow-sm">
                 <CardContent className="p-6 space-y-4">
-                  <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
-                    <Target className="w-6 h-6 text-orange-600" />
+                  <div className="w-12 h-12 bg-orange-100 dark:bg-orange-950/30 rounded-lg flex items-center justify-center">
+                    <Target className="w-6 h-6 text-orange-600 dark:text-orange-400" />
                   </div>
                   <h3 className="text-xl font-semibold text-foreground">Technical Complexity</h3>
                   <p className="text-muted-foreground">
@@ -189,8 +189,8 @@ const CrushyCaseStudy = () => {
 
               <Card className="border-0 shadow-sm">
                 <CardContent className="p-6 space-y-4">
-                  <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
-                    <Users className="w-6 h-6 text-purple-600" />
+                  <div className="w-12 h-12 bg-purple-100 dark:bg-purple-950/30 rounded-lg flex items-center justify-center">
+                    <Users className="w-6 h-6 text-purple-600 dark:text-purple-400" />
                   </div>
                   <h3 className="text-xl font-semibold text-foreground">Market Differentiation</h3>
                   <p className="text-muted-foreground">
@@ -221,8 +221,8 @@ const CrushyCaseStudy = () => {
                 <h3 className="text-2xl font-bold text-foreground mb-6">Discovery Phase</h3>
                 <div className="grid md:grid-cols-3 gap-6">
                   <div className="space-y-3">
-                    <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-                      <span className="text-blue-600 font-bold">146</span>
+                    <div className="w-10 h-10 bg-blue-100 dark:bg-blue-950/30 rounded-lg flex items-center justify-center">
+                      <span className="text-blue-600 dark:text-blue-400 font-bold">146</span>
                     </div>
                     <h4 className="font-semibold text-foreground">User Research</h4>
                     <p className="text-muted-foreground text-sm">
@@ -231,8 +231,8 @@ const CrushyCaseStudy = () => {
                   </div>
                   
                   <div className="space-y-3">
-                    <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
-                      <span className="text-green-600 font-bold">4</span>
+                    <div className="w-10 h-10 bg-green-100 dark:bg-green-950/30 rounded-lg flex items-center justify-center">
+                      <span className="text-green-600 dark:text-green-400 font-bold">4</span>
                     </div>
                     <h4 className="font-semibold text-foreground">User Personas</h4>
                     <p className="text-muted-foreground text-sm">
@@ -241,8 +241,8 @@ const CrushyCaseStudy = () => {
                   </div>
                   
                   <div className="space-y-3">
-                    <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
-                      <span className="text-purple-600 font-bold">10</span>
+                    <div className="w-10 h-10 bg-purple-100 dark:bg-purple-950/30 rounded-lg flex items-center justify-center">
+                      <span className="text-purple-600 dark:text-purple-400 font-bold">10</span>
                     </div>
                     <h4 className="font-semibold text-foreground">Competitor Analysis</h4>
                     <p className="text-muted-foreground text-sm">
@@ -268,7 +268,7 @@ const CrushyCaseStudy = () => {
             </div>
 
             <div className="space-y-8">
-              <div className="bg-gradient-to-r from-muted/50 to-indigo-50 rounded-2xl p-8">
+              <div className="bg-gradient-to-r from-muted/50 to-indigo-50 dark:from-muted/30 dark:to-indigo-950/30 rounded-2xl p-8">
                 <h3 className="text-2xl font-bold text-foreground mb-4">Supporting Different Intentions</h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
                   Instead of prescribing a single way to meet people, Crushy provides presentation options and gentle affordances so users can express intent more clearly. These presentation modes are product choices to help people discover compatible interactions. Just one of the features that are fairly unique.
@@ -276,22 +276,22 @@ const CrushyCaseStudy = () => {
                 <div className="bg-card rounded-lg p-6 mt-4">
                   <div className="space-y-4">
                     <div className="flex items-start space-x-3">
-                      <span className="font-semibold text-blue-600 min-w-[100px]">Surf Mode:</span>
+                      <span className="font-semibold text-blue-600 dark:text-blue-400 min-w-[100px]">Surf Mode:</span>
                       <span className="text-muted-foreground">An image-forward presentation for casual discovery.</span>
                     </div>
                     <div className="flex items-start space-x-3">
-                      <span className="font-semibold text-purple-600 min-w-[100px]">Dive Mode:</span>
+                      <span className="font-semibold text-purple-600 dark:text-purple-400 min-w-[100px]">Dive Mode:</span>
                       <span className="text-muted-foreground">A profile-led presentation focused on preferences and conversation starters.</span>
                     </div>
                     <div className="flex items-start space-x-3">
-                      <span className="font-semibold text-purple-600 min-w-[100px]">Crushr Mode:</span>
+                      <span className="font-semibold text-purple-600 dark:text-purple-400 min-w-[100px]">Crushr Mode:</span>
                       <span className="text-muted-foreground">For men only. Like Grindr, but way more affordable. Allows sharing of picture album.</span>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-8">
+              <div className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-950/30 dark:to-emerald-950/30 rounded-2xl p-8">
                 <h3 className="text-2xl font-bold text-foreground mb-4">Human-centered matching</h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
                   Matching in Crushy is guided by user-controlled preferences and free filters. The focus is on transparency and user agency, allowing people to discover others based on shared interests and intentions rather than algorithms.
@@ -435,10 +435,10 @@ const CrushyCaseStudy = () => {
                   style={{transform: `rotate(${(-5 + Math.random()*10)}deg)`, border: '5px solid #fff'}}
                 >
                   <CardContent className="p-0 w-full h-full">
-                    <div className="w-full h-full bg-gradient-to-br from-pink-100 to-purple-100 flex items-center justify-center">
+                    <div className="w-full h-full bg-gradient-to-br from-pink-100 to-purple-100 dark:from-pink-950/30 dark:to-purple-950/30 flex items-center justify-center">
                       <div className="text-center">
-                        <Heart className="w-12 h-12 text-pink-600 mx-auto mb-2" />
-                        <p className="text-pink-600 font-medium text-sm">{screen.category}</p>
+                        <Heart className="w-12 h-12 text-pink-600 dark:text-pink-400 mx-auto mb-2" />
+                        <p className="text-pink-600 dark:text-pink-400 font-medium text-sm">{screen.category}</p>
                       </div>
                     </div>
                   </CardContent>
@@ -470,15 +470,15 @@ const CrushyCaseStudy = () => {
                 <h3 className="text-xl font-semibold text-foreground">What Worked Exceptionally Well</h3>
                 <ul className="space-y-2">
                   <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-green-600 rounded-full mt-2"></div>
+                    <div className="w-2 h-2 bg-green-600 dark:bg-green-400 rounded-full mt-2"></div>
                     <span className="text-muted-foreground">People-first discovery and free search resonated with users</span>
                   </li>
                   <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-green-600 rounded-full mt-2"></div>
+                    <div className="w-2 h-2 bg-green-600 dark:bg-green-400 rounded-full mt-2"></div>
                     <span className="text-muted-foreground">React Native enabled rapid cross-platform development</span>
                   </li>
                   <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-green-600 rounded-full mt-2"></div>
+                    <div className="w-2 h-2 bg-green-600 dark:bg-green-400 rounded-full mt-2"></div>
                     <span className="text-muted-foreground">Supabase provided robust real-time capabilities</span>
                   </li>
                 </ul>
@@ -488,15 +488,15 @@ const CrushyCaseStudy = () => {
                 <h3 className="text-xl font-semibold text-foreground">Personal Growth</h3>
                 <ul className="space-y-2">
                   <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-orange-600 rounded-full mt-2"></div>
+                    <div className="w-2 h-2 bg-orange-600 dark:bg-orange-400 rounded-full mt-2"></div>
                     <span className="text-muted-foreground">Mastered full-stack mobile development</span>
                   </li>
                   <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-orange-600 rounded-full mt-2"></div>
+                    <div className="w-2 h-2 bg-orange-600 dark:bg-orange-400 rounded-full mt-2"></div>
                     <span className="text-muted-foreground">Learned to balance feature complexity with usability</span>
                   </li>
                   <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-orange-600 rounded-full mt-2"></div>
+                    <div className="w-2 h-2 bg-orange-600 dark:bg-orange-400 rounded-full mt-2"></div>
                     <span className="text-muted-foreground">Developed skills in user research and product strategy</span>
                   </li>
                 </ul>
