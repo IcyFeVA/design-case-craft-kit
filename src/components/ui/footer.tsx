@@ -4,7 +4,7 @@ import { Palette, Video } from "lucide-react";
 const Footer = () => {
   return (
     <footer className="border-t border-border py-8">
-      <div className="max-w-4xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <p className="text-muted-foreground">© 2025 Pascal Zirn. All rights reserved.</p>
           <div className="flex items-center space-x-6">
