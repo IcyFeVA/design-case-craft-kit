@@ -164,7 +164,7 @@ const VStage = () => {
                     </ul>
                   </div>
 
-                  <div className="bg-blue-50 p-6 rounded-xl">
+                  <div className="bg-blue-50 dark:bg-slate-900 p-6 rounded-xl">
                     <p className="text-blue-800 font-semibold text-lg mb-2">Design Question</p>
                     <p className="text-blue-700">How might we make vSTAGE accessible to new users while preserving the deep functionality that CAD professionals depend on?</p>
                   </div>
@@ -192,7 +192,7 @@ const VStage = () => {
                         <p><strong>Needs:</strong> Bulk operations, inverse selection, bookmark systems</p>
                       </div>
                     </div>
-                    <div className="bg-blue-50 dark:bg-blue-950/30 p-6 rounded-xl">
+                    <div className="bg-blue-50 dark:bg-slate-950/30 p-6 rounded-xl">
                       <h4 className="font-semibold text-blue-800 mb-3">Newcomer Persona</h4>
                       <div className="space-y-2 text-blue-700 text-sm">
                         <p><strong>Goals:</strong> Simple presentations, intuitive navigation, quick learning</p>
@@ -257,7 +257,7 @@ const VStage = () => {
                             <p className="text-yellow-600 text-sm">Except for intentional slide-style navigation patterns</p>
                           </div>
                         </div>
-                        <div className="flex items-center gap-3 p-3 bg-blue-50 dark:bg-blue-950/30 rounded-lg">
+                        <div className="flex items-center gap-3 p-3 bg-blue-50 dark:bg-slate-950/30 rounded-lg">
                           <div className="w-8 h-8 bg-blue-200 rounded-full flex items-center justify-center text-blue-800 font-bold text-sm">🏗</div>
                           <div>
                             <p className="font-medium text-blue-800">Modular Components</p>
@@ -370,7 +370,7 @@ const VStage = () => {
                       <p className="text-green-800 font-medium">Faster Onboarding</p>
                       <p className="text-green-600 text-sm">For new users</p>
                     </div>
-                    <div className="bg-blue-50 dark:bg-blue-950/30 p-6 rounded-xl text-center">
+                    <div className="bg-blue-50 dark:bg-slate-950/30 p-6 rounded-xl text-center">
                       <div className="text-3xl font-bold text-blue-600 mb-2">40%</div>
                       <p className="text-blue-800 font-medium">Improved Workflow Speed</p>
                       <p className="text-blue-600 text-sm">For expert users</p>

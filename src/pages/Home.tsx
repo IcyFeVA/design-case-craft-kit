@@ -736,12 +736,12 @@ const Home = () => {
       </section> */}
 
       {/* Contact Section */}
-      <section ref={contactRef} id="contact" className="bg-slate-900 text-white py-20">
+      <section ref={contactRef} id="contact" className="bg-muted/30 dark:bg-purple-900/20 text-white py-20">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <div className="space-y-8">
             <div className="space-y-4">
-              <h2 className="text-3xl md:text-4xl font-bold">Let's Work Together</h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground">Let's Work Together</h2>
+              <p className="text-xl text-muted-foreground dark:text-gray-300 max-w-2xl mx-auto">
                 I'm always interested in new opportunities and exciting projects. Let's discuss how we can create something amazing together.
               </p>
             </div>
@@ -754,14 +754,10 @@ const Home = () => {
                 </Button>
               </Link>
               <Link to="https://www.linkedin.com/in/pascalz/" target="_blank">
-              <Button
-                size="lg"
-                variant="outline"
-                className="gap-2 text-white border-white hover:bg-white hover:text-gray-900 bg-transparent"
-              >
-                <Linkedin className="w-4 h-4" />
-                LinkedIn
-              </Button>
+                <Button size="lg" variant="secondary" className="gap-2">
+                  <Linkedin className="w-4 h-4" />
+                  LinkedIn
+                </Button>
               </Link>
             </div>
 
