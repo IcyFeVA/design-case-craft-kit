@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { ArrowRight, Github, Linkedin, Instagram, Download, Twitter, ExternalLink, Grid3X3, Star, Mail, ArrowDown, Dribbble, Lock, Palette, Video } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Instagram, Download, Twitter, ExternalLink, Grid3X3, Star, Mail, ArrowDown, Dribbble, Lock, Palette, Video, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/ui/navbar";
 import Footer from "@/components/ui/footer";
@@ -49,6 +49,7 @@ const Home = () => {
   const headlineRef = useRef(null); // new ref for headline
   const statsRef = useRef(null);
   const featuredWorkRef = useRef(null);
+  const aiexplorationRef = useRef(null);
   const caseStudiesRef = useRef(null);
   const aboutRef = useRef(null);
   const testimonialsRef = useRef(null);
@@ -180,6 +181,19 @@ const Home = () => {
       }
     );
 
+    // AI exploration animation
+    gsap.fromTo(aiexplorationRef.current, 
+      { opacity: 0, y: 30 },
+      { 
+        opacity: 1, 
+        y: 0, 
+        duration: 1, 
+        scrollTrigger: {
+          trigger: aiexplorationRef.current,
+          start: "top 80%"
+        }
+      }
+    );
     // Case studies animation
     gsap.fromTo(caseStudiesRef.current, 
       { opacity: 0, y: 30 },
@@ -362,9 +376,71 @@ const Home = () => {
         <img src="/img/core-skills.png" alt="Core Skills" className="max-w-6xl mx-auto px-6 py-20" />
       </section> */}
 
+      {/* The Future of UX/UI Design */}
+      <section ref={aiexplorationRef} className="max-w-6xl mx-auto px-6 py-20">
+        
+        <div className="h-16"></div>
+
+        <div className="space-y-8">
+          <div className="text-center space-y-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground">AI to Amplify Rapid Prototyping</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              AI is transforming design. Here's how I'm leveraging it to create stunning designs and code in under 20 minutes.
+            </p>
+          </div>
+
+          <div className="space-y-8">
+            <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl flex items-center justify-center max-h-[480px] overflow-hidden w-full featured-work-container">
+              <Link to="/ai-driven-design">
+                <img src="/img/ai-design/teaser.png" alt="Tesla Apple Watch App Thumbnail" className="rounded-2xl featured-work-hover transition-transform duration-300 hover:scale-105" />
+              </Link>
+            </div>
+
+            <div className="max-w-4xl mx-auto space-y-6">
+              <div className="flex flex-wrap gap-2">
+                <Badge variant="secondary" className="text-xs">
+                  Workflow Innovation
+                </Badge>
+                <Badge variant="secondary" className="text-xs">
+                  AI Integration
+                </Badge>
+                <Badge variant="secondary" className="text-xs">
+                  Rapid Prototyping
+                </Badge>
+              </div>
+
+              <div className="space-y-4">
+                <h3 className="text-2xl md:text-3xl font-bold text-foreground">
+                  The Future of UX/UI Design — An exploration with AI
+                </h3>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  How I'm using Google's Gemini Pro AI and UX Pilot to create designs and code in under 20 minutes.
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link to="/ai-driven-design">
+                  <Button variant="explore" className="gap-2">
+                    View Case Study
+                    <ArrowRight className="w-4 h-4" />
+                  </Button>
+                </Link>
+                {/* <Button variant="outline" className="gap-2 bg-transparent">
+                  <ExternalLink className="w-4 h-4" />
+                  Live Project
+                </Button> */}
+              </div>
+            </div>
+          </div>   
+
+        </div>
+      </section> 
+
+      <div className="h-16"></div>
+
       {/* Featured Work */}
-      <section ref={featuredWorkRef} id="work" className="max-w-6xl mx-auto px-6 py-20">
-        <div className="space-y-16">
+      <section ref={featuredWorkRef} id="work" className="px-6 py-20 bg-muted/30">
+        <div className="space-y-8 max-w-6xl mx-auto ">
           <div className="text-center space-y-4">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">Featured Work</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -372,7 +448,6 @@ const Home = () => {
             </p>
           </div>
 
-          {/* Featured Project - vSTAGE */}
           <div className="space-y-8">
             <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl flex items-center justify-center max-h-[480px] overflow-hidden w-full featured-work-container">
               <Link to="/tesla-watch-app">
@@ -410,6 +485,8 @@ const Home = () => {
               </div>
             </div>
           </div>
+
+          <div className="h-8"> </div>
 
           {/* Other Projects Grid */}
           <div className="grid md:grid-cols-2 gap-8">
@@ -536,11 +613,13 @@ const Home = () => {
                 </CardContent>
               </Card>
             </Link> */}
-          </div>
+          </div>         
+
         </div>
       </section>
 
-      {/* Case Studies Section */}
+
+      {/* Locked Case Studies Section */}
       <section ref={caseStudiesRef} className="py-20">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
