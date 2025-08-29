@@ -19,7 +19,7 @@ type Screenshot = {
 
 const processShots: Screenshot[] = [
   {
-    imageUrl: '/img/ai-design/gemini-prompt.png',
+    imageUrl: '/img/ai-design/prompt.png',
     title: "Gemini Pro AI Prompt",
     description: "The initial prompt used to generate the project brief and UI components with Google's Gemini Pro AI",
     category: "AI Prompt",
@@ -27,21 +27,21 @@ const processShots: Screenshot[] = [
     tags: ["Gemini Pro", "AI Prompt", "Project Brief"],
   },
   {
-    imageUrl: '/img/ai-design/uxpilot-process.png',
+    imageUrl: '/img/ai-design/uxpilot.png',
     title: "UX Pilot Workflow",
     description: "Using the AI-generated brief in UX Pilot to create the home page design",
     category: "Process",
     year: 2025,
     tags: ["UX Pilot", "Design Process", "AI Integration"],
   },
-  {
-    imageUrl: '/img/ai-design/final-design.png',
-    title: "Final Home Page Design",
-    description: "The completed home page design generated through the AI-driven workflow",
-    category: "Final Design",
-    year: 2025,
-    tags: ["Home Page", "Final Design", "AI Generated"],
-  },
+  // {
+  //   imageUrl: '/img/ai-design/final-design.png',
+  //   title: "Final Home Page Design",
+  //   description: "The completed home page design generated through the AI-driven workflow",
+  //   category: "Final Design",
+  //   year: 2025,
+  //   tags: ["Home Page", "Final Design", "AI Generated"],
+  // },
 ];
 
 
@@ -57,11 +57,11 @@ const AIDrivenDesign = () => {
       <section className="max-w-4xl mx-auto px-6 py-16">
         <div className="space-y-8">
           <div className="space-y-6">
-            <div className="flex flex-wrap gap-2">
+            {/* <div className="flex flex-wrap gap-2">
               <Badge variant="secondary">AI-Driven Design</Badge>
               <Badge variant="secondary">UX Workflow</Badge>
               <Badge variant="secondary">Rapid Prototyping</Badge>
-            </div>
+            </div> */}
 
             <h1 className="text-4xl md:text-5xl font-bold text-foreground leading-tight">
               The Future of UX/UI Design is Now: AI-Powered Workflows
@@ -74,7 +74,7 @@ const AIDrivenDesign = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 py-4">
               <div className="text-center">
                 <div className="text-2xl font-bold text-foreground">20 mins</div>
-                <div className="text-sm text-muted-foreground">Design to Code</div>
+                <div className="text-sm text-muted-foreground">Prompt to Design/Code</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-foreground">AI + Tools</div>
@@ -109,12 +109,12 @@ const AIDrivenDesign = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground">Tools Used</h3>
-                  <p className="text-muted-foreground">Gemini Pro AI, UX Pilot, Figma, v0.dev, Lovable</p>
+                  <p className="text-muted-foreground">Gemini (or your favorite), UX Pilot, Roo Code</p>
                 </div>
-                <div>
+                {/* <div>
                   <h3 className="font-semibold text-foreground">Role</h3>
                   <p className="text-muted-foreground">Designer & Workflow Innovator</p>
-                </div>
+                </div> */}
               </div>
             </div>
             <div className="aspect-video bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-blue-950/30 dark:to-indigo-950/30 rounded-2xl flex items-center justify-center">
@@ -615,7 +615,7 @@ const AIDrivenDesign = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16">
+      {/* <section className="py-16">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <div className="space-y-8">
             <h2 className="text-3xl font-bold text-foreground">Try This Workflow Yourself</h2>
@@ -634,7 +634,7 @@ const AIDrivenDesign = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Final Design Image Modal */}
       <Dialog open={isFinalDesignModalOpen} onOpenChange={setIsFinalDesignModalOpen}>
