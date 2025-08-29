@@ -405,99 +405,12 @@ const AIDrivenDesign = () => {
                     <Badge variant="secondary">AI-Generated Design</Badge>
                   </div>
                 </div>
-                <div className="overflow-auto max-h-[600px]">
-                  <div className="min-h-[800px] bg-gradient-to-b from-blue-50 to-white dark:from-slate-900 dark:to-slate-800 p-8">
-                    {/* Hero Section */}
-                    <div className="text-center mb-16">
-                      <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-                        Find Your Dream Home
-                      </h1>
-                      <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-                        Discover the perfect property with our AI-powered search and personalized recommendations
-                      </p>
-                      <div className="max-w-2xl mx-auto bg-white dark:bg-slate-800 rounded-lg shadow-lg p-2 flex">
-                        <input 
-                          type="text" 
-                          placeholder="Enter location, property type, or keyword" 
-                          className="flex-1 px-4 py-3 border-0 focus:outline-none"
-                        />
-                        <Button className="px-6">
-                          Search
-                        </Button>
-                      </div>
-                    </div>
-                    
-                    {/* Features Section */}
-                    <div className="grid md:grid-cols-3 gap-8 mb-16">
-                      <div className="text-center p-6 bg-white dark:bg-slate-800 rounded-lg shadow">
-                        <div className="w-12 h-12 bg-blue-100 dark:bg-blue-950/30 rounded-full flex items-center justify-center mx-auto mb-4">
-                          <Home className="w-6 h-6 text-blue-600 dark:text-blue-400" />
-                        </div>
-                        <h3 className="text-xl font-semibold mb-2">Property Search</h3>
-                        <p className="text-muted-foreground">
-                          Advanced filters to find exactly what you're looking for
-                        </p>
-                      </div>
-                      <div className="text-center p-6 bg-white dark:bg-slate-800 rounded-lg shadow">
-                        <div className="w-12 h-12 bg-green-100 dark:bg-green-950/30 rounded-full flex items-center justify-center mx-auto mb-4">
-                          <Zap className="w-6 h-6 text-green-600 dark:text-green-400" />
-                        </div>
-                        <h3 className="text-xl font-semibold mb-2">Instant Valuation</h3>
-                        <p className="text-muted-foreground">
-                          Get your property's value in seconds with our AI tool
-                        </p>
-                      </div>
-                      <div className="text-center p-6 bg-white dark:bg-slate-800 rounded-lg shadow">
-                        <div className="w-12 h-12 bg-purple-100 dark:bg-purple-950/30 rounded-full flex items-center justify-center mx-auto mb-4">
-                          <Rocket className="w-6 h-6 text-purple-600 dark:text-purple-400" />
-                        </div>
-                        <h3 className="text-xl font-semibold mb-2">Virtual Tours</h3>
-                        <p className="text-muted-foreground">
-                          Explore properties from anywhere with 3D virtual tours
-                        </p>
-                      </div>
-                    </div>
-                    
-                    {/* Featured Properties */}
-                    <div className="mb-16">
-                      <h2 className="text-3xl font-bold text-foreground mb-8 text-center">
-                        Featured Properties
-                      </h2>
-                      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {[1, 2, 3].map((item) => (
-                          <div key={item} className="bg-white dark:bg-slate-800 rounded-lg shadow overflow-hidden">
-                            <div className="h-48 bg-gradient-to-r from-blue-200 to-purple-200 dark:from-blue-900 dark:to-purple-900"></div>
-                            <div className="p-6">
-                              <div className="flex justify-between items-start mb-2">
-                                <h3 className="text-xl font-semibold">Modern Downtown Apartment</h3>
-                                <span className="text-lg font-bold text-blue-600 dark:text-blue-400">$450,000</span>
-                              </div>
-                              <p className="text-muted-foreground mb-4">2 beds • 2 baths • 1200 sqft</p>
-                              <Button variant="outline" className="w-full">
-                                View Details
-                              </Button>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                    
-                    {/* CTA Section */}
-                    <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center text-white">
-                      <h2 className="text-3xl font-bold mb-4">Ready to Find Your Dream Home?</h2>
-                      <p className="text-xl mb-8 max-w-2xl mx-auto">
-                        Join thousands of satisfied customers who found their perfect property with us
-                      </p>
-                      <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Button variant="secondary" size="lg">
-                          Browse Properties
-                        </Button>
-                        <Button variant="outline" size="lg" className="bg-transparent border-white text-white hover:bg-white/10">
-                          Contact an Agent
-                        </Button>
-                      </div>
-                    </div>
-                  </div>
+                <div className="overflow-hidden">
+                  <img
+                    src="/img/ai-design/final1.png"
+                    alt="AI-Generated Real Estate Website Home Page Design"
+                    className="w-full h-auto object-contain"
+                  />
                 </div>
               </div>
               <p className="text-center text-sm text-muted-foreground mt-4">

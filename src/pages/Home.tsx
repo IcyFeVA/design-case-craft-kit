@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { ArrowRight, Github, Linkedin, Instagram, Download, Twitter, ExternalLink, Grid3X3, Star, Mail, ArrowDown, Dribbble, Lock, Palette, Video, Sparkles } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Instagram, Download, Twitter, ExternalLink, Grid3X3, Star, Mail, ArrowDown, Dribbble, Lock, Palette, Video } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/ui/navbar";
 import Footer from "@/components/ui/footer";
@@ -537,45 +537,6 @@ const Home = () => {
               </Card>
             </Link> */}
           </div>
-          
-          {/* New AI-Driven Design Card */}
-          {/* <div className="mt-8">
-            <Link to="/ai-driven-design">
-              <Card className="border-0 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
-                <CardContent className="p-0">
-                  <div className="aspect-video rounded-t-lg flex items-center justify-center border-b featured-work-container">
-                    <div className="bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-blue-950/30 dark:to-indigo-950/30 w-full h-full rounded-lg flex items-center justify-center">
-                      <div className="text-center">
-                        <Sparkles className="w-12 h-12 text-blue-600 dark:text-blue-400 mx-auto mb-2" />
-                        <p className="text-blue-600 dark:text-blue-400 font-medium">AI-Driven Design</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="p-6 space-y-4">
-                    <div className="flex flex-wrap gap-2">
-                      <Badge variant="outline" className="text-xs">
-                        Workflow Innovation
-                      </Badge>
-                      <Badge variant="outline" className="text-xs">
-                        AI Integration
-                      </Badge>
-                      <Badge variant="outline" className="text-xs">
-                        Rapid Prototyping
-                      </Badge>
-                    </div>
-                    <h4 className="text-xl font-semibold text-foreground">The Future of UX/UI Design</h4>
-                    <p className="text-muted-foreground text-sm leading-relaxed">
-                      How I'm using Google's Gemini Pro AI and UX Pilot to create designs and code in under 20 minutes.
-                    </p>
-                    <Button variant="ghost" className="gap-2 p-0 h-auto text-sm">
-                      View Case Study
-                      <ArrowRight className="w-3 h-3" />
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            </Link>
-          </div> */}
         </div>
       </section>
 
