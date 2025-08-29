@@ -1,11 +1,12 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ArrowLeft, ExternalLink, Sparkles, Zap, Rocket, Brain, Home } from "lucide-react";
+import { ArrowLeft, ExternalLink, Sparkles, Zap, Rocket, Brain, Home, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import CaseStudyNav from "@/components/CaseStudyNav";
 import { useState } from "react";
 import { GalleryImageDialog } from "./GalleryImageDialog";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 type Screenshot = {
   imageUrl: string;
@@ -43,10 +44,11 @@ const processShots: Screenshot[] = [
   },
 ];
 
+
 const AIDrivenDesign = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [isFinalDesignModalOpen, setIsFinalDesignModalOpen] = useState(false);
   const selectedImage = openIndex !== null ? processShots[openIndex] : null;
-
   return (
     <div className="pt-8 pb-16 bg-background">
       <CaseStudyNav />
@@ -401,11 +403,14 @@ const AIDrivenDesign = () => {
               <div className="border border-border rounded-lg overflow-hidden">
                 <div className="bg-gradient-to-r from-muted/50 to-muted/30 p-4 border-b border-border">
                   <div className="flex items-center justify-between">
-                    <h3 className="font-semibold text-foreground">Real Estate Website Home Page</h3>
+                    <h3 className="font-semibold text-foreground">Neighborhood Event Finder</h3>
                     <Badge variant="secondary">AI-Generated Design</Badge>
                   </div>
                 </div>
-                <div className="overflow-hidden">
+                <div
+                  className="cursor-pointer"
+                  onClick={() => setIsFinalDesignModalOpen(true)}
+                >
                   <img
                     src="/img/ai-design/final1.png"
                     alt="AI-Generated Real Estate Website Home Page Design"
@@ -620,6 +625,29 @@ const AIDrivenDesign = () => {
           </div>
         </div>
       </section>
+
+      {/* Final Design Image Modal */}
+      <Dialog open={isFinalDesignModalOpen} onOpenChange={setIsFinalDesignModalOpen}>
+        <DialogContent className="max-w-none w-screen h-screen p-0 bg-black flex flex-col">
+          <div className="absolute top-4 right-4 z-50">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setIsFinalDesignModalOpen(false)}
+              className="text-white hover:bg-white/10 hover:text-white"
+            >
+              <X className="w-6 h-6" />
+            </Button>
+          </div>
+          <div className="flex-1 overflow-auto p-4">
+            <img
+              src="/img/ai-design/final1.png"
+              alt="AI-Generated Real Estate Website Home Page Design"
+              className="w-auto h-auto max-w-none"
+            />
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };
