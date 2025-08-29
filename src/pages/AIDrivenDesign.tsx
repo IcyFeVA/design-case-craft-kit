@@ -643,7 +643,7 @@ const AIDrivenDesign = () => {
             <img
               src="/img/ai-design/final1.png"
               alt="AI-Generated Real Estate Website Home Page Design"
-              className="w-auto h-auto max-w-none"
+              className="w-auto h-auto max-w-none mx-auto"
             />
           </div>
         </DialogContent>
