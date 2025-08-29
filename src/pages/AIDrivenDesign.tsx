@@ -196,12 +196,14 @@ const AIDrivenDesign = () => {
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
                     <div>
-                      <p className="text-muted-foreground">I use this prompt with Google's Gemini Pro AI:</p>
+                      <p className="text-muted-foreground">I use this prompt (two parts) with Google's Gemini Pro AI:</p>
                       <div className="mt-2 p-4 bg-muted rounded-lg">
-                        <p className="text-sm font-mono">
-                          "1. I'm building a real estate website. Ask me questions one by one until we reach a solid project brief that will guide the whole design process.<br/><br/>
-                          2. Give me the contents of the home page UI, from top to bottom, include only elements, components and building blocks. Do not include styling and UI specs."
-                        </p>
+                        <div className="border-l-4 border-blue-500 pl-4 py-2">
+                          <p className="text-md font-mono italic">
+                            "1. I'm building a neighborhood event finder website. Ask me questions one by one until we reach a solid project brief that will guide the whole design process.<br/><br/>
+                            2. Give me the contents of the home page UI, from top to bottom, include only elements, components and building blocks. Do not include styling and UI specs."
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -239,15 +241,15 @@ const AIDrivenDesign = () => {
                 <div className="space-y-4">
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
-                    <span className="text-muted-foreground">Export designs to Figma, v0.dev, or Lovable for refinement</span>
+                    <span className="text-muted-foreground">Export designs to Figma for refinement</span>
                   </div>
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-green-600 rounded-full mt-2"></div>
-                    <span className="text-muted-foreground">Use AI-assisted coding tools to generate initial code</span>
+                    <span className="text-muted-foreground">Or use AI-assisted coding tools to refine code</span>
                   </div>
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-purple-600 rounded-full mt-2"></div>
-                    <span className="text-muted-foreground">Vibe code until the design is production-ready</span>
+                    <span className="text-muted-foreground">Vibe code until the design is production-ready (coding skills are reocommended)</span>
                   </div>
                 </div>
               </div>
@@ -270,7 +272,7 @@ const AIDrivenDesign = () => {
                     <span className="text-blue-600 dark:text-blue-400 font-bold">1</span>
                   </div>
                   <div className="ml-4">
-                    <h3 className="font-semibold text-foreground">Gemini Pro AI</h3>
+                    <h3 className="font-semibold text-foreground">Gemini Pro AI (or your favorite)</h3>
                     <p className="text-muted-foreground text-sm">Generate project brief and UI components</p>
                   </div>
                   <div className="ml-auto">
@@ -301,7 +303,7 @@ const AIDrivenDesign = () => {
                   </div>
                   <div className="ml-4">
                     <h3 className="font-semibold text-foreground">Design Tools</h3>
-                    <p className="text-muted-foreground text-sm">Figma, v0.dev, or Lovable for refinement</p>
+                    <p className="text-muted-foreground text-sm">Figma</p>
                   </div>
                   <div className="ml-auto">
                     <div className="w-8 h-8 bg-purple-100 dark:bg-purple-950/30 rounded-full flex items-center justify-center">
