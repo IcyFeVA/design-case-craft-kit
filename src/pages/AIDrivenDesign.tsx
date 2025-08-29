@@ -68,12 +68,12 @@ const AIDrivenDesign = () => {
             </h1>
 
             <p className="text-xl text-muted-foreground leading-relaxed">
-              How I'm using Google's Gemini Pro AI and UX Pilot to create designs and code in under 20 minutes - perfect for proposals and ideation.
+              How I'm using Google's Gemini Pro AI and UX Pilot to create designs and code in under 15 minutes - perfect for proposals and ideation.
             </p>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 py-4">
               <div className="text-center">
-                <div className="text-2xl font-bold text-foreground">20 mins</div>
+                <div className="text-2xl font-bold text-foreground">15 mins</div>
                 <div className="text-sm text-muted-foreground">Prompt to Design/Code</div>
               </div>
               <div className="text-center">
@@ -594,7 +594,7 @@ const AIDrivenDesign = () => {
             <div className="bg-card rounded-2xl p-8 shadow-sm">
               <p className="text-lg text-muted-foreground leading-relaxed">
                 This AI-driven workflow has fundamentally changed how I approach design projects. What used to take 
-                days of research, briefing, and initial concepting can now be accomplished in under 20 minutes. 
+                days of research, briefing, and initial concepting can now be accomplished in under 15 minutes. 
                 This doesn't diminish the value of design; instead, it elevates it by allowing me to focus on 
                 what truly matters: understanding user needs, crafting meaningful experiences, and solving 
                 complex problems creatively.

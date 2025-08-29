@@ -385,7 +385,7 @@ const Home = () => {
           <div className="text-center space-y-4">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">AI to Amplify Rapid Prototyping</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              AI is transforming design. Here's how I'm leveraging it to create stunning designs and code in under 20 minutes.
+              AI is transforming design. Here's how I'm leveraging it to create stunning designs and code in under 15 minutes.
             </p>
           </div>
 
@@ -414,7 +414,7 @@ const Home = () => {
                   The Future of UX/UI Design — An exploration with AI
                 </h3>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  How I'm using Google's Gemini Pro AI and UX Pilot to create designs and code in under 20 minutes.
+                  How I'm using Google's Gemini Pro AI and UX Pilot to create designs and code in under 15 minutes.
                 </p>
               </div>
 
