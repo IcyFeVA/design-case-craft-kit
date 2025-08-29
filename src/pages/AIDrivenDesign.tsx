@@ -409,7 +409,17 @@ const AIDrivenDesign = () => {
                 </div>
                 <div
                   className="cursor-pointer"
-                  onClick={() => setIsFinalDesignModalOpen(true)}
+                  onClick={() => {
+                    // Check if user is on mobile device
+                    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+                    if (isMobile) {
+                      // Open image in new tab for mobile users
+                      window.open("/img/ai-design/final1.png", "_blank");
+                    } else {
+                      // Open modal for desktop users
+                      setIsFinalDesignModalOpen(true);
+                    }
+                  }}
                 >
                   <img
                     src="/img/ai-design/final1.png"
