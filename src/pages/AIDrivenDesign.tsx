@@ -51,7 +51,7 @@ const AIDrivenDesign = () => {
   const selectedImage = openIndex !== null ? processShots[openIndex] : null;
   return (
     <div className="pt-8 pb-16 bg-background">
-      <CaseStudyNav />
+      <CaseStudyNav linkOverride="/" />
       
       {/* Hero Section */}
       <section className="max-w-4xl mx-auto px-6 py-16">

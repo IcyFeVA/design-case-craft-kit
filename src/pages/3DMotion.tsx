@@ -33,9 +33,9 @@ const Motion = () => {
         </div>
       </section>
 
-      <h3 className="text-2xl md:text-3xl font-bold text-foreground leading-tight mx-auto text-center">
+      <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-slate-600 dark:from-slate-500 dark:to-slate-600">
         3D, Motion, FUI (2024)
-      </h3>
+      </h2>
 
       <section className="pb-20 px-6 lg:px-8 py-8">
         <div className="max-w-6xl mx-auto">
@@ -47,9 +47,9 @@ const Motion = () => {
         </div>
       </section>
 
-      <h3 className="text-2xl md:text-3xl font-bold text-foreground leading-tight mx-auto text-center">
+      <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-slate-600 dark:from-slate-500 dark:to-slate-600">
         Character Animation Reel (2012, Maya)
-      </h3>
+      </h2>
 
       <section className="pb-20 px-6 lg:px-8 py-8">
         <div className="max-w-6xl mx-auto">
@@ -61,9 +61,9 @@ const Motion = () => {
         </div>
       </section>
 
-      <h3 className="text-2xl md:text-3xl font-bold text-foreground leading-tight mx-auto text-center">
+      <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-slate-600 dark:from-slate-500 dark:to-slate-600">
         R&M Prime Trailer (C4D, AE)
-      </h3>
+      </h2>
 
       <section className="pb-20 px-6 lg:px-8 py-8">
         <div className="max-w-6xl mx-auto">
@@ -75,9 +75,9 @@ const Motion = () => {
         </div>
       </section>
 
-      <h3 className="text-2xl md:text-3xl font-bold text-foreground leading-tight mx-auto text-center">
+      <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-slate-600 dark:from-slate-500 dark:to-slate-600">
         Star Wars like Space Jump (Houdini, AE)
-      </h3>
+      </h2>
 
       <section className="pb-20 px-6 lg:px-8 py-8">
         <div className="max-w-6xl mx-auto">
@@ -89,9 +89,9 @@ const Motion = () => {
         </div>
       </section>      
 
-      <h3 className="text-2xl md:text-3xl font-bold text-foreground leading-tight mx-auto text-center">
+      <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-slate-600 dark:from-slate-500 dark:to-slate-600">
         Thank you "card" for client (C4D, Element3D)
-      </h3>
+      </h2>
 
       <section className="pb-20 px-6 lg:px-8 py-8">
         <div className="max-w-6xl mx-auto">
