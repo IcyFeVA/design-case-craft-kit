@@ -383,7 +383,7 @@ const Home = () => {
 
         <div className="space-y-8">
           <div className="text-center space-y-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500 dark:from-blue-300 dark:to-purple-300">AI to Amplify Rapid Prototyping</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-slate-600 dark:from-slate-500 dark:to-slate-600">AI to Amplify Rapid Prototyping</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               AI is transforming design. Here's how I'm leveraging it to create stunning designs and code in under 15 minutes.
             </p>
@@ -442,7 +442,7 @@ const Home = () => {
       <section ref={featuredWorkRef} id="work" className="px-6 py-20 bg-muted/30">
         <div className="space-y-8 max-w-6xl mx-auto ">
           <div className="text-center space-y-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500 dark:from-blue-300 dark:to-purple-300">Featured Work</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-slate-600 dark:from-slate-500 dark:to-slate-600">Featured Work</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               A selection of projects that showcase my approach to solving complex design challenges
             </p>
@@ -623,7 +623,7 @@ const Home = () => {
       <section ref={caseStudiesRef} className="py-20">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500 dark:from-blue-300 dark:to-purple-300">Locked Case Studies (for interviews)</h2>
+            <h2 className="text-4xl font-bold text-foreground mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-slate-600 dark:from-slate-500 dark:to-slate-600">Locked Case Studies (for interviews)</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Deep dives into design challenges, processes, and solutions
             </p>
@@ -701,7 +701,7 @@ const Home = () => {
         <div className="max-w-4xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500 dark:from-blue-300 dark:to-purple-300">About Me</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-slate-600 dark:from-slate-500 dark:to-slate-600">About Me</h2>
               <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
                 <p>
                   I'm a product designer with 9+ years of experience creating digital experiences that users love. My
@@ -746,7 +746,7 @@ const Home = () => {
       <section ref={testimonialsRef} className="max-w-4xl mx-auto px-6 py-20">
         <div className="space-y-12">
           <div className="text-center space-y-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500 dark:from-blue-300 dark:to-purple-300">What People Say</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-slate-600 dark:from-slate-500 dark:to-slate-600">What People Say</h2>
             <p className="text-xl text-muted-foreground">Feedback from colleagues and clients I've worked with</p>
           </div>
 
@@ -814,11 +814,11 @@ const Home = () => {
       </section> */}
 
       {/* Contact Section */}
-      <section ref={contactRef} id="contact" className="bg-muted/30 dark:bg-purple-900/20 text-white py-20">
+      <section ref={contactRef} id="contact" className="bg-muted/30 dark:bg-muted/30 text-white py-20">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <div className="space-y-8">
             <div className="space-y-4">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500 dark:from-blue-300 dark:to-purple-300">Let's Work Together</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-slate-600 dark:from-slate-500 dark:to-slate-600">Let's Work Together</h2>
               <p className="text-xl text-muted-foreground dark:text-gray-300 max-w-2xl mx-auto">
                 I'm always interested in new opportunities and exciting projects. Let's discuss how we can create something amazing together.
               </p>
@@ -852,3 +852,4 @@ const Home = () => {
 };
 
 export default Home;
+
