@@ -44,12 +44,12 @@ const Navbar: FC<NavbarProps> = ({ highlight }) => (
           >
             Gallery
           </Link>
-          <Link
+          {/* <Link
             to="/timeline"
             className={`text-muted-foreground hover:text-foreground transition-colors`}
           >
             Timeline
-          </Link>
+          </Link> */}
           <Link
             to="/#about"
             className={`text-muted-foreground hover:text-foreground transition-colors ${
