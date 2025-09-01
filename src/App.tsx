@@ -18,6 +18,7 @@ import VStage from "./pages/VStage";
 import Motion from "./pages/3DMotion";
 import CrushyCaseStudy from "./pages/CrushyCaseStudy";
 import AIDrivenDesign from "./pages/AIDrivenDesign";
+import Timeline from "./pages/Timeline";
 
 const queryClient = new QueryClient();
 
@@ -58,6 +59,7 @@ const App = () => (
            <Route path="/ai-driven-design" element={<AIDrivenDesign />} />
            <Route path="/ui-gallery" element={<UIGallery />} />
            <Route path="/motion" element={<Motion />} />
+           <Route path="/timeline" element={<Timeline />} />
            <Route path="*" element={<NotFound />} />
          </Routes>
         </BrowserRouter>

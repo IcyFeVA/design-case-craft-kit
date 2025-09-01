@@ -154,6 +154,15 @@
   }
 }
 
+/* Timeline Component Styles */
+@layer utilities {
+  .break-inside-avoid {
+    break-inside: avoid-column;
+    page-break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+  }
+}
+
 .animate-marquee {
   animation: marquee 20s linear infinite;
 }

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import MobileMenu from "./MobileMenu";
 import { DarkModeToggle } from "@/components/DarkModeToggle";
 
-type NavLink = "work" | "gallery" | "motion" | "about" | "contact";
+type NavLink = "work" | "gallery" | "motion" | "timeline" | "about" | "contact";
 
 interface NavbarProps {
   highlight?: NavLink;
@@ -43,7 +43,13 @@ const Navbar: FC<NavbarProps> = ({ highlight }) => (
             }`}
           >
             Gallery
-          </Link>          
+          </Link>
+          <Link
+            to="/timeline"
+            className={`text-muted-foreground hover:text-foreground transition-colors`}
+          >
+            Timeline
+          </Link>
           <Link
             to="/#about"
             className={`text-muted-foreground hover:text-foreground transition-colors ${
