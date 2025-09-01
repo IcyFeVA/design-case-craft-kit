@@ -1,10 +1,9 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Navbar from "@/components/ui/navbar";
 import { TIMELINE, type TimelineItem } from "@/data/timeline";
 import TimelineItemComponent from "@/components/TimelineItem";
 import TimelineOverlay from "@/components/TimelineOverlay";
 import { useTimelineAnimations } from "@/hooks/useTimelineAnimations";
-import { useRef } from "react";
 
 const Timeline = () => {
   const [selectedItem, setSelectedItem] = useState<TimelineItem | null>(null);
@@ -12,6 +11,7 @@ const Timeline = () => {
   const timelineRef = useRef<HTMLDivElement>(null);
   const watermarkRef = useRef<HTMLDivElement>(null);
   const timelineLineRef = useRef<HTMLDivElement>(null);
+  const yearRefs = useRef<Record<number, HTMLDivElement | null>>({});
   
   // Use timeline animations hook
   useTimelineAnimations({
@@ -44,6 +44,13 @@ const Timeline = () => {
     setIsOverlayOpen(false);
   };
 
+  const scrollToYear = (year: number) => {
+    const element = yearRefs.current[year];
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background relative" ref={timelineRef}>
       {/* Navbar */}
@@ -74,7 +81,8 @@ const Timeline = () => {
               {years.map(year => (
                 <div 
                   key={year} 
-                  className="text-lg font-semibold text-foreground"
+                  className="text-lg font-semibold text-foreground cursor-pointer hover:text-primary transition-colors"
+                  onClick={() => scrollToYear(year)}
                 >
                   {year}
                 </div>
@@ -82,28 +90,28 @@ const Timeline = () => {
             </div>
           </div>
           
-          {/* Timeline Line */}
-          <div className="md:w-px w-full h-1 md:h-auto relative flex items-center justify-center">
-            <div 
-              ref={timelineLineRef}
-              className="w-1 h-0 bg-primary relative"
-            >
-              <div className="absolute -top-2 -left-1.5 w-4 h-4 rounded-full bg-primary"></div>
-            </div>
-          </div>
-          
-          {/* Items Flow */}
-          <div className="md:w-5/6">
+          {/* Timeline Line and Items */}
+          <div className="md:w-5/6 relative">
+            {/* Timeline Line in the center */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-primary z-0 top-0 bottom-0"></div>
+            
             {years.map(year => (
-              <div key={year} className="mb-16 last:mb-0">
+              <div 
+                key={year} 
+                ref={(el) => (yearRefs.current[year] = el)}
+                className="mb-16 last:mb-0 relative"
+              >
+                {/* Year Marker on Timeline */}
+                <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-primary z-10"></div>
+                
                 <div className="flex flex-col md:flex-row gap-8">
-                  {/* Left Column with CSS Columns for fluid layout */}
-                  <div className="md:w-1/2">
-                    <div className="columns-1 md:columns-2 gap-6 space-y-6">
+                  {/* Left Column - Single column of thumbnails */}
+                  <div className="md:w-2/5 md:pr-16">
+                    <div className="space-y-6">
                       {itemsByYear[year]
-                        .filter(item => item.side === "left" || (!item.side && itemsByYear[year].indexOf(item) % 2 === 0))
+                        .filter((_, index) => index % 2 === 0)
                         .map(item => (
-                          <div key={item.id} className="break-inside-avoid timeline-item">
+                          <div key={item.id} className="timeline-item">
                             <TimelineItemComponent 
                               item={item} 
                               onClick={() => handleItemClick(item)} 
@@ -113,13 +121,20 @@ const Timeline = () => {
                     </div>
                   </div>
                   
-                  {/* Right Column with CSS Columns for fluid layout */}
-                  <div className="md:w-1/2">
-                    <div className="columns-1 md:columns-2 gap-6 space-y-6">
+                  {/* Center - Year Display */}
+                  <div className="md:w-1/5 flex items-center justify-center">
+                    <div className="text-2xl font-bold text-foreground bg-background px-4 py-2 rounded-full border border-primary z-10">
+                      {year}
+                    </div>
+                  </div>
+                  
+                  {/* Right Column - Single column of thumbnails */}
+                  <div className="md:w-2/5 md:pl-16">
+                    <div className="space-y-6">
                       {itemsByYear[year]
-                        .filter(item => item.side === "right" || (!item.side && itemsByYear[year].indexOf(item) % 2 === 1))
+                        .filter((_, index) => index % 2 === 1)
                         .map(item => (
-                          <div key={item.id} className="break-inside-avoid timeline-item">
+                          <div key={item.id} className="timeline-item">
                             <TimelineItemComponent 
                               item={item} 
                               onClick={() => handleItemClick(item)} 

@@ -161,6 +161,10 @@
     page-break-inside: avoid;
     -webkit-column-break-inside: avoid;
   }
+  
+  .timeline-thumbnail {
+    min-height: 200px;
+  }
 }
 
 .animate-marquee {

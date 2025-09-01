@@ -24,9 +24,9 @@ const TimelineItem: FC<TimelineItemProps> = ({ item, onClick }) => {
   const aspectRatio = getAspectRatio(item.media.aspectRatio);
   
   return (
-    <div 
+    <div
       className={cn(
-        "relative cursor-pointer group overflow-hidden rounded-lg border bg-card shadow-sm transition-all duration-300",
+        "relative cursor-pointer group overflow-hidden rounded-lg border bg-card shadow-sm transition-all duration-300 timeline-thumbnail",
         "hover:shadow-md hover:border-primary/30",
         isHovered ? "transform scale-105" : ""
       )}
@@ -63,17 +63,17 @@ const TimelineItem: FC<TimelineItemProps> = ({ item, onClick }) => {
                 />
               )}
               <div className="absolute inset-0 flex items-center justify-center bg-black/30">
-                <div className="bg-white/80 rounded-full p-3">
-                  <svg 
-                    xmlns="http://www.w3.org/2000/svg" 
-                    viewBox="0 0 24 24" 
-                    fill="currentColor" 
-                    className="w-8 h-8 text-gray-800"
+                <div className="bg-white/80 rounded-full p-4">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="w-10 h-10 text-gray-800"
                   >
-                    <path 
-                      fillRule="evenodd" 
-                      d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" 
-                      clipRule="evenodd" 
+                    <path
+                      fillRule="evenodd"
+                      d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
+                      clipRule="evenodd"
                     />
                   </svg>
                 </div>
@@ -83,20 +83,10 @@ const TimelineItem: FC<TimelineItemProps> = ({ item, onClick }) => {
         </AspectRatio>
       </div>
       
-      <div className="p-4">
-        <div className="flex justify-between items-start">
-          <div>
-            <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors">
-              {item.title}
-            </h3>
-            <p className="text-sm text-muted-foreground mt-1">
-              {item.description}
-            </p>
-          </div>
-          <span className="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded-full whitespace-nowrap">
-            {item.year}
-          </span>
-        </div>
+      <div className="p-3">
+        <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors text-base">
+          {item.title}
+        </h3>
       </div>
     </div>
   );
