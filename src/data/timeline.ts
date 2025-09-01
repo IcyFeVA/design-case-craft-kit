@@ -1,6 +1,6 @@
 /**
  * Timeline Data Structure
- * 
+ *
  * Fields:
  * - id: Unique identifier for the item
  * - year: The year of the work
@@ -9,15 +9,22 @@
  * - media: Object containing media information
  *   - type: "image" | "video"
  *   - src: Path to the media file (relative to public directory)
+ *   - poster: Optional poster image for videos (for accessibility)
  *   - aspectRatio: Aspect ratio of the media (e.g., "16:9", "4:3", "1:1", "2:3")
  * - side: Optional. Force item to appear on "left" or "right" side. If omitted, layout will determine automatically.
- * 
+ *
+ * Accessibility Notes:
+ * - All images should have descriptive filenames for alt text
+ * - For videos, include a poster image for preview and accessibility
+ * - Descriptions should be meaningful and concise
+ *
  * Adding new items:
  * 1. Add a new object to the TIMELINE array
  * 2. Use existing images from public/img/ or add new ones to public/img/
  * 3. For videos, include a poster image
  * 4. Specify aspectRatio for proper layout (e.g., "16:9", "2:3")
  * 5. Ensure id is unique
+ * 6. Write descriptive titles and descriptions for accessibility
  */
 
 export interface TimelineItem {
