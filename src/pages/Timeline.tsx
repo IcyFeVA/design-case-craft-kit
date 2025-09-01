@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Navbar from "@/components/ui/navbar";
 import { TIMELINE, type TimelineItem } from "@/data/timeline";
 import TimelineItemComponent from "@/components/TimelineItem";
@@ -8,6 +8,7 @@ import { useTimelineAnimations } from "@/hooks/useTimelineAnimations";
 const Timeline = () => {
   const [selectedItem, setSelectedItem] = useState<TimelineItem | null>(null);
   const [isOverlayOpen, setIsOverlayOpen] = useState(false);
+  const [activeYear, setActiveYear] = useState<number | null>(null);
   const timelineRef = useRef<HTMLDivElement>(null);
   const watermarkRef = useRef<HTMLDivElement>(null);
   const timelineLineRef = useRef<HTMLDivElement>(null);
@@ -48,8 +49,39 @@ const Timeline = () => {
     const element = yearRefs.current[year];
     if (element) {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
+      setActiveYear(year);
     }
   };
+
+  // Update active year based on scroll position
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + window.innerHeight / 2;
+      
+      // Find the year that is currently in view
+      for (const year of years) {
+        const element = yearRefs.current[year];
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          const absoluteTop = rect.top + window.scrollY;
+          
+          if (absoluteTop <= scrollPosition && absoluteTop + rect.height > scrollPosition) {
+            setActiveYear(year);
+            // Update watermark to show active year
+            if (watermarkRef.current) {
+              watermarkRef.current.textContent = year.toString();
+            }
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial check
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [years]);
 
   return (
     <div className="min-h-screen bg-background relative" ref={timelineRef}>
@@ -62,7 +94,7 @@ const Timeline = () => {
         className="fixed bottom-8 right-8 text-[120px] md:text-[200px] font-bold pointer-events-none z-0"
         style={{ opacity: 0.05 }}
       >
-        {currentYear}
+        {activeYear || currentYear}
       </div>
       
       <div className="max-w-6xl mx-auto px-6 pt-24 pb-16 relative z-10">
@@ -81,7 +113,11 @@ const Timeline = () => {
               {years.map(year => (
                 <div 
                   key={year} 
-                  className="text-lg font-semibold text-foreground cursor-pointer hover:text-primary transition-colors"
+                  className={`text-lg font-semibold cursor-pointer transition-colors ${
+                    activeYear === year 
+                      ? "text-primary" 
+                      : "text-foreground hover:text-primary"
+                  }`}
                   onClick={() => scrollToYear(year)}
                 >
                   {year}
@@ -101,9 +137,6 @@ const Timeline = () => {
                 ref={(el) => (yearRefs.current[year] = el)}
                 className="mb-16 last:mb-0 relative"
               >
-                {/* Year Marker on Timeline */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-primary z-10"></div>
-                
                 <div className="flex flex-col md:flex-row gap-8">
                   {/* Left Column - Single column of thumbnails */}
                   <div className="md:w-2/5 md:pr-16">
@@ -118,13 +151,6 @@ const Timeline = () => {
                             />
                           </div>
                         ))}
-                    </div>
-                  </div>
-                  
-                  {/* Center - Year Display */}
-                  <div className="md:w-1/5 flex items-center justify-center">
-                    <div className="text-2xl font-bold text-foreground bg-background px-4 py-2 rounded-full border border-primary z-10">
-                      {year}
                     </div>
                   </div>
                   
