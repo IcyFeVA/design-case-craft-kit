@@ -392,7 +392,7 @@ const Home = () => {
           <div className="space-y-8">
             <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl flex items-center justify-center max-h-[480px] overflow-hidden w-full featured-work-container">
               <Link to="/ai-driven-design">
-                <img src="/img/ai-design/teaser2.jpg" alt="Tesla Apple Watch App Thumbnail" className="rounded-2xl featured-work-hover transition-transform duration-300 hover:scale-105" />
+                <img src="/img/ai-design/teaser2.png" alt="Tesla Apple Watch App Thumbnail" className="rounded-2xl featured-work-hover transition-transform duration-300 hover:scale-105" />
               </Link>
             </div>
 
