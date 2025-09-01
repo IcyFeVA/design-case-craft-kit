@@ -97,10 +97,12 @@ const Timeline = () => {
         {activeYear || currentYear}
       </div>
       
-      <div className="max-w-6xl mx-auto px-6 pt-24 pb-16 relative z-10">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Design Timeline</h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+      <div className="max-w-6xl mx-auto px-6 pt-40 pb-16 relative z-10">
+        <div className="text-center mb-16 space-y-6 md:pl-40">
+          <h1 className="text-5xl md:text-6xl font-bold text-foreground leading-tight">
+            Career Timeline
+          </h1>
+          <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
             A visual journey through my design work and projects over the years
           </p>
         </div>
@@ -127,7 +129,7 @@ const Timeline = () => {
           </div>
           
           {/* Timeline Content Area */}
-          <div className="md:w-5/6 relative">
+          <div className="md:w-full relative">
             {/* Timeline Line - spans full height */}
             <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-primary z-0"></div>
             
@@ -138,9 +140,9 @@ const Timeline = () => {
                 className="mb-16 last:mb-0 relative"
               >
                 {/* Three column layout: Left thumbnails | Timeline line | Right thumbnails */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+                <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
                   {/* Left Column - Thumbnails */}
-                  <div className="space-y-6">
+                  <div className="md:col-span-5 space-y-6">
                     {itemsByYear[year]
                       .filter((_, index) => index % 2 === 0)
                       .map(item => (
@@ -154,12 +156,12 @@ const Timeline = () => {
                   </div>
                   
                   {/* Center Column - Empty space for timeline */}
-                  <div className="flex justify-center relative">
+                  <div className="md:col-span-2 flex justify-center relative">
                     {/* This column provides spacing for the timeline line */}
                   </div>
                   
                   {/* Right Column - Thumbnails */}
-                  <div className="space-y-6">
+                  <div className="md:col-span-5 space-y-6">
                     {itemsByYear[year]
                       .filter((_, index) => index % 2 === 1)
                       .map(item => (
