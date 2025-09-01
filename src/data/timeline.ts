@@ -65,6 +65,42 @@ export const TIMELINE: TimelineItem[] = [
     },
     side: "right"
   },
+    {
+    id: "ai-design-system",
+    year: 2024,
+    title: "AI-Driven Design System",
+    description: "Created a design system that leverages AI for component generation and consistency checking.",
+    media: {
+      type: "image",
+      src: "/img/ai-design/final1.png",
+      aspectRatio: "16:9"
+    },
+    side: "right"
+  },
+    {
+    id: "ai-design-system",
+    year: 2024,
+    title: "AI-Driven Design System",
+    description: "Created a design system that leverages AI for component generation and consistency checking.",
+    media: {
+      type: "image",
+      src: "/img/ai-design/final1.png",
+      aspectRatio: "16:9"
+    },
+    side: "right"
+  },
+    {
+    id: "ai-design-system",
+    year: 2024,
+    title: "AI-Driven Design System",
+    description: "Created a design system that leverages AI for component generation and consistency checking.",
+    media: {
+      type: "image",
+      src: "/img/ai-design/final1.png",
+      aspectRatio: "16:9"
+    },
+    side: "right"
+  },
   {
     id: "vstage-platform",
     year: 2023,
@@ -125,6 +161,98 @@ export const TIMELINE: TimelineItem[] = [
   {
     id: "3d-motion-reel",
     year: 2021,
+    title: "3D Motion Design Reel",
+    description: "Compilation of 3D motion design projects showcasing animation and visual effects skills.",
+    media: {
+      type: "image",
+      src: "/img/gallery/holo1.jpg",
+      aspectRatio: "16:9"
+    },
+    side: "left"
+  },
+  {
+    id: "tesla-app",
+    year: 2020,
+    title: "Tesla Watch App Redesign",
+    description: "Complete UI/UX overhaul for Tesla's smartwatch application with focus on driver safety and minimal interaction.",
+    media: {
+      type: "image",
+      src: "/img/tesla/final1.png",
+      aspectRatio: "1:1"
+    }
+  },
+  {
+    id: "ai-design-system",
+    year: 2020,
+    title: "AI-Driven Design System",
+    description: "Created a design system that leverages AI for component generation and consistency checking.",
+    media: {
+      type: "image",
+      src: "/img/ai-design/final1.png",
+      aspectRatio: "16:9"
+    },
+    side: "right"
+  },
+  {
+    id: "vstage-platform",
+    year: 2018,
+    title: "VStage Virtual Production Platform",
+    description: "Designed and developed a real-time virtual production platform for film and television.",
+    media: {
+      type: "image",
+      src: "/img/vstage/final1.png",
+      aspectRatio: "16:9"
+    }
+  },
+  {
+    id: "gallery-exhibition",
+    year: 2017,
+    title: "Interactive Gallery Exhibition",
+    description: "Curated and designed an interactive digital art exhibition with mixed media installations.",
+    media: {
+      type: "image",
+      src: "/img/gallery/bolt1.jpg",
+      aspectRatio: "2:3"
+    },
+    side: "left"
+  },
+  {
+    id: "tx-cms",
+    year: 2016,
+    title: "TX Content Management System",
+    description: "Enterprise-level CMS with drag-and-drop interface and real-time collaboration features.",
+    media: {
+      type: "image",
+      src: "/img/tx/final1.png",
+      aspectRatio: "16:9"
+    }
+  },
+  {
+    id: "ecommerce-platform",
+    year: 2016,
+    title: "Crushy E-commerce Platform",
+    description: "Complete redesign of e-commerce platform focusing on mobile-first experience and accessibility.",
+    media: {
+      type: "image",
+      src: "/img/gallery/neo1.png",
+      aspectRatio: "16:9"
+    },
+    side: "right"
+  },
+  {
+    id: "mindspace-app",
+    year: 2016,
+    title: "MindSpace Wellness App",
+    description: "Meditation and mindfulness application with personalized journeys and progress tracking.",
+    media: {
+      type: "image",
+      src: "/img/gallery/personal1.jpg",
+      aspectRatio: "2:3"
+    }
+  },
+  {
+    id: "3d-motion-reel",
+    year: 2014,
     title: "3D Motion Design Reel",
     description: "Compilation of 3D motion design projects showcasing animation and visual effects skills.",
     media: {

@@ -137,7 +137,7 @@ const Timeline = () => {
               <div
                 key={year}
                 ref={(el) => (yearRefs.current[year] = el)}
-                className="mb-16 last:mb-0 relative"
+                className="mb-64 last:mb-0 relative"
               >
                 {/* Three column layout: Left thumbnails | Timeline line | Right thumbnails */}
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
