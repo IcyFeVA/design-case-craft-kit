@@ -126,48 +126,50 @@ const Timeline = () => {
             </div>
           </div>
           
-          {/* Timeline Line and Items */}
+          {/* Timeline Content Area */}
           <div className="md:w-5/6 relative">
-            {/* Timeline Line in the center */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-primary z-0 top-0 bottom-0"></div>
+            {/* Timeline Line - spans full height */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-primary z-0"></div>
             
             {years.map(year => (
-              <div 
-                key={year} 
+              <div
+                key={year}
                 ref={(el) => (yearRefs.current[year] = el)}
                 className="mb-16 last:mb-0 relative"
               >
-                <div className="flex flex-col md:flex-row gap-8">
-                  {/* Left Column - Single column of thumbnails */}
-                  <div className="md:w-2/5 md:pr-16">
-                    <div className="space-y-6">
-                      {itemsByYear[year]
-                        .filter((_, index) => index % 2 === 0)
-                        .map(item => (
-                          <div key={item.id} className="timeline-item">
-                            <TimelineItemComponent 
-                              item={item} 
-                              onClick={() => handleItemClick(item)} 
-                            />
-                          </div>
-                        ))}
-                    </div>
+                {/* Three column layout: Left thumbnails | Timeline line | Right thumbnails */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+                  {/* Left Column - Thumbnails */}
+                  <div className="space-y-6">
+                    {itemsByYear[year]
+                      .filter((_, index) => index % 2 === 0)
+                      .map(item => (
+                        <div key={item.id} className="timeline-item">
+                          <TimelineItemComponent
+                            item={item}
+                            onClick={() => handleItemClick(item)}
+                          />
+                        </div>
+                      ))}
                   </div>
                   
-                  {/* Right Column - Single column of thumbnails */}
-                  <div className="md:w-2/5 md:pl-16">
-                    <div className="space-y-6">
-                      {itemsByYear[year]
-                        .filter((_, index) => index % 2 === 1)
-                        .map(item => (
-                          <div key={item.id} className="timeline-item">
-                            <TimelineItemComponent 
-                              item={item} 
-                              onClick={() => handleItemClick(item)} 
-                            />
-                          </div>
-                        ))}
-                    </div>
+                  {/* Center Column - Empty space for timeline */}
+                  <div className="flex justify-center relative">
+                    {/* This column provides spacing for the timeline line */}
+                  </div>
+                  
+                  {/* Right Column - Thumbnails */}
+                  <div className="space-y-6">
+                    {itemsByYear[year]
+                      .filter((_, index) => index % 2 === 1)
+                      .map(item => (
+                        <div key={item.id} className="timeline-item">
+                          <TimelineItemComponent
+                            item={item}
+                            onClick={() => handleItemClick(item)}
+                          />
+                        </div>
+                      ))}
                   </div>
                 </div>
               </div>
