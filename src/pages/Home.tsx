@@ -411,7 +411,7 @@ const Home = () => {
 
               <div className="space-y-4">
                 <h3 className="text-2xl md:text-3xl font-bold text-foreground">
-                  The Future is now! — An exploration with AI
+                  The Future of UX/UI Design is Now: AI-Powered Workflows
                 </h3>
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   How I'm using Google's Gemini Pro AI and UX Pilot to create designs and code in under 15 minutes.
