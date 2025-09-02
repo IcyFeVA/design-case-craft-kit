@@ -9,12 +9,14 @@ interface UseTimelineAnimationsProps {
   timelineRef: React.RefObject<HTMLDivElement>;
   watermarkRef: React.RefObject<HTMLDivElement>;
   timelineLineRef: React.RefObject<HTMLDivElement>;
+  yearHeadingRefs: React.RefObject<Record<number, HTMLDivElement | null>>;
 }
 
 export const useTimelineAnimations = ({
   timelineRef,
   watermarkRef,
-  timelineLineRef
+  timelineLineRef,
+  yearHeadingRefs
 }: UseTimelineAnimationsProps) => {
   useEffect(() => {
     const animations: gsap.core.Tween[] = [];
@@ -90,6 +92,35 @@ export const useTimelineAnimations = ({
       }
     }
 
+    // Year heading animations
+    if (yearHeadingRefs.current) {
+      Object.values(yearHeadingRefs.current).forEach(heading => {
+        if (heading) {
+          const headingAnim = gsap.fromTo(
+            heading,
+            { opacity: 0, y: -20 },
+            {
+              opacity: 1,
+              y: 0,
+              duration: 1,
+              ease: "power2.out",
+              scrollTrigger: {
+                trigger: heading,
+                start: "top 90%",
+                toggleActions: "play none none reverse"
+              }
+            }
+          );
+          animations.push(headingAnim);
+
+          // Store the ScrollTrigger instance for cleanup
+          if (headingAnim.scrollTrigger) {
+            triggers.push(headingAnim.scrollTrigger);
+          }
+        }
+      });
+    }
+
     // Cleanup function
     return () => {
       // Kill all animations
@@ -109,5 +140,5 @@ export const useTimelineAnimations = ({
       // Kill any remaining ScrollTriggers
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
     };
-  }, [timelineRef, watermarkRef, timelineLineRef]);
+  }, [timelineRef, watermarkRef, timelineLineRef, yearHeadingRefs]);
 };

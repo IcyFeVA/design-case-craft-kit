@@ -13,12 +13,14 @@ const Timeline = () => {
   const watermarkRef = useRef<HTMLDivElement>(null);
   const timelineLineRef = useRef<HTMLDivElement>(null);
   const yearRefs = useRef<Record<number, HTMLDivElement | null>>({});
+  const yearHeadingRefs = useRef<Record<number, HTMLDivElement | null>>({});
   
   // Use timeline animations hook
   useTimelineAnimations({
     timelineRef,
     watermarkRef,
-    timelineLineRef
+    timelineLineRef,
+    yearHeadingRefs
   });
   
   // Get unique years sorted in descending order
@@ -139,6 +141,14 @@ const Timeline = () => {
                 ref={(el) => (yearRefs.current[year] = el)}
                 className="mb-64 last:mb-0 relative"
               >
+                {/* Year Heading */}
+                <h2
+                  ref={(el) => (yearHeadingRefs.current[year] = el)}
+                  className="text-4xl md:text-5xl font-bold text-center mb-12 text-foreground"
+                >
+                  {year}
+                </h2>
+
                 {/* Three column layout: Left thumbnails | Timeline line | Right thumbnails */}
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
                   {/* Left Column - Thumbnails */}
