@@ -133,7 +133,7 @@ const Timeline = () => {
           {/* Timeline Content Area */}
           <div className="md:w-full relative">
             {/* Timeline Line - spans full height */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-primary z-0"></div>
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-secondary z-0"></div>
             
             {years.map(year => (
               <div
@@ -142,12 +142,14 @@ const Timeline = () => {
                 className="mb-64 last:mb-0 relative"
               >
                 {/* Year Heading */}
-                <h2
-                  ref={(el) => (yearHeadingRefs.current[year] = el)}
-                  className="text-4xl md:text-5xl font-bold text-center mb-12 text-foreground"
-                >
-                  {year}
-                </h2>
+                <div className="bg-background p-6 rounded-lg mb-8">
+                  <h2
+                    ref={(el) => (yearHeadingRefs.current[year] = el)}
+                    className="text-4xl md:text-5xl font-bold text-center text-foreground"
+                  >
+                    {year}
+                  </h2>
+                </div>
 
                 {/* Three column layout: Left thumbnails | Timeline line | Right thumbnails */}
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
