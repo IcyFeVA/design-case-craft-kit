@@ -102,10 +102,10 @@ const Timeline = () => {
       <div className="max-w-6xl mx-auto px-6 pt-40 pb-16 relative z-10">
         <div className="text-center mb-16 space-y-6 md:pl-40">
           <h1 className="text-5xl md:text-6xl font-bold text-foreground leading-tight">
-            Career Timeline
+            Design Projects Timeline
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-            A visual journey through my design work and projects over the years
+            A visual journey through my design work over the years
           </p>
         </div>
         
@@ -145,7 +145,7 @@ const Timeline = () => {
                 <div className="bg-background p-6 rounded-lg mb-8">
                   <h2
                     ref={(el) => (yearHeadingRefs.current[year] = el)}
-                    className="text-4xl md:text-5xl font-bold text-center text-foreground"
+                    className="text-3xl md:text-4xl text-center font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-slate-600 dark:from-slate-500 dark:to-slate-600"
                   >
                     {year}
                   </h2>
