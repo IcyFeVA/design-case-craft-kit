@@ -36,7 +36,7 @@ const App = () => (
         <BrowserRouter>
           <ScrollToTop />
           {/* Dev Route Widget - only visible in development */}
-          {import.meta.env.MODE === "development" && (
+          {/* {import.meta.env.MODE === "development" && (
             <div className="fixed bottom-4 right-4 z-[9999] bg-background/95 border border-border rounded-lg shadow-lg p-3 text-xs min-w-[120px] max-w-[180px] backdrop-blur-sm">
               <div className="font-semibold mb-2 text-sm text-foreground">Routes</div>
               <ul className="list-none m-0 p-0 space-y-1">
@@ -46,7 +46,7 @@ const App = () => (
                 <li><a href="/txcms-case-study" className="text-primary hover:text-primary/80 no-underline">Txcms Case Study</a></li>
               </ul>
             </div>
-          )}
+          )} */}
           <Routes>
            <Route path="/" element={<Home />} />
            <Route path="/case-study" element={<Index />} />
