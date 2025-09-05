@@ -438,6 +438,58 @@ const Home = () => {
 
       <div className="h-16"></div>
 
+      {/* Social Proof Section */}
+      {/* <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Thousands of developers scale with{" "}
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
+                Design Systems
+              </span>
+            </h2>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 border-l-4 border-blue-500 shadow-sm">
+              <p className="text-lg text-muted-foreground leading-relaxed italic mb-4">
+                "The switch to using design systems brought{" "}
+                <span className="font-semibold text-foreground">infinite value</span> that
+                I'm still discovering today."
+              </p>
+              <div className="flex items-center space-x-3">
+                <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
+                  <span className="text-white font-semibold text-sm">PC</span>
+                </div>
+                <div>
+                  <p className="font-semibold text-foreground">Pascal Chen</p>
+                  <p className="text-sm text-muted-foreground">Founder at Design Craft</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-2 gap-8">
+              <div className="text-center space-y-2">
+                <div className="text-3xl md:text-4xl font-bold text-foreground">20B+</div>
+                <div className="text-sm text-muted-foreground">monthly database operations</div>
+              </div>
+              <div className="text-center space-y-2">
+                <div className="text-3xl md:text-4xl font-bold text-foreground">300K+</div>
+                <div className="text-sm text-muted-foreground">developers</div>
+              </div>
+              <div className="text-center space-y-2">
+                <div className="text-3xl md:text-4xl font-bold text-foreground">300+</div>
+                <div className="text-sm text-muted-foreground">PoP locations</div>
+              </div>
+              <div className="text-center space-y-2">
+                <div className="text-3xl md:text-4xl font-bold text-foreground">50K+</div>
+                <div className="text-sm text-muted-foreground">GitHub stars</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> */}
+
       {/* Featured Work */}
       <section ref={featuredWorkRef} id="work" className="px-6 py-20 bg-muted/30">
         <div className="space-y-8 max-w-6xl mx-auto ">
