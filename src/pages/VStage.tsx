@@ -178,10 +178,9 @@ const VStage = () => {
                         <h4 className="font-medium text-foreground mb-2">Senior CAD Engineer - "The Expert"</h4>
                         <p className="text-sm text-muted-foreground mb-3">Age 35-50, 10+ years CAD experience, works with complex assemblies daily</p>
                         <ul className="text-sm text-muted-foreground space-y-1">
-                          <li>• Manages projects with 50,000+ components</li>
-                          <li>• Needs advanced filtering and bulk operations</li>
-                          <li>• Values precision and comprehensive control</li>
-                          <li>• Creates technical presentations for stakeholders</li>
+                          <li>• Real-time rendering required for 50k+ components</li>
+                          <li>• Cross-platform compatibility (Windows, macOS)</li>
+                          <li>• Integration with existing CAD workflows essential</li>
                         </ul>
                       </div>
                       <div className="bg-card p-6 rounded-lg">
@@ -262,7 +261,7 @@ const VStage = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground">Tools & Methodologies</h3>
-                    <p className="text-muted-foreground text-sm">Figma (Design & Prototyping), React (Implementation), User Journey Mapping, Design Thinking Framework, Agile Development</p>
+                    <p className="text-muted-foreground text-sm">Figma (Design & Prototyping), Unity (Implementation), User Journey Mapping, Design Thinking Framework, Agile Development</p>
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground">Success Metrics</h3>
@@ -291,7 +290,7 @@ const VStage = () => {
                 vSTAGE's existing interface created a significant barrier to adoption, with complex workflows that overwhelmed newcomers while simultaneously limiting expert efficiency. The challenge was designing a solution that could scale from simple presentations to complex 3D data manipulation without compromising either use case.
               </p>
               
-              <div className="bg-card rounded-2xl p-6 mb-8">
+              <div className="bg-muted/30 rounded-2xl p-6 mb-8">
                 <h3 className="text-lg font-semibold text-foreground mb-3">Current User Journey Pain Points</h3>
                 <div className="grid md:grid-cols-1 gap-4 text-sm text-muted-foreground">
                   <div className="flex items-center gap-4">
@@ -346,7 +345,7 @@ const VStage = () => {
                 </Card>
               </div>
 
-              <div className="bg-indigo-600 p-6 rounded-xl">
+              <div className="bg-muted/30 dark:bg-indigo-600 p-6 rounded-xl">
                 <p className="text-foreground font-semibold text-lg mb-2">Core Design Challenge</p>
                 <p className="text-foreground">How might we create an adaptive interface system that scales from simple presentation creation to complex 3D data manipulation, serving both newcomers and experts without compromising either experience?</p>
               </div>
@@ -434,7 +433,7 @@ const VStage = () => {
                         <div className="w-2 h-2 bg-orange-600 rounded-full mt-2"></div>
                         <div>
                           <span className="text-muted-foreground font-medium">Months 8-9: Delivery Phase</span>
-                          <p className="text-sm text-muted-foreground mt-1">Collaborated with development team on React implementation, conducted final validation testing, created comprehensive design documentation, prepared launch materials</p>
+                          <p className="text-sm text-muted-foreground mt-1">Collaborated with development team on Unity implementation, conducted final validation testing, created comprehensive design documentation, prepared launch materials</p>
                         </div>
                       </div>
                     </div>
@@ -496,12 +495,12 @@ const VStage = () => {
                       <div className="border-l-4 border-red-500 pl-4">
                         <h4 className="font-medium text-foreground">Real-Time 3D Rendering</h4>
                         <p className="text-sm text-muted-foreground mt-1"><strong>Challenge:</strong> Rendering 50,000+ CAD components in real-time while maintaining 60fps performance across varying hardware configurations. Traditional approaches caused 5-10 second lag times.</p>
-                        <p className="text-sm text-muted-foreground mt-1"><strong>Solution:</strong> Implemented level-of-detail (LOD) rendering with WebGL optimization, reducing polygon count by 85% for distant components while preserving visual fidelity. Achieved sub-2 second load times for large assemblies.</p>
+                        <p className="text-sm text-muted-foreground mt-1"><strong>Solution:</strong> Implemented level-of-detail (LOD) rendering with Unity's High Definition Render Pipeline (HDRP), reducing polygon count by 85% for distant components while preserving visual fidelity. Achieved sub-2 second load times for large assemblies in the standalone desktop application.</p>
                       </div>
                       <div className="border-l-4 border-yellow-500 pl-4">
                         <h4 className="font-medium text-foreground">Memory Management</h4>
-                        <p className="text-sm text-muted-foreground mt-1"><strong>Challenge:</strong> Large CAD files (500MB+) exceeded browser memory limits, causing crashes on standard hardware.</p>
-                        <p className="text-sm text-muted-foreground mt-1"><strong>Solution:</strong> Developed streaming architecture with on-demand component loading, reducing memory footprint by 70%. Implemented intelligent caching that prioritizes frequently accessed components.</p>
+                        <p className="text-sm text-muted-foreground mt-1"><strong>Challenge:</strong> Large CAD files (500MB+) exceeded system memory allocations on standard desktop hardware, causing performance degradation and crashes.</p>
+                        <p className="text-sm text-muted-foreground mt-1"><strong>Solution:</strong> Developed Unity asset streaming architecture with on-demand component loading, reducing memory footprint by 70%. Implemented intelligent caching that prioritizes frequently accessed components for seamless desktop performance.</p>
                       </div>
                     </div>
                   </div>
@@ -516,8 +515,8 @@ const VStage = () => {
                       </div>
                       <div className="border-l-4 border-green-500 pl-4">
                         <h4 className="font-medium text-foreground">Cross-Platform Rendering</h4>
-                        <p className="text-sm text-muted-foreground mt-1"><strong>Challenge:</strong> Consistent 3D visualization across Windows, macOS, and web browsers with varying GPU capabilities and WebGL implementations.</p>
-                        <p className="text-sm text-muted-foreground mt-1"><strong>Solution:</strong> Built fallback rendering pipeline using Canvas2D for low-end devices, with automatic detection and graceful degradation. Ensured pixel-perfect consistency across all platforms through comprehensive testing matrix.</p>
+                        <p className="text-sm text-muted-foreground mt-1"><strong>Challenge:</strong> Consistent 3D visualization across Windows and macOS with varying GPU capabilities using DirectX and Metal backends.</p>
+                        <p className="text-sm text-muted-foreground mt-1"><strong>Solution:</strong> Built fallback rendering pipeline using Unity's Universal Render Pipeline (URP) for lower-end devices, with automatic detection and graceful degradation. Ensured pixel-perfect consistency across desktop platforms through comprehensive testing matrix.</p>
                       </div>
                     </div>
                   </div>
