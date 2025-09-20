@@ -161,7 +161,7 @@ const TeslaWatchApp = () => {
     <main className="pt-8 pb-16 bg-background">
       <CaseStudyNav />
       {/* Executive Summary */}
-      <section className="max-w-4xl mx-auto px-6 py-8 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg shadow-sm">
+      {/* <section className="max-w-4xl mx-auto px-6 py-8 bg-card rounded-lg shadow-sm">
         <div className="space-y-4">
           <h2 className="text-2xl font-bold text-foreground">Executive Summary</h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
@@ -174,7 +174,7 @@ const TeslaWatchApp = () => {
             <Badge variant="secondary">UX Research Included</Badge>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Hero Section */}
       <section className="max-w-4xl mx-auto px-6 py-16">
@@ -192,9 +192,7 @@ const TeslaWatchApp = () => {
             </h1>
 
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Porting the Tesla mobile app to the Apple Watch presents unique
-              challenges in UI, compatibility, and interaction. This concept
-              explores how a seamless Tesla experience could work on your wrist, backed by user research and iterative design.
+This concept project reimagines the Tesla mobile app for Apple Watch, addressing key challenges in wearable UX design. Through user research, iterative prototyping, and gesture-based interactions inspired by cinematic innovation, I created a seamless wrist-based Tesla experience. The project demonstrates expertise in constraint-driven design, animation prototyping, and cross-platform compatibility, resulting in a 40% reduction in task completion time for core features (hypothetical testing).
             </p>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 py-4">
@@ -331,12 +329,12 @@ const TeslaWatchApp = () => {
             
             <div className="bg-card rounded-2xl p-6 mb-8">
               <h3 className="text-lg font-semibold text-foreground mb-3">User Journey Pain Points</h3>
-              <div className="grid md:grid-cols-3 gap-4 text-sm text-muted-foreground">
-                <div>1. Approach parked car &rarr; Pull out phone &rarr; Unlock &rarr; Open app</div>
-                <div>2. Wait for load &rarr; Navigate menus &rarr; Select action &rarr; Confirm</div>
-                <div>3. Delay (3-5s) &rarr; Potential safety risk in dynamic environments</div>
+              <div className="grid md:grid-cols-1 gap-4 text-sm text-muted-foreground">
+                <div>1. Approach parked car → Pull out phone → Unlock → Open app</div>
+                <div>2. Wait for load → Navigate menus → Select action → Confirm</div>
+                <div>3. Delay (3-5s) → Potential safety risk in dynamic environments</div>
               </div>
-              <p className="text-sm mt-2">Goal: Streamline to single gesture + glanceable feedback.</p>
+              <p className="text-sm mt-4">Goal: Streamline to single gesture + glanceable feedback.</p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-6">
@@ -375,7 +373,7 @@ const TeslaWatchApp = () => {
                     Cross-Platform Compatibility
                   </h3>
                   <p className="text-muted-foreground">
-                    Integrating with Tesla's API while adhering to watchOS limitations (no background processing >30s) required creative workarounds. Challenge: Ensure real-time vehicle status without draining battery (target: <5% per hour). Solution: Predictive caching and glanceable summaries, inspired by Bond's seamless device control in "Tomorrow Never Dies."
+                    Integrating with Tesla's API while adhering to watchOS limitations (no background processing 30s) required creative workarounds. Challenge: Ensure real-time vehicle status without draining battery (target: 5% per hour). Solution: Predictive caching and glanceable summaries, inspired by Bond's seamless device control in "Tomorrow Never Dies."
                   </p>
                 </CardContent>
               </Card>
@@ -515,7 +513,7 @@ const TeslaWatchApp = () => {
                   <div className="border-l-4 border-red-500 pl-4">
                     <h4 className="font-medium text-foreground">Battery Life Optimization</h4>
                     <p className="text-sm text-muted-foreground mt-1"><strong>Challenge:</strong> watchOS limits background processing to 30 seconds, but Tesla API calls can take 2-5 seconds.</p>
-                    <p className="text-sm text-muted-foreground mt-1"><strong>Solution:</strong> Implemented predictive caching and smart wake patterns, reducing battery drain to <3% per hour during active use.</p>
+                    <p className="text-sm text-muted-foreground mt-1"><strong>Solution:</strong> Implemented predictive caching and smart wake patterns, reducing battery drain to 3% per hour during active use.</p>
                   </div>
                   <div className="border-l-4 border-yellow-500 pl-4">
                     <h4 className="font-medium text-foreground">Network Connectivity</h4>
@@ -542,7 +540,7 @@ const TeslaWatchApp = () => {
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8">
+            <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950 dark:to-purple-950 rounded-2xl p-8">
               <h3 className="text-xl font-semibold text-foreground mb-4">Security & Privacy Considerations</h3>
               <div className="grid md:grid-cols-3 gap-6">
                 <div>
@@ -633,7 +631,7 @@ const TeslaWatchApp = () => {
             </div>
 
             {/* Metrics & Outcomes */}
-            <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl p-8">
+            <div className="bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-950 dark:to-blue-950 rounded-2xl p-8">
               <h3 className="text-xl font-semibold text-foreground mb-6">Hypothetical Performance Metrics</h3>
               <div className="grid md:grid-cols-4 gap-6">
                 <div className="text-center">
@@ -826,7 +824,7 @@ const TeslaWatchApp = () => {
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 text-center">
+            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950 dark:to-indigo-950 rounded-2xl p-8 text-center">
               <h3 className="text-xl font-semibold text-foreground mb-4">Project Conclusion</h3>
               <p className="text-muted-foreground leading-relaxed max-w-2xl mx-auto">
                 This Tesla Watch App concept demonstrates how thoughtful design can overcome significant technical constraints while creating delightful user experiences. The project showcases the importance of research-driven design, iterative prototyping, and creative problem-solving in emerging technology spaces. While it remains conceptual, the methodologies and insights gained are directly applicable to real-world product development.
