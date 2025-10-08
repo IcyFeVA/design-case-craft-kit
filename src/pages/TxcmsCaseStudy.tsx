@@ -2,7 +2,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ArrowLeft, ArrowRight, ExternalLink, Newspaper, Users, Monitor, Lightbulb } from "lucide-react";
+import { ArrowLeft, ArrowRight, ExternalLink, Newspaper, Users, Monitor, Lightbulb, Clock, Target, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/ui/navbar";
 import CaseStudyNav from "@/components/CaseStudyNav";
@@ -20,59 +20,58 @@ type Screenshot = {
 };
 
 const processShots: Screenshot[] = [
-      {
-        imageUrl: '/img/tx/process3.png',
-        title: "Process",
-        description: "User Journey Mapping and Personas. Interviewwed dozens of journalists to understand their workflows and needs.",
-        category: "UI",
+  {
+    imageUrl: '/img/tx/process3.png',
+    title: "Process",
+    description: "User Journey Mapping and Personas. Interviewed dozens of journalists to understand their workflows and needs.",
+    category: "UI",
         year: 2023,
-        tags: ["UX", "Interviews", "User Journey Mapping"],
-    },
-      {
-        imageUrl: '/img/tx/process1.png',
-        title: "Process",
-        description: "A few of the many hifi wireframes I created to explore different approaches to the CMS design.",
-        category: "UI",
+    tags: ["UX", "Interviews", "User Journey Mapping"],
+  },
+  {
+    imageUrl: '/img/tx/process1.png',
+    title: "Process",
+    description: "A few of the many hifi wireframes I created to explore different approaches to the CMS design.",
+    category: "UI",
         year: 2023,
-        tags: ["Sketch", "Wireframes"],
-    },
-          {
-        imageUrl: '/img/tx/process2.png',
-        title: "Process",
-        description: "Each step of a user journey was carefully mapped out, from content creation to publishing and sharing.",
-        category: "UI",
+    tags: ["Sketch", "Wireframes"],
+  },
+  {
+    imageUrl: '/img/tx/process2.png',
+    title: "Process",
+    description: "Each step of a user journey was carefully mapped out, from content creation to publishing and sharing.",
+    category: "UI",
         year: 2023,
-        tags: ["Sketch", "Wireframes"],
-    },
-
+    tags: ["Sketch", "Wireframes"],
+  },
 ];
 
-  const uiScreens: Screenshot[] = [
-      {
-          imageUrl: '/img/tx/final1.png',
-          title: "The final Story Editor UI",
-          description: "Designed for mobile-first content creation with a focus on simplicity and efficiency. It supports a command-based rich text editor, drag & drop, and a real-time mobile-preview. Remeber, this was 2016!",
-          category: "UX/UI",
-          year: 2016,
-          tags: [""],
-      },
-      {
-          imageUrl: '/img/tx/final3.png',
-          title: "Story Placement System",
-          description: "Drag & drop story placement system allows journalists to easily select where their articles will appear across different news portals and categories, ensuring content is optimized for each audience.",
-          category: "UX/UI",
-          year: 2016,
-          tags: [""],
-      },
-      {
-          imageUrl: '/img/tx/final2.png',
-          title: "Video Management",
-          description: "Each video can be tagged with multiple synonyms, allowing for flexible search and categorization across different news portals. This system ensures that content is easily discoverable and adaptable to each portal's unique needs.",
-          category: "UX/UI",
-          year: 2016,
-          tags: [""],
-      },
-  ];
+const uiScreens: Screenshot[] = [
+  {
+    imageUrl: '/img/tx/final1.png',
+    title: "The final Story Editor UI",
+    description: "Designed for mobile-first content creation with a focus on simplicity and efficiency. It supports a command-based rich text editor, drag & drop, and a real-time mobile-preview. Remember, this was 2016!",
+    category: "UX/UI",
+    year: 2016,
+    tags: ["Mobile-First", "Command Editor"],
+  },
+  {
+    imageUrl: '/img/tx/final3.png',
+    title: "Story Placement System",
+    description: "Drag & drop story placement system allows journalists to easily select where their articles will appear across different news portals and categories, ensuring content is optimized for each audience.",
+    category: "UX/UI",
+    year: 2016,
+    tags: ["Content Management", "Multi-Portal"],
+  },
+  {
+    imageUrl: '/img/tx/final2.png',
+    title: "Video Management",
+    description: "Each video can be tagged with multiple synonyms, allowing for flexible search and categorization across different news portals. This system ensures that content is easily discoverable and adaptable to each portal's unique needs.",
+    category: "UX/UI",
+    year: 2016,
+    tags: ["Video Management", "Smart Tagging"],
+  },
+];
 
 const TxcmsCaseStudy = () => {
 
@@ -101,12 +100,31 @@ const TxcmsCaseStudy = () => {
             </div> */}
 
             <h1 className="text-4xl md:text-5xl font-bold text-foreground leading-tight">
-              Designing a Unified CMS for Switzerland's Leading News Publishers
+              TX Group CMS Redesign Case Study
             </h1>
 
+            <div className="flex flex-wrap gap-2 mb-4">
+              <Badge variant="secondary" className="gap-1">
+                <Clock className="w-3 h-3" />
+                Senior UX/UI Designer
+              </Badge>
+              <Badge variant="secondary" className="gap-1">
+                <Target className="w-3 h-3" />
+                Sketch, Photoshop
+              </Badge>
+              <Badge variant="secondary" className="gap-1">
+                <Users className="w-3 h-3" />
+                Cross-functional Team
+              </Badge>
+              <Badge variant="secondary" className="gap-1">
+                <Zap className="w-3 h-3" />
+                Workflow Automation
+              </Badge>
+            </div>
+
             <p className="text-xl text-muted-foreground leading-relaxed">
-              A comprehensive content management system that revolutionized how dozens of Swiss news 
-              portals create, share, and optimize content for millions of mobile readers.
+              Leading the redesign of TX Group's content management system to improve efficiency, reduce errors,
+              and support scalable newsroom workflows for journalists across multiple Swiss media brands.
             </p>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 py-4">
@@ -115,12 +133,12 @@ const TxcmsCaseStudy = () => {
                 <div className="text-sm text-muted-foreground">Timeline</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-foreground">90%</div>
-                <div className="text-sm text-muted-foreground">Mobile readership</div>
+                <div className="text-2xl font-bold text-foreground">200%</div>
+                <div className="text-sm text-muted-foreground">Faster workflows</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-foreground">15+</div>
-                <div className="text-sm text-muted-foreground">News portals</div>
+                <div className="text-2xl font-bold text-foreground">90%</div>
+                <div className="text-sm text-muted-foreground">Fewer image errors</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-foreground">50+</div>
@@ -131,30 +149,50 @@ const TxcmsCaseStudy = () => {
         </div>
       </section>
 
-      {/* Project Overview */}
+      {/* Context & Problem */}
       <section className="bg-muted/30 py-16">
         <div className="max-w-4xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-6">
-              <h2 className="text-3xl font-bold text-foreground">Project Overview</h2>
+              <h2 className="text-3xl font-bold text-foreground">Context & Problem</h2>
               <p className="text-muted-foreground leading-relaxed">
-                TX Group, owning most of Switzerland's newspapers and their websites, needed a unified 
-                CMS that could serve all their journalists while allowing content sharing and inheritance 
-                between different news portals. The challenge was creating a system with unique features 
-                no other CMS offered.
+                TX Group managed multiple media brands across Switzerland, Germany and Netherlands, with a CMS that journalists found slow,
+                error-prone, and difficult to scale. Pain points included:
               </p>
-              <div className="space-y-4">
+              <div className="space-y-3">
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-red-600 rounded-full mt-2"></div>
+                  <span className="text-muted-foreground">Editorial tasks took twice as long as necessary</span>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-red-600 rounded-full mt-2"></div>
+                  <span className="text-muted-foreground">Image handling errors occurred in 90% of articles</span>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-red-600 rounded-full mt-2"></div>
+                  <span className="text-muted-foreground">Mobile publishing and multi-site article inheritance were cumbersome</span>
+                </div>
+              </div>
+              <p className="text-muted-foreground leading-relaxed pt-4">
+                The challenge: redesign the CMS to improve efficiency, reduce errors, and support scalable newsroom
+                workflows—all while keeping the system intuitive for editors of all experience levels.
+              </p>
+              <div className="space-y-4 pt-4">
                 <div>
                   <h3 className="font-semibold text-foreground">Client</h3>
                   <p className="text-muted-foreground">TX Group</p>
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground">Timeline</h3>
-                  <p className="text-muted-foreground">9 months (2016)</p>
+                  <p className="text-muted-foreground">Jul 2013 – Sep 2017</p>
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground">Role</h3>
-                  <p className="text-muted-foreground">Lead UX/UI Designer</p>
+                  <p className="text-muted-foreground">Senior UX/UI Designer</p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-foreground">Team</h3>
+                  <p className="text-muted-foreground">Cross-functional with Product, Engineering, and Editorial stakeholders</p>
                 </div>
               </div>
             </div>
@@ -219,48 +257,65 @@ const TxcmsCaseStudy = () => {
         </div>
       </section>
 
-      {/* Research Process */}
+      {/* Research & Insights */}
       <section className="bg-muted/30 py-16">
         <div className="max-w-4xl mx-auto px-6">
           <div className="space-y-12">
             <div className="text-center space-y-4">
-              <h2 className="text-3xl font-bold text-foreground">Research & Discovery</h2>
+              <h2 className="text-3xl font-bold text-foreground">Research & Insights</h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Working closely with journalists and developers, I conducted extensive research to understand 
-                the unique needs of news content creation and distribution.
+                I led user-centered research to understand the editorial workflows and pain points across six news brands.
               </p>
             </div>
 
             <div className="space-y-8">
               <div className="bg-card rounded-2xl p-8 shadow-sm">
-                <h3 className="text-2xl font-bold text-foreground mb-6">Discovery Phase (3 weeks)</h3>
+                <h3 className="text-2xl font-bold text-foreground mb-6">User Research Activities</h3>
                 <div className="grid md:grid-cols-3 gap-6">
                   <div className="space-y-3">
                     <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-                      <span className="text-blue-600 font-bold">25</span>
+                      <span className="text-blue-600 font-bold">30+</span>
                     </div>
                     <h4 className="font-semibold text-foreground">Journalist Interviews</h4>
                     <p className="text-muted-foreground text-sm">
-                      Interviewed journalists from different news portals to understand their daily workflows and pain points.
+                      Conducted in-depth interviews with journalists from different news brands and experience levels.
                     </p>
                   </div>
                   <div className="space-y-3">
                     <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
-                      <span className="text-green-600 font-bold">5</span>
+                      <span className="text-green-600 font-bold">6</span>
                     </div>
-                    <h4 className="font-semibold text-foreground">Persona Development</h4>
+                    <h4 className="font-semibold text-foreground">News Brands Analyzed</h4>
                     <p className="text-muted-foreground text-sm">
-                      Created detailed personas ranging from tech-savvy digital journalists to traditional print writers.
+                      Analyzed editorial workflows across different news portals and publication types.
                     </p>
                   </div>
                   <div className="space-y-3">
                     <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
-                      <span className="text-purple-600 font-bold">10</span>
+                      <span className="text-purple-600 font-bold">∞</span>
                     </div>
-                    <h4 className="font-semibold text-foreground">Workflow Analysis</h4>
+                    <h4 className="font-semibold text-foreground">Usability Testing</h4>
                     <p className="text-muted-foreground text-sm">
-                      Analyzed existing content creation and publishing workflows across different news portals.
+                      Continuous usability testing throughout the design process to validate solutions.
                     </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-card rounded-2xl p-8 shadow-sm">
+                <h3 className="text-2xl font-bold text-foreground mb-6">Key Insights Discovered</h3>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                    <span className="text-muted-foreground">Editors needed mobile-first workflows to publish quickly from anywhere</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-green-600 rounded-full mt-2"></div>
+                    <span className="text-muted-foreground">Multi-site publishing required content inheritance with minimal manual changes</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-600 rounded-full mt-2"></div>
+                    <span className="text-muted-foreground">Automated image cropping and responsive previews would reduce manual errors significantly</span>
                   </div>
                 </div>
               </div>
@@ -269,43 +324,79 @@ const TxcmsCaseStudy = () => {
         </div>
       </section>
 
-      {/* Innovation Highlights */}
+      {/* Design Exploration */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-6">
           <div className="space-y-12">
             <div className="text-center space-y-4">
-              <h2 className="text-3xl font-bold text-foreground">Innovative Solutions</h2>
+              <h2 className="text-3xl font-bold text-foreground">Design Exploration</h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                I designed several features that set this CMS apart from any other system available at the time.
+                I focused on creating intuitive workflows and innovative solutions that would set this CMS apart from existing systems.
               </p>
             </div>
 
             <div className="space-y-8">
               <div className="bg-gradient-to-r from-muted/30 to-indigo-50 dark:from-muted/20 dark:to-indigo-950/30 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-foreground mb-4">The "Importance Triangle" Innovation</h3>
+                <h3 className="text-2xl font-bold text-foreground mb-4">Workflow Simplification</h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  While having a shower one day, it came to me: The "importance triangle" - a unique solution for adaptive image cropping. 
-                  Three hexagonal markers allow journalists to indicate which parts of an image are most important, 
-                  ensuring smart cropping across different portal layouts (16:9, 3:2, square formats).
+                  Introduced mobile-first article creation with clear, step-by-step publishing flows that made content creation
+                  intuitive for journalists of all experience levels.
                 </p>
-                <div className="bg-card rounded-lg p-6 mt-4">
-                  <div className="flex items-center justify-center space-x-4">
-                    <img src="/img/tx/importance-triangle.png" alt="Importance Triangle" className="w-full object-contain" />
+                <div className="space-y-3">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                    <span className="text-muted-foreground">Mobile-first article creation with live preview</span>
                   </div>
-                  <p className="text-center text-sm text-muted-foreground mt-2">Priority markers ensure intelligent cropping</p>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-green-600 rounded-full mt-2"></div>
+                    <span className="text-muted-foreground">Enabled inheritance across news sites for content reuse</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-600 rounded-full mt-2"></div>
+                    <span className="text-muted-foreground">Step-by-step publishing flows with clear visual guidance</span>
+                  </div>
                 </div>
               </div>
 
               <div className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-950/30 dark:to-emerald-950/30 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-foreground mb-4">Command-Based Rich Text Editor (before Notion was a thing)</h3>
+                <h3 className="text-2xl font-bold text-foreground mb-4">Automation & Efficiency</h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  Inspired by what I have seen at a React Conference in Paris, I designed a command system where journalists could type commands like 
-                  "/new poll" or "/add poll" to insert content without leaving their keyboard - revolutionary for 2016.
+                  Designed automated systems to reduce manual errors and improve content creation speed while maintaining quality.
                 </p>
-                <div className="bg-card rounded-lg p-4 font-mono text-sm">
-                  <div className="text-muted-foreground">Type: <span className="text-blue-600">/new</span> → Creates new poll, map, etc.</div>
-                  <div className="text-muted-foreground">Type: <span className="text-green-600">/add </span> → Insert existing image, poll, etc.</div>
-                  <div className="text-muted-foreground">Type: <span className="text-purple-600">/embed </span> → Embed video content, iframe, etc.</div>
+                <div className="space-y-3">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                    <span className="text-muted-foreground">Auto-cropping for images in multiple formats (16:9, 3:2, square)</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-green-600 rounded-full mt-2"></div>
+                    <span className="text-muted-foreground">Reusable component library in Sketch for consistency</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-600 rounded-full mt-2"></div>
+                    <span className="text-muted-foreground">Automated workflow scripts to reduce repetitive tasks</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-950/30 dark:to-pink-950/30 rounded-2xl p-8">
+                <h3 className="text-2xl font-bold text-foreground mb-4">Visual Design & Interaction</h3>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Created a modern, clean interface that supported both novice and expert editors with thoughtful interactions.
+                </p>
+                <div className="space-y-3">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                    <span className="text-muted-foreground">Modern, clean interface supporting all experience levels</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-green-600 rounded-full mt-2"></div>
+                    <span className="text-muted-foreground">Motion cues and micro-interactions to guide users</span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-600 rounded-full mt-2"></div>
+                    <span className="text-muted-foreground">Accessibility and readability across all devices</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -313,114 +404,120 @@ const TxcmsCaseStudy = () => {
         </div>
       </section>
 
-      {/* Design Process */}
+      {/* Implementation & Collaboration */}
       <section className="bg-muted/30 py-16">
         <div className="max-w-4xl mx-auto px-6">
           <div className="space-y-12">
             <div className="text-center space-y-4">
-              <h2 className="text-3xl font-bold text-foreground">Design Process</h2>
+              <h2 className="text-3xl font-bold text-foreground">Implementation & Collaboration</h2>
+              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+                Worked closely with product owner and engineers to align UX decisions with business goals while maintaining rapid iteration cycles.
+              </p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-card rounded-2xl p-8 shadow-sm">
-                <h3 className="text-2xl font-bold text-foreground mb-6">Design Phase (4 months)</h3>
+                <h3 className="text-2xl font-bold text-foreground mb-6">Collaboration Approach</h3>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
                     <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                    <span className="text-muted-foreground">Mobile-first live preview system design</span>
+                    <span className="text-muted-foreground">Maintained rapid iteration cycles with journalists</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                    <span className="text-muted-foreground">Command-based rich text editor wireframes</span>
+                    <div className="w-2 h-2 bg-green-600 rounded-full"></div>
+                    <span className="text-muted-foreground">Validated designs with stakeholders at each stage</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                    <span className="text-muted-foreground">Content inheritance workflow mapping</span>
+                    <div className="w-2 h-2 bg-purple-600 rounded-full"></div>
+                    <span className="text-muted-foreground">Automated repetitive editorial workflows using scripts</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                    <span className="text-muted-foreground">Multi-language tagging system design</span>
+                    <div className="w-2 h-2 bg-orange-600 rounded-full"></div>
+                    <span className="text-muted-foreground">Built reusable Sketch component systems</span>
                   </div>
                 </div>
               </div>
 
               <div className="bg-card rounded-2xl p-8 shadow-sm">
-                <h3 className="text-2xl font-bold text-foreground mb-6">Key Features Delivered</h3>
+                <h3 className="text-2xl font-bold text-foreground mb-6">Cross-functional Achievements</h3>
                 <div className="space-y-4">
                   <div className="flex justify-between items-center">
-                    <span className="text-muted-foreground">Article placement system</span>
-                    <span className="font-bold text-green-600">✓ Delivered</span>
+                    <span className="text-muted-foreground">Product-UX alignment</span>
+                    <span className="font-bold text-green-600">✓ Achieved</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-muted-foreground">Gamification system</span>
-                    <span className="font-bold text-green-600">✓ Delivered</span>
+                    <span className="text-muted-foreground">Engineering collaboration</span>
+                    <span className="font-bold text-green-600">✓ Seamless</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-muted-foreground">Smart tagging with synonyms</span>
-                    <span className="font-bold text-green-600">✓ Delivered</span>
+                    <span className="text-muted-foreground">Editorial stakeholder buy-in</span>
+                    <span className="font-bold text-green-600">✓ Complete</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-muted-foreground">Content inheritance system</span>
-                    <span className="font-bold text-green-600">✓ Delivered</span>
+                    <span className="text-muted-foreground">Development efficiency</span>
+                    <span className="font-bold text-green-600">✓ 95% reusable components</span>
                   </div>
                 </div>
               </div>
             </div>
-                                {/* Overlapping 16:9 thumbnails row */}
-                    <ScreenshotsRow screenshots={processShots} />
+            {/* Overlapping 16:9 thumbnails row */}
+            <ScreenshotsRow screenshots={processShots} />
           </div>
         </div>
       </section>
 
-      {/* Testing & Impact */}
+      {/* Results & Impact */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-6">
           <div className="space-y-12">
             <div className="text-center space-y-4">
-              <h2 className="text-3xl font-bold text-foreground">Testing & Impact</h2>
+              <h2 className="text-3xl font-bold text-foreground">Results & Impact</h2>
+              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+                The redesigned CMS delivered significant improvements in efficiency, error reduction, and user satisfaction across all media outlets.
+              </p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-card rounded-2xl p-8 border border-border">
-                <h3 className="text-2xl font-bold text-foreground mb-6">Validation Process (2 months)</h3>
+                <h3 className="text-2xl font-bold text-foreground mb-6">Measurable Outcomes</h3>
                 <div className="space-y-4">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                    <span className="text-muted-foreground">Iterative prototype testing with journalists</span>
+                  <div className="flex justify-between items-center p-3 bg-green-50 dark:bg-green-950/30 rounded-lg">
+                    <span className="text-muted-foreground font-medium">Editorial workflows</span>
+                    <span className="font-bold text-green-600">200% faster</span>
                   </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                    <span className="text-muted-foreground">Command system usability validation</span>
+                  <div className="flex justify-between items-center p-3 bg-blue-50 dark:bg-blue-950/30 rounded-lg">
+                    <span className="text-muted-foreground font-medium">Image-related errors</span>
+                    <span className="font-bold text-blue-600">90% reduction</span>
                   </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                    <span className="text-muted-foreground">Importance triangle effectiveness testing</span>
+                  <div className="flex justify-between items-center p-3 bg-purple-50 dark:bg-purple-950/30 rounded-lg">
+                    <span className="text-muted-foreground font-medium">Media outlets adoption</span>
+                    <span className="font-bold text-purple-600">6 outlets</span>
                   </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                    <span className="text-muted-foreground">Cross-portal content sharing workflows</span>
+                  <div className="flex justify-between items-center p-3 bg-orange-50 dark:bg-orange-950/30 rounded-lg">
+                    <span className="text-muted-foreground font-medium">Client satisfaction</span>
+                    <span className="font-bold text-orange-600">98% positive</span>
                   </div>
                 </div>
               </div>
 
               <div className="bg-card rounded-2xl p-8 border border-border">
-                <h3 className="text-2xl font-bold text-foreground mb-6">Projected Impact</h3>
+                <h3 className="text-2xl font-bold text-foreground mb-6">Technical Achievements</h3>
                 <div className="space-y-4">
-                  <div className="flex justify-between items-center">
-                    <span className="text-muted-foreground">Content creation speed</span>
-                    <span className="font-bold text-green-600">+40% faster</span>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-green-600 rounded-full mt-2"></div>
+                    <span className="text-muted-foreground">Adoption across 6 media outlets supporting 3 countries</span>
                   </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-muted-foreground">Mobile optimization</span>
-                    <span className="font-bold text-green-600">100% coverage</span>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                    <span className="text-muted-foreground">95% reusable Sketch component library reduced dev time</span>
                   </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-muted-foreground">Content reuse efficiency</span>
-                    <span className="font-bold text-green-600">+60% increase</span>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-600 rounded-full mt-2"></div>
+                    <span className="text-muted-foreground">Automated workflows eliminated repetitive tasks</span>
                   </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-muted-foreground">Journalist satisfaction</span>
-                    <span className="font-bold text-green-600">Highly positive</span>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-orange-600 rounded-full mt-2"></div>
+                    <span className="text-muted-foreground">Mobile-first design supported 90%+ mobile readership</span>
                   </div>
                 </div>
               </div>
@@ -460,53 +557,52 @@ const TxcmsCaseStudy = () => {
             </div>
           </section>      
 
-      {/* Key Learnings */}
+      {/* Reflection & Learnings */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-6">
           <div className="space-y-8">
-            <h2 className="text-3xl font-bold text-foreground">Key Learnings & Reflection</h2>
+            <h2 className="text-3xl font-bold text-foreground">Reflection & Learnings</h2>
             <div className="bg-muted/30 rounded-2xl p-8">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                This project taught me that the best innovations often come from unexpected moments of insight. 
-                The importance triangle concept, born during a shower, became one of the system's most praised features. 
-                Working directly with developers and journalists showed me the value of cross-functional collaboration 
-                in creating truly user-centered products.
+                This project reinforced the importance of user-centered design in complex enterprise systems.
+                I gained expertise in cross-discipline collaboration, balancing visual polish, usability, and technical constraints.
+                Most importantly, I learned how automation and workflow optimization can amplify impact beyond interface design.
               </p>
             </div>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-4">
-                <h3 className="text-xl font-semibold text-foreground">What Worked Exceptionally Well</h3>
+                <h3 className="text-xl font-semibold text-foreground">Key Principles Reinforced</h3>
                 <ul className="space-y-2">
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-green-600 rounded-full mt-2"></div>
-                    <span className="text-muted-foreground">Command-based interface reduced cognitive load for power users</span>
+                    <span className="text-muted-foreground">User-centered design drives enterprise system success</span>
                   </li>
                   <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-green-600 rounded-full mt-2"></div>
-                    <span className="text-muted-foreground">Importance triangle solved a complex technical problem elegantly</span>
+                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                    <span className="text-muted-foreground">Cross-functional collaboration enables innovative solutions</span>
                   </li>
                   <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-green-600 rounded-full mt-2"></div>
-                    <span className="text-muted-foreground">Close collaboration with developers and SCRUM enabled rapid prototyping</span>
+                    <div className="w-2 h-2 bg-purple-600 rounded-full mt-2"></div>
+                    <span className="text-muted-foreground">Balancing UX polish with technical feasibility is key</span>
                   </li>
                 </ul>
               </div>
-              
+
               <div className="space-y-4">
-                <h3 className="text-xl font-semibold text-foreground">Personal Growth</h3>
+                <h3 className="text-xl font-semibold text-foreground">Strategic Insights</h3>
                 <ul className="space-y-2">
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-orange-600 rounded-full mt-2"></div>
-                    <span className="text-muted-foreground">Learned to balance innovation with practical implementation constraints</span>
+                    <span className="text-muted-foreground">Automation can amplify design impact beyond UI</span>
                   </li>
                   <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-orange-600 rounded-full mt-2"></div>
-                    <span className="text-muted-foreground">Developed empathy for both technical and editorial user needs</span>
+                    <div className="w-2 h-2 bg-red-600 rounded-full mt-2"></div>
+                    <span className="text-muted-foreground">Workflow optimization drives measurable business results</span>
                   </li>
                   <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-orange-600 rounded-full mt-2"></div>
-                    <span className="text-muted-foreground">Gained confidence in proposing unconventional solutions</span>
+                    <div className="w-2 h-2 bg-indigo-600 rounded-full mt-2"></div>
+                    <span className="text-muted-foreground">Innovation often emerges from constraint-solving</span>
                   </li>
                 </ul>
               </div>
