@@ -500,45 +500,6 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="space-y-8">
-            <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl flex items-center justify-center max-h-[480px] overflow-hidden w-full featured-work-container">
-              <Link to="/tesla-watch-app">
-                <img src="/img/tesla/teaser.png" alt="Tesla Apple Watch App Thumbnail" className="rounded-2xl featured-work-hover transition-transform duration-300 hover:scale-105" />
-              </Link>
-            </div>
-
-            <div className="max-w-4xl mx-auto space-y-6">
-              <div className="flex flex-wrap gap-2">
-                <Badge variant="secondary">UX/UI Design</Badge>
-                <Badge variant="secondary">Apple Watch</Badge>
-                <Badge variant="secondary">Tiny UI</Badge>
-              </div>
-
-              <div className="space-y-4">
-                <h3 className="text-2xl md:text-3xl font-bold text-foreground">
-                  Tesla — Adoption to Apple Watch
-                </h3>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  If you know the TV Show "Knight Rider", this is the next step. This concept watch app allows you to control your car from your wrist, with a focus on simplicity and ease of use.
-                </p>
-              </div>
-
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/tesla-watch-app">
-                  <Button variant="explore" className="gap-2">
-                    View Case Study
-                    <ArrowRight className="w-4 h-4" />
-                  </Button>
-                </Link>
-                {/* <Button variant="outline" className="gap-2 bg-transparent">
-                  <ExternalLink className="w-4 h-4" />
-                  Live Project
-                </Button> */}
-              </div>
-            </div>
-          </div>
-
-          <div className="h-8"> </div>
 
           {/* Other Projects Grid */}
           <div className="grid md:grid-cols-2 gap-8">
@@ -560,7 +521,7 @@ const Home = () => {
                         React
                       </Badge>
                     </div>
-                    <h4 className="text-xl font-semibold text-foreground">A Unique and Powerful CMS</h4>
+                    <h4 className="text-xl font-semibold text-foreground">Enterpise Level CMS for Journalists</h4>
                     <p className="text-muted-foreground text-sm leading-relaxed">
                       Reduced user frustration (by a lot), designed new interactions, and invented a new way to automatically crop images
                     </p>
@@ -665,7 +626,47 @@ const Home = () => {
                 </CardContent>
               </Card>
             </Link> */}
-          </div>         
+          </div>            
+
+          <div className="h-8"> </div>
+
+          <div className="space-y-8">
+            <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl flex items-center justify-center max-h-[480px] overflow-hidden w-full featured-work-container">
+              <Link to="/tesla-watch-app">
+                <img src="/img/tesla/teaser.png" alt="Tesla Apple Watch App Thumbnail" className="rounded-2xl featured-work-hover transition-transform duration-300 hover:scale-105" />
+              </Link>
+            </div>
+
+            <div className="max-w-4xl mx-auto space-y-6">
+              <div className="flex flex-wrap gap-2">
+                <Badge variant="secondary">UX/UI Design</Badge>
+                <Badge variant="secondary">Apple Watch</Badge>
+                <Badge variant="secondary">Tiny UI</Badge>
+              </div>
+
+              <div className="space-y-4">
+                <h3 className="text-2xl md:text-3xl font-bold text-foreground">
+                  Tesla — Adoption to Apple Watch
+                </h3>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  If you know the TV Show "Knight Rider", this is the next step. This concept watch app allows you to control your car from your wrist, with a focus on simplicity and ease of use.
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link to="/tesla-watch-app">
+                  <Button variant="explore" className="gap-2">
+                    View Case Study
+                    <ArrowRight className="w-4 h-4" />
+                  </Button>
+                </Link>
+                {/* <Button variant="outline" className="gap-2 bg-transparent">
+                  <ExternalLink className="w-4 h-4" />
+                  Live Project
+                </Button> */}
+              </div>
+            </div>
+          </div>       
 
         </div>
       </section>
