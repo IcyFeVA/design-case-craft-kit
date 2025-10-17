@@ -552,7 +552,7 @@ const Home = () => {
                         3D Presentation
                       </Badge>
                     </div>
-                    <h4 className="text-xl font-semibold text-foreground">vSTAGE — 3D Presentation Platform</h4>
+                    <h4 className="text-xl font-semibold text-foreground">vSTAGE (SaaS) — 3D Presentation Application</h4>
                     <p className="text-muted-foreground text-sm leading-relaxed">
                       Transformed a complex 3D tool designed for CAD professionals into an intuitive platform accessible to newcomers while retaining deep functionality for power users.
                     </p>
