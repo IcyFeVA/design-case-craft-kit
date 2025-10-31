@@ -404,6 +404,50 @@ const TxcmsCaseStudy = () => {
         </div>
       </section>
 
+      {/* Innovation Highlights */}
+      <section className="py-16">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="space-y-12">
+            <div className="text-center space-y-4">
+              <h2 className="text-3xl font-bold text-foreground">Innovative Solutions</h2>
+              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+                I designed several features that set this CMS apart from any other system available at the time.
+              </p>
+            </div>
+
+            <div className="space-y-8">
+              <div className="bg-gradient-to-r from-muted/30 to-indigo-50 dark:from-muted/20 dark:to-indigo-950/30 rounded-2xl p-8">
+                <h3 className="text-2xl font-bold text-foreground mb-4">The "Importance Triangle" Innovation</h3>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  While having a shower one day, it came to me: The "importance triangle" - a unique solution for adaptive image cropping. 
+                  Three hexagonal markers allow journalists to indicate which parts of an image are most important, 
+                  ensuring smart cropping across different portal layouts (16:9, 3:2, square formats).
+                </p>
+                <div className="bg-card rounded-lg p-6 mt-4">
+                  <div className="flex items-center justify-center space-x-4">
+                    <img src="/img/tx/importance-triangle.png" alt="Importance Triangle" className="w-full object-contain" />
+                  </div>
+                  <p className="text-center text-sm text-muted-foreground mt-2">Priority markers ensure intelligent cropping</p>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-950/30 dark:to-emerald-950/30 rounded-2xl p-8">
+                <h3 className="text-2xl font-bold text-foreground mb-4">Command-Based Rich Text Editor (before Notion was a thing)</h3>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Inspired by what I have seen at a React Conference in Paris, I designed a command system where journalists could type commands like 
+                  "/new poll" or "/add poll" to insert content without leaving their keyboard - revolutionary for 2016.
+                </p>
+                <div className="bg-card rounded-lg p-4 font-mono text-sm">
+                  <div className="text-muted-foreground">Type: <span className="text-blue-600">/new</span> → Creates new poll, map, etc.</div>
+                  <div className="text-muted-foreground">Type: <span className="text-green-600">/add </span> → Insert existing image, poll, etc.</div>
+                  <div className="text-muted-foreground">Type: <span className="text-purple-600">/embed </span> → Embed video content, iframe, etc.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>      
+
       {/* Implementation & Collaboration */}
       <section className="bg-muted/30 py-16">
         <div className="max-w-4xl mx-auto px-6">
@@ -613,49 +657,7 @@ const TxcmsCaseStudy = () => {
 
 
 
-      {/* Innovation Highlights */}
-      <section className="py-16">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="space-y-12">
-            <div className="text-center space-y-4">
-              <h2 className="text-3xl font-bold text-foreground">Innovative Solutions</h2>
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                I designed several features that set this CMS apart from any other system available at the time.
-              </p>
-            </div>
 
-            <div className="space-y-8">
-              <div className="bg-gradient-to-r from-muted/30 to-indigo-50 dark:from-muted/20 dark:to-indigo-950/30 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-foreground mb-4">The "Importance Triangle" Innovation</h3>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  While having a shower one day, it came to me: The "importance triangle" - a unique solution for adaptive image cropping. 
-                  Three hexagonal markers allow journalists to indicate which parts of an image are most important, 
-                  ensuring smart cropping across different portal layouts (16:9, 3:2, square formats).
-                </p>
-                <div className="bg-card rounded-lg p-6 mt-4">
-                  <div className="flex items-center justify-center space-x-4">
-                    <img src="/img/tx/importance-triangle.png" alt="Importance Triangle" className="w-full object-contain" />
-                  </div>
-                  <p className="text-center text-sm text-muted-foreground mt-2">Priority markers ensure intelligent cropping</p>
-                </div>
-              </div>
-
-              <div className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-950/30 dark:to-emerald-950/30 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-foreground mb-4">Command-Based Rich Text Editor (before Notion was a thing)</h3>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  Inspired by what I have seen at a React Conference in Paris, I designed a command system where journalists could type commands like 
-                  "/new poll" or "/add poll" to insert content without leaving their keyboard - revolutionary for 2016.
-                </p>
-                <div className="bg-card rounded-lg p-4 font-mono text-sm">
-                  <div className="text-muted-foreground">Type: <span className="text-blue-600">/new</span> → Creates new poll, map, etc.</div>
-                  <div className="text-muted-foreground">Type: <span className="text-green-600">/add </span> → Insert existing image, poll, etc.</div>
-                  <div className="text-muted-foreground">Type: <span className="text-purple-600">/embed </span> → Embed video content, iframe, etc.</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       {/* <section className="bg-slate-50 py-16">
