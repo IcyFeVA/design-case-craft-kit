@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { X } from 'lucide-react';
+import { Button } from "@/components/ui/button";
 
 interface BeforeAfterSliderProps {
   beforeImage: string;
@@ -71,19 +72,18 @@ export function BeforeAfterSlider({
 
   return (
     <>
-      <button
+      <Button variant='explore'
         onClick={() => setIsOpen(true)}
-        className="px-6 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-medium"
       >
         View Before/After
-      </button>
+      </Button>
 
       {isOpen && (
         <div
           onClick={handleOverlayClick}
           className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 animate-in fade-in duration-300"
         >
-          <div className="relative w-full max-w-4xl">
+          <div className="relative w-full max-w-[1600px]">
             {/* Close Button */}
             <button
               onClick={() => setIsOpen(false)}
@@ -113,14 +113,14 @@ export function BeforeAfterSlider({
               <img
                 src={afterImage}
                 alt={afterLabel}
-                className="block w-full h-auto"
+                className="block w-full h-auto max-h-[80vh]"
               />
 
               {/* Before Image (Overlay with Clip Path) */}
               <img
                 src={beforeImage}
                 alt={beforeLabel}
-                className="absolute top-0 left-0 block w-full h-auto"
+                className="absolute top-0 left-0 block w-full h-auto max-h-[80vh]"
                 style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
               />
 
