@@ -1,21 +1,47 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { useTheme } from 'next-themes';
 
 export const UnicornStudioBg = () => {
+  const { theme } = useTheme();
+  const [isDesktop, setIsDesktop] = useState(false);
+
   useEffect(() => {
+    // Check if desktop on mount and resize
+    const checkDesktop = () => {
+      setIsDesktop(window.matchMedia('(min-width: 768px)').matches);
+    };
+    
+    checkDesktop();
+    window.addEventListener('resize', checkDesktop);
+    return () => window.removeEventListener('resize', checkDesktop);
+  }, []);
+
+  useEffect(() => {
+    // Only initialize if desktop and dark mode
+    if (!isDesktop || theme !== 'dark') {
+      return;
+    }
+
     // Initialize Unicorn Studio script
-    if (!window.UnicornStudio) {
-      (window as any).UnicornStudio = { isInitialized: false };
+    const w = window as any;
+    if (!w.UnicornStudio) {
+      w.UnicornStudio = { isInitialized: false };
       const script = document.createElement('script');
       script.src = 'https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.5.2/dist/unicornStudio.umd.js';
       script.onload = () => {
-        if (!(window as any).UnicornStudio.isInitialized) {
-          (window as any).UnicornStudio.init();
-          (window as any).UnicornStudio.isInitialized = true;
+        if (!w.UnicornStudio.isInitialized) {
+          w.UnicornStudio.init();
+          w.UnicornStudio.isInitialized = true;
         }
       };
       document.head.appendChild(script);
     }
-  }, []);
+  }, [isDesktop, theme]);
+
+  // Don't render if not desktop or not dark mode
+  if (!isDesktop || theme !== 'dark') {
+    return null;
+  }
 
   return (
     <div
