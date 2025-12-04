@@ -290,7 +290,7 @@ const Home = () => {
                 {["Product Designer crafting"].map((w, i) => (
                   <span
                     key={i}
-                    className="inline-block headline-word mr-3 opacity-0 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500"
+                    className="inline-block headline-word mr-3 opacity-0 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-200"
                   >
                     {w}
                   </span>
@@ -308,7 +308,7 @@ const Home = () => {
               </div>
             </h1>
 
-            <p className="text-xl md:text-2xl text-gray-500 leading-relaxed max-w-3xl">
+            <p className="text-xl md:text-2xl text-gray-400 leading-relaxed max-w-3xl">
               Hi! I’m Pascal, I build clear, useful experiences that solve real problems — fast.
             </p>
           </div>
@@ -321,7 +321,7 @@ const Home = () => {
               </Button>
             </Link>
             <Link to="/ui-gallery">
-              <Button variant="outline" size="lg" className="gap-2 bg-transparent">
+              <Button variant="outline" size="lg" className="gap-2">
               {/* <Grid3X3 className="w-4 h-4" /> */}
               Curated Gallery
               </Button>
