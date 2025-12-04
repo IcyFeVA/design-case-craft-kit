@@ -87,6 +87,14 @@ const processShots: Screenshot[] = [
           year: 2023,
           tags: ["3D", "Presentation", "Real-time", "CAD"],
       },
+      {
+          imageUrl: '/img/vstage/final6.png',
+          title: "Figma Components",
+          description: "",
+          category: "UX/UI",
+          year: 2023,
+          tags: ["3D", "Presentation", "Real-time", "CAD"],
+      },      
   ];
 
 
