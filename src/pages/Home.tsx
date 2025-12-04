@@ -424,7 +424,7 @@ const Home = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/ai-driven-design">
                   <Button variant="explore" className="gap-2">
-                    View Case Study
+                    Learn more
                     <ArrowRight className="w-4 h-4" />
                   </Button>
                 </Link>
@@ -679,7 +679,7 @@ const Home = () => {
       <section ref={caseStudiesRef} className="py-20">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-slate-600 dark:from-slate-500 dark:to-slate-600">Locked Case Studies (for interviews)</h2>
+            <h2 className="text-4xl font-bold text-foreground mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-slate-600 dark:from-slate-500 dark:to-slate-600">Coming soon</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Deep dives into design challenges, processes, and solutions
             </p>
@@ -733,14 +733,14 @@ const Home = () => {
                 <div className="h-48 bg-gradient-to-br from-slate-300 to-slate-500 dark:from-slate-800 dark:to-slate-600 rounded-xl mb-6 flex items-center justify-center">
                   <div className="text-center flex flex-col items-center justify-center">
                     <Lock className="w-16 h-16 text-white mb-3" />
-                    <p className="text-white font-medium">Zdash</p>
+                    <p className="text-white font-medium">inTime</p>
                   </div>
                 </div>
                 <h3 className="text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
-                  Banking App for young adults
+                  inTime Solutions
                 </h3>
                 <p className="text-muted-foreground mb-4 leading-relaxed">
-                 Effortless banking for the young generation, designed to be intuitive and secure.
+                  Scheduling and workforce management software purpose-built for Public Safety.
                 </p>
                 {/* <div className="flex items-center text-blue-600 font-medium">
                   Read Case Study
