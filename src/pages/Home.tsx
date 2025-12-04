@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { ArrowRight, Github, Linkedin, Instagram, Download, Twitter, ExternalLink, Grid3X3, Star, Mail, ArrowDown, Dribbble, Lock, Palette, Video, Sparkles } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Instagram, Download, Twitter, ExternalLink, Grid3X3, Star, Mail, ArrowDown, Dribbble, Lock, Palette, Video, Sparkles, FolderLock } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/ui/navbar";
 import Footer from "@/components/ui/footer";
@@ -690,7 +690,7 @@ const Home = () => {
               <div className="bg-card rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 h-full">
                 <div className="h-48 bg-gradient-to-br from-slate-300 to-slate-500 dark:from-slate-800 dark:to-slate-600 rounded-xl mb-6 flex items-center justify-center">
                   <div className="text-center flex flex-col items-center justify-center">
-                    <Lock className="w-16 h-16 text-white mb-3" />
+                    <FolderLock className="w-16 h-16 text-white mb-3" />
                     <p className="text-white font-medium">Crushy</p>
                   </div>
                 </div>
@@ -711,7 +711,7 @@ const Home = () => {
               <div className="bg-card rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 h-full">
                 <div className="h-48 bg-gradient-to-br from-slate-300 to-slate-500 dark:from-slate-800 dark:to-slate-600 rounded-xl mb-6 flex items-center justify-center">
                   <div className="text-center flex flex-col items-center justify-center">
-                    <Lock className="w-16 h-16 text-white mb-3" />
+                    <FolderLock className="w-16 h-16 text-white mb-3" />
                     <p className="text-white font-medium">Bolt from the Blue</p>
                   </div>
                 </div>
@@ -732,7 +732,7 @@ const Home = () => {
               <div className="bg-card rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 h-full">
                 <div className="h-48 bg-gradient-to-br from-slate-300 to-slate-500 dark:from-slate-800 dark:to-slate-600 rounded-xl mb-6 flex items-center justify-center">
                   <div className="text-center flex flex-col items-center justify-center">
-                    <Lock className="w-16 h-16 text-white mb-3" />
+                    <FolderLock className="w-16 h-16 text-white mb-3" />
                     <p className="text-white font-medium">inTime</p>
                   </div>
                 </div>
