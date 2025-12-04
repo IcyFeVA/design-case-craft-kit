@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/ui/navbar";
 import Footer from "@/components/ui/footer";
 import Marquee from "@/components/Marquee";
+import { UnicornStudioBg } from "@/components/UnicornStudioBg";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -271,9 +272,11 @@ const Home = () => {
 
       <div className="max-w-6xl mx-auto py-8"></div>
 
-      {/* Hero Section */}
-      <section ref={heroRef} className="max-w-4xl mx-auto px-6 py-20">
-        <div className="space-y-8">
+      <section ref={heroRef} className="w-full px-6 py-20 relative">
+        <div className="absolute inset-0 -z-10 overflow-hidden">
+          <UnicornStudioBg />
+        </div>
+        <div className="space-y-8 relative z-10 mx-auto max-w-4xl min-h-[450px] flex flex-col justify-center">
           <div className="space-y-6">
             {/* <Badge variant="outline" className="text-sm font-medium">
               Available for new opportunities
@@ -305,7 +308,7 @@ const Home = () => {
               </div>
             </h1>
 
-            <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-3xl">
+            <p className="text-xl md:text-2xl text-gray-500 leading-relaxed max-w-3xl">
               Hi! I’m Pascal, I build clear, useful experiences that solve real problems — fast.
             </p>
           </div>
@@ -341,7 +344,7 @@ const Home = () => {
               <Video className="w-5 h-5 inline" />
               &nbsp; Vimeo
             </Link> */}
-            </div>
+          </div>
         </div>
       </section>
 
