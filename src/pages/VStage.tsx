@@ -8,6 +8,7 @@ import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import ScreenshotsRow from "@/components/ScreenshotsRow";
 import { GalleryImageDialog } from "./GalleryImageDialog";
+import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 
 type Screenshot = {
   imageUrl: string;
@@ -150,6 +151,16 @@ const VStage = () => {
             {/* Hero Image Placeholder */}
             <div className="w-full bg-gradient-to-br from-muted/30 to-muted/50 dark:from-muted/20 dark:to-muted/40 rounded-2xl mb-8 flex items-center justify-center">
               <img src="/img/vstage/hero.png" alt="vSTAGE Hero" className="max-w-full max-h-full object-cover rounded-lg shadow-lg" />
+            </div>
+
+            {/* Before/After Slider */}
+            <div className="mb-12 flex justify-center">
+              <BeforeAfterSlider 
+                beforeImage="/img/vstage/before.png"
+                afterImage="/img/vstage/after.png"
+                beforeLabel="Before"
+                afterLabel="After"
+              />
             </div>
 
             {/* Project Details */}
