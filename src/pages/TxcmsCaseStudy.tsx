@@ -25,7 +25,7 @@ const processShots: Screenshot[] = [
     title: "Process",
     description: "User Journey Mapping and Personas. Interviewed dozens of journalists to understand their workflows and needs.",
     category: "UI",
-        year: 2023,
+    year: 2023,
     tags: ["UX", "Interviews", "User Journey Mapping"],
   },
   {
@@ -33,7 +33,7 @@ const processShots: Screenshot[] = [
     title: "Process",
     description: "A few of the many hifi wireframes I created to explore different approaches to the CMS design.",
     category: "UI",
-        year: 2023,
+    year: 2023,
     tags: ["Sketch", "Wireframes"],
   },
   {
@@ -41,7 +41,7 @@ const processShots: Screenshot[] = [
     title: "Process",
     description: "Each step of a user journey was carefully mapped out, from content creation to publishing and sharing.",
     category: "UI",
-        year: 2023,
+    year: 2023,
     tags: ["Sketch", "Wireframes"],
   },
 ];
@@ -75,14 +75,14 @@ const uiScreens: Screenshot[] = [
 
 const TxcmsCaseStudy = () => {
 
-    const [openUiScreenIndex, setOpenUiScreenIndex] = useState<number | null>(null);
-  
-    const selectedUiScreen = openUiScreenIndex !== null ? uiScreens[openUiScreenIndex] : null;
+  const [openUiScreenIndex, setOpenUiScreenIndex] = useState<number | null>(null);
+
+  const selectedUiScreen = openUiScreenIndex !== null ? uiScreens[openUiScreenIndex] : null;
 
   return (
-   <div className="pt-8 pb-16 bg-background">
+    <div className="pt-8 pb-16 bg-background">
       <CaseStudyNav />
-      
+
       {/* Hero Section */}
       <section className="max-w-4xl mx-auto px-6 py-16">
         <div className="space-y-8">
@@ -212,10 +212,10 @@ const TxcmsCaseStudy = () => {
           <div className="space-y-8">
             <h2 className="text-3xl font-bold text-foreground">The Challenge</h2>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              With millions of users reading articles on TX Group's websites and over 90% using mobile devices, 
+              With millions of users reading articles on TX Group's websites and over 90% using mobile devices,
               we needed to create a CMS that prioritized mobile-first content creation while serving multiple news portals.
             </p>
-            
+
             <div className="grid md:grid-cols-3 gap-6">
               <Card className="border-0 shadow-sm">
                 <CardContent className="p-6 space-y-4">
@@ -419,8 +419,8 @@ const TxcmsCaseStudy = () => {
               <div className="bg-gradient-to-r from-muted/30 to-indigo-50 dark:from-muted/20 dark:to-indigo-950/30 rounded-2xl p-8">
                 <h3 className="text-2xl font-bold text-foreground mb-4">The "Importance Triangle" Innovation</h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  While having a shower one day, it came to me: The "importance triangle" - a unique solution for adaptive image cropping. 
-                  Three hexagonal markers allow journalists to indicate which parts of an image are most important, 
+                  While having a shower one day, it came to me: The "importance triangle" - a unique solution for adaptive image cropping.
+                  Three hexagonal markers allow journalists to indicate which parts of an image are most important,
                   ensuring smart cropping across different portal layouts (16:9, 3:2, square formats).
                 </p>
                 <div className="bg-card rounded-lg p-6 mt-4">
@@ -434,7 +434,7 @@ const TxcmsCaseStudy = () => {
               <div className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-950/30 dark:to-emerald-950/30 rounded-2xl p-8">
                 <h3 className="text-2xl font-bold text-foreground mb-4">Command-Based Rich Text Editor (before Notion was a thing)</h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  Inspired by what I have seen at a React Conference in Paris, I designed a command system where journalists could type commands like 
+                  Inspired by what I have seen at a React Conference in Paris, I designed a command system where journalists could type commands like
                   "/new poll" or "/add poll" to insert content without leaving their keyboard - revolutionary for 2016.
                 </p>
                 <div className="bg-card rounded-lg p-4 font-mono text-sm">
@@ -446,7 +446,7 @@ const TxcmsCaseStudy = () => {
             </div>
           </div>
         </div>
-      </section>      
+      </section>
 
       {/* Implementation & Collaboration */}
       <section className="bg-muted/30 py-16">
@@ -570,36 +570,36 @@ const TxcmsCaseStudy = () => {
         </div>
       </section>
 
-                {/* UI Screens Section */}
-          <section className="py-16">
-            <div className="max-w-4xl mx-auto px-6">
-                <div className="space-y-8">
-                    <h2 className="text-3xl font-bold text-foreground">
-                        Final UI
-                    </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {uiScreens.map((screen, index) => (
-                            <Card
-                                key={index}
-                                className="w-full rounded-2xl shadow-xl overflow-hidden transform transition-transform hover:scale-105 cursor-pointer aspect-video"
-                                onClick={() => setOpenUiScreenIndex(index)}
-                                style={{transform: `rotate(${(-5 + Math.random()*10)}deg)`, border: '5px solid #fff'}}
-                            >
-                                <CardContent className="p-0 w-full h-full">
-                                    <img src={screen.imageUrl} alt={screen.title} className="w-full h-full object-cover" />
-                                </CardContent>
-                            </Card>
-                        ))}
-                    </div>
-                </div>
-                      <GalleryImageDialog
-                          open={!!selectedUiScreen}
-                          onOpenChange={(open) => setOpenUiScreenIndex(open ? openUiScreenIndex : null)}
-                          item={selectedUiScreen}
-                      />
-                
+      {/* UI Screens Section */}
+      <section className="py-16">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="space-y-8">
+            <h2 className="text-3xl font-bold text-foreground">
+              Final UI
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {uiScreens.map((screen, index) => (
+                <Card
+                  key={index}
+                  className="w-full rounded-2xl shadow-xl overflow-hidden transform transition-transform hover:scale-105 cursor-pointer aspect-video"
+                  onClick={() => setOpenUiScreenIndex(index)}
+                  style={{ transform: `rotate(${(-5 + Math.random() * 10)}deg)`, border: '5px solid #fff' }}
+                >
+                  <CardContent className="p-0 w-full h-full">
+                    <img src={screen.imageUrl} alt={screen.title} className="w-full h-full object-cover" />
+                  </CardContent>
+                </Card>
+              ))}
             </div>
-          </section>      
+          </div>
+          <GalleryImageDialog
+            open={!!selectedUiScreen}
+            onOpenChange={(open) => setOpenUiScreenIndex(open ? openUiScreenIndex : null)}
+            item={selectedUiScreen}
+          />
+
+        </div>
+      </section>
 
       {/* Reflection & Learnings */}
       <section className="py-16">
@@ -668,7 +668,7 @@ const TxcmsCaseStudy = () => {
               I'd be happy to share more insights about innovating in the news and publishing technology space.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/">
+              <Link to="/home">
                 <Button size="lg" className="gap-2">
                   View More Projects
                   <ArrowRight className="w-4 h-4" />

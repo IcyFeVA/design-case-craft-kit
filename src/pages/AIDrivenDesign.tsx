@@ -51,8 +51,8 @@ const AIDrivenDesign = () => {
   const selectedImage = openIndex !== null ? processShots[openIndex] : null;
   return (
     <div className="pt-8 pb-16 bg-background">
-      <CaseStudyNav linkOverride="/" />
-      
+      <CaseStudyNav linkOverride="/home" />
+
       {/* Hero Section */}
       <section className="max-w-4xl mx-auto px-6 py-16">
         <div className="space-y-8">
@@ -136,7 +136,7 @@ const AIDrivenDesign = () => {
             <p className="text-xl text-muted-foreground leading-relaxed">
               Traditional design processes are time-consuming and often involve repetitive tasks that can be automated. Designers spend too much time on:
             </p>
-            
+
             <div className="grid md:grid-cols-3 gap-6">
               <Card className="border-0 shadow-sm">
                 <CardContent className="p-6 space-y-4">
@@ -200,7 +200,7 @@ const AIDrivenDesign = () => {
                       <div className="mt-2 p-4 bg-muted rounded-lg">
                         <div className="border-l-4 border-blue-500 pl-4 py-2">
                           <p className="text-md font-mono italic">
-                            "1. I'm building a neighborhood event finder website. Ask me questions one by one until we reach a solid project brief that will guide the whole design process.<br/><br/>
+                            "1. I'm building a neighborhood event finder website. Ask me questions one by one until we reach a solid project brief that will guide the whole design process.<br /><br />
                             2. Give me the contents of the home page UI, from top to bottom, include only elements, components and building blocks. Do not include styling and UI specs."
                           </p>
                         </div>
@@ -263,7 +263,7 @@ const AIDrivenDesign = () => {
         <div className="max-w-4xl mx-auto px-6">
           <div className="space-y-8">
             <h2 className="text-3xl font-bold text-foreground text-center">Workflow Visualization</h2>
-            
+
             {/* Process Diagram */}
             <div className="bg-card rounded-2xl p-8 shadow-sm">
               <div className="space-y-6">
@@ -281,7 +281,7 @@ const AIDrivenDesign = () => {
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center">
                   <div className="flex-shrink-0 w-10 h-10 rounded-full bg-green-100 dark:bg-green-950/30 flex items-center justify-center">
                     <span className="text-green-600 dark:text-green-400 font-bold">2</span>
@@ -296,7 +296,7 @@ const AIDrivenDesign = () => {
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center">
                   <div className="flex-shrink-0 w-10 h-10 rounded-full bg-purple-100 dark:bg-purple-950/30 flex items-center justify-center">
                     <span className="text-purple-600 dark:text-purple-400 font-bold">3</span>
@@ -311,7 +311,7 @@ const AIDrivenDesign = () => {
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center">
                   <div className="flex-shrink-0 w-10 h-10 rounded-full bg-orange-100 dark:bg-orange-950/30 flex items-center justify-center">
                     <span className="text-orange-600 dark:text-orange-400 font-bold">4</span>
@@ -399,7 +399,7 @@ const AIDrivenDesign = () => {
             <p className="text-xl text-muted-foreground text-center max-w-2xl mx-auto">
               The complete home page design generated through the AI-driven workflow
             </p>
-            
+
             {/* Scrollable container for the final design */}
             <div className="bg-card rounded-2xl p-6 shadow-sm">
               <div className="border border-border rounded-lg overflow-hidden">
@@ -538,7 +538,7 @@ const AIDrivenDesign = () => {
             <p className="text-xl text-muted-foreground text-center max-w-2xl mx-auto">
               As AI tools become more sophisticated, designers who embrace these workflows will have a significant competitive advantage
             </p>
-            
+
             <div className="bg-card rounded-2xl p-8 shadow-sm">
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
@@ -548,12 +548,12 @@ const AIDrivenDesign = () => {
                   <div>
                     <h3 className="text-lg font-semibold text-foreground mb-2">Human-AI Collaboration</h3>
                     <p className="text-muted-foreground">
-                      The most successful designers will be those who learn to effectively collaborate with AI tools, 
+                      The most successful designers will be those who learn to effectively collaborate with AI tools,
                       using them to handle routine tasks while focusing their creativity on strategic and emotional aspects of design.
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start space-x-4">
                   <div className="w-8 h-8 bg-green-100 dark:bg-green-950/30 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <span className="text-green-600 dark:text-green-400 font-bold text-sm">2</span>
@@ -561,12 +561,12 @@ const AIDrivenDesign = () => {
                   <div>
                     <h3 className="text-lg font-semibold text-foreground mb-2">Continuous Learning</h3>
                     <p className="text-muted-foreground">
-                      As AI tools evolve rapidly, designers must commit to continuous learning to stay current with 
+                      As AI tools evolve rapidly, designers must commit to continuous learning to stay current with
                       the latest capabilities and best practices for integrating these tools into their workflows.
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start space-x-4">
                   <div className="w-8 h-8 bg-purple-100 dark:bg-purple-950/30 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <span className="text-purple-600 dark:text-purple-400 font-bold text-sm">3</span>
@@ -574,7 +574,7 @@ const AIDrivenDesign = () => {
                   <div>
                     <h3 className="text-lg font-semibold text-foreground mb-2">Ethical Considerations</h3>
                     <p className="text-muted-foreground">
-                      Designers must navigate the ethical implications of AI-generated content, ensuring transparency 
+                      Designers must navigate the ethical implications of AI-generated content, ensuring transparency
                       with clients and users about the role of AI in the design process.
                     </p>
                   </div>
@@ -590,25 +590,25 @@ const AIDrivenDesign = () => {
         <div className="max-w-4xl mx-auto px-6">
           <div className="space-y-8">
             <h2 className="text-3xl font-bold text-foreground text-center">Personal Reflection</h2>
-            
+
             <div className="bg-card rounded-2xl p-8 shadow-sm">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                This AI-driven workflow has fundamentally changed how I approach design projects. What used to take 
-                days of research, briefing, and initial concepting can now be accomplished in under 15 minutes. 
-                This doesn't diminish the value of design; instead, it elevates it by allowing me to focus on 
-                what truly matters: understanding user needs, crafting meaningful experiences, and solving 
+                This AI-driven workflow has fundamentally changed how I approach design projects. What used to take
+                days of research, briefing, and initial concepting can now be accomplished in under 15 minutes.
+                This doesn't diminish the value of design; instead, it elevates it by allowing me to focus on
+                what truly matters: understanding user needs, crafting meaningful experiences, and solving
                 complex problems creatively.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mt-4">
-                The key is not to replace human creativity with AI, but to amplify it. By automating the 
-                repetitive aspects of design work, we free ourselves to tackle more challenging and rewarding 
-                problems. This workflow is particularly powerful for early-stage ideation, client proposals, 
-                and rapid prototyping - contexts where speed and iteration are more valuable than pixel-perfect 
+                The key is not to replace human creativity with AI, but to amplify it. By automating the
+                repetitive aspects of design work, we free ourselves to tackle more challenging and rewarding
+                problems. This workflow is particularly powerful for early-stage ideation, client proposals,
+                and rapid prototyping - contexts where speed and iteration are more valuable than pixel-perfect
                 execution.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mt-4">
-                As AI tools continue to evolve, I'm excited to explore even more sophisticated integrations 
-                that could further enhance the design process while preserving the human touch that makes 
+                As AI tools continue to evolve, I'm excited to explore even more sophisticated integrations
+                that could further enhance the design process while preserving the human touch that makes
                 our work meaningful and impactful.
               </p>
             </div>

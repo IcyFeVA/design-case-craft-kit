@@ -20,83 +20,83 @@ type Screenshot = {
 };
 
 const processShots: Screenshot[] = [
-      {
-        imageUrl: '/img/vstage/process3.png',
-        title: "Process",
-        description: "",
-        category: "UI",
-        year: 2023,
-        tags: [],
-    },
-      {
-        imageUrl: '/img/vstage/process4.png',
-        title: "Process",
-        description: "",
-        category: "UI",
-        year: 2023,
-        tags: [],
-    },
-          {
-        imageUrl: '/img/vstage/process5.png',
-        title: "Process",
-        description: "",
-        category: "UI",
-        year: 2023,
-        tags: [],
-    },
+  {
+    imageUrl: '/img/vstage/process3.png',
+    title: "Process",
+    description: "",
+    category: "UI",
+    year: 2023,
+    tags: [],
+  },
+  {
+    imageUrl: '/img/vstage/process4.png',
+    title: "Process",
+    description: "",
+    category: "UI",
+    year: 2023,
+    tags: [],
+  },
+  {
+    imageUrl: '/img/vstage/process5.png',
+    title: "Process",
+    description: "",
+    category: "UI",
+    year: 2023,
+    tags: [],
+  },
 
 ];
 
-  const uiScreens: Screenshot[] = [
-      {
-          imageUrl: '/img/vstage/final1.png',
-          title: "Final UI",
-          description: "Dark mode of the vSTAGE 3D interface, showcasing the main editor with advanced controls and data visualization.",
-          category: "UX/UI",
-          year: 2023,
-          tags: ["3D", "Presentation", "Real-time", "CAD"],
-      },
-      {
-          imageUrl: '/img/vstage/final5.png',
-          title: "Final UI",
-          description: "Slide-bar navigation (bottom) with large visual trackers for presentation sequences, designed like familiar media players.",
-          category: "UX/UI",
-          year: 2023,
-          tags: ["3D", "Presentation", "Real-time", "CAD"],
-      },
-      {
-          imageUrl: '/img/vstage/final3.png',
-          title: "Final UI",
-          description: "Overlay Editor to manage visual overlays for video export and presentation",
-          category: "UX/UI",
-          year: 2023,
-          tags: ["3D", "Presentation", "Real-time", "CAD"],
-      },
-      {
-          imageUrl: '/img/vstage/final2.png',
-          title: "Final UI",
-          description: "Login screen for vSTAGE, designed to be simple and intuitive for new users.",
-          category: "UX/UI",
-          year: 2023,
-          tags: ["3D", "Presentation", "Real-time", "CAD"],
-      },
-      {
-          imageUrl: '/img/vstage/final4.png',
-          title: "Figma Components",
-          description: "There are dozens of dynamic components and reusable patterns for rapid development.",
-          category: "UX/UI",
-          year: 2023,
-          tags: ["3D", "Presentation", "Real-time", "CAD"],
-      },
-      {
-          imageUrl: '/img/vstage/final6.png',
-          title: "Figma Components",
-          description: "",
-          category: "UX/UI",
-          year: 2023,
-          tags: ["3D", "Presentation", "Real-time", "CAD"],
-      },      
-  ];
+const uiScreens: Screenshot[] = [
+  {
+    imageUrl: '/img/vstage/final1.png',
+    title: "Final UI",
+    description: "Dark mode of the vSTAGE 3D interface, showcasing the main editor with advanced controls and data visualization.",
+    category: "UX/UI",
+    year: 2023,
+    tags: ["3D", "Presentation", "Real-time", "CAD"],
+  },
+  {
+    imageUrl: '/img/vstage/final5.png',
+    title: "Final UI",
+    description: "Slide-bar navigation (bottom) with large visual trackers for presentation sequences, designed like familiar media players.",
+    category: "UX/UI",
+    year: 2023,
+    tags: ["3D", "Presentation", "Real-time", "CAD"],
+  },
+  {
+    imageUrl: '/img/vstage/final3.png',
+    title: "Final UI",
+    description: "Overlay Editor to manage visual overlays for video export and presentation",
+    category: "UX/UI",
+    year: 2023,
+    tags: ["3D", "Presentation", "Real-time", "CAD"],
+  },
+  {
+    imageUrl: '/img/vstage/final2.png',
+    title: "Final UI",
+    description: "Login screen for vSTAGE, designed to be simple and intuitive for new users.",
+    category: "UX/UI",
+    year: 2023,
+    tags: ["3D", "Presentation", "Real-time", "CAD"],
+  },
+  {
+    imageUrl: '/img/vstage/final4.png',
+    title: "Figma Components",
+    description: "There are dozens of dynamic components and reusable patterns for rapid development.",
+    category: "UX/UI",
+    year: 2023,
+    tags: ["3D", "Presentation", "Real-time", "CAD"],
+  },
+  {
+    imageUrl: '/img/vstage/final6.png',
+    title: "Figma Components",
+    description: "",
+    category: "UX/UI",
+    year: 2023,
+    tags: ["3D", "Presentation", "Real-time", "CAD"],
+  },
+];
 
 
 
@@ -105,7 +105,7 @@ const VStage = () => {
 
   const selectedUiScreen = openUiScreenIndex !== null ? uiScreens[openUiScreenIndex] : null;
 
-  
+
   return (
     <div className="min-h-screen bg-background">
       <CaseStudyNav />
@@ -130,7 +130,7 @@ const VStage = () => {
               </div>
             </div>
           </section> */}
-          
+
           {/* Hero Section */}
           <section className="mb-20">
             <div className="mb-8">
@@ -141,7 +141,7 @@ const VStage = () => {
                 Complex B2B SaaS 3D Data Visualization & Presentation Platform
               </p>
             </div>
-            
+
             <div className="mb-12">
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Led the complete UX/UI redesign of vSTAGE, a 3D data visualization platform, transforming it from a CAD-expert-only tool into an adaptive interface serving both professionals and newcomers. Through extensive user research, progressive disclosure design, and modular component architecture, achieved 75% faster onboarding for new users while improving expert workflow efficiency by 40%. The project demonstrates expertise in complex data visualization, adaptive UI systems, and scalable design methodologies.
@@ -155,7 +155,7 @@ const VStage = () => {
 
             {/* Before/After Slider */}
             <div className="mb-12 flex justify-center">
-              <BeforeAfterSlider 
+              <BeforeAfterSlider
                 beforeImage="/img/vstage/before.png"
                 afterImage="/img/vstage/after.png"
                 beforeLabel="Before"
@@ -188,7 +188,7 @@ const VStage = () => {
                 <p className="text-xl text-muted-foreground leading-relaxed">
                   vSTAGE was a powerful 3D visualization platform trapped in expert-only complexity. With 85% of potential users abandoning the tool within their first session, Side Effects needed a fundamental UX transformation to unlock the platform's market potential while preserving its technical depth.
                 </p>
-                
+
                 <div className="grid md:grid-cols-2 gap-8">
                   <div>
                     <h3 className="text-xl font-semibold text-foreground mb-4">Target User Personas</h3>
@@ -224,7 +224,7 @@ const VStage = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   <div>
                     <h3 className="text-xl font-semibold text-foreground mb-4">Research Insights & Market Analysis</h3>
                     <div className="space-y-4">
@@ -296,7 +296,7 @@ const VStage = () => {
                 <img
                   src="/img/vstage/hero.png"
                   alt="vSTAGE Project Overview"
-                  className="w-full h-full object-cover rounded-2xl"/>
+                  className="w-full h-full object-cover rounded-2xl" />
               </div>
             </div>
           </section>
@@ -308,7 +308,7 @@ const VStage = () => {
               <p className="text-xl text-muted-foreground leading-relaxed">
                 vSTAGE's existing interface created a significant barrier to adoption, with complex workflows that overwhelmed newcomers while simultaneously limiting expert efficiency. The challenge was designing a solution that could scale from simple presentations to complex 3D data manipulation without compromising either use case.
               </p>
-              
+
               <div className="bg-muted/30 rounded-2xl p-6 mb-8">
                 <h3 className="text-lg font-semibold text-foreground mb-3">Current User Journey Pain Points</h3>
                 <div className="grid md:grid-cols-1 gap-4 text-sm text-muted-foreground">
@@ -371,7 +371,7 @@ const VStage = () => {
             </div>
           </section>
 
-            <div className="mb-64"></div>
+          <div className="mb-64"></div>
 
           {/* Design Process & Methodology */}
           <section className="bg-muted/30 py-16 mb-20">
@@ -506,7 +506,7 @@ const VStage = () => {
                 <p className="text-xl text-muted-foreground leading-relaxed">
                   Designing vSTAGE required navigating significant technical challenges inherent to 3D data visualization, including real-time rendering of massive datasets, cross-platform compatibility, and seamless integration with existing CAD ecosystems. Each constraint informed innovative solutions that balanced performance, usability, and scalability.
                 </p>
-                
+
                 <div className="grid md:grid-cols-2 gap-8">
                   <div className="bg-card rounded-2xl p-6">
                     <h3 className="text-xl font-semibold text-foreground mb-4">Performance & Rendering Constraints</h3>
@@ -523,7 +523,7 @@ const VStage = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className="bg-card rounded-2xl p-6">
                     <h3 className="text-xl font-semibold text-foreground mb-4">Integration & Compatibility</h3>
                     <div className="space-y-4">
@@ -577,17 +577,17 @@ const VStage = () => {
                       <h4 className="font-semibold text-foreground mb-2">Adaptive UI System</h4>
                       <p className="text-muted-foreground">Toggle-based interface that hides complexity for newcomers while keeping advanced tools accessible to experts. Pop-over toggles, collapsible panels, and contextual menus.</p>
                     </div>
-                    
+
                     <div className="bg-amber-50 dark:bg-amber-950/30 p-6 rounded-xl border-l-4 border-amber-200 dark:border-amber-800">
                       <h4 className="font-semibold text-amber-700 mb-2">Slide-Bar Navigation</h4>
                       <p className="text-amber-700">Horizontal slide navigation with large visual trackers for presentation sequences - the one exception to the "no horizontal scroll" rule, designed like familiar media players.</p>
                     </div>
-                    
+
                     <div className="bg-emerald-50 dark:bg-emerald-950/30 p-6 rounded-xl border-l-4 border-emerald-200 dark:border-emerald-800">
                       <h4 className="font-semibold text-emerald-600 mb-2">Smart Tree View Filters</h4>
                       <p className="text-emerald-700">Hierarchical component browser with bulk selection, inverse selection, bookmarking, and tagging. Handles 50k+ components with search and filtering.</p>
                     </div>
-                    
+
                     <div className="bg-violet-50 dark:bg-violet-950/30 p-6 rounded-xl border-l-4 border-violet-200 dark:border-violet-800">
                       <h4 className="font-semibold text-violet-600 mb-2">Dual Theme System</h4>
                       <p className="text-violet-700">Complete dark/light theme implementation optimized for long CAD sessions and presentation environments. Seamless switching preserves user context.</p>
@@ -810,57 +810,57 @@ const VStage = () => {
 
           {/* Video */}
           <section className="py-16">
-              <div className="max-w-4xl mx-auto px-6">
-                  <div className="space-y-8">
-                      <h2 className="text-3xl font-bold text-foreground text-center">
-                          Prototype in Action
-                      </h2>
-                      <div className="flex justify-center">
-                          <div className="aspect-video w-full max-w-4xl rounded-2xl overflow-hidden shadow-lg bg-black">
-                                        <iframe
-                                            className="w-full h-full"
-                                            src="https://www.youtube.com/embed/x9Sv6HWOf9E?si=vtetT8m7eiUsq2PR" 
-                                            title="YouTube video player" 
-                                            frameBorder="0" 
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                            referrerPolicy="strict-origin-when-cross-origin" 
-                                            allowFullScreen>
-                                        </iframe>
-                          </div>
-                      </div>
+            <div className="max-w-4xl mx-auto px-6">
+              <div className="space-y-8">
+                <h2 className="text-3xl font-bold text-foreground text-center">
+                  Prototype in Action
+                </h2>
+                <div className="flex justify-center">
+                  <div className="aspect-video w-full max-w-4xl rounded-2xl overflow-hidden shadow-lg bg-black">
+                    <iframe
+                      className="w-full h-full"
+                      src="https://www.youtube.com/embed/x9Sv6HWOf9E?si=vtetT8m7eiUsq2PR"
+                      title="YouTube video player"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen>
+                    </iframe>
                   </div>
+                </div>
               </div>
-          </section>          
+            </div>
+          </section>
 
 
           {/* UI Screens Section */}
           <section className="py-16">
             <div className="max-w-4xl mx-auto">
-                <div className="space-y-8">
-                    <h2 className="text-3xl font-bold text-foreground">
-                        Final UI
-                    </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {uiScreens.map((screen, index) => (
-                            <Card
-                                key={index}
-                                className="w-full rounded-2xl shadow-xl overflow-hidden transform transition-transform hover:scale-105 cursor-pointer aspect-video"
-                                onClick={() => setOpenUiScreenIndex(index)}
-                                style={{transform: `rotate(${(-5 + Math.random()*10)}deg)`, border: '5px solid #fff'}}
-                            >
-                                <CardContent className="p-0 w-full h-full">
-                                    <img src={screen.imageUrl} alt={screen.title} className="w-full h-full object-cover" />
-                                </CardContent>
-                            </Card>
-                        ))}
-                    </div>
+              <div className="space-y-8">
+                <h2 className="text-3xl font-bold text-foreground">
+                  Final UI
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  {uiScreens.map((screen, index) => (
+                    <Card
+                      key={index}
+                      className="w-full rounded-2xl shadow-xl overflow-hidden transform transition-transform hover:scale-105 cursor-pointer aspect-video"
+                      onClick={() => setOpenUiScreenIndex(index)}
+                      style={{ transform: `rotate(${(-5 + Math.random() * 10)}deg)`, border: '5px solid #fff' }}
+                    >
+                      <CardContent className="p-0 w-full h-full">
+                        <img src={screen.imageUrl} alt={screen.title} className="w-full h-full object-cover" />
+                      </CardContent>
+                    </Card>
+                  ))}
                 </div>
-                      <GalleryImageDialog
-                          open={!!selectedUiScreen}
-                          onOpenChange={(open) => setOpenUiScreenIndex(open ? openUiScreenIndex : null)}
-                          item={selectedUiScreen}
-                      />
-                
+              </div>
+              <GalleryImageDialog
+                open={!!selectedUiScreen}
+                onOpenChange={(open) => setOpenUiScreenIndex(open ? openUiScreenIndex : null)}
+                item={selectedUiScreen}
+              />
+
             </div>
           </section>
 
@@ -872,7 +872,7 @@ const VStage = () => {
                 <p className="text-xl text-muted-foreground text-center leading-relaxed max-w-3xl mx-auto">
                   The vSTAGE redesign establishes a strong foundation for continued innovation in 3D visualization UX. Future development will focus on expanding collaborative capabilities, integrating emerging technologies, and scaling the adaptive interface framework for broader industry applications.
                 </p>
-                
+
                 <div className="grid md:grid-cols-2 gap-8">
                   <div className="bg-card rounded-2xl p-6">
                     <h3 className="text-xl font-semibold text-foreground mb-4">Immediate Next Steps</h3>
@@ -891,7 +891,7 @@ const VStage = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className="bg-card rounded-2xl p-6">
                     <h3 className="text-xl font-semibold text-foreground mb-4">Long-term Vision</h3>
                     <div className="space-y-4">
@@ -933,7 +933,7 @@ const VStage = () => {
                     <ExternalLink size={16} />
                   </Button>
                 </Link>
-                <Link to="/">
+                <Link to="/home">
                   <Button className="inline-flex items-center gap-2">
                     Back to Portfolio
                     <ExternalLink size={16} />

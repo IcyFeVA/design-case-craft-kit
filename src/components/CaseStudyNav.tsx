@@ -14,7 +14,7 @@ const CaseStudyNav: React.FC<CaseStudyNavProps> = ({ linkOverride }) => {
                 <div className="flex items-center justify-between h-16">
                     <div className="flex items-center space-x-8">
                         <Link
-                            to={linkOverride || "/#work"}
+                            to={linkOverride || "/home#work"}
                             className="flex items-center space-x-2 text-muted-foreground hover:text-foreground transition-colors"
                         >
                             <ArrowLeft className="w-4 h-4" />

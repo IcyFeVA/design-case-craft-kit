@@ -17,7 +17,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
   const skills = [
-    "UX/UI Design", "Figma", "Design Systems", "User Research", 
+    "UX/UI Design", "Figma", "Design Systems", "User Research",
     "Prototyping", "3D Interfaces", "Interaction Design", "Visual Design"
   ];
 
@@ -30,7 +30,7 @@ const Home = () => {
       link: "/case-study"
     },
     {
-      title: "E-commerce Platform", 
+      title: "E-commerce Platform",
       category: "Web Application",
       description: "Complete redesign of a B2B marketplace, increasing conversion rates by 40% through improved user flows.",
       tags: ["Web Design", "User Research", "Conversion Optimization"],
@@ -89,12 +89,12 @@ const Home = () => {
     }
 
     // Stats section animation
-    gsap.fromTo(statsRef.current, 
+    gsap.fromTo(statsRef.current,
       { opacity: 0, y: 30 },
-      { 
-        opacity: 1, 
-        y: 0, 
-        duration: 1, 
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
         scrollTrigger: {
           trigger: statsRef.current,
           start: "top 80%"
@@ -119,7 +119,7 @@ const Home = () => {
           duration: 2,
           snap: { innerText: 1 },
           scrollTrigger: { trigger: statsRef.current, start: "top 80%" },
-          onUpdate: function() {
+          onUpdate: function () {
             if (projectsRef.current) projectsRef.current.innerText = Math.floor(this.targets()[0].innerText) + "+";
           }
         })
@@ -131,7 +131,7 @@ const Home = () => {
           duration: 2,
           snap: { innerText: 1 },
           scrollTrigger: { trigger: statsRef.current, start: "top 80%" },
-          onUpdate: function() {
+          onUpdate: function () {
             if (clientsRef.current) clientsRef.current.innerText = Math.floor(this.targets()[0].innerText) + "+";
           }
         })
@@ -143,7 +143,7 @@ const Home = () => {
           duration: 2,
           snap: { innerText: 1 },
           scrollTrigger: { trigger: statsRef.current, start: "top 80%" },
-          onUpdate: function() {
+          onUpdate: function () {
             if (yearsRef.current) yearsRef.current.innerText = Math.floor(this.targets()[0].innerText) + "+";
           }
         })
@@ -155,7 +155,7 @@ const Home = () => {
           duration: 2,
           snap: { innerText: 1 },
           scrollTrigger: { trigger: statsRef.current, start: "top 80%" },
-          onUpdate: function() {
+          onUpdate: function () {
             if (awardsRef.current) awardsRef.current.innerText = Math.floor(this.targets()[0].innerText).toString();
           }
         })
@@ -167,14 +167,14 @@ const Home = () => {
       if (yearsRef.current) yearsRef.current.innerText = "10+";
       if (awardsRef.current) awardsRef.current.innerText = "25000+";
     }
- 
+
     // Featured work animation
-    gsap.fromTo(featuredWorkRef.current, 
+    gsap.fromTo(featuredWorkRef.current,
       { opacity: 0, y: 30 },
-      { 
-        opacity: 1, 
-        y: 0, 
-        duration: 1, 
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
         scrollTrigger: {
           trigger: featuredWorkRef.current,
           start: "top 80%"
@@ -183,12 +183,12 @@ const Home = () => {
     );
 
     // AI exploration animation
-    gsap.fromTo(aiexplorationRef.current, 
+    gsap.fromTo(aiexplorationRef.current,
       { opacity: 0, y: 30 },
-      { 
-        opacity: 1, 
-        y: 0, 
-        duration: 1, 
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
         scrollTrigger: {
           trigger: aiexplorationRef.current,
           start: "top 80%"
@@ -196,12 +196,12 @@ const Home = () => {
       }
     );
     // Case studies animation
-    gsap.fromTo(caseStudiesRef.current, 
+    gsap.fromTo(caseStudiesRef.current,
       { opacity: 0, y: 30 },
-      { 
-        opacity: 1, 
-        y: 0, 
-        duration: 1, 
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
         scrollTrigger: {
           trigger: caseStudiesRef.current,
           start: "top 80%"
@@ -210,12 +210,12 @@ const Home = () => {
     );
 
     // About section animation
-    gsap.fromTo(aboutRef.current, 
+    gsap.fromTo(aboutRef.current,
       { opacity: 0, y: 30 },
-      { 
-        opacity: 1, 
-        y: 0, 
-        duration: 1, 
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
         scrollTrigger: {
           trigger: aboutRef.current,
           start: "top 80%"
@@ -224,12 +224,12 @@ const Home = () => {
     );
 
     // Testimonials animation
-    gsap.fromTo(testimonialsRef.current, 
+    gsap.fromTo(testimonialsRef.current,
       { opacity: 0, y: 30 },
-      { 
-        opacity: 1, 
-        y: 0, 
-        duration: 1, 
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
         scrollTrigger: {
           trigger: testimonialsRef.current,
           start: "top 80%"
@@ -238,12 +238,12 @@ const Home = () => {
     );
 
     // Contact section animation
-    gsap.fromTo(contactRef.current, 
+    gsap.fromTo(contactRef.current,
       { opacity: 0, y: 30 },
-      { 
-        opacity: 1, 
-        y: 0, 
-        duration: 1, 
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
         scrollTrigger: {
           trigger: contactRef.current,
           start: "top 80%"
@@ -313,23 +313,23 @@ const Home = () => {
             </p>
           </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-            <Link to="/#work">
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link to="/home#work">
               <Button variant="explore" size="lg" className="gap-2">
-              View My Work
-              <ArrowDown className="w-4 h-4 explore-arrow" />
+                View My Work
+                <ArrowDown className="w-4 h-4 explore-arrow" />
               </Button>
             </Link>
             <Link to="/ui-gallery">
               <Button variant="outline" size="lg" className="gap-2">
-              {/* <Grid3X3 className="w-4 h-4" /> */}
-              Curated Gallery
+                {/* <Grid3X3 className="w-4 h-4" /> */}
+                Curated Gallery
               </Button>
             </Link>
-            </div>
+          </div>
 
           {/* Social Links */}
-            <div className="flex items-center space-x-6 pt-4">
+          <div className="flex items-center space-x-6 pt-4">
             {/* <Link to="https://instagram.com/icyfeva" target="_blank" className="text-gray-400 hover:text-gray-600 transition-colors">
               <Instagram className="w-5 h-5" />
             </Link>
@@ -381,7 +381,7 @@ const Home = () => {
 
       {/* The Future of UX/UI Design */}
       <section ref={aiexplorationRef} className="max-w-6xl mx-auto px-6 py-20">
-        
+
         <div className="h-16"></div>
 
         <div className="space-y-8">
@@ -434,10 +434,10 @@ const Home = () => {
                 </Button> */}
               </div>
             </div>
-          </div>   
+          </div>
 
         </div>
-      </section> 
+      </section>
 
       <div className="h-16"></div>
 
@@ -509,7 +509,7 @@ const Home = () => {
             <Link to="/txcms-case-study">
               <Card className="border-0 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
                 <CardContent className="p-0">
-                    <div className="aspect-video rounded-t-lg flex items-center justify-center border-b featured-work-container">
+                  <div className="aspect-video rounded-t-lg flex items-center justify-center border-b featured-work-container">
                     <img src="/img/tx/thumb.png" alt="vSTAGE Hero" className="aspect-video w-full object-cover rounded-lg featured-work-hover transition-transform duration-300 hover:scale-105" />
                   </div>
                   <div className="p-6 space-y-4">
@@ -629,7 +629,7 @@ const Home = () => {
                 </CardContent>
               </Card>
             </Link> */}
-          </div>            
+          </div>
 
           <div className="h-8"> </div>
 
@@ -669,7 +669,7 @@ const Home = () => {
                 </Button> */}
               </div>
             </div>
-          </div>       
+          </div>
 
         </div>
       </section>
@@ -687,66 +687,66 @@ const Home = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             {/* <Link to="/case-study" className="group"> */}
-              <div className="bg-card rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 h-full">
-                <div className="h-48 bg-gradient-to-br from-slate-300 to-slate-500 dark:from-slate-800 dark:to-slate-600 rounded-xl mb-6 flex items-center justify-center">
-                  <div className="text-center flex flex-col items-center justify-center">
-                    <FolderLock className="w-16 h-16 text-white mb-3" />
-                    <p className="text-white font-medium">Crushy</p>
-                  </div>
+            <div className="bg-card rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 h-full">
+              <div className="h-48 bg-gradient-to-br from-slate-300 to-slate-500 dark:from-slate-800 dark:to-slate-600 rounded-xl mb-6 flex items-center justify-center">
+                <div className="text-center flex flex-col items-center justify-center">
+                  <FolderLock className="w-16 h-16 text-white mb-3" />
+                  <p className="text-white font-medium">Crushy</p>
                 </div>
-                <h3 className="text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
-                  Brand New Social Networking App
-                </h3>
-                <p className="text-muted-foreground mb-4 leading-relaxed">
-                  A fresh approach to social networking, focusing on people first.
-                </p>
-                {/* <div className="flex items-center text-blue-600 font-medium">
+              </div>
+              <h3 className="text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
+                Brand New Social Networking App
+              </h3>
+              <p className="text-muted-foreground mb-4 leading-relaxed">
+                A fresh approach to social networking, focusing on people first.
+              </p>
+              {/* <div className="flex items-center text-blue-600 font-medium">
                   Read Case Study
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </div> */}
-              </div>
+            </div>
             {/* </Link> */}
 
             {/* <Link to="/ecommerce-case-study" className="group"> */}
-              <div className="bg-card rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 h-full">
-                <div className="h-48 bg-gradient-to-br from-slate-300 to-slate-500 dark:from-slate-800 dark:to-slate-600 rounded-xl mb-6 flex items-center justify-center">
-                  <div className="text-center flex flex-col items-center justify-center">
-                    <FolderLock className="w-16 h-16 text-white mb-3" />
-                    <p className="text-white font-medium">Bolt from the Blue</p>
-                  </div>
+            <div className="bg-card rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 h-full">
+              <div className="h-48 bg-gradient-to-br from-slate-300 to-slate-500 dark:from-slate-800 dark:to-slate-600 rounded-xl mb-6 flex items-center justify-center">
+                <div className="text-center flex flex-col items-center justify-center">
+                  <FolderLock className="w-16 h-16 text-white mb-3" />
+                  <p className="text-white font-medium">Bolt from the Blue</p>
                 </div>
-                <h3 className="text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
-                  Fictional UI's for a Feature Film
-                </h3>
-                <p className="text-muted-foreground mb-4 leading-relaxed">
-                  After working on a Netflix Show, I had the pleasure to design and animate UI's for a feature film.
-                </p>
-                {/* <div className="flex items-center text-blue-600 font-medium">
+              </div>
+              <h3 className="text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
+                Fictional UI's for a Feature Film
+              </h3>
+              <p className="text-muted-foreground mb-4 leading-relaxed">
+                After working on a Netflix Show, I had the pleasure to design and animate UI's for a feature film.
+              </p>
+              {/* <div className="flex items-center text-blue-600 font-medium">
                   Read Case Study
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </div> */}
-              </div>
+            </div>
             {/* </Link> */}
 
             {/* <Link to="/mindspace-case-study" className="group"> */}
-              <div className="bg-card rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 h-full">
-                <div className="h-48 bg-gradient-to-br from-slate-300 to-slate-500 dark:from-slate-800 dark:to-slate-600 rounded-xl mb-6 flex items-center justify-center">
-                  <div className="text-center flex flex-col items-center justify-center">
-                    <FolderLock className="w-16 h-16 text-white mb-3" />
-                    <p className="text-white font-medium">inTime</p>
-                  </div>
+            <div className="bg-card rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 h-full">
+              <div className="h-48 bg-gradient-to-br from-slate-300 to-slate-500 dark:from-slate-800 dark:to-slate-600 rounded-xl mb-6 flex items-center justify-center">
+                <div className="text-center flex flex-col items-center justify-center">
+                  <FolderLock className="w-16 h-16 text-white mb-3" />
+                  <p className="text-white font-medium">inTime</p>
                 </div>
-                <h3 className="text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
-                  inTime Solutions
-                </h3>
-                <p className="text-muted-foreground mb-4 leading-relaxed">
-                  Scheduling and workforce management software purpose-built for Public Safety.
-                </p>
-                {/* <div className="flex items-center text-blue-600 font-medium">
+              </div>
+              <h3 className="text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
+                inTime Solutions
+              </h3>
+              <p className="text-muted-foreground mb-4 leading-relaxed">
+                Scheduling and workforce management software purpose-built for Public Safety.
+              </p>
+              {/* <div className="flex items-center text-blue-600 font-medium">
                   Read Case Study
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </div> */}
-              </div>
+            </div>
             {/* </Link> */}
           </div>
         </div>

@@ -27,99 +27,99 @@ type Screenshot = {
 };
 
 const screenshots: Screenshot[] = [
-      {
-        imageUrl: '/img/tesla/process3.png',
-        title: "Process",
-        description: "First draft looks nice, but not usable (text and buttons too small).",
-        category: "UI",
-        year: 2023,
-        tags: ["Dashboard", "Tesla", "Apple Watch"],
-    },
-    {
-        imageUrl: '/img/tesla/process1.png',
-        title: "Process",
-        description: "Iterations: Home Screen / Summoning Car",
-        category: "UI",
-        year: 2023,
-        tags: ["Dashboard", "Tesla", "Apple Watch"],
-    },
-    {
-        imageUrl: '/img/tesla/process2.png',
-        title: "Process",
-        description: "Iterations: Touch Surface",
-        category: "UI",
-        year: 2023,
-        tags: ["Dashboard", "Tesla", "Apple Watch"],
-    },
-      {
-        imageUrl: '/img/tesla/process4.png',
-        title: "Process",
-        description: "The concept of using a touch surface to execute a action was inspired by the James Bond movie 'Tomorrow Never Dies.' In this film, the renowned spy is seen using a touchpad on an Ericsson phone to control his BMW car.",
-        category: "UI",
-        year: 2023,
-        tags: ["Dashboard", "Tesla", "Apple Watch"],
-    },
+  {
+    imageUrl: '/img/tesla/process3.png',
+    title: "Process",
+    description: "First draft looks nice, but not usable (text and buttons too small).",
+    category: "UI",
+    year: 2023,
+    tags: ["Dashboard", "Tesla", "Apple Watch"],
+  },
+  {
+    imageUrl: '/img/tesla/process1.png',
+    title: "Process",
+    description: "Iterations: Home Screen / Summoning Car",
+    category: "UI",
+    year: 2023,
+    tags: ["Dashboard", "Tesla", "Apple Watch"],
+  },
+  {
+    imageUrl: '/img/tesla/process2.png',
+    title: "Process",
+    description: "Iterations: Touch Surface",
+    category: "UI",
+    year: 2023,
+    tags: ["Dashboard", "Tesla", "Apple Watch"],
+  },
+  {
+    imageUrl: '/img/tesla/process4.png',
+    title: "Process",
+    description: "The concept of using a touch surface to execute a action was inspired by the James Bond movie 'Tomorrow Never Dies.' In this film, the renowned spy is seen using a touchpad on an Ericsson phone to control his BMW car.",
+    category: "UI",
+    year: 2023,
+    tags: ["Dashboard", "Tesla", "Apple Watch"],
+  },
 
 ];
 
 type ScreenshotsRowProps = {
-    screenshots: Screenshot[];
+  screenshots: Screenshot[];
 };
 
 function ScreenshotsRow({ screenshots }: ScreenshotsRowProps) {
-    const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-    const selectedImage = openIndex !== null ? screenshots[openIndex] : null;
-    const setSelectedImage = (idx: number | null) => setOpenIndex(idx);
+  const selectedImage = openIndex !== null ? screenshots[openIndex] : null;
+  const setSelectedImage = (idx: number | null) => setOpenIndex(idx);
 
-    return (
-        <>
-            <div className="flex items-center mt-8" style={{ height: 48 }}>
-                <span
-                    className="mr-4 text-sm font-medium text-muted-foreground"
-                    style={{ minWidth: 80 }}
-                >
-                    Process Shots
-                </span>
-                {screenshots.map((s, i) => ( 
-                    <div
-                        key={i}
-                        style={{
-                            width: 120,
-                            aspectRatio: "16/9",
-                            borderRadius: 8,
-                            overflow: "hidden",
-                            marginLeft: i === 0 ? 0 : 16,
-                            zIndex: 10 + i,
-                            background: `url(${s.imageUrl}) center/cover`,
-                            cursor: "pointer",
-                            // transition: "box-shadow 0.2s",
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            color: "#fff",
-                            fontSize: 12,
-                            fontWeight: 500,
-                            textShadow: "0 1px 4px rgba(0,0,0,0.4)",
-                            border: "3px solid #fff",
-                            boxSizing: "border-box",
-                            // transform: Math.random() > 0.5 ? "rotate(3deg)" : "rotate(-3deg)",
-                        }}
-                        title={s.title}
-                        onClick={() => setOpenIndex(i)}
-                        className="shadow-2xl transform transition-transform duration-300 hover:scale-110"
-                    >
-                    </div>
-                ))}
-            </div>
-            {/* Image Overlay Dialog */}
-            <GalleryImageDialog
-                open={!!selectedImage}
-                onOpenChange={(open) => setSelectedImage(open ? openIndex : null)}
-                item={selectedImage}
-            />
-        </>
-    );
+  return (
+    <>
+      <div className="flex items-center mt-8" style={{ height: 48 }}>
+        <span
+          className="mr-4 text-sm font-medium text-muted-foreground"
+          style={{ minWidth: 80 }}
+        >
+          Process Shots
+        </span>
+        {screenshots.map((s, i) => (
+          <div
+            key={i}
+            style={{
+              width: 120,
+              aspectRatio: "16/9",
+              borderRadius: 8,
+              overflow: "hidden",
+              marginLeft: i === 0 ? 0 : 16,
+              zIndex: 10 + i,
+              background: `url(${s.imageUrl}) center/cover`,
+              cursor: "pointer",
+              // transition: "box-shadow 0.2s",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              color: "#fff",
+              fontSize: 12,
+              fontWeight: 500,
+              textShadow: "0 1px 4px rgba(0,0,0,0.4)",
+              border: "3px solid #fff",
+              boxSizing: "border-box",
+              // transform: Math.random() > 0.5 ? "rotate(3deg)" : "rotate(-3deg)",
+            }}
+            title={s.title}
+            onClick={() => setOpenIndex(i)}
+            className="shadow-2xl transform transition-transform duration-300 hover:scale-110"
+          >
+          </div>
+        ))}
+      </div>
+      {/* Image Overlay Dialog */}
+      <GalleryImageDialog
+        open={!!selectedImage}
+        onOpenChange={(open) => setSelectedImage(open ? openIndex : null)}
+        item={selectedImage}
+      />
+    </>
+  );
 }
 
 
@@ -127,30 +127,30 @@ const TeslaWatchApp = () => {
   const [openUiScreenIndex, setOpenUiScreenIndex] = useState<number | null>(null);
 
   const uiScreens: Screenshot[] = [
-      {
-          imageUrl: '/img/tesla/final1.png',
-          title: "What if Tesla had a Apple Watch App?",
-          description: "Mockup",
-          category: "UX/UI",
-          year: 2023,
-          tags: ["Climate", "Controls", "Watch"],
-      },
-      {
-          imageUrl: '/img/tesla/final2.jpg',
-          title: "On the Apple Watch Ultra",
-          description: "Mockup",
-          category: "UX/UI",
-          year: 2023,
-          tags: ["Climate", "Controls", "Watch"],
-      },
-      {
-          imageUrl: '/img/tesla/final3.png',
-          title: "Teaser",
-          description: "Mockup",
-          category: "UX/UI",
-          year: 2023,
-          tags: ["Climate", "Controls", "Watch"],
-      },
+    {
+      imageUrl: '/img/tesla/final1.png',
+      title: "What if Tesla had a Apple Watch App?",
+      description: "Mockup",
+      category: "UX/UI",
+      year: 2023,
+      tags: ["Climate", "Controls", "Watch"],
+    },
+    {
+      imageUrl: '/img/tesla/final2.jpg',
+      title: "On the Apple Watch Ultra",
+      description: "Mockup",
+      category: "UX/UI",
+      year: 2023,
+      tags: ["Climate", "Controls", "Watch"],
+    },
+    {
+      imageUrl: '/img/tesla/final3.png',
+      title: "Teaser",
+      description: "Mockup",
+      category: "UX/UI",
+      year: 2023,
+      tags: ["Climate", "Controls", "Watch"],
+    },
   ];
 
   const selectedUiScreen = openUiScreenIndex !== null ? uiScreens[openUiScreenIndex] : null;
@@ -192,7 +192,7 @@ const TeslaWatchApp = () => {
             </h1>
 
             <p className="text-xl text-muted-foreground leading-relaxed">
-This concept project reimagines the Tesla mobile app for Apple Watch, addressing key challenges in wearable UX design. Through user research, iterative prototyping, and gesture-based interactions inspired by cinematic innovation, I created a seamless wrist-based Tesla experience. The project demonstrates expertise in constraint-driven design, animation prototyping, and cross-platform compatibility, resulting in a 40% reduction in task completion time for core features (hypothetical testing).
+              This concept project reimagines the Tesla mobile app for Apple Watch, addressing key challenges in wearable UX design. Through user research, iterative prototyping, and gesture-based interactions inspired by cinematic innovation, I created a seamless wrist-based Tesla experience. The project demonstrates expertise in constraint-driven design, animation prototyping, and cross-platform compatibility, resulting in a 40% reduction in task completion time for core features (hypothetical testing).
             </p>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 py-4">
@@ -225,7 +225,7 @@ This concept project reimagines the Tesla mobile app for Apple Watch, addressing
             <p className="text-xl text-muted-foreground leading-relaxed">
               Tesla owners frequently need quick access to vehicle controls, but the mobile app requires pulling out their phone. A watch app could enable hands-free, glanceable interactions, but wearable constraints demand innovative solutions.
             </p>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h3 className="text-xl font-semibold text-foreground mb-4">Target Users</h3>
@@ -250,7 +250,7 @@ This concept project reimagines the Tesla mobile app for Apple Watch, addressing
                   </div>
                 </div>
               </div>
-              
+
               <div>
                 <h3 className="text-xl font-semibold text-foreground mb-4">Research Insights</h3>
                 <div className="space-y-4">
@@ -312,7 +312,7 @@ This concept project reimagines the Tesla mobile app for Apple Watch, addressing
               <img
                 src="/img/tesla/thumb.png"
                 alt="Tesla Watch App Hero Image"
-                className="w-full h-full object-cover rounded-2xl"/>
+                className="w-full h-full object-cover rounded-2xl" />
             </div>
           </div>
         </div>
@@ -326,7 +326,7 @@ This concept project reimagines the Tesla mobile app for Apple Watch, addressing
             <p className="text-xl text-muted-foreground leading-relaxed">
               Building on user research insights, the primary challenge was adapting Tesla's complex mobile features for the Apple Watch's 1.78-inch display (312x390 pixels) and limited input methods. With 68% of users accessing the app 5+ times daily, the design needed to reduce interaction time from 8-10 seconds (phone) to under 3 seconds (watch) while maintaining safety and accessibility standards.
             </p>
-            
+
             <div className="bg-card rounded-2xl p-6 mb-8">
               <h3 className="text-lg font-semibold text-foreground mb-3">User Journey Pain Points</h3>
               <div className="grid md:grid-cols-1 gap-4 text-sm text-muted-foreground">
@@ -505,7 +505,7 @@ This concept project reimagines the Tesla mobile app for Apple Watch, addressing
             <p className="text-xl text-muted-foreground leading-relaxed">
               Designing for Apple Watch required navigating strict technical limitations while maintaining seamless integration with Tesla's ecosystem. Each constraint became an opportunity for innovative problem-solving.
             </p>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-card rounded-2xl p-6">
                 <h3 className="text-xl font-semibold text-foreground mb-4">Platform Constraints</h3>
@@ -522,7 +522,7 @@ This concept project reimagines the Tesla mobile app for Apple Watch, addressing
                   </div>
                 </div>
               </div>
-              
+
               <div className="bg-card rounded-2xl p-6">
                 <h3 className="text-xl font-semibold text-foreground mb-4">Integration Solutions</h3>
                 <div className="space-y-4">
@@ -561,60 +561,60 @@ This concept project reimagines the Tesla mobile app for Apple Watch, addressing
         </div>
       </section>
 
-        {/* Animation Demo */}
-    <section className="py-16">
+      {/* Animation Demo */}
+      <section className="py-16">
         <div className="max-w-4xl mx-auto px-6">
-            <div className="space-y-8">
-                <h2 className="text-3xl font-bold text-foreground text-center">
-                    Prototype Animation
-                </h2>
-                <div className="flex justify-center">
-                    <div className="aspect-video w-full max-w-4xl rounded-2xl overflow-hidden shadow-lg bg-black">
-                        <iframe
-                            src="https://player.vimeo.com/video/867596433"
-                            width="100%"
-                            height="100%"
-                            allow="autoplay; fullscreen; picture-in-picture"
-                            allowFullScreen
-                            title="Tesla Watch App Demo"
-                            className="w-full h-full"
-                        ></iframe>
-                    </div>
-                </div>
+          <div className="space-y-8">
+            <h2 className="text-3xl font-bold text-foreground text-center">
+              Prototype Animation
+            </h2>
+            <div className="flex justify-center">
+              <div className="aspect-video w-full max-w-4xl rounded-2xl overflow-hidden shadow-lg bg-black">
+                <iframe
+                  src="https://player.vimeo.com/video/867596433"
+                  width="100%"
+                  height="100%"
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowFullScreen
+                  title="Tesla Watch App Demo"
+                  className="w-full h-full"
+                ></iframe>
+              </div>
             </div>
+          </div>
         </div>
-    </section>
+      </section>
 
 
       {/* UI Screens Section */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-6">
-            <div className="space-y-8">
-                <h2 className="text-3xl font-bold text-foreground text-center">
-                    Mockups
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {uiScreens.map((screen, index) => (
-                        <Card
-                            key={index}
-                            className="w-full rounded-2xl shadow-xl overflow-hidden transform transition-transform hover:scale-105 cursor-pointer aspect-video"
-                            onClick={() => setOpenUiScreenIndex(index)}
-                            style={{transform: `rotate(${(-5 + Math.random()*10)}deg)`, border: '5px solid #fff'}}
-                        >
-                            <CardContent className="p-0 w-full h-full">
-                                <img src={screen.imageUrl} alt={screen.title} className="w-full h-full object-cover" />
-                            </CardContent>
-                        </Card>
-                    ))}
-                </div>
+          <div className="space-y-8">
+            <h2 className="text-3xl font-bold text-foreground text-center">
+              Mockups
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {uiScreens.map((screen, index) => (
+                <Card
+                  key={index}
+                  className="w-full rounded-2xl shadow-xl overflow-hidden transform transition-transform hover:scale-105 cursor-pointer aspect-video"
+                  onClick={() => setOpenUiScreenIndex(index)}
+                  style={{ transform: `rotate(${(-5 + Math.random() * 10)}deg)`, border: '5px solid #fff' }}
+                >
+                  <CardContent className="p-0 w-full h-full">
+                    <img src={screen.imageUrl} alt={screen.title} className="w-full h-full object-cover" />
+                  </CardContent>
+                </Card>
+              ))}
             </div>
+          </div>
         </div>
       </section>
 
       <GalleryImageDialog
-          open={!!selectedUiScreen}
-          onOpenChange={(open) => setOpenUiScreenIndex(open ? openUiScreenIndex : null)}
-          item={selectedUiScreen}
+        open={!!selectedUiScreen}
+        onOpenChange={(open) => setOpenUiScreenIndex(open ? openUiScreenIndex : null)}
+        item={selectedUiScreen}
       />
 
       {/* Results & Impact */}
@@ -785,7 +785,7 @@ This concept project reimagines the Tesla mobile app for Apple Watch, addressing
             <p className="text-xl text-muted-foreground text-center leading-relaxed max-w-3xl mx-auto">
               This concept project opens several avenues for further development, from technical implementation to expanded feature sets and broader automotive industry applications.
             </p>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-card rounded-2xl p-6">
                 <h3 className="text-xl font-semibold text-foreground mb-4">Immediate Next Steps</h3>
@@ -804,7 +804,7 @@ This concept project reimagines the Tesla mobile app for Apple Watch, addressing
                   </div>
                 </div>
               </div>
-              
+
               <div className="bg-card rounded-2xl p-6">
                 <h3 className="text-xl font-semibold text-foreground mb-4">Long-term Vision</h3>
                 <div className="space-y-4">
@@ -847,7 +847,7 @@ This concept project reimagines the Tesla mobile app for Apple Watch, addressing
               touch!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/">
+              <Link to="/home">
                 <Button size="lg" className="gap-2">
                   View More Projects
                   <ArrowRight className="w-4 h-4" />

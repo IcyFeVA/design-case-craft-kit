@@ -23,7 +23,7 @@ const MindSpaceCaseStudy = () => {
       {/* Main Content */}
       <main className="pt-20 pb-16">
         <div className="max-w-4xl mx-auto px-6">
-          
+
           {/* Hero Section */}
           <section className="mb-20">
             <div className="mb-8">
@@ -34,7 +34,7 @@ const MindSpaceCaseStudy = () => {
                 Mental Health Companion for College Students
               </p>
             </div>
-            
+
             <div className="mb-12">
               <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
                 Bridging the gap between crisis and care through accessible, peer-supported mental health tools
@@ -102,7 +102,7 @@ const MindSpaceCaseStudy = () => {
                   <p className="text-muted-foreground leading-relaxed mb-6">
                     I conducted comprehensive research with 15 college students aged 18-24 to understand their mental health journey and current coping mechanisms.
                   </p>
-                  
+
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                     <div className="bg-green-50 p-6 rounded-xl">
                       <h4 className="font-semibold text-green-800 mb-2">15 Interviews</h4>
@@ -138,7 +138,7 @@ const MindSpaceCaseStudy = () => {
                 <h2 className="text-3xl font-bold text-foreground mb-6">Design Process</h2>
                 <div className="prose prose-lg max-w-none">
                   <div className="space-y-8">
-                    
+
                     <div>
                       <h3 className="font-semibold text-foreground mb-3 text-xl">1. User Personas & Journey Mapping</h3>
                       <p className="text-muted-foreground mb-4">Created three distinct personas representing different student mental health archetypes and mapped their journey from stress triggers to resolution.</p>
@@ -232,17 +232,17 @@ const MindSpaceCaseStudy = () => {
                       <h4 className="font-semibold text-red-800 mb-2">🆘 Crisis Support</h4>
                       <p className="text-red-700">One-tap SOS button providing immediate access to breathing exercises, crisis hotlines, and emergency contacts</p>
                     </div>
-                    
+
                     <div className="bg-blue-50 p-6 rounded-xl border-l-4 border-blue-200">
                       <h4 className="font-semibold text-blue-800 mb-2">📊 Mood Tracking</h4>
                       <p className="text-blue-700">Gamified daily check-ins with personalized insights and mood pattern recognition</p>
                     </div>
-                    
+
                     <div className="bg-green-50 p-6 rounded-xl border-l-4 border-green-200">
                       <h4 className="font-semibold text-green-800 mb-2">👥 Peer Support</h4>
                       <p className="text-green-700">Anonymous peer groups organized by university, study buddy matching, and shared wellness challenges</p>
                     </div>
-                    
+
                     <div className="bg-purple-50 p-6 rounded-xl border-l-4 border-purple-200">
                       <h4 className="font-semibold text-purple-800 mb-2">⚡ Micro-Interventions</h4>
                       <p className="text-purple-700">2-minute breathing exercises, quick mindfulness prompts, and energy-boosting activities</p>
@@ -400,7 +400,7 @@ const MindSpaceCaseStudy = () => {
                     <ExternalLink size={16} />
                   </Button>
                 </Link>
-                <Link to="/">
+                <Link to="/home">
                   <Button className="inline-flex items-center gap-2">
                     Back to Portfolio
                     <ExternalLink size={16} />

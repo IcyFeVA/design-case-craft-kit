@@ -13,7 +13,7 @@ const Index = () => {
       {/* Main Content */}
       <main className="pt-20 pb-16">
         <div className="max-w-4xl mx-auto px-6">
-          
+
           {/* Hero Section */}
           <section className="mb-20">
             <div className="mb-8">
@@ -24,7 +24,7 @@ const Index = () => {
                 3D Data Visualization & Presentation Platform
               </p>
             </div>
-            
+
             <div className="mb-12">
               <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
                 Transforming complex 3D CAD data into intuitive, real-time presentations accessible to both experts and newcomers
@@ -67,7 +67,7 @@ const Index = () => {
                   <p className="text-muted-foreground leading-relaxed mb-6">
                     Side Effects had developed vSTAGE, an advanced 3D visualization tool for presentations, training, and simulations. However, it was exclusively designed for CAD professionals, creating a significant barrier for broader adoption.
                   </p>
-                  
+
                   <div className="bg-red-50 p-6 rounded-xl border-l-4 border-red-200 mb-6">
                     <h4 className="font-semibold text-red-800 mb-2">Core Problems</h4>
                     <ul className="space-y-2 text-red-700">
@@ -137,7 +137,7 @@ const Index = () => {
                 <h2 className="text-3xl font-bold text-foreground mb-6">Design Process</h2>
                 <div className="prose prose-lg max-w-none">
                   <div className="space-y-8">
-                    
+
                     <div>
                       <h3 className="font-semibold text-foreground mb-3 text-xl">1. Workflow Mapping & User Journeys</h3>
                       <p className="text-muted-foreground mb-4">Mapped distinct export and overlay workflows for each persona, identifying critical decision points and potential friction areas.</p>
@@ -231,17 +231,17 @@ const Index = () => {
                       <h4 className="font-semibold text-slate-800 mb-2">🎨 Adaptive UI System</h4>
                       <p className="text-slate-700">Toggle-based interface that hides complexity for newcomers while keeping advanced tools accessible to experts. Pop-over toggles, collapsible panels, and contextual menus.</p>
                     </div>
-                    
+
                     <div className="bg-amber-50 p-6 rounded-xl border-l-4 border-amber-200">
                       <h4 className="font-semibold text-amber-800 mb-2">🎬 Slide-Bar Navigation</h4>
                       <p className="text-amber-700">Horizontal slide navigation with large visual trackers for presentation sequences - the one exception to the "no horizontal scroll" rule, designed like familiar media players.</p>
                     </div>
-                    
+
                     <div className="bg-emerald-50 p-6 rounded-xl border-l-4 border-emerald-200">
                       <h4 className="font-semibold text-emerald-800 mb-2">🌳 Smart Tree View Filters</h4>
                       <p className="text-emerald-700">Hierarchical component browser with bulk selection, inverse selection, bookmarking, and tagging. Handles 50k+ components with search and filtering.</p>
                     </div>
-                    
+
                     <div className="bg-violet-50 p-6 rounded-xl border-l-4 border-violet-200">
                       <h4 className="font-semibold text-violet-800 mb-2">🌓 Dual Theme System</h4>
                       <p className="text-violet-700">Complete dark/light theme implementation optimized for long CAD sessions and presentation environments. Seamless switching preserves user context.</p>
@@ -399,7 +399,7 @@ const Index = () => {
                     <ExternalLink size={16} />
                   </Button>
                 </Link>
-                <Link to="/">
+                <Link to="/home">
                   <Button className="inline-flex items-center gap-2">
                     Back to Portfolio
                     <ExternalLink size={16} />

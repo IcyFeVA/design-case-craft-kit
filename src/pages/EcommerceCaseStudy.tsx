@@ -10,7 +10,7 @@ const EcommerceCaseStudy = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      
+
       {/* Hero Section */}
       <section className="max-w-4xl mx-auto px-6 py-16">
         <div className="space-y-8">
@@ -31,7 +31,7 @@ const EcommerceCaseStudy = () => {
             </h1>
 
             <p className="text-xl text-muted-foreground leading-relaxed">
-              A complete redesign of an e-commerce checkout flow that reduced cart abandonment by 24% 
+              A complete redesign of an e-commerce checkout flow that reduced cart abandonment by 24%
               and increased conversion rates by 15% through user-centered design principles.
             </p>
 
@@ -64,8 +64,8 @@ const EcommerceCaseStudy = () => {
             <div className="space-y-6">
               <h2 className="text-3xl font-bold text-foreground">Project Overview</h2>
               <p className="text-muted-foreground leading-relaxed">
-                Our mid-sized e-commerce platform was experiencing a 68% cart abandonment rate, significantly 
-                higher than the industry average of 45%. User feedback indicated frustration with the checkout 
+                Our mid-sized e-commerce platform was experiencing a 68% cart abandonment rate, significantly
+                higher than the industry average of 45%. User feedback indicated frustration with the checkout
                 process, leading to lost revenue and poor user experience.
               </p>
               <div className="space-y-4">
@@ -101,7 +101,7 @@ const EcommerceCaseStudy = () => {
             <p className="text-xl text-muted-foreground leading-relaxed">
               Through analytics and user research, we identified three primary pain points causing high cart abandonment:
             </p>
-            
+
             <div className="grid md:grid-cols-3 gap-6">
               <Card className="border-0 shadow-sm">
                 <CardContent className="p-6 space-y-4">
@@ -310,12 +310,12 @@ const EcommerceCaseStudy = () => {
             <h2 className="text-3xl font-bold text-foreground">Key Learnings</h2>
             <div className="bg-blue-50 rounded-2xl p-8">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                This project taught me the importance of transparent communication in e-commerce design. 
-                I learned that small friction points can compound to create major user experience barriers. 
+                This project taught me the importance of transparent communication in e-commerce design.
+                I learned that small friction points can compound to create major user experience barriers.
                 The success reinforced my belief in data-driven design decisions combined with qualitative user insights.
               </p>
             </div>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-4">
                 <h3 className="text-xl font-semibold text-foreground">What Worked Well</h3>
@@ -334,7 +334,7 @@ const EcommerceCaseStudy = () => {
                   </li>
                 </ul>
               </div>
-              
+
               <div className="space-y-4">
                 <h3 className="text-xl font-semibold text-foreground">Areas for Improvement</h3>
                 <ul className="space-y-2">
@@ -365,7 +365,7 @@ const EcommerceCaseStudy = () => {
             <p className="text-lg text-muted-foreground leading-relaxed">
               Based on the success of this project, we're planning several enhancements to further optimize the checkout experience:
             </p>
-            
+
             <div className="grid md:grid-cols-3 gap-6">
               <Card className="border-0 shadow-sm">
                 <CardContent className="p-6 space-y-3">
@@ -375,7 +375,7 @@ const EcommerceCaseStudy = () => {
                   </p>
                 </CardContent>
               </Card>
-              
+
               <Card className="border-0 shadow-sm">
                 <CardContent className="p-6 space-y-3">
                   <h4 className="font-semibold text-foreground">Payment Options</h4>
@@ -384,7 +384,7 @@ const EcommerceCaseStudy = () => {
                   </p>
                 </CardContent>
               </Card>
-              
+
               <Card className="border-0 shadow-sm">
                 <CardContent className="p-6 space-y-3">
                   <h4 className="font-semibold text-foreground">Recovery Flow</h4>
@@ -407,7 +407,7 @@ const EcommerceCaseStudy = () => {
               I'd love to discuss this project in detail and share insights from the design process.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/">
+              <Link to="/home">
                 <Button size="lg" className="gap-2">
                   View More Work
                   <ArrowRight className="w-4 h-4" />

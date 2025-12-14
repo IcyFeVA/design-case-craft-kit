@@ -19,6 +19,7 @@ import Motion from "./pages/3DMotion";
 import CrushyCaseStudy from "./pages/CrushyCaseStudy";
 import AIDrivenDesign from "./pages/AIDrivenDesign";
 import Timeline from "./pages/Timeline";
+import Intro from "./pages/Intro";
 
 const queryClient = new QueryClient();
 
@@ -48,20 +49,21 @@ const App = () => (
             </div>
           )} */}
           <Routes>
-           <Route path="/" element={<Home />} />
-           <Route path="/case-study" element={<Index />} />
-           <Route path="/mindspace-case-study" element={<MindSpaceCaseStudy />} />
-           <Route path="/ecommerce-case-study" element={<EcommerceCaseStudy />} />
-           <Route path="/txcms-case-study" element={<TxcmsCaseStudy />} />
-           <Route path="/tesla-watch-app" element={<TeslaWatchApp />} />
-           <Route path="/vstage" element={<VStage />} />
-           <Route path="/crushy-case-study" element={<CrushyCaseStudy />} />
-           <Route path="/ai-driven-design" element={<AIDrivenDesign />} />
-           <Route path="/ui-gallery" element={<UIGallery />} />
-           <Route path="/motion" element={<Motion />} />
-           <Route path="/timeline" element={<Timeline />} />
-           <Route path="*" element={<NotFound />} />
-         </Routes>
+            <Route path="/" element={<Intro />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/case-study" element={<Index />} />
+            <Route path="/mindspace-case-study" element={<MindSpaceCaseStudy />} />
+            <Route path="/ecommerce-case-study" element={<EcommerceCaseStudy />} />
+            <Route path="/txcms-case-study" element={<TxcmsCaseStudy />} />
+            <Route path="/tesla-watch-app" element={<TeslaWatchApp />} />
+            <Route path="/vstage" element={<VStage />} />
+            <Route path="/crushy-case-study" element={<CrushyCaseStudy />} />
+            <Route path="/ai-driven-design" element={<AIDrivenDesign />} />
+            <Route path="/ui-gallery" element={<UIGallery />} />
+            <Route path="/motion" element={<Motion />} />
+            <Route path="/timeline" element={<Timeline />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>
