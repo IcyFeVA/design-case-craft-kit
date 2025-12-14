@@ -23,17 +23,16 @@ const Intro = () => {
 
             {/* Enter Button - Slightly below the animation */}
             <div
-                className={`mt-8 z-10 transition-all duration-1000 transform ${showButton ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
+                className={`z-10 transition-all duration-1000 transform ${showButton ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
                     }`}
             >
                 <Link to="/home">
                     <Button
-                        variant="outline"
                         size="lg"
                         className="text-white border-white/20 hover:bg-white/10 hover:text-white transition-all duration-300 text-lg px-8 py-6 group bg-black/50 backdrop-blur-sm"
                     >
-                        Enter Site
-                        <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                        E N T E R
+                        {/* <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" /> */}
                     </Button>
                 </Link>
             </div>
