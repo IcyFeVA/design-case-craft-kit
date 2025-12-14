@@ -1,18 +1,32 @@
 import { UnicornIntro } from "@/components/UnicornIntro";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 const Intro = () => {
     const [showButton, setShowButton] = useState(false);
+    const navigate = useNavigate();
 
     useEffect(() => {
+        const checkMobile = () => {
+            if (window.innerWidth < 768) {
+                navigate('/home', { replace: true });
+            }
+        };
+
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+
         const timer = setTimeout(() => {
             setShowButton(true);
         }, 2000);
-        return () => clearTimeout(timer);
-    }, []);
+
+        return () => {
+            clearTimeout(timer);
+            window.removeEventListener('resize', checkMobile);
+        };
+    }, [navigate]);
 
     return (
         <div className="fixed inset-0 bg-black flex flex-col items-center justify-center overflow-hidden">
