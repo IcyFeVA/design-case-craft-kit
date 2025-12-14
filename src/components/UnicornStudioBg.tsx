@@ -15,7 +15,7 @@ export const UnicornStudioBg = () => {
     const checkDesktop = () => {
       setIsDesktop(window.matchMedia('(min-width: 768px)').matches);
     };
-    
+
     checkDesktop();
     window.addEventListener('resize', checkDesktop);
     return () => window.removeEventListener('resize', checkDesktop);
@@ -29,7 +29,7 @@ export const UnicornStudioBg = () => {
 
     // Initialize Unicorn Studio script
     const w = window as any;
-    
+
     // Load script if not already loaded
     if (!document.querySelector('script[src*="unicornStudio"]')) {
       const script = document.createElement('script');
@@ -51,8 +51,9 @@ export const UnicornStudioBg = () => {
 
   return (
     <div
-    //   data-us-project="4Fpn7p07PYhcifhUg8uM"
+      //   data-us-project="4Fpn7p07PYhcifhUg8uM"
       data-us-project="75qQehYLDLVINEpdel7N"
+      data-us-production="true"
       style={{
         width: '100%',
         height: '100%',
