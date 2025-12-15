@@ -43,10 +43,9 @@ const Intro = () => {
                 <Link to="/home">
                     <Button
                         size="lg"
-                        className="text-white border-white/20 hover:bg-white/10 hover:text-white transition-all duration-500 text-lg px-8 py-6 group bg-black/50 backdrop-blur-sm tracking-[0.3em] hover:tracking-[0.6em]"
+                        className="text-white border-white/20 hover:bg-white/10 hover:text-white text-center transition-all duration-500 text-lg px-8 py-6 bg-black hover:bg-gray-950 tracking-[0.3em] hover:tracking-[0.6em]"
                     >
                         ENTER
-                        {/* <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" /> */}
                     </Button>
                 </Link>
             </div>
