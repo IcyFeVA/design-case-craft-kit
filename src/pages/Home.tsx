@@ -760,7 +760,7 @@ const Home = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-foreground bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-slate-600 dark:from-slate-500 dark:to-slate-600">About Me</h2>
               <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  I'm a product designer with 9+ years of experience creating digital experiences that users love. My
+                  I'm a product designer with 15+ years of experience creating digital experiences that users love. My
                   interest in psychology helps me understand user behavior and design solutions that truly resonate.
                 </p>
                 <p>
@@ -776,21 +776,21 @@ const Home = () => {
             <div className="space-y-6">
               <div className="aspect-square bg-gradient-to-br from-gray-200 to-gray-300 rounded-2xl flex items-center justify-center">
                 <div className="text-center space-y-2">
-                  <img src="/img/itsame.jpg" alt="Alex Chen" className="rounded-3xl" />
+                  <img src="/img/meagain.png" alt="Pascal Zirn" className="rounded-2xl" />
                 </div>
               </div>
 
               <div className="space-y-4">
                 <h3 className="text-xl font-semibold text-foreground">Skills & Expertise</h3>
                 <div className="flex flex-wrap gap-2">
-                  <Badge variant="secondary">3D</Badge>
                   <Badge variant="secondary">Interaction Design</Badge>
                   <Badge variant="secondary">Prototyping</Badge>
                   <Badge variant="secondary">Design Systems</Badge>
                   <Badge variant="secondary">Figma</Badge>
-                  <Badge variant="secondary">Motion Design</Badge>
+                  <Badge variant="secondary">3D & Motion Design</Badge>
                   <Badge variant="secondary">Adobe Creative Suite</Badge>
                   <Badge variant="secondary">HTML/CSS/JS</Badge>
+                  <Badge variant="secondary">Photo & Video</Badge>
                 </div>
               </div>
             </div>
