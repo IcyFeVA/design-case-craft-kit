@@ -63,7 +63,7 @@ const Home = () => {
   const awardsRef = useRef(null);
 
   useEffect(() => {
-    // Hero + headline timeline: hero fades in, then quick staggered headline entrance
+    // Hero + headline timeline
     const tl = gsap.timeline();
     tl.fromTo(
       heroRef.current,
@@ -71,7 +71,7 @@ const Home = () => {
       { opacity: 1, y: 0, duration: 0.8, ease: "power2.out", delay: 0.2 }
     );
 
-    // animate headline words with a quick, tight stagger for a "cool" effect
+    // animate headline words
     if (headlineRef.current) {
       tl.fromTo(
         headlineRef.current.querySelectorAll(".headline-word"),
@@ -84,39 +84,78 @@ const Home = () => {
           ease: "power3.out",
           stagger: 0.06
         },
-        "-=0.45" // overlap slightly with hero fade for punch
+        "-=0.45"
       );
     }
 
-    // Stats section animation
-    gsap.fromTo(statsRef.current,
-      { opacity: 0, y: 30 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        scrollTrigger: {
-          trigger: statsRef.current,
-          start: "top 80%"
+    // Staggered Animations for Sections
+    const sections = [
+      { ref: statsRef, stagger: 0.1 },
+      { ref: featuredWorkRef, stagger: 0.1 },
+      { ref: aiexplorationRef, stagger: 0.1 },
+      { ref: caseStudiesRef, stagger: 0.1 },
+      { ref: aboutRef, stagger: 0.1 },
+      { ref: testimonialsRef, stagger: 0.1 },
+      { ref: contactRef, stagger: 0.1 }
+    ];
+
+    sections.forEach(({ ref, stagger }) => {
+      if (ref.current) {
+        const sectionsElements = ref.current.querySelectorAll(".animate-item");
+
+        if (sectionsElements.length > 0) {
+          gsap.fromTo(sectionsElements,
+            { opacity: 0, y: 30 },
+            {
+              opacity: 1,
+              y: 0,
+              duration: 0.8,
+              ease: "power2.out",
+              stagger: stagger,
+              scrollTrigger: {
+                trigger: ref.current,
+                start: "top 80%",
+                toggleActions: "play none none reverse"
+              }
+            }
+          );
+        } else {
+          // Fallback for whole section
+          gsap.fromTo(ref.current,
+            { opacity: 0, y: 30 },
+            {
+              opacity: 1,
+              y: 0,
+              duration: 0.8,
+              ease: "power2.out",
+              scrollTrigger: {
+                trigger: ref.current,
+                start: "top 80%",
+                toggleActions: "play none none reverse"
+              }
+            }
+          );
         }
       }
-    );
+    });
 
-    // Animate stats numbers only on mobile. Desktop shows final values instantly.
+    // Mobile Stats Counter Animation
     const numberTweens: gsap.core.Tween[] = [];
     const isMobile = typeof window !== "undefined" && window.matchMedia && window.matchMedia("(max-width: 767px)").matches;
 
     if (isMobile) {
-      // start from zero to final values on mobile
       if (projectsRef.current) projectsRef.current.innerText = "0";
       if (clientsRef.current) clientsRef.current.innerText = "0";
       if (yearsRef.current) yearsRef.current.innerText = "0";
       if (awardsRef.current) awardsRef.current.innerText = "0";
 
+      const ease = "power1.out";
+
       numberTweens.push(
         gsap.fromTo(projectsRef.current, { innerText: 0 }, {
           innerText: 120,
           duration: 2,
+          ease,
           snap: { innerText: 1 },
           scrollTrigger: { trigger: statsRef.current, start: "top 80%" },
           onUpdate: function () {
@@ -129,6 +168,7 @@ const Home = () => {
         gsap.fromTo(clientsRef.current, { innerText: 0 }, {
           innerText: 40,
           duration: 2,
+          ease,
           snap: { innerText: 1 },
           scrollTrigger: { trigger: statsRef.current, start: "top 80%" },
           onUpdate: function () {
@@ -141,6 +181,7 @@ const Home = () => {
         gsap.fromTo(yearsRef.current, { innerText: 0 }, {
           innerText: 10,
           duration: 2,
+          ease,
           snap: { innerText: 1 },
           scrollTrigger: { trigger: statsRef.current, start: "top 80%" },
           onUpdate: function () {
@@ -153,6 +194,7 @@ const Home = () => {
         gsap.fromTo(awardsRef.current, { innerText: 0 }, {
           innerText: 25000,
           duration: 2,
+          ease,
           snap: { innerText: 1 },
           scrollTrigger: { trigger: statsRef.current, start: "top 80%" },
           onUpdate: function () {
@@ -161,106 +203,14 @@ const Home = () => {
         })
       );
     } else {
-      // Desktop: set final texts immediately (no animation)
       if (projectsRef.current) projectsRef.current.innerText = "120+";
       if (clientsRef.current) clientsRef.current.innerText = "40+";
       if (yearsRef.current) yearsRef.current.innerText = "10+";
       if (awardsRef.current) awardsRef.current.innerText = "25000+";
     }
 
-    // Featured work animation
-    gsap.fromTo(featuredWorkRef.current,
-      { opacity: 0, y: 30 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        scrollTrigger: {
-          trigger: featuredWorkRef.current,
-          start: "top 80%"
-        }
-      }
-    );
-
-    // AI exploration animation
-    gsap.fromTo(aiexplorationRef.current,
-      { opacity: 0, y: 30 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        scrollTrigger: {
-          trigger: aiexplorationRef.current,
-          start: "top 80%"
-        }
-      }
-    );
-    // Case studies animation
-    gsap.fromTo(caseStudiesRef.current,
-      { opacity: 0, y: 30 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        scrollTrigger: {
-          trigger: caseStudiesRef.current,
-          start: "top 80%"
-        }
-      }
-    );
-
-    // About section animation
-    gsap.fromTo(aboutRef.current,
-      { opacity: 0, y: 30 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        scrollTrigger: {
-          trigger: aboutRef.current,
-          start: "top 80%"
-        }
-      }
-    );
-
-    // Testimonials animation
-    gsap.fromTo(testimonialsRef.current,
-      { opacity: 0, y: 30 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        scrollTrigger: {
-          trigger: testimonialsRef.current,
-          start: "top 80%"
-        }
-      }
-    );
-
-    // Contact section animation
-    gsap.fromTo(contactRef.current,
-      { opacity: 0, y: 30 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        scrollTrigger: {
-          trigger: contactRef.current,
-          start: "top 80%"
-        }
-      }
-    );
-
-    // Cleanup function
     return () => {
-      // kill any number tweens created for mobile
-      numberTweens.forEach(t => {
-        try {
-          t.kill();
-        } catch (e) {
-          console.error('Error killing tween:', e);
-        }
-      });
+      numberTweens.forEach(t => t.kill());
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
     };
   }, []);
@@ -352,20 +302,20 @@ const Home = () => {
       <section ref={statsRef} className="bg-muted/30 py-16">
         <div className="max-w-4xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center space-y-2">
+            <div className="text-center space-y-2 animate-item">
               <div ref={projectsRef} className="text-3xl font-bold text-foreground">120+</div>
               <div className="text-sm text-muted-foreground">Projects Completed</div>
             </div>
-            <div className="text-center space-y-2">
+            <div className="text-center space-y-2 animate-item">
               <div ref={clientsRef} className="text-3xl font-bold text-foreground">40+</div>
               <div className="text-sm text-muted-foreground">Happy Clients</div>
             </div>
-            <div className="text-center space-y-2">
+            <div className="text-center space-y-2 animate-item">
               <div ref={yearsRef} className="text-3xl font-bold text-foreground">10+</div>
               <div className="text-sm text-muted-foreground">Years Experience</div>
             </div>
-            <div className="text-center space-y-2">
-              <div ref={awardsRef} className="text-3xl font-bold text-foreground">2 5000+</div>
+            <div className="text-center space-y-2 animate-item">
+              <div ref={awardsRef} className="text-3xl font-bold text-foreground">25000+</div>
               <div className="text-sm text-muted-foreground">work hours</div>
             </div>
           </div>
@@ -385,7 +335,7 @@ const Home = () => {
         <div className="h-16"></div>
 
         <div className="space-y-8">
-          <div className="text-center space-y-4">
+          <div className="text-center space-y-4 animate-item">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-slate-600 dark:from-slate-500 dark:to-slate-600">AI to Amplify Rapid Prototyping</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               AI is transforming design. Here's how I'm leveraging it to create stunning designs and code in under 15 minutes.
@@ -393,13 +343,13 @@ const Home = () => {
           </div>
 
           <div className="space-y-8">
-            <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl flex items-center justify-center max-h-[480px] overflow-hidden w-full featured-work-container">
+            <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl flex items-center justify-center max-h-[480px] overflow-hidden w-full featured-work-container animate-item">
               <Link to="/ai-driven-design">
                 <img src="/img/ai-design/teaser2.png" alt="Tesla Apple Watch App Thumbnail" className="rounded-2xl featured-work-hover transition-transform duration-300 hover:scale-105" />
               </Link>
             </div>
 
-            <div className="max-w-4xl mx-auto space-y-6">
+            <div className="max-w-4xl mx-auto space-y-6 animate-item">
               <div className="flex flex-wrap gap-2">
                 <Badge variant="secondary" className="text-xs">
                   Workflow Innovation
@@ -496,7 +446,7 @@ const Home = () => {
       {/* Featured Work */}
       <section ref={featuredWorkRef} id="work" className="px-6 py-20 bg-muted/30">
         <div className="space-y-8 max-w-6xl mx-auto ">
-          <div className="text-center space-y-4">
+          <div className="text-center space-y-4 animate-item">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-slate-600 dark:from-slate-500 dark:to-slate-600">Featured Work</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               A selection of projects that showcase my approach to solving complex design challenges
@@ -506,7 +456,7 @@ const Home = () => {
 
           {/* Other Projects Grid */}
           <div className="grid md:grid-cols-2 gap-8">
-            <Link to="/txcms-case-study">
+            <Link to="/txcms-case-study" className="animate-item block">
               <Card className="border-0 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
                 <CardContent className="p-0">
                   <div className="aspect-video rounded-t-lg flex items-center justify-center border-b featured-work-container">
@@ -537,7 +487,7 @@ const Home = () => {
               </Card>
             </Link>
 
-            <Link to="/vstage">
+            <Link to="/vstage" className="animate-item block">
               <Card className="border-0 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
                 <CardContent className="p-0">
                   <div className="aspect-video rounded-t-lg flex items-center justify-center border-b featured-work-container">
@@ -634,13 +584,13 @@ const Home = () => {
           <div className="h-8"> </div>
 
           <div className="space-y-8">
-            <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl flex items-center justify-center max-h-[480px] overflow-hidden w-full featured-work-container">
+            <div className="bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl flex items-center justify-center max-h-[480px] overflow-hidden w-full featured-work-container animate-item">
               <Link to="/tesla-watch-app">
                 <img src="/img/tesla/teaser.png" alt="Tesla Apple Watch App Thumbnail" className="rounded-2xl featured-work-hover transition-transform duration-300 hover:scale-105" />
               </Link>
             </div>
 
-            <div className="max-w-4xl mx-auto space-y-6">
+            <div className="max-w-4xl mx-auto space-y-6 animate-item">
               <div className="flex flex-wrap gap-2">
                 <Badge variant="secondary">UX/UI Design</Badge>
                 <Badge variant="secondary">Apple Watch</Badge>
@@ -678,7 +628,7 @@ const Home = () => {
       {/* Locked Case Studies Section */}
       <section ref={caseStudiesRef} className="py-20">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 animate-item">
             <h2 className="text-4xl font-bold text-foreground mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-slate-600 dark:from-slate-500 dark:to-slate-600">Coming soon</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Deep dives into design challenges, processes, and solutions
@@ -687,7 +637,7 @@ const Home = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             {/* <Link to="/case-study" className="group"> */}
-            <div className="bg-card rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 h-full">
+            <div className="bg-card rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 h-full animate-item">
               <div className="h-48 bg-gradient-to-br from-slate-300 to-slate-500 dark:from-slate-800 dark:to-slate-600 rounded-xl mb-6 flex items-center justify-center">
                 <div className="text-center flex flex-col items-center justify-center">
                   <FolderLock className="w-16 h-16 text-white mb-3" />
@@ -708,7 +658,7 @@ const Home = () => {
             {/* </Link> */}
 
             {/* <Link to="/ecommerce-case-study" className="group"> */}
-            <div className="bg-card rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 h-full">
+            <div className="bg-card rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 h-full animate-item">
               <div className="h-48 bg-gradient-to-br from-slate-300 to-slate-500 dark:from-slate-800 dark:to-slate-600 rounded-xl mb-6 flex items-center justify-center">
                 <div className="text-center flex flex-col items-center justify-center">
                   <FolderLock className="w-16 h-16 text-white mb-3" />
@@ -729,7 +679,7 @@ const Home = () => {
             {/* </Link> */}
 
             {/* <Link to="/mindspace-case-study" className="group"> */}
-            <div className="bg-card rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 h-full">
+            <div className="bg-card rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 h-full animate-item">
               <div className="h-48 bg-gradient-to-br from-slate-300 to-slate-500 dark:from-slate-800 dark:to-slate-600 rounded-xl mb-6 flex items-center justify-center">
                 <div className="text-center flex flex-col items-center justify-center">
                   <FolderLock className="w-16 h-16 text-white mb-3" />
@@ -756,7 +706,7 @@ const Home = () => {
       <section ref={aboutRef} id="about" className="bg-muted/30 py-20">
         <div className="max-w-4xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
+            <div className="space-y-6 animate-item">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-slate-600 dark:from-slate-500 dark:to-slate-600">About Me</h2>
               <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
                 <p>
@@ -773,7 +723,7 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-6 animate-item">
               <div className="aspect-square bg-gradient-to-br from-gray-200 to-gray-300 rounded-2xl flex items-center justify-center">
                 <div className="text-center space-y-2">
                   <img src="/img/meagainonew.png" alt="Pascal Zirn" className="rounded-2xl" />
@@ -801,13 +751,13 @@ const Home = () => {
       {/* Testimonials */}
       <section ref={testimonialsRef} className="max-w-4xl mx-auto px-6 py-20">
         <div className="space-y-12">
-          <div className="text-center space-y-4">
+          <div className="text-center space-y-4 animate-item">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-slate-600 dark:from-slate-500 dark:to-slate-600">What People Say</h2>
             <p className="text-xl text-muted-foreground">Feedback from colleagues and clients I've worked with</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <Card className="border-0 shadow-sm">
+            <Card className="border-0 shadow-sm animate-item">
               <CardContent className="p-8 space-y-4">
                 <div className="flex space-x-1">
                   {[...Array(5)].map((_, i) => (
@@ -827,7 +777,7 @@ const Home = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-0 shadow-sm">
+            <Card className="border-0 shadow-sm animate-item">
               <CardContent className="p-8 space-y-4">
                 <div className="flex space-x-1">
                   {[...Array(5)].map((_, i) => (
@@ -873,14 +823,14 @@ const Home = () => {
       <section ref={contactRef} id="contact" className="bg-muted/30 dark:bg-muted/30 text-white py-20">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <div className="space-y-8">
-            <div className="space-y-4">
+            <div className="space-y-4 animate-item">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-slate-600 dark:from-slate-500 dark:to-slate-600">Let's Work Together</h2>
               <p className="text-xl text-muted-foreground dark:text-gray-300 max-w-2xl mx-auto">
                 I'm always interested in new opportunities and exciting projects. Let's discuss how we can create something amazing together.
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-item">
               <Link to="mailto:pascal.zirn@pm.me">
                 <Button size="lg" variant="secondary" className="gap-2">
                   <Mail className="w-4 h-4" />
