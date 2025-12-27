@@ -726,7 +726,7 @@ const Home = () => {
             <div className="space-y-6 animate-item">
               <div className="aspect-square bg-gradient-to-br from-gray-200 to-gray-300 rounded-2xl flex items-center justify-center">
                 <div className="text-center space-y-2">
-                  <img src="/img/meagainonew.png" alt="Pascal Zirn" className="rounded-2xl" />
+                  <img src="/img/meagain-enhanced.png" alt="Pascal Zirn" className="rounded-2xl" />
                 </div>
               </div>
 
